@@ -41,7 +41,7 @@ html {
 .splitcolors{
 	height: 100vh;
 	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#4cffb5+0,4cffb5+50,f8f9f9+50,f8f9f9+100 */
-    background: #4cffb5; /* Old browsers */
+    background: #fee600; /* Old browsers */
     background: -moz-linear-gradient(left, #fee600 0%, #fee600 50%, #f8f9f9 50%, #f8f9f9 100%); /* FF3.6-15 */
     background: -webkit-linear-gradient(left, #fee600 0%,#fee600 50%,#f8f9f9 50%,#f8f9f9 100%); /* Chrome10-25,Safari5.1-6 */
     background: linear-gradient(to right, #fee600 0%,#fee600 50%,#f8f9f9 50%,#f8f9f9 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
