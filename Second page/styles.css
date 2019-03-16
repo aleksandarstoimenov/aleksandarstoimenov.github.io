@@ -1,0 +1,306 @@
+@charset "UTF-8";
+@font-face {
+  font-family: myFirstFont;
+  src: url(AvenirNextLTPro-Heavy.otf);
+}
+@font-face {
+	font-family: mySecondFont;
+	src: url(BertholdAkzidenzGroteskBEMedium.otf);
+}
+
+/* INVISIBLE SCROLLBAR */
+
+html {
+    overflow: scroll;
+    overflow-x: hidden;
+}
+::-webkit-scrollbar {
+    width: 0px; 
+    background: transparent;
+}
+
+/* CSS GRID */
+
+.container {
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	grid-template-rows: auto;
+	grid-template-areas:
+		"a a a a a a a a a a a a"
+		"b b b b b b b b b b b b"
+		". . d d . . . . . . . ."
+}
+
+/* GRID ITEMS */
+
+.splitcolors{
+	height: calc(100vh - 1.4cm);
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#4cffb5+0,4cffb5+50,f8f9f9+50,f8f9f9+100 */
+    background: #4cffb5; /* Old browsers */
+    background: -moz-linear-gradient(left, #fee600 0%, #fee600 50%, #f8f9f9 50%, #f8f9f9 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, #fee600 0%,#fee600 50%,#f8f9f9 50%,#f8f9f9 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, #fee600 0%,#fee600 50%,#f8f9f9 50%,#f8f9f9 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fee600', endColorstr='#f8f9f9',GradientType=1 ); /* IE6-9 */
+	
+	grid-area: a;
+	
+	z-index: 0;
+}
+
+.griditem1{
+	font-family: "mySecondFont";
+	background-color: beige;
+	width: 10vw;
+	grid-area: d;
+}
+
+
+
+/* PAGE ITEMS */
+
+
+
+/*ALL OF THIS IS FOR NAVIGATION*/
+
+/* white sidebars */
+
+.sidebarleft{
+	background-color: white;        width: 1.4cm; 
+	                                height: 100vh;
+	position: fixed;                top: 0cm;
+                                    left: 0cm;
+	z-index: +3;
+}
+
+.sidebarright{
+	background-color: white;        width: 1.4cm; 
+	                                height: 100vh;
+	position: fixed;                top: 0cm;
+                                    right: 0cm;
+	z-index: +3;
+}
+
+.sidebartop{
+	background-color: white;        width: 100vw;
+	                                height: 1.4cm;
+	position: fixed;                top: 0cm;
+                                    right: 0cm;
+	z-index: +3;
+}
+
+.sidebarbottom{
+	background-color: white;        width: 100vw;
+	                                height: 1.4cm;
+	position: fixed;                bottom: 0cm;
+                                    right: 0cm;
+	z-index: +3;
+}
+
+
+
+/* NAVIGATION ICONS */
+
+
+
+.social {
+	position: fixed;                top: 50%;
+                                    left: calc(100% - 0.7cm);
+    transform:                      translate(-50%, -50%);
+	z-index: +4;
+}
+
+.logo {
+	position: fixed;                top: 0.5cm;
+	                                left: 1.4cm;
+	z-index: +6;
+}
+
+.wave {
+	
+	position: fixed;                right: 1.4cm;
+	                                top: 0.5cm;
+	z-index: +4;
+}
+
+/* Menu animation, sliding bar */
+
+
+.trigger{
+	/* invisible box */             width: 40px;
+	                                height: 30px;
+	position: fixed;                top: 50%;
+                                    left: 1.1cm;
+	transform:                      translate(0cm,0%);
+	z-index: +5;
+}
+
+.menu {
+	position: fixed;                top: 0%;
+                                    left: 0%;
+	transition-duration:            350ms;
+	transition-timing-function:     ease-in-out;
+	z-index: 0;
+}
+
+.trigger:hover .menu{
+	transform:                      translate(-0.35cm,0%);
+}
+
+.menuhooverdrag{
+	background-color: white;        width: 2.4cm;
+	                                height: 100vh;
+	position: fixed;                top: calc(-50vh + 15px);
+                                    left: -2.1cm;
+	transition-duration:            350ms;
+	transition-timing-function:     ease-in-out;
+	pointer-events:                 none;
+	/* pointer-events: none; si jamais je veux que la sourie arrete une fois plus dessus*/
+	z-index: -2;
+}
+
+.trigger:hover .menuhooverdrag{
+	transform:                      translate(1cm,0%);
+}
+
+
+/* this is for the click on to toggle the menu */
+
+
+.menutriger {
+	width: 50px;
+	height: 40px;
+    border:black;
+    outline:none;
+    display:block;
+    
+	background: transparent;
+	cursor:pointer;
+	
+	transition-duration:            350ms;
+	transition-timing-function:     ease-in-out;
+	
+	z-index: 0;
+	
+}
+
+
+.trigger:hover .menutriger{
+	transform:                      translate(-0.35cm,0%);
+}
+
+
+
+/*ALL OF THIS IS GENERATING THE SLIDING MENU AND THE NAVIGATION*/
+
+/*this is for the sliding white background*/
+
+.sliding_menu {
+	background-color: white;        width: 90%; 
+	                                height: 100vh;
+	position: fixed;                top: 0cm;
+                                    left: -90%;
+	transition-duration:            1000ms;
+	transition-timing-function:     ease-in-out;
+}
+
+.sliding_menu.on{
+	transform: 						translate(90%,0cm);
+}
+
+/*this is for the links*/
+
+.listwithoutborders{
+    padding: 0;
+    list-style-type: none;
+	/* clear list style */
+}
+
+
+.navitems{
+	position: absolute;             top: 50%;  
+                                    left: 50%; 
+	
+	font-size: 30px;
+	line-height: 60px;
+
+    transform: translate(-50%, -50%);
+	font-family: "myFirstFont";
+	color: black;
+}
+
+a, a:link, a:visited {
+  color: black;
+  text-decoration: none;
+  
+}
+
+/*this is for the sliding bars under the links */
+
+.invisibleside {
+	background: white;
+	height: 100%;
+	width: 200%;
+	position: absolute;				top: 0%;
+                                    left: -200%;
+	z-index: 4;
+}
+
+.trigger2{
+	display: inline-block;
+	background-color:#F62A2E;
+	height: 0.3cm;
+	width: 90%;
+	position: absolute;
+	left: -100%;
+	top: 55px;
+	
+	transition-duration:            1000ms;
+	transition-timing-function:     ease-in-out;
+	
+	z-index: -1;
+}
+
+.trigger2active:hover .trigger2{
+	transform:                      translate(100%,0%);
+}
+
+
+.trigger3{
+	display: inline-block;
+	background-color:#CCCCCC;
+	height: 0.3cm;
+	width: 99%;
+	position: absolute;
+	left: 0%;
+	top: 115px;
+	
+	transition-duration:            1000ms;
+	transition-timing-function:     ease-in-out;
+	
+	z-index: -1;
+}
+
+.trigger4{
+	display: inline-block;
+	background-color:#FF5154;
+	height: 0.3cm;
+	width: 99%;
+	position: absolute;
+	left: -100%;
+	top: 175px;
+	
+	transition-duration:            1000ms;
+	transition-timing-function:     ease-in-out;
+	
+	z-index: -1;
+}
+
+.trigger4active:hover .trigger4{
+	transform:                      translate(100%,0%);
+}
+
+
+
+
+
+

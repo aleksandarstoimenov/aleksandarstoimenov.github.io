@@ -1,0 +1,385 @@
+@charset "UTF-8";
+@font-face {
+  font-family: myFirstFont;
+  src: url(AvenirNextLTPro-Heavy.otf);
+}
+@font-face {
+	font-family: mySecondFont;
+	src: url(AvenirNextLTPro-Medium.otf);
+}
+
+/* INVISIBLE SCROLLBAR */
+
+body, html {
+	background-color: #f8f9f9;
+	margin: 0px;
+}
+
+html {
+    overflow: scroll;
+    overflow-x: hidden;
+}
+::-webkit-scrollbar {
+    width: 0px; 
+    background: transparent;
+}
+
+/* CSS GRID */
+
+.container {
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	grid-template-rows: auto;
+	grid-template-areas:
+		"a a a a a a a a a a a a"
+		"b b b b b b b b b b b b"
+		". . c c c c c c c c . ."
+}
+
+/* GRID ITEMS */
+
+.splitcolors{
+	height: 100vh;
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#4cffb5+0,4cffb5+50,f8f9f9+50,f8f9f9+100 */
+    background: #4cffb5; /* Old browsers */
+    background: -moz-linear-gradient(left, #fee600 0%, #fee600 50%, #f8f9f9 50%, #f8f9f9 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, #fee600 0%,#fee600 50%,#f8f9f9 50%,#f8f9f9 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, #fee600 0%,#fee600 50%,#f8f9f9 50%,#f8f9f9 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fee600', endColorstr='#f8f9f9',GradientType=1 ); /* IE6-9 */
+	
+	grid-area: a;
+}
+
+.chaise{
+	background-image: url( Homeimages/photofauteuil.jpg);
+	background-size: cover;
+    height: calc(100vh - 2.8cm);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	grid-area: b;
+}
+
+/*pour la première section de la première page*/
+
+.griditem1{
+	text-align: left;
+	grid-area: c;
+	/* word-wrap: break-word; si pas d espaces entre mots */
+}
+
+.imagedeco{
+	height: 10px;
+	transform: translate(0,1.5cm);
+}
+
+.student{
+	font-family: myFirstfont;
+	font-size: 60pt;
+	line-height: 60pt;
+	height: 60pt;
+	padding-bottom: 60px;
+	margin: none;
+}
+
+.soustitre{
+	font-family: myFirstfont;
+	font-size: 20pt;
+	padding: none;
+	margin: none;
+}
+
+.text{
+	font-family: mySecondfont;
+	font-size: 11pt;
+	color: #4F4F4F;
+	line-height: 18pt;
+	padding-bottom: 100px;
+}
+
+.yellowaccent{
+	color: #fee600;	
+}
+
+
+
+/* PAGE ITEMS */
+
+.bonjour {
+	position: absolute;             top: 50%;
+                                    left: 50%;
+    transform: translate(-50% , calc(-50% + 0.35cm));
+	font-family: myFirstfont;
+	font-size: 120pt;
+	line-height: 120pt;
+	text-rendering: geometricPrecision;
+}
+
+/* bouncing arrow */
+
+.ball {
+  margin-top: 50px;
+  border-radius: 0%;
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  position: absolute;             bottom: 1.6cm;  
+                                  left: calc(50% - 0.5cm); 
+  animation: bounce 1s infinite alternate;
+  -webkit-animation: bounce 1s infinite alternate;
+}
+@keyframes bounce {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-15px);
+  }
+}
+@-webkit-keyframes bounce {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-15px);
+  }
+}
+
+/*ALL OF THIS IS FOR NAVIGATION*/
+
+/* white sidebars */
+
+.sidebarleft{
+	background-color: white;        width: 1.4cm; 
+	                                height: 100vh;
+	position: fixed;                top: 0cm;
+                                    left: 0cm;
+	z-index: +3;
+}
+
+.sidebarright{
+	background-color: white;        width: 1.4cm; 
+	                                height: 100vh;
+	position: fixed;                top: 0cm;
+                                    right: 0cm;
+	z-index: +3;
+}
+
+.sidebartop{
+	background-color: white;        width: 100vw;
+	                                height: 1.4cm;
+	position: fixed;                top: 0cm;
+                                    right: 0cm;
+	z-index: +3;
+}
+
+.sidebarbottom{
+	background-color: white;        width: 100vw;
+	                                height: 1.4cm;
+	position: fixed;                bottom: 0cm;
+                                    right: 0cm;
+	z-index: +3;
+}
+
+
+
+/* NAVIGATION ICONS */
+
+
+
+.social {
+	position: fixed;                top: 50%;
+                                    left: calc(100% - 0.7cm);
+    transform:                      translate(-50%, -50%);
+	z-index: +4;
+}
+
+.logo {
+	position: fixed;                top: 0.5cm;
+	                                left: 1.4cm;
+	z-index: +6;
+}
+
+.wave {
+	
+	position: fixed;                right: 1.4cm;
+	                                top: 0.5cm;
+	z-index: +4;
+}
+
+/* Menu animation, sliding bar */
+
+
+.trigger{
+	/* invisible box */             width: 40px;
+	                                height: 30px;
+	position: fixed;                top: 50%;
+                                    left: 1.1cm;
+	transform:                      translate(0cm,0%);
+	z-index: +5;
+}
+
+.menu {
+	position: fixed;                top: 0%;
+                                    left: 0%;
+	transition-duration:            350ms;
+	transition-timing-function:     ease-in-out;
+	z-index: 0;
+}
+
+.trigger:hover .menu{
+	transform:                      translate(-0.35cm,0%);
+}
+
+.menuhooverdrag{
+	background-color: white;        width: 2.4cm;
+	                                height: 100vh;
+	position: fixed;                top: calc(-50vh + 15px);
+                                    left: -2.1cm;
+	transition-duration:            350ms;
+	transition-timing-function:     ease-in-out;
+	pointer-events:                 none;
+	/* pointer-events: none; si jamais je veux que la sourie arrete une fois plus dessus*/
+	z-index: -2;
+}
+
+.trigger:hover .menuhooverdrag{
+	transform:                      translate(1cm,0%);
+}
+
+
+/* this is for the click on to toggle the menu */
+
+
+.menutriger {
+	width: 50px;
+	height: 40px;
+    border:black;
+    outline:none;
+    display:block;
+    
+	background: transparent;
+	cursor:pointer;
+	
+	transition-duration:            350ms;
+	transition-timing-function:     ease-in-out;
+	
+	z-index: 0;
+	
+}
+
+
+.trigger:hover .menutriger{
+	transform:                      translate(-0.35cm,0%);
+}
+
+
+
+/*ALL OF THIS IS GENERATING THE SLIDING MENU AND THE NAVIGATION*/
+
+/*this is for the sliding white background*/
+
+.sliding_menu {
+	background-color: white;        width: 90%; 
+	                                height: 100vh;
+	position: fixed;                top: 0cm;
+                                    left: -90%;
+	transition-duration:            1000ms;
+	transition-timing-function:     ease-in-out;
+}
+
+.sliding_menu.on{
+	transform: 						translate(90%,0cm);
+}
+
+/*this is for the links*/
+
+.listwithoutborders{
+    padding: 0;
+    list-style-type: none;
+	/* clear list style */
+}
+
+
+.navitems {
+	position: absolute;             top: 50%;  
+                                    left: 50%; 
+	font-size: 30px;
+	line-height: 60px;
+    transform: translate(-50%, -50%);
+	font-family: "myFirstFont";
+	color: black;
+}
+
+a, a:link, a:visited {
+  color: black;
+  text-decoration: none;
+}
+
+/*this is for the sliding bars under the links */
+
+.invisibleside {
+	background: white;
+	height: 100%;
+	width: 200%;
+	position: absolute;				top: 0%;
+                                    left: -200%;
+	z-index: 4;
+}
+
+.trigger2 {
+	display: inline-block;
+	background-color:#FB7E80;
+	height: 0.3cm;
+	width: 100%;
+	position: absolute;
+	left: -101%;
+	top: 55px;	
+	transition-duration:            1000ms;
+	transition-timing-function:     ease-in-out;
+	z-index: -1;
+}
+
+.trigger2active:hover .trigger2{
+	transform:                      translate(101%,0%);
+}
+
+
+.trigger3 {
+	display: inline-block;
+	background-color:#CCCCCC;
+	height: 0.3cm;
+	width: 100%;
+	position: absolute;
+	left: -101%;
+	top: 115px;
+	transition-duration:            1000ms;
+	transition-timing-function:     ease-in-out;
+	z-index: -1;
+}
+
+.trigger3active:hover .trigger3 {
+	transform:                      translate(101%,0%);
+}
+
+.trigger4 {
+	display: inline-block;
+	background-color:#F62A2E;
+	height: 0.3cm;
+	width: 100%;
+	position: absolute;
+	left: -101%;
+	top: 175px;
+	transition-duration:            1000ms;
+	transition-timing-function:     ease-in-out;
+	z-index: -1;
+}
+
+.trigger4active:hover .trigger4 {
+	transform:                      translate(101%,0%);
+}
+
+
+
+
+
+
