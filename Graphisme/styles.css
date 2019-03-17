@@ -34,16 +34,26 @@ body {
 	grid-template-columns: repeat(12, 1fr);
 	grid-template-rows: auto;
 	grid-template-areas:
-		". . . a a a a a a . . ."
 		". . . b b b b b b . . ."
 		". . . c c c c c c . . ."
 		". . . d d d d d d . . ."
 		". . . e e e e e e . . ."
 		". . . g g f f f f . . ."
-		
+		". . . h h h h h h . . ."
+		". . . i i i i i i . . ."
+		". . . j j j j j j . . ."	
+		". . . k k k k k k . . ."		
 }
 
 /* GRID ITEMS */
+
+/* text en haut de page */
+
+.texteacceuil{
+	grid-area: b;
+	background-color: #F8F9F9;
+	height: 100vh;
+}
 
 .redaccent {
 	color: #fc5956;
@@ -57,15 +67,15 @@ body {
 	height: 60pt;
 	padding-bottom: 10px;
 	margin: none;
-	grid-area: a;
 }
 
 .gridtext1{
 	font-family: mySecondfont;
 	font-size: 12pt;
 	color: #4F4F4F;
-	grid-area: b;
 }
+
+/* images du folio */
 
 .titrefoscup {
 	font-family: myThirdfont;
@@ -73,7 +83,6 @@ body {
 	color: #4F4F4F;
 	grid-area: c;
 	text-align: center;
-	padding-top: 3cm;
 }
 
 .foscup{
@@ -88,14 +97,13 @@ body {
 	color: #4F4F4F;
 	grid-area: e;
 	text-align: center;
-	padding-top: 3cm;
+	padding-top: 2cm;
 }
 
 .chatsouris {
 	padding-top: 1cm;
 	grid-area: f;
 	width: 100%;
-	padding-bottom: 2cm;
 }
 
 .poeme {
@@ -108,6 +116,38 @@ body {
 	margin-bottom: auto;
 	margin-top: auto;
 	margin-right: 1cm;
+}
+
+.titrecouchsurfing {
+	font-family: myThirdfont;
+	font-size: 12pt;
+	color: #4F4F4F;
+	grid-area: h;
+	text-align: center;
+	padding-top: 2cm;
+}
+
+.couchsurfing {
+	padding-top: 0.5cm;
+	grid-area: i;
+	width: 100%;
+	padding-bottom: 2cm;
+}
+
+.titrebreuer {
+	font-family: myThirdfont;
+	font-size: 12pt;
+	color: #4F4F4F;
+	grid-area: j;
+	text-align: center;
+	padding-top: 2cm;
+}
+
+.breuer {
+	padding-top: 0.5cm;
+	grid-area: k;
+	width: 100%;
+	padding-bottom: 2cm;
 }
 
 
