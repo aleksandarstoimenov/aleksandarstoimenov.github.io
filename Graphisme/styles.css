@@ -34,7 +34,7 @@ body {
 	grid-template-columns: repeat(12, 1fr);
 	grid-template-rows: auto;
 	grid-template-areas:
-		". . . b b b b b b . . ."
+		". . b b b b b b b b . ."
 		". . . c c c c c c . . ."
 		". . . d d d d d d . . ."
 		". . . e e e e e e . . ."
@@ -53,6 +53,8 @@ body {
 	grid-area: b;
 	background-color: #F8F9F9;
 	height: 100vh;
+	margin: auto;
+	padding-top: 1.4cm;
 }
 
 .redaccent {
@@ -61,12 +63,16 @@ body {
 
 .griditem1{
 	font-family: "myFirstfont";
-	padding-top: 100px;
 	font-size: 60pt;
 	line-height: 60pt;
 	height: 60pt;
 	padding-bottom: 10px;
 	margin: none;
+}
+
+.sous-titre {
+	font-family: myFirstfont;
+	font-size: 20pt;
 }
 
 .gridtext1{

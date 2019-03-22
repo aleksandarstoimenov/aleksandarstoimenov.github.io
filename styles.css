@@ -51,7 +51,7 @@ html {
 }
 
 .chaise{
-	background-image: url( Homeimages/photofauteuil.jpg);
+	background-image: url( Homeimages/mdr.jpg);
 	background-size: cover;
     height: calc(100vh - 2.8cm);
 	background-repeat: no-repeat;
@@ -64,6 +64,8 @@ html {
 .griditem1{
 	text-align: left;
 	grid-area: c;
+	background-color: #f8f9f9;
+	height: 100vh;
 	/* word-wrap: break-word; si pas d espaces entre mots */
 }
 
@@ -77,7 +79,7 @@ html {
 	font-size: 60pt;
 	line-height: 60pt;
 	height: 60pt;
-	padding-bottom: 60px;
+	padding-bottom: 10px;
 	margin: none;
 }
 
