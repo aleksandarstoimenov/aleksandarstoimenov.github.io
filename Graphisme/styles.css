@@ -11,6 +11,18 @@
 	font-family: myThirdfont;
 	src: url(AvenirNextLTPro-Demi.otf);
 }
+@font-face {
+	font-family: myThirdFont;
+	src: url(AvenirNextLTPro-Italic.otf);
+}
+@font-face {
+	font-family: myFourthFont;
+	src: url(AvenirNextLTPro-MediumItalic.otf);
+}
+@font-face {
+	font-family: myFifthFont;
+	src: url(TimesNewRomanMTStd-Italic.otf);
+}
 
 /* INVISIBLE SCROLLBAR */
 
@@ -19,7 +31,7 @@ html {
     overflow-x: hidden;
 }
 ::-webkit-scrollbar {
-    width: 0px; 
+    width: 0px;
     background: transparent;
 }
 
@@ -41,8 +53,8 @@ body {
 		". . . g g f f f f . . ."
 		". . . h h h h h h . . ."
 		". . . i i i i i i . . ."
-		". . . j j j j j j . . ."	
-		". . . k k k k k k . . ."		
+		". . . j j j j j j . . ."
+		". . . k k k k k k . . ."
 }
 
 /* GRID ITEMS */
@@ -167,7 +179,7 @@ body {
 /* white sidebars */
 
 .sidebarleft{
-	background-color: white;        width: 1.4cm; 
+	background-color: white;        width: 1.4cm;
 	                                height: 100vh;
 	position: fixed;                top: 0cm;
                                     left: 0cm;
@@ -175,7 +187,7 @@ body {
 }
 
 .sidebarright{
-	background-color: white;        width: 1.4cm; 
+	background-color: white;        width: 1.4cm;
 	                                height: 100vh;
 	position: fixed;                top: 0cm;
                                     right: 0cm;
@@ -218,7 +230,7 @@ body {
 }
 
 .wave {
-	
+
 	position: fixed;                right: 1.4cm;
 	                                top: 0.5cm;
 	z-index: +4;
@@ -274,15 +286,15 @@ body {
     border:black;
     outline:none;
     display:block;
-    
+
 	background: transparent;
 	cursor:pointer;
-	
+
 	transition-duration:            350ms;
 	transition-timing-function:     ease-in-out;
-	
+
 	z-index: 0;
-	
+
 }
 
 
@@ -297,7 +309,7 @@ body {
 /*this is for the sliding white background*/
 
 .sliding_menu {
-	background-color: white;        width: 90%; 
+	background-color: white;        width: 90%;
 	                                height: 100vh;
 	position: fixed;                top: 0cm;
                                     left: -90%;
@@ -319,9 +331,9 @@ body {
 
 
 .navitems{
-	position: absolute;             top: 50%;  
-                                    left: 50%; 
-	
+	position: absolute;             top: 50%;
+                                    left: 50%;
+
 	font-size: 30px;
 	line-height: 60px;
 
@@ -333,7 +345,7 @@ body {
 a, a:link, a:visited {
   color: black;
   text-decoration: none;
-  
+
 }
 
 /*this is for the sliding bars under the links */
@@ -349,16 +361,16 @@ a, a:link, a:visited {
 
 .trigger2{
 	display: inline-block;
-	background-color:#F62A2E;
+	background-color:#f9cf4b;
 	height: 0.3cm;
 	width: 100%;
 	position: absolute;
 	left: -101%;
 	top: 55px;
-	
+
 	transition-duration:            1000ms;
 	transition-timing-function:     ease-in-out;
-	
+
 	z-index: -1;
 }
 
@@ -369,31 +381,31 @@ a, a:link, a:visited {
 
 .trigger3{
 	display: inline-block;
-	background-color:#CCCCCC;
+	background-color:#fc5956;
 	height: 0.3cm;
 	width: 100%;
 	position: absolute;
 	left: 0%;
 	top: 115px;
-	
+
 	transition-duration:            1000ms;
 	transition-timing-function:     ease-in-out;
-	
+
 	z-index: -1;
 }
 
 .trigger4{
 	display: inline-block;
-	background-color:#FF5154;
+	background-color:#5149ec;
 	height: 0.3cm;
 	width: 100%;
 	position: absolute;
 	left: -101%;
 	top: 175px;
-	
+
 	transition-duration:            1000ms;
 	transition-timing-function:     ease-in-out;
-	
+
 	z-index: -1;
 }
 
@@ -401,8 +413,28 @@ a, a:link, a:visited {
 	transform:                      translate(101%,0%);
 }
 
+/* contact */
+
+#addresse {
+  font-family: myThirdFont;
+  font-size: 12pt;
+  color: #767676;
+}
+#addresse:visited {
+  color: #767676;
+  padding-top: 0px;
+}
+#calltoaction{
+  font-family: myFifthFont;
+  font-size: 18pt;
+  padding-bottom: 0px;
+}
 
 
-
-
-
+.listwithoutborders2{
+    padding: 0;
+    list-style-type: none;
+    position: absolute;             bottom: 1.4cm;
+                                      left: 50%;
+    transform: translate(-50%, -50%);
+}
