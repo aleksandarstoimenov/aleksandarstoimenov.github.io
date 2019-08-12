@@ -43,6 +43,7 @@ body {
 
 .container {
 	display: grid;
+  padding-bottom: 3cm;
 	grid-template-columns: repeat(12, 1fr);
 	grid-template-rows: auto;
 	grid-template-areas:
@@ -371,7 +372,6 @@ body {
 	grid-area: l;
   width: 90%;
   padding: 10px;
-  padding-bottom: 4cm;
   cursor:pointer;
 }
 
