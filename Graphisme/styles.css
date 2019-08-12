@@ -42,19 +42,18 @@ body {
 /* CSS GRID */
 
 .container {
+  padding-bottom: 3cm;
 	display: grid;
 	grid-template-columns: repeat(12, 1fr);
 	grid-template-rows: auto;
 	grid-template-areas:
 		". . b b b b b b b b . ."
-		". . . c c c c c c . . ."
-		". . . d d d d d d . . ."
+		". . d d f f i i k k . ."
+		". . . . . . . . . . . ."
 		". . . e e e e e e . . ."
-		". . . g g f f f f . . ."
+		". . . g g . . . . . . ."
 		". . . h h h h h h . . ."
-		". . . i i i i i i . . ."
 		". . . j j j j j j . . ."
-		". . . k k k k k k . . ."
 }
 
 /* GRID ITEMS */
@@ -64,9 +63,12 @@ body {
 .texteacceuil{
 	grid-area: b;
 	background-color: #F8F9F9;
-	height: 100vh;
+	height: 1fr;
 	margin: auto;
-	padding-top: 1.4cm;
+  padding-top: 1.4cm;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 1.4cm;
 }
 
 .redaccent {
@@ -93,79 +95,160 @@ body {
 	color: #4F4F4F;
 }
 
+/* Pop Ups modal*/
+
+.bg-modal {
+	width: 100vw;
+  height: 100vh;
+  background-color: white;
+  position: fixed;
+  display: none;
+}
+
+.bg-modal.on {
+  display: flex;
+}
+
+.foscupmodal {
+	max-height: calc(100vh - 2.8cm);
+  max-width: calc(50vw - 1.4cm);
+  position: fixed;             top: 50%;
+                               left: 0%;
+  transform: translate(1.4cm , -50%);
+}
+
+.croix1 {
+  height: 15px;
+  position: fixed;             top: calc(1.4cm + 15px);
+                               right: 0%;
+  transform: translate(calc(-1.4cm - 15px) , -50%);
+  cursor:pointer;
+
+}
+
+.bg-modal1 {
+	width: 100vw;
+  height: 100vh;
+  background-color: white;
+  position: fixed;
+  display: none;
+}
+
+.bg-modal1.on {
+  display: flex;
+}
+
+.chatsourismodal {
+	max-height: calc(100vh - 2.8cm);
+  max-width: calc(50vw - 1.4cm);
+  position: fixed;             top: 50%;
+                               left: 0%;
+  transform: translate(1.4cm , -50%);
+}
+
+.croix2 {
+  height: 15px;
+  position: fixed;             top: calc(1.4cm + 15px);
+                               right: 0%;
+  transform: translate(calc(-1.4cm - 15px) , -50%);
+  cursor:pointer;
+
+}
+
+.bg-modal2 {
+	width: 100vw;
+  height: 100vh;
+  background-color: white;
+  position: fixed;
+  display: none;
+}
+
+.bg-modal2.on {
+  display: flex;
+}
+
+.couchsurfingmodal {
+	max-height: calc(100vh - 2.8cm);
+  max-width: calc(50vw - 1.4cm);
+  position: fixed;             top: 50%;
+                               left: 0%;
+  transform: translate(1.4cm , -50%);
+}
+
+.croix3 {
+  height: 15px;
+  position: fixed;             top: calc(1.4cm + 15px);
+                               right: 0%;
+  transform: translate(calc(-1.4cm - 15px) , -50%);
+  cursor:pointer;
+}
+
+.bg-modal3 {
+	width: 100vw;
+  height: 100vh;
+  background-color: white;
+  position: fixed;
+  display: none;
+}
+
+.bg-modal3.on {
+  display: flex;
+}
+
+.breuermodal {
+	max-height: calc(100vh - 2.8cm);
+  max-width: calc(50vw - 1.4cm);
+  position: fixed;             top: 50%;
+                               left: 0%;
+  transform: translate(1.4cm , -50%);
+}
+
+.croix4 {
+  height: 15px;
+  position: fixed;             top: calc(1.4cm + 15px);
+                               right: 0%;
+  transform: translate(calc(-1.4cm - 15px) , -50%);
+  cursor:pointer;
+}
+
+.T1 {
+	font-family: mySecondFont;
+  font-size: 16pt;
+  text-align: left;
+  position: fixed;             top: 50%;
+                               right: 0%;
+  transform: translate(-50% , -50%);
+}
+
+#C1 {
+	font-family: myThirdFont;
+  font-size: 11pt;
+}
+
 /* images du folio */
 
-.titrefoscup {
-	font-family: myThirdfont;
-	font-size: 12pt;
-	color: #4F4F4F;
-	grid-area: c;
-	text-align: center;
-}
-
 .foscup{
-	padding-top: 1cm;
 	grid-area: d;
-	width: 100%;
-}
-
-.titrechatsouris {
-	font-family: myThirdfont;
-	font-size: 12pt;
-	color: #4F4F4F;
-	grid-area: e;
-	text-align: center;
-	padding-top: 2cm;
+	width: 90%;
+  cursor: pointer;
 }
 
 .chatsouris {
-	padding-top: 1cm;
 	grid-area: f;
-	width: 100%;
-}
-
-.poeme {
-	font-family: mySecondfont;
-	font-size: 8pt;
-	color: #888787;
-	grid-area: g;
-	text-align: center;
-	margin-left: auto;
-	margin-bottom: auto;
-	margin-top: auto;
-	margin-right: 1cm;
-}
-
-.titrecouchsurfing {
-	font-family: myThirdfont;
-	font-size: 12pt;
-	color: #4F4F4F;
-	grid-area: h;
-	text-align: center;
-	padding-top: 2cm;
+	width: 90%;
+  cursor: pointer;
 }
 
 .couchsurfing {
-	padding-top: 0.5cm;
 	grid-area: i;
-	width: 100%;
-	padding-bottom: 2cm;
-}
-
-.titrebreuer {
-	font-family: myThirdfont;
-	font-size: 12pt;
-	color: #4F4F4F;
-	grid-area: j;
-	text-align: center;
-	padding-top: 2cm;
+	width: 90%;
+  cursor: pointer;
 }
 
 .breuer {
-	padding-top: 0.5cm;
 	grid-area: k;
-	width: 100%;
-	padding-bottom: 2cm;
+	width: 90%;
+  cursor: pointer;
 }
 
 
