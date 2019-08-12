@@ -48,8 +48,8 @@ body {
 	grid-template-rows: auto;
 	grid-template-areas:
 		". . b b b b b b b b . ."
-		". . d d f f i i k k . ."
-		". . . . . . . . . . . ."
+		". . d d s s i i k k . ."
+		". . l l r r f f t t . ."
 		". . . e e e e e e . . ."
 		". . . g g . . . . . . ."
 		". . . h h h h h h . . ."
@@ -113,8 +113,8 @@ body {
 	max-height: calc(100vh - 2.8cm);
   max-width: calc(50vw - 1.4cm);
   position: fixed;             top: 50%;
-                               left: 0%;
-  transform: translate(1.4cm , -50%);
+                               right: 50%;
+  transform: translate(0 , -50%);
 }
 
 .croix1 {
@@ -142,8 +142,8 @@ body {
 	max-height: calc(100vh - 2.8cm);
   max-width: calc(50vw - 1.4cm);
   position: fixed;             top: 50%;
-                               left: 0%;
-  transform: translate(1.4cm , -50%);
+                               right: 50%;
+  transform: translate(0 , -50%);
 }
 
 .croix2 {
@@ -171,8 +171,8 @@ body {
 	max-height: calc(100vh - 2.8cm);
   max-width: calc(50vw - 1.4cm);
   position: fixed;             top: 50%;
-                               left: 0%;
-  transform: translate(1.4cm , -50%);
+                               right: 50%;
+  transform: translate(0 , -50%);
 }
 
 .croix3 {
@@ -199,11 +199,123 @@ body {
 	max-height: calc(100vh - 2.8cm);
   max-width: calc(50vw - 1.4cm);
   position: fixed;             top: 50%;
-                               left: 0%;
-  transform: translate(1.4cm , -50%);
+                               right: 50%;
+  transform: translate(0 , -50%);
 }
 
 .croix4 {
+  height: 15px;
+  position: fixed;             top: calc(1.4cm + 15px);
+                               right: 0%;
+  transform: translate(calc(-1.4cm - 15px) , -50%);
+  cursor:pointer;
+}
+
+.bg-modal4 {
+	width: 100vw;
+  height: 100vh;
+  background-color: white;
+  position: fixed;
+  display: none;
+}
+
+.bg-modal4.on {
+  display: flex;
+}
+
+.moujinguesmodal {
+	max-height: calc(100vh - 2.8cm);
+  max-width: calc(50vw - 1.4cm);
+  position: fixed;             top: 50%;
+                               right: 50%;
+  transform: translate(0 , -50%);
+}
+
+.croix5 {
+  height: 15px;
+  position: fixed;             top: calc(1.4cm + 15px);
+                               right: 0%;
+  transform: translate(calc(-1.4cm - 15px) , -50%);
+  cursor:pointer;
+}
+
+.bg-modal5 {
+	width: 100vw;
+  height: 100vh;
+  background-color: white;
+  position: fixed;
+  display: none;
+}
+
+.bg-modal5.on {
+  display: flex;
+}
+
+.streetmodal {
+	max-height: calc(100vh - 2.8cm);
+  max-width: calc(50vw - 1.4cm);
+  position: fixed;             top: 50%;
+                               right: 50%;
+  transform: translate(0 , -50%);
+}
+
+.croix6 {
+  height: 15px;
+  position: fixed;             top: calc(1.4cm + 15px);
+                               right: 0%;
+  transform: translate(calc(-1.4cm - 15px) , -50%);
+  cursor:pointer;
+}
+
+.bg-modal6 {
+	width: 100vw;
+  height: 100vh;
+  background-color: white;
+  position: fixed;
+  display: none;
+}
+
+.bg-modal6.on {
+  display: flex;
+}
+
+.handsmodal {
+	max-height: calc(100vh - 2.8cm);
+  max-width: calc(50vw - 1.4cm);
+  position: fixed;             top: 50%;
+                               right: 50%;
+  transform: translate(0 , -50%);
+}
+
+.croix7 {
+  height: 15px;
+  position: fixed;             top: calc(1.4cm + 15px);
+                               right: 0%;
+  transform: translate(calc(-1.4cm - 15px) , -50%);
+  cursor:pointer;
+}
+
+.bg-modal7 {
+	width: 100vw;
+  height: 100vh;
+  background-color: white;
+  position: fixed;
+  display: none;
+}
+
+.bg-modal7.on {
+  display: flex;
+}
+
+.chambremodal {
+	max-height: calc(100vh - 2.8cm);
+  max-width: calc(50vw - 1.4cm);
+  position: fixed;             top: 50%;
+                               right: 50%;
+  transform: translate(0 , -50%);
+}
+
+.croix8 {
   height: 15px;
   position: fixed;             top: calc(1.4cm + 15px);
                                right: 0%;
@@ -216,8 +328,9 @@ body {
   font-size: 16pt;
   text-align: left;
   position: fixed;             top: 50%;
-                               right: 0%;
-  transform: translate(-50% , -50%);
+                               left: 50%;
+  transform: translate(1.4cm , -50%);
+  max-width: 7cm
 }
 
 #C1 {
@@ -235,8 +348,9 @@ body {
 
 .chatsouris {
 	grid-area: f;
-	width: 90%;
+	width: 85%;
   cursor: pointer;
+  padding-top: 10%;
 }
 
 .couchsurfing {
@@ -249,6 +363,33 @@ body {
 	grid-area: k;
 	width: 90%;
   cursor: pointer;
+}
+
+.moujingues {
+	grid-area: l;
+	width: 90%;
+  cursor: pointer;
+  padding-top: 10%;
+}
+
+.street {
+	grid-area: r;
+	width: 90%;
+  cursor: pointer;
+  padding-top: 10%;
+}
+
+.hands {
+	grid-area: s;
+	width: 90%;
+  cursor: pointer;
+}
+
+.chambre {
+	grid-area: t;
+	width: 90%;
+  cursor: pointer;
+  padding-top: 10%;
 }
 
 

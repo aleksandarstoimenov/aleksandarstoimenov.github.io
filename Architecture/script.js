@@ -64,3 +64,39 @@ $(function (){
   	$(".bg-modal4").toggleClass("on");
 	});
 });
+
+$(function (){
+	$(".puta").click(function(){
+  	$(".bg-modal5").toggleClass("on");
+	});
+});
+
+$(function (){
+	$(".croix6").click(function(){
+  	$(".bg-modal5").toggleClass("on");
+	});
+});
+
+$(function (){
+	$(".coupe").click(function(){
+  	$(".bg-modal6").toggleClass("on");
+	});
+});
+
+$(function (){
+	$(".croix7").click(function(){
+  	$(".bg-modal6").toggleClass("on");
+	});
+});
+
+$(function (){
+	$(".encore").click(function(){
+  	$(".bg-modal7").toggleClass("on");
+	});
+});
+
+$(function (){
+	$(".croix8").click(function(){
+  	$(".bg-modal7").toggleClass("on");
+	});
+});

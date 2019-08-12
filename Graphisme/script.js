@@ -52,3 +52,51 @@ $(function (){
   	$(".bg-modal3").toggleClass("on");
 	});
 });
+
+$(function (){
+	$(".moujingues").click(function(){
+  	$(".bg-modal4").toggleClass("on");
+	});
+});
+
+$(function (){
+	$(".croix5").click(function(){
+  	$(".bg-modal4").toggleClass("on");
+	});
+});
+
+$(function (){
+	$(".street").click(function(){
+  	$(".bg-modal5").toggleClass("on");
+	});
+});
+
+$(function (){
+	$(".croix6").click(function(){
+  	$(".bg-modal5").toggleClass("on");
+	});
+});
+
+$(function (){
+	$(".hands").click(function(){
+  	$(".bg-modal6").toggleClass("on");
+	});
+});
+
+$(function (){
+	$(".croix7").click(function(){
+  	$(".bg-modal6").toggleClass("on");
+	});
+});
+
+$(function (){
+	$(".chambre").click(function(){
+  	$(".bg-modal7").toggleClass("on");
+	});
+});
+
+$(function (){
+	$(".croix8").click(function(){
+  	$(".bg-modal7").toggleClass("on");
+	});
+});
