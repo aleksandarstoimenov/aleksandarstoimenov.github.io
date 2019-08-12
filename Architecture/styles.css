@@ -371,29 +371,29 @@ body {
 .plan2 {
 	grid-area: l;
   width: 90%;
-  padding: 10px;
+  padding-top: 10%;
   cursor:pointer;
 }
 
 .puta {
 	grid-area: v;
 	width: 90%;
-  padding: 10px;
   cursor:pointer;
+  padding-top: 10%;
 }
 
 .coupe {
 	grid-area: w;
 	width: 90%;
-  padding: 10px;
   cursor:pointer;
+  padding-top: 10%;
 }
 
 .encore {
 	grid-area: z;
 	width: 90%;
-  padding: 10px;
   cursor:pointer;
+  padding-top: 10%;
 }
 
 
