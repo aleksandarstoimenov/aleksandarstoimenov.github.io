@@ -1,0 +1,70 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <tab name="Init" type="InitTab" active="false" scrollx="20" scrolly="0" scale="0.9"></tab>
+  <tab name="New Tab" type="CommonTab" active="true" scrollx="-61.99999999999818" scrolly="320.0000000000001" scale="0.9">
+    <block xmlns="https://developers.google.com/blockly/xml" type="autoRotateCamera" id="}4zh@`##Z3qI:pW%8ugA" x="410" y="-70">
+      <field name="ON_OFF">ON</field>
+      <value name="SPEED">
+        <shadow type="math_number" id="x`]axCT3Nmfn4#=*[raS">
+          <field name="NUM">2</field>
+        </shadow>
+      </value>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="whenClicked" id="iiUX7@wbP@UaZO9~U7`V" inline="false" x="410" y="30">
+      <mutation xmlns="http://www.w3.org/1999/xhtml" adveventoptions="false" enableifmissed="false"></mutation>
+      <field name="X_RAY">FALSE</field>
+      <field name="DOUBLE_CLICK">FALSE</field>
+      <field name="LEFT_BUTTON">TRUE</field>
+      <field name="MIDDLE_BUTTON">TRUE</field>
+      <field name="RIGHT_BUTTON">TRUE</field>
+      <value name="VALUE">
+        <shadow type="objectList" id="zwwi?Q~OEkls3[]^tG.+">
+          <field name="FIELDNAME">Cube.003</field>
+        </shadow>
+      </value>
+      <statement name="DO">
+        <block type="zoomCameraToObject" id="9I|IK7p?LXzaJpdzzx:q">
+          <mutation xmlns="http://www.w3.org/1999/xhtml" whenfinishedslot="false"></mutation>
+          <value name="OBJECT">
+            <shadow type="objectList" id="m6b9a9mnC!Qrn}8!t=QP">
+              <field name="FIELDNAME">Cube.003</field>
+            </shadow>
+          </value>
+          <value name="DURATION">
+            <shadow type="math_number" id=",bKHLB,U8^W?`*:hr^UC">
+              <field name="NUM">1</field>
+            </shadow>
+          </value>
+        </block>
+      </statement>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="whenClicked" id="l#;/+jBk*,yp/7D#~w[;" inline="false" x="410" y="210">
+      <mutation xmlns="http://www.w3.org/1999/xhtml" adveventoptions="false" enableifmissed="false"></mutation>
+      <field name="X_RAY">FALSE</field>
+      <field name="DOUBLE_CLICK">FALSE</field>
+      <field name="LEFT_BUTTON">TRUE</field>
+      <field name="MIDDLE_BUTTON">TRUE</field>
+      <field name="RIGHT_BUTTON">TRUE</field>
+      <value name="VALUE">
+        <shadow type="objectList" id="@]a:d.mMwV_=KRf(.qjS">
+          <field name="FIELDNAME">Cube.003</field>
+        </shadow>
+      </value>
+      <statement name="DO">
+        <block type="zoomCameraToObject" id="_;J@u!n~3eZN4[im+z_m">
+          <mutation xmlns="http://www.w3.org/1999/xhtml" whenfinishedslot="false"></mutation>
+          <value name="OBJECT">
+            <shadow type="objectList" id="^6i@=$(vPuc!em6K*.GS">
+              <field name="FIELDNAME">Cube.003</field>
+            </shadow>
+          </value>
+          <value name="DURATION">
+            <shadow type="math_number" id="bWsa9cC6+,N?t-F:v-yQ">
+              <field name="NUM">1</field>
+            </shadow>
+          </value>
+        </block>
+      </statement>
+    </block>
+  </tab>
+  <editorsettings viewport-x="1134" viewport-y="37" viewport-w="768" viewport-h="459.5" viewport-hidden="false" toolbox-library-mode="false" toolbox-minimized-mode="false"></editorsettings>
+</xml>

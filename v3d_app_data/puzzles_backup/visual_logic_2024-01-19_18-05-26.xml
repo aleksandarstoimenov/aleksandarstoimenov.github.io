@@ -1,0 +1,40 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <tab name="Init" type="InitTab" active="false" scrollx="20" scrolly="0" scale="0.9"></tab>
+  <tab name="New Tab" type="CommonTab" active="true" scrollx="-63.926773169932176" scrolly="455.08804744707356" scale="0.8227024747918819">
+    <block xmlns="https://developers.google.com/blockly/xml" type="whenClicked" id="YeD.@zadK`L7R)XK.GE6" inline="false" x="230" y="-70">
+      <mutation xmlns="http://www.w3.org/1999/xhtml" adveventoptions="false" enableifmissed="false"></mutation>
+      <field name="X_RAY">FALSE</field>
+      <field name="DOUBLE_CLICK">FALSE</field>
+      <field name="LEFT_BUTTON">TRUE</field>
+      <field name="MIDDLE_BUTTON">TRUE</field>
+      <field name="RIGHT_BUTTON">TRUE</field>
+      <value name="VALUE">
+        <shadow type="objectList" id="EgcG=PSYKANIhgFlN{Nl">
+          <field name="FIELDNAME">Cube</field>
+        </shadow>
+      </value>
+      <statement name="DO">
+        <block type="tweenCameraExt" id="NHSH=?Nfg-L_IAs9G%?i">
+          <mutation xmlns="http://www.w3.org/1999/xhtml" whenfinishedslot="true"></mutation>
+          <field name="MOVEMENT_TYPE">SPHERICAL</field>
+          <value name="POSITION">
+            <block type="objectList" id="S_yvuTjvd[N%7|;^78.f">
+              <field name="FIELDNAME">camera_position_zoomed_in</field>
+            </block>
+          </value>
+          <value name="LOOKAT">
+            <block type="objectList" id="TM1cz^eC../Rd_CJ=9d8">
+              <field name="FIELDNAME">&lt;none&gt;</field>
+            </block>
+          </value>
+          <value name="DURATION">
+            <shadow type="math_number" id="ZZ1)S(^WAn{?iVxFYyu^">
+              <field name="NUM">1</field>
+            </shadow>
+          </value>
+        </block>
+      </statement>
+    </block>
+  </tab>
+  <editorsettings viewport-x="1134" viewport-y="37" viewport-w="768" viewport-h="459.5" viewport-hidden="false" toolbox-library-mode="false" toolbox-minimized-mode="false"></editorsettings>
+</xml>

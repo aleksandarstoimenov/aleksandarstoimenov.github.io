@@ -1,0 +1,244 @@
+@font-face {
+   font-family: GillSansBold;
+   src: url(fonts/GillSans-Bold.ttf);
+}
+
+@font-face {
+   font-family: GillSansSemiBold;
+   src: url(fonts/GillSans-SemiBold.ttf);
+}
+
+@font-face {
+   font-family: OpenSans;
+   src: url(fonts/OpenSans-Regular.ttf);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: auto;
+    width: auto;
+    overflow: hidden;
+    position: relative; /* Ensure relative positioning for absolute child elements */
+}
+
+/* PLE HEADER */
+
+#ple_header_background {
+    height: 95px;
+    background-color: #ffffff;
+    width: 100%;
+    position: absolute;
+    top: 35px;
+    left: 0;
+}
+
+#image_ple_1 {
+  height: 13px;
+  position: absolute;
+  top: 18px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#image_ple {
+  height: 95px;
+  position: absolute;
+  top: 83px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#ple_header_background_2 {
+    height: 35px;
+    background-color: #c6d2ed;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#pixel_dash{
+    height: 1px;
+    background-color: #e5e5e5;
+    width: 100%;
+    position: absolute;
+    top: 131px;
+    left: 0;
+}
+
+/* PLE HEADER */
+
+.flex-container {
+    display: flex;
+    flex-direction: row; /* or column, depending on your layout */
+    height: calc(100vh - 131px);
+    transform: translateY(132px);
+}
+
+#iframe-container {
+    flex: 1;
+    background-color: #f0f0f0;
+    position: relative;
+    height: 100%;
+}
+
+#text-container {
+    flex: 1;
+    height: 100%;
+    background-color: #ffffff;
+    position: relative;
+    height: 100%;
+    min-width: 500px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+#text-block {
+  min-width: 500px;
+  max-width: 500px;
+  transform: translateX(0);
+  transition: transform 0.5s ease;
+  animation-duration: 4s;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#popup_room {
+    font-family: 'GillSansSemiBold';
+    top: 50%;
+    max-width: 100%;
+    color: #282828;
+    font-size: 21px;
+    line-height: 21px;
+    padding: 0;
+    margin: 0;
+    font-kerning: auto;
+    max-width: 600px;
+}
+
+#popup_object {
+    font-family: 'GillSansBold';
+    max-width: 100%;
+    color: #C20016;
+    font-size: 35px;
+    line-height: auto;
+    padding-top: 5px;
+    margin: 0;
+    max-width: 600px;
+}
+
+#dividing_line{
+  height: 1px;
+  background-color: #e5e5e5;
+  width: 100%;
+  max-width: 600px;
+  margin-top: 40px;
+  margin-bottom: 50px;
+}
+
+#popup_locataire{
+  font-family: 'GillSansSemiBold';
+  max-width: 100%;
+  color: #C20016;
+  font-size: 18px;
+  line-height: 0px;
+  padding: 0;
+  margin: 0;
+  padding-top: 0px;
+  padding-bottom: 20px;
+  max-width: 600px;
+}
+
+#popup_paragraph {
+    font-family: 'OpenSans';
+    word-wrap: break-word;
+    max-width: 100%;
+    line-height: 31px;
+    padding: 0;
+    margin: 0;
+    padding-top: 5px;
+    max-width: 600px;
+    font-size: 17px;
+}
+
+#color_overwrite {
+    font-family: 'OpenSans';
+    color: #C20016;
+    font-size: 20px;
+    line-height: 0px;
+    padding: 0;
+    margin: 0;
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.popup-cross {
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.popup-cross::before,
+.popup-cross::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    background-color: black;
+}
+
+.popup-cross::before {
+    transform: rotate(45deg);
+    left: 50%;
+    top: 0;
+}
+
+.popup-cross::after {
+    transform: rotate(-45deg);
+    left: 50%;
+    bottom: 0;
+}
+
+
+@media (min-width: 1920px) {
+  #iframe-container {
+      flex: 2;
+  }
+
+  #text-container {
+      flex: 1;
+  }
+}
+
+@media (max-width: 900px) {
+    #iframe-container {
+        height: 100%;
+        width: 100vw;
+    }
+
+    #text-container {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: transform 0.5s ease;
+        animation-duration: 4s;
+    }
+
+    .popup-cross {
+        display: block;
+    }
+}

@@ -1,0 +1,21 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <tab name="Init" type="InitTab" active="false" scrollx="19.999999999999773" scrolly="0" scale="0.9"></tab>
+  <tab name="New Tab" type="CommonTab" active="true" scrollx="433.5888269235213" scrolly="-13.222694068723513" scale="0.5857568232861466">
+    <block xmlns="https://developers.google.com/blockly/xml" type="stopAnimation" id="I8k3zHtlsevFMU)qh*sz" x="-450" y="130">
+      <value name="VALUE">
+        <shadow type="animationList" id="huqJx%T%Ebv;y*I9Wb|(">
+          <field name="FIELDNAME">&lt;none&gt;</field>
+        </shadow>
+        <block type="getAnimations" id="_ix(ikI.b{rLW-UV|eU.">
+          <value name="OBJECTINPUT">
+            <shadow type="objectList" id="+rG!/(+yl_NAsLfud=R$">
+              <field name="FIELDNAME">&lt;none&gt;</field>
+            </shadow>
+            <block type="allObjectList" id="S~fDrj;,s}]F1$J770xg"></block>
+          </value>
+        </block>
+      </value>
+    </block>
+  </tab>
+  <editorsettings viewport-x="1081.3333129882812" viewport-y="29.333335876464844" viewport-w="431.333" viewport-h="318.5" viewport-hidden="true" toolbox-library-mode="false" toolbox-minimized-mode="false"></editorsettings>
+</xml>

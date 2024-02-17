@@ -1,124 +1,39 @@
-<!doctype html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <title>Untitled Document</title>
-    <link href="styles.css" rel="stylesheet" type="text/css">
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="description" content="Put some description here - remember about SEO!">
+    <title>Maquette - PLE</title>
+    <link rel="stylesheet" href="style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script type="text/javascript" src="script.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-
-<body>
-
-
-	<!-- CSS GRID -->
-
-	<div class="container">
-		<div class="splitcolors"></div>
-		<div class="chaise"></div>
-		<div class="griditem1">
-			<img src="Homeimages/lineart.png" alt="" class="imagedeco">
-			<p class="student yellowaccent" id="yellowaccent">STU <br>DENT.</p>
-			<p class="soustitre">
-				 Rendus <br> graphiques
-			<span class="yellowaccent">top!</span></p>
-			<p class="text">
-				Une approche horizontale du design vient avec ses avantages mais aussi ses inconvénients.
-				En effet, si le processus n’est pas scrupuleusement étudié et mis en place, il peut en résulter de mauvaises prises de décisions, jugées objectivement bonnes car elles sont le résultat de l’agréement  de la majorité des acteurs impliqués.
-				Ceci résulte du fait que les différentes propositions émises
-			</p>
-		</div>
-	</div>
-
-
-
-
-	<!-- ITEMS DISPLAYED ON THE PAGE -->
-
-	<div class="bonjour">
-			BON<span class="yellowaccent">-</span><br>JOUR
-	</div>
-	<div class="ball">
-		<img src="Homeimages/arrow.svg" alt="arrow pointing down the screen" height="30px">
-	</div>
-
-	<!-- SIDEBARS AND NAVIGATION ICONS -->
-
-
-	<!-- Objects used for the side bars -->
-
-
-	<div class="sidebarleft"></div>
-	<div class="sidebarright"></div>
-	<div class="sidebartop"></div>
-	<div class="sidebarbottom"></div>
-
-	<div class="social">
-			<img src="Homeimages/Social.png" alt="" height="100px">
-	</div>
-	<div class="logo">
-			<img src="Homeimages/Stoi logo" alt="logo" height="15px">
-	</div>
-	<div class="wave">
-			<img src="Homeimages/lineart.png" alt="" height="10px">
-	</div>
-
-
-	<!-- Hover over menu icon animation -->
-
-
-	<div class="trigger">
-		<div class="menu">
-			<img src="Homeimages/Menu.png" alt="" height="30px">
-		</div>
-		<div class="menutriger"></div>
-		<div class="menuhooverdrag"></div>
-	</div>
-
-
-	<!-- SLidding menu after click on menu, + the elements it contains -->
-
-
-	<div class="sliding_menu">
-		<nav class="navitems">
-			<ul class="listwithoutborders">
-				<li class="trigger2active">
-					<a href="index.html">Acceuil.</a>
-					<div class="trigger2"></div>
-				</li>
-				<li class="trigger3active">
-					<a href="Graphisme/graphisme.html">Graphisme.</a>
-					<div class="trigger3"></div>
-				</li>
-				<li class="trigger4active">
-					<a href="Architecture/architecture.html">Architecture.</a>
-					<div class="trigger4"></div>
-				</li>
-				<!-- Bare blanche mouse hoover -->
-				<div class="invisibleside"></div>
-			</ul>
-		</nav>
-    <address>
-      <ul class="listwithoutborders2">
-        <li id="calltoaction">
-        Contactez moi!
-        </li>
-        <li>
-          <a href="mailto:alekstoimenov97@gmail.com?subject=Proposition" id="addresse">alekstoimenov97@gmail.com</a>
-        </li>
-        <li>
-          <a href="tel:+32492458114" id="addresse">+32 492 45 81 14</a>
-        </li>
-      </ul>
-    </address>
-	</div>
-
-
-
-
-
-
-
-</body>
+    <script type="text/javascript" src="script.js"></script>
+  </head>
+  <body>
+    <div class="flex-container">
+      <div id="iframe-container">
+          <iframe id="my_iframe" src="ple_maquette_1.html"></iframe>
+      </div>
+      <div id="text-container">
+        <div id="text-block">
+          <div class="popup-cross" id="popup-cross"></div>
+          <h1 id="popup_room">Maquette PLE</h1>
+          <h1 id="popup_object">Interactive et explorable</h1>
+          <div id="dividing_line"></div>
+          <p id="popup_locataire">Navigation</p>
+          <p id="popup_paragraph"><span id="color_overwrite">•</span> Utiliser la souris pour tourner autour de la maquette.</p>
+          <p id="popup_paragraph"><span id="color_overwrite">•</span> Clickez sur une pièce pour zoomer.</p>
+          <p id="popup_paragraph"><span id="color_overwrite">•</span> Sélectionner un objet</p>
+          <div id="dividing_line"></div>
+          <p id="popup_locataire">Information</p>
+          <p id="popup_paragraph"><span id="color_overwrite">•</span> Une fois l'objet cliqué, des informations s'affichent.</p>
+        </div>
+      </div>
+    </div>
+    <div id="ple_header_background_2"></div>
+    <img src="images/ple_header_2.png" alt="" id="image_ple_1">
+    <div id="ple_header_background"></div>
+    <img src="images/ple_header.png" alt="" id="image_ple">
+    <div id="pixel_dash"></div>
+  </body>
 </html>

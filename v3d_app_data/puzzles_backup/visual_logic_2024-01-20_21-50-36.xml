@@ -1,0 +1,124 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <tab name="Init" type="InitTab" active="false" scrollx="19.999999999999773" scrolly="0" scale="0.9"></tab>
+  <tab name="New Tab" type="CommonTab" active="true" scrollx="219.4371643066405" scrolly="1666.164535522461" scale="1">
+    <variables xmlns="https://developers.google.com/blockly/xml">
+      <variable id="cVp9WPL#0mfYiOV)p#cV">Room 1 animation timer</variable>
+    </variables>
+    <block xmlns="https://developers.google.com/blockly/xml" type="allObjectList" id="m~`JZ5-;c#-OpnPudVNw" x="150" y="-1530"></block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="stopAnimation" id="]xTI3O`e8-):SL6%IQN#" x="10" y="-1430">
+      <value name="VALUE">
+        <shadow type="animationList" id="(rs7L.{3#vF1/pu/i!~=">
+          <field name="FIELDNAME">Cube.003</field>
+        </shadow>
+      </value>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="getAnimationFrame" id="@}1.Trm_1w;N~0:Efj_~" x="410" y="-1330">
+      <value name="VALUE">
+        <shadow type="animationList" id=";c=4H,gUq[K8d^x8t)5#">
+          <field name="FIELDNAME">Cube.003</field>
+        </shadow>
+      </value>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="variables_set" id="IMxGTI2veWy/}$$M[$s-" x="10" y="-1270">
+      <field name="VAR" id="cVp9WPL#0mfYiOV)p#cV">Room 1 animation timer</field>
+      <value name="VALUE">
+        <block type="math_number" id="y.-zhVe9{Mc%3KyYNeE[">
+          <field name="NUM">0</field>
+        </block>
+      </value>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="whenHovered" id="qPFhJc7nmruc;$*2+fq0" inline="false" x="10" y="-1190">
+      <mutation xmlns="http://www.w3.org/1999/xhtml" adveventoptions="false"></mutation>
+      <field name="X_RAY">FALSE</field>
+      <value name="VALUE">
+        <shadow type="objectList" id="2M;Ey.GDEE9+;x?0}2K4">
+          <field name="FIELDNAME">Cube.003</field>
+        </shadow>
+      </value>
+      <statement name="DO_OVER">
+        <block type="playAnimationAdv" id="X^0*Pv3HxlDHKz7;%){,">
+          <mutation xmlns="http://www.w3.org/1999/xhtml" advplaybackoptions="true" enablewhenfinished="false"></mutation>
+          <field name="REVERSED">FALSE</field>
+          <field name="LOOP">LoopOnce</field>
+          <value name="VALUE">
+            <shadow type="animationList" id="4J`2?F/N!u6rl!%dL(qH">
+              <field name="FIELDNAME">Cube.003</field>
+            </shadow>
+          </value>
+          <value name="FROM">
+            <shadow type="math_number" id="9tEP/+4yIq%U.v[]YuW1">
+              <field name="NUM">0</field>
+            </shadow>
+          </value>
+          <value name="TO">
+            <shadow type="math_number" id="zs:s^ze7`t)CFug(fLAR">
+              <field name="NUM">48</field>
+            </shadow>
+          </value>
+          <value name="SPEED">
+            <shadow type="math_number" id="rzY$UM$SmZVO*r:b|y-K">
+              <field name="NUM">2</field>
+            </shadow>
+          </value>
+        </block>
+      </statement>
+      <statement name="DO_OUT">
+        <block type="controls_if" id="0Lj0aFaG237-TSGs2d{3">
+          <mutation else="1"></mutation>
+          <value name="IF0">
+            <block type="isAnimationPlaying" id=")+82jGN.FWu)`[$w!iCC">
+              <value name="VALUE">
+                <shadow type="animationList" id="}w|U-O~6fR4xW6XMT=bU">
+                  <field name="FIELDNAME">Cube.003</field>
+                </shadow>
+              </value>
+            </block>
+          </value>
+          <statement name="DO0">
+            <block type="setAnimationSpeed" id="1T0fDM~6n[fn,AU!4JT.">
+              <field name="REVERSED">TRUE</field>
+              <value name="VALUE">
+                <shadow type="animationList" id="wmFOzN!tjqu?aae)xVG)">
+                  <field name="FIELDNAME">Cube.003</field>
+                </shadow>
+              </value>
+              <value name="SPEED">
+                <shadow type="math_number" id="J|r+A!H*l+YR%RUb$!,_">
+                  <field name="NUM">2</field>
+                </shadow>
+              </value>
+            </block>
+          </statement>
+          <statement name="ELSE">
+            <block type="playAnimationAdv" id="6t*T+#n:frDIzF90xZaI">
+              <mutation xmlns="http://www.w3.org/1999/xhtml" advplaybackoptions="true" enablewhenfinished="false"></mutation>
+              <field name="REVERSED">TRUE</field>
+              <field name="LOOP">LoopOnce</field>
+              <value name="VALUE">
+                <shadow type="animationList" id="}2*_zS8K/`|v-0.eX_sK">
+                  <field name="FIELDNAME">Cube.003</field>
+                </shadow>
+              </value>
+              <value name="FROM">
+                <shadow type="math_number" id="NH=x7LMR3)D}(8IP)W9)">
+                  <field name="NUM">0</field>
+                </shadow>
+              </value>
+              <value name="TO">
+                <shadow type="math_number" id="^S;kww;CyVhbo$93ZqXY">
+                  <field name="NUM">48</field>
+                </shadow>
+              </value>
+              <value name="SPEED">
+                <shadow type="math_number" id="5B?AA[kC@7tsLQl9)H~m">
+                  <field name="NUM">2</field>
+                </shadow>
+              </value>
+            </block>
+          </statement>
+        </block>
+      </statement>
+    </block>
+  </tab>
+  <editorsettings viewport-x="1081.3333129882812" viewport-y="29.333335876464844" viewport-w="431.333" viewport-h="318.5" viewport-hidden="false" toolbox-library-mode="false" toolbox-minimized-mode="false"></editorsettings>
+</xml>

@@ -1,0 +1,135 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <tab name="Init" type="InitTab" active="false" scrollx="20" scrolly="0" scale="0.9"></tab>
+  <tab name="New Tab" type="CommonTab" active="true" scrollx="66.22664022881509" scrolly="158.5555563854141" scale="0.6139132535407591">
+    <variables xmlns="https://developers.google.com/blockly/xml">
+      <variable id="g-xTXo)L:`o@Q1TbP^6o">am_I_zoomed_in?</variable>
+    </variables>
+    <block xmlns="https://developers.google.com/blockly/xml" type="whenHovered" id=".@3jiM%vh-IphZE*3AVt" inline="false" x="430" y="-490">
+      <mutation xmlns="http://www.w3.org/1999/xhtml" adveventoptions="false"></mutation>
+      <field name="X_RAY">FALSE</field>
+      <value name="VALUE">
+        <shadow type="objectList" id="ctiPHrDSZ;*n4zn*gn39">
+          <field name="FIELDNAME">Plane</field>
+        </shadow>
+      </value>
+      <statement name="DO_OVER">
+        <block type="playAnimationAdv" id="qw2g::PkOrFqJ@]k*6x9">
+          <mutation xmlns="http://www.w3.org/1999/xhtml" advplaybackoptions="true" enablewhenfinished="false"></mutation>
+          <field name="REVERSED">FALSE</field>
+          <field name="LOOP">LoopPingPong</field>
+          <value name="VALUE">
+            <shadow type="animationList" id="~Z`16#9d.IL)P2?MHNBf">
+              <field name="FIELDNAME">Plane</field>
+            </shadow>
+          </value>
+          <value name="FROM">
+            <shadow type="math_number" id="[MnK^h]9zZ/%cjvc[wG$">
+              <field name="NUM">0</field>
+            </shadow>
+          </value>
+          <value name="TO">
+            <shadow type="math_number" id="6Y(d[Lmkz/zJU*j(hB?L">
+              <field name="NUM">25</field>
+            </shadow>
+          </value>
+          <value name="SPEED">
+            <shadow type="math_number" id="J,|Q4Bvk~]n#^QgsdDM*">
+              <field name="NUM">1</field>
+            </shadow>
+          </value>
+        </block>
+      </statement>
+      <statement name="DO_OUT">
+        <block type="stopAnimation" id="t`hlGGTeqH9z=P3()v:x">
+          <value name="VALUE">
+            <shadow type="animationList" id="W=qjC1fUxCA5/O?)yCZd">
+              <field name="FIELDNAME">Plane</field>
+            </shadow>
+          </value>
+        </block>
+      </statement>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="whenClicked" id="YeD.@zadK`L7R)XK.GE6" inline="false" x="410" y="230">
+      <mutation xmlns="http://www.w3.org/1999/xhtml" adveventoptions="false" enableifmissed="false"></mutation>
+      <field name="X_RAY">FALSE</field>
+      <field name="DOUBLE_CLICK">FALSE</field>
+      <field name="LEFT_BUTTON">TRUE</field>
+      <field name="MIDDLE_BUTTON">TRUE</field>
+      <field name="RIGHT_BUTTON">TRUE</field>
+      <value name="VALUE">
+        <shadow type="objectList" id="EgcG=PSYKANIhgFlN{Nl">
+          <field name="FIELDNAME">Cube</field>
+        </shadow>
+      </value>
+      <statement name="DO">
+        <block type="tweenCameraExt" id="NHSH=?Nfg-L_IAs9G%?i">
+          <mutation xmlns="http://www.w3.org/1999/xhtml" whenfinishedslot="true"></mutation>
+          <field name="MOVEMENT_TYPE">LINEAR</field>
+          <value name="POSITION">
+            <block type="objectList" id="S_yvuTjvd[N%7|;^78.f">
+              <field name="FIELDNAME">camera_position_zoomed_in</field>
+            </block>
+          </value>
+          <value name="LOOKAT">
+            <block type="objectList" id="TM1cz^eC../Rd_CJ=9d8">
+              <field name="FIELDNAME">Scene</field>
+            </block>
+          </value>
+          <value name="DURATION">
+            <shadow type="math_number" id="ZZ1)S(^WAn{?iVxFYyu^">
+              <field name="NUM">1</field>
+            </shadow>
+          </value>
+        </block>
+      </statement>
+      <next>
+        <block type="variables_set" id="qcS-JFg%EF35](8V)u@N">
+          <field name="VAR" id="g-xTXo)L:`o@Q1TbP^6o">am_I_zoomed_in?</field>
+          <value name="VALUE">
+            <block type="text" id="/4Ep$!R|!U6bNmwCVY*w">
+              <field name="TEXT">zoomedin</field>
+            </block>
+          </value>
+        </block>
+      </next>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="variables_get" id="~Mssp5le:?rKV?0fNt2_" x="210" y="430">
+      <field name="VAR" id="g-xTXo)L:`o@Q1TbP^6o">am_I_zoomed_in?</field>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="whenClicked" id="zCZYQO?e%l)K([%+(x~;" inline="false" x="390" y="550">
+      <mutation xmlns="http://www.w3.org/1999/xhtml" adveventoptions="false" enableifmissed="false"></mutation>
+      <field name="X_RAY">FALSE</field>
+      <field name="DOUBLE_CLICK">FALSE</field>
+      <field name="LEFT_BUTTON">TRUE</field>
+      <field name="MIDDLE_BUTTON">TRUE</field>
+      <field name="RIGHT_BUTTON">TRUE</field>
+      <value name="VALUE">
+        <shadow type="objectList" id="2I,:11FO20rU7Zq=E5YI">
+          <field name="FIELDNAME">Background</field>
+        </shadow>
+      </value>
+      <statement name="DO">
+        <block type="tweenCameraExt" id="SF|^jSp]BZ^|hwW,Rk;5">
+          <mutation xmlns="http://www.w3.org/1999/xhtml" whenfinishedslot="true"></mutation>
+          <field name="MOVEMENT_TYPE">LINEAR</field>
+          <value name="POSITION">
+            <block type="objectList" id="tyGz-r?3MaF%)rQI?HCu">
+              <field name="FIELDNAME">camera_position_zoomed_out</field>
+            </block>
+          </value>
+          <value name="LOOKAT">
+            <block type="objectList" id="{e_|SAB3aflWA=ky6;lw">
+              <field name="FIELDNAME">Scene</field>
+            </block>
+          </value>
+          <value name="DURATION">
+            <shadow type="math_number" id="j}-IZEr):29~;.ft/c@@">
+              <field name="NUM">1</field>
+            </shadow>
+          </value>
+        </block>
+      </statement>
+    </block>
+  </tab>
+  <editorsettings viewport-x="1134" viewport-y="37" viewport-w="768" viewport-h="459.5" viewport-hidden="false" toolbox-library-mode="false" toolbox-minimized-mode="false"></editorsettings>
+</xml>
