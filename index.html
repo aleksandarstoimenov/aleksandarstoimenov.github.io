@@ -10,13 +10,38 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   </head>
   <body>
+
+    <!--  FLEX  -->
+
     <div class="flex-container">
+
+      <!--  IFRAME  -->
+
       <div id="iframe-container">
           <iframe id="my_iframe" src="ple_maquette_1.html"></iframe>
       </div>
+
+      <!-- SLIDING MENU -->
+
       <div id="text-container">
         <div id="text-block">
-          <div class="popup-cross" id="popup-cross"></div>
+          <h1 id="popup_object">Interactive et explorable</h1>
+          <div id="dividing_line"></div>
+          <p id="popup_locataire">Navigation</p>
+          <p id="popup_paragraph"><span id="color_overwrite">•</span> Utiliser la souris pour tourner autour de la maquette.</p>
+          <p id="popup_paragraph"><span id="color_overwrite">•</span> Clickez sur une pièce pour zoomer.</p>
+          <p id="popup_paragraph"><span id="color_overwrite">•</span> Sélectionner un objet</p>
+          <div id="dividing_line"></div>
+          <p id="popup_locataire">Information</p>
+          <p id="popup_paragraph"><span id="color_overwrite">•</span> Une fois l'objet cliqué, des informations s'affichent.</p>
+        </div>
+      </div>
+
+      <!-- PHONE SLIDING MENU -->
+
+      <div id="text-container-phone">
+        <div class="popup-cross" id="popup-cross"></div>
+        <div id="text-block-phone">
           <h1 id="popup_room">Maquette PLE</h1>
           <h1 id="popup_object">Interactive et explorable</h1>
           <div id="dividing_line"></div>
@@ -30,6 +55,9 @@
         </div>
       </div>
     </div>
+
+    <!-- LOADING SCREEN -->
+
     <div id="loading-screen">
       <div id="loading-icon">
         <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
@@ -40,12 +68,15 @@
       Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum.
       Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum.
       Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum.
-      Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum.</p>
+      </p>
       <img src="images/click-icon.png" alt="" id="click-icon">
       <img src="images/hover-icon.png" alt="" id="hover-icon">
       <img src="images/start-button-hovered.png" alt="" id="start-button-hovered">
       <img src="images/start-button.png" alt="" id="start-button">
     </div>
+
+    <!-- HEADER -->
+
     <div id="ple_header_background_2"></div>
     <img src="images/ple_header_2.png" alt="" id="image_ple_1">
     <div id="ple_header_background"></div>

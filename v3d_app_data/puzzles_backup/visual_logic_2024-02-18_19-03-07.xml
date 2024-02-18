@@ -35,7 +35,7 @@
       </statement>
     </block>
   </tab>
-  <tab name="New Tab" type="CommonTab" active="true" scrollx="-4254.913440324668" scrolly="626.9928800319883" scale="0.7462153966366275">
+  <tab name="New Tab" type="CommonTab" active="true" scrollx="-6358.294616699219" scrolly="1063.0589599609375" scale="1">
     <variables xmlns="https://developers.google.com/blockly/xml">
       <variable id="V;R6qf}0gq6K:p/Q3TzO">animations_except_garden</variable>
       <variable id="J6oW`R0+@yA6=I_KCzo)">furniture_triggers</variable>
@@ -951,80 +951,61 @@
                     </shadow>
                   </value>
                   <next>
-                    <block type="setHTMLElemAttribute" id=":ju$8A8clNo(.uBNDAD%">
-                      <field name="ATTRIBUTE">innerHTML</field>
+                    <block type="setHTMLElemStyle" id="*pvyNKMF,h.pmb;KA*#0">
+                      <field name="PROPERTY">transform</field>
                       <field name="PARENT">TRUE</field>
                       <value name="VALUE">
-                        <shadow type="text" id="=/.t_$bDbY~/vo^du{Cl">
-                          <field name="TEXT"></field>
+                        <shadow type="text" id="}Bs^832a[`kc93{%POcx">
+                          <field name="TEXT">translate(300%, -50%)</field>
                         </shadow>
-                        <block type="variables_get" id="QX[[1A92af;koKZ^R-YB">
-                          <field name="VAR" id="v.Xf?aMII{Cz9uMHLfYu">paragraph_text</field>
-                        </block>
                       </value>
                       <value name="ID">
-                        <shadow type="text" id="adSVR?5b@i6_a@35.%lo">
-                          <field name="TEXT">text-block-phone</field>
+                        <shadow type="text" id="HHOvite_jMYLL%_c`|79">
+                          <field name="TEXT">text-block</field>
                         </shadow>
                       </value>
                       <next>
-                        <block type="setHTMLElemStyle" id="*pvyNKMF,h.pmb;KA*#0">
-                          <field name="PROPERTY">transform</field>
-                          <field name="PARENT">TRUE</field>
+                        <block type="setTimeout" id="Y*Q^(D,MMWrx|()1%=5=">
                           <value name="VALUE">
-                            <shadow type="text" id="}Bs^832a[`kc93{%POcx">
-                              <field name="TEXT">translate(300%, -50%)</field>
+                            <shadow type="math_number" id="+TaUR6mT#L0Z3*ewhQG[">
+                              <field name="NUM">0.4</field>
                             </shadow>
                           </value>
-                          <value name="ID">
-                            <shadow type="text" id="HHOvite_jMYLL%_c`|79">
-                              <field name="TEXT">text-block</field>
-                            </shadow>
-                          </value>
-                          <next>
-                            <block type="setTimeout" id="Y*Q^(D,MMWrx|()1%=5=">
+                          <statement name="DO">
+                            <block type="setHTMLElemAttribute" id="tBF{tejW}BF,tFFT!m;g">
+                              <field name="ATTRIBUTE">innerHTML</field>
+                              <field name="PARENT">TRUE</field>
                               <value name="VALUE">
-                                <shadow type="math_number" id="+TaUR6mT#L0Z3*ewhQG[">
-                                  <field name="NUM">0.4</field>
+                                <shadow type="text" id="=/.t_$bDbY~/vo^du{Cl">
+                                  <field name="TEXT"></field>
+                                </shadow>
+                                <block type="variables_get" id="KgJN#AYG}p_J+A^x@/pw">
+                                  <field name="VAR" id="v.Xf?aMII{Cz9uMHLfYu">paragraph_text</field>
+                                </block>
+                              </value>
+                              <value name="ID">
+                                <shadow type="text" id="9/u`wBdluHL^cF^TZ4iA">
+                                  <field name="TEXT">text-block</field>
                                 </shadow>
                               </value>
-                              <statement name="DO">
-                                <block type="setHTMLElemAttribute" id="tBF{tejW}BF,tFFT!m;g">
-                                  <field name="ATTRIBUTE">innerHTML</field>
+                              <next>
+                                <block type="setHTMLElemStyle" id="#v#c1k8x7{4Yds4!!s^P">
+                                  <field name="PROPERTY">transform</field>
                                   <field name="PARENT">TRUE</field>
                                   <value name="VALUE">
-                                    <shadow type="text" id="=/.t_$bDbY~/vo^du{Cl">
-                                      <field name="TEXT"></field>
+                                    <shadow type="text" id="F5l%WK};-Z_N87VkKhD@">
+                                      <field name="TEXT">translate(-50%, -50%)</field>
                                     </shadow>
-                                    <block type="variables_get" id="KgJN#AYG}p_J+A^x@/pw">
-                                      <field name="VAR" id="v.Xf?aMII{Cz9uMHLfYu">paragraph_text</field>
-                                    </block>
                                   </value>
                                   <value name="ID">
-                                    <shadow type="text" id="9/u`wBdluHL^cF^TZ4iA">
+                                    <shadow type="text" id="?K9eawu8Tx~Xo{YYx(v;">
                                       <field name="TEXT">text-block</field>
                                     </shadow>
                                   </value>
-                                  <next>
-                                    <block type="setHTMLElemStyle" id="#v#c1k8x7{4Yds4!!s^P">
-                                      <field name="PROPERTY">transform</field>
-                                      <field name="PARENT">TRUE</field>
-                                      <value name="VALUE">
-                                        <shadow type="text" id="F5l%WK};-Z_N87VkKhD@">
-                                          <field name="TEXT">translate(-50%, -50%)</field>
-                                        </shadow>
-                                      </value>
-                                      <value name="ID">
-                                        <shadow type="text" id="?K9eawu8Tx~Xo{YYx(v;">
-                                          <field name="TEXT">text-block</field>
-                                        </shadow>
-                                      </value>
-                                    </block>
-                                  </next>
                                 </block>
-                              </statement>
+                              </next>
                             </block>
-                          </next>
+                          </statement>
                         </block>
                       </next>
                     </block>
@@ -1808,7 +1789,7 @@
       <value name="ARG1">
         <block type="textMultiline" id="#ahfE;^Kg3N0.VxU5C/p">
           <field name="HIGHLIGHT_MODE">html</field>
-          <field name="TEXT" editor-height="14" editor-width="1927.9401895499418">          &lt;h1 id="popup_room"&gt;Séjour&lt;/h1&gt;&amp;#10;          &lt;h1 id="popup_object"&gt;Fenètres&lt;/h1&gt;&amp;#10;          &lt;div id="dividing_line"&gt;&lt;/div&gt;&amp;#10;          &lt;p id="popup_locataire"&gt;Locataire&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;•&lt;/span&gt; Remplacement des vitres brisées par sa faute.&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;•&lt;/span&gt; Nettoyage régulier des vitres accessibles.&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;•&lt;/span&gt; Remplacement des vitres brisées par sa faute.&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;•&lt;/span&gt; Réfection des griffes faites aux vitres et aux châssis.&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;•&lt;/span&gt; Maintenir libre écoulement des eaux de condensation des châssis, sous peine de voir sa responsabilité engagée pour les dégâts en résultant (humidité, mérules…).&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;•&lt;/span&gt; Réfection des griffes faites aux vitres et aux châssis. En l'absence de VMC  : aération quotidienne des locaux.&lt;/p&gt;&amp;#10;          &lt;div id="dividing_line"&gt;&lt;/div&gt;&amp;#10;          &lt;p id="popup_locataire"&gt;Propriétaire&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;•&lt;/span&gt; Réparations nécessaires, autres que locatives, et remplacement.&lt;/p&gt;</field>
+          <field name="TEXT" editor-height="14" editor-width="1927.9401895499418">          &lt;div class="popup-cross" id="popup-cross"&gt;&lt;/div&gt;&amp;#10;          &lt;h1 id="popup_room"&gt;Séjour&lt;/h1&gt;&amp;#10;          &lt;h1 id="popup_object"&gt;Fenètres&lt;/h1&gt;&amp;#10;          &lt;div id="dividing_line"&gt;&lt;/div&gt;&amp;#10;          &lt;p id="popup_locataire"&gt;Locataire&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;•&lt;/span&gt; Remplacement des vitres brisées par sa faute.&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;•&lt;/span&gt; Nettoyage régulier des vitres accessibles.&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;•&lt;/span&gt; Remplacement des vitres brisées par sa faute.&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;•&lt;/span&gt; Réfection des griffes faites aux vitres et aux châssis.&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;•&lt;/span&gt; Maintenir libre écoulement des eaux de condensation des châssis, sous peine de voir sa responsabilité engagée pour les dégâts en résultant (humidité, mérules…).&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;•&lt;/span&gt; Réfection des griffes faites aux vitres et aux châssis. En l'absence de VMC  : aération quotidienne des locaux.&lt;/p&gt;&amp;#10;          &lt;div id="dividing_line"&gt;&lt;/div&gt;&amp;#10;          &lt;p id="popup_locataire"&gt;Propriétaire&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;•&lt;/span&gt; Réparations nécessaires, autres que locatives, et remplacement.&lt;/p&gt;</field>
         </block>
       </value>
       <next>
@@ -1825,7 +1806,7 @@
           <value name="ARG1">
             <block type="textMultiline" id="EO5ynGs7xNDj^!FN[Q3V">
               <field name="HIGHLIGHT_MODE">html</field>
-              <field name="TEXT" editor-height="17" editor-width="806.2076162696285">          &lt;h1 id="popup_room"&gt;Séjour&lt;/h1&gt;&amp;#10;          &lt;h1 id="popup_object"&gt;Plafonnier, prise de courant, interrupteur.&lt;/h1&gt;&amp;#10;          &lt;div id="dividing_line"&gt;&lt;/div&gt;&amp;#10;          &lt;p id="popup_locataire"&gt;Locataire&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;•&lt;/span&gt; Remise en état des dégâts suite au placement des luminaires. &lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;•&lt;/span&gt; Le locataire est tenu de laisser aux points lumineux des fils en attente d'une longueur de plus ou moins 10 cm. S'il coupe les fils au raz du plafond ou du mur, il sera tenu au remplacement des fils dans la gaine.&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;•&lt;/span&gt; Le locataire doit veiller à entretenir l'installation électrique et ne pas surcharger celle-ci en tout ou en partie.&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;•&lt;/span&gt; Remplacement des ampoules, tubes d'éclairage, des interrupteurs, soquets et des prises de courant cassés, même suite un usage normal.&lt;/p&gt;&amp;#10;          &lt;div id="dividing_line"&gt;&lt;/div&gt;&amp;#10;          &lt;p id="popup_locataire"&gt;Propriétaire&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;•&lt;/span&gt; Tous remplacements des câblages pour tous services sauf si causés par des modifications du locataire. &lt;/p&gt;</field>
+              <field name="TEXT" editor-height="3" editor-width="368.44309486075963">          &lt;div class="popup-cross" id="popup-cross"&gt;&lt;/div&gt;&amp;#10;          &lt;h1 id="popup_room"&gt;Séjour&lt;/h1&gt;&amp;#10;          &lt;h1 id="popup_object"&gt;Plafonnier, prise de courant, interrupteur.&lt;/h1&gt;&amp;#10;          &lt;div id="dividing_line"&gt;&lt;/div&gt;&amp;#10;          &lt;p id="popup_locataire"&gt;Locataire&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;•&lt;/span&gt; Remise en état des dégâts suite au placement des luminaires. &lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;•&lt;/span&gt; Le locataire est tenu de laisser aux points lumineux des fils en attente d'une longueur de plus ou moins 10 cm. S'il coupe les fils au raz du plafond ou du mur, il sera tenu au remplacement des fils dans la gaine.&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;•&lt;/span&gt; Le locataire doit veiller à entretenir l'installation électrique et ne pas surcharger celle-ci en tout ou en partie.&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;•&lt;/span&gt; Remplacement des ampoules, tubes d'éclairage, des interrupteurs, soquets et des prises de courant cassés, même suite un usage normal.&lt;/p&gt;&amp;#10;          &lt;div id="dividing_line"&gt;&lt;/div&gt;&amp;#10;          &lt;p id="popup_locataire"&gt;Propriétaire&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;•&lt;/span&gt; Tous remplacements des câblages pour tous services sauf si causés par des modifications du locataire. &lt;/p&gt;</field>
             </block>
           </value>
         </block>

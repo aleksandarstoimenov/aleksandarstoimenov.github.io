@@ -35,14 +35,11 @@
       </statement>
     </block>
   </tab>
-  <tab name="New Tab" type="CommonTab" active="true" scrollx="-4254.913440324668" scrolly="626.9928800319883" scale="0.7462153966366275">
+  <tab name="New Tab" type="CommonTab" active="true" scrollx="-4239.828918457031" scrolly="725.2351684570312" scale="1">
     <variables xmlns="https://developers.google.com/blockly/xml">
       <variable id="V;R6qf}0gq6K:p/Q3TzO">animations_except_garden</variable>
       <variable id="J6oW`R0+@yA6=I_KCzo)">furniture_triggers</variable>
       <variable id="dvX?DWjvdey/WczArs@m">room_animation_triggers</variable>
-      <variable id="U~)`(c^[rvq;pQ31M{,t">What is the current camera?</variable>
-      <variable id="7UegB-]uhENyB]8saN4z">Which animation to play? (all rooms - the current one)</variable>
-      <variable id="MVm!|Ti{MzL[z(LZ]`O,">Is there a wall? (zoom out)</variable>
       <variable id="60tdU/T30Qk7^c|n(d:B">Which room trigger?</variable>
       <variable id=")!VwqeCAsCHcRL_{y7:a">Which animation to play? (all the rooms - current one)</variable>
       <variable id="h[29:Bn6p!}!}sW%VnnG">Which room does the camera look to?</variable>
@@ -50,6 +47,9 @@
       <variable id="29E;W`tSLl^,sr$o+]O|">Camera selector zoom in</variable>
       <variable id="!D9sqt2x;o1nG=a:3gh8">Is there a wall? (zoom in)</variable>
       <variable id="ksvD3n81F4eg*~qwdV,e">Which room to reverse hover animation?</variable>
+      <variable id="U~)`(c^[rvq;pQ31M{,t">What is the current camera?</variable>
+      <variable id="7UegB-]uhENyB]8saN4z">Which animation to play? (all rooms - the current one)</variable>
+      <variable id="MVm!|Ti{MzL[z(LZ]`O,">Is there a wall? (zoom out)</variable>
       <variable id="iyuzO7wPce%i!#VRa!.$">object_clicked</variable>
       <variable id="v.Xf?aMII{Cz9uMHLfYu">paragraph_text</variable>
       <variable id="+X/(IbEgDFZlRBeEfdlP">room_animation_duration</variable>
@@ -58,6 +58,7 @@
       <variable id="W|V-M|WqX]y(D7sKQh$C">camera_animation_duration</variable>
       <variable id="KNg=ZRDon@m+J4F;c`^5">Which room is hoovered?</variable>
       <variable id="cp+/$S}6Te)WAeiNfrcH">Which room to trigger hoover animation?</variable>
+      <variable id="grZ/3NJG/q({L3bP}-iE">is_the_room_clicked?</variable>
       <variable id="+gDK6YF-G!-xADCZ5[}J">animations_except_study_room</variable>
       <variable id=":`=hU#np!zKIqRl,TMcW">room_animation_frame</variable>
       <variable id=".Qv7z%l?FR3pGgg*VHRs">animations_except_living_room</variable>
@@ -538,8 +539,13 @@
         <block type="lists_create_with" id="76!WC@#Wzh5y|4G)d@6v">
           <mutation items="3"></mutation>
           <value name="ADD0">
-            <block type="groupList" id="Y3P_B!qb[_RGk$YxO|_;">
-              <field name="FIELDNAME">furniture_triggers_living_room</field>
+            <block type="objectList" id="RH,m=e6*3upX;J%q$+j4">
+              <field name="FIELDNAME">cupboard_trigger</field>
+            </block>
+          </value>
+          <value name="ADD1">
+            <block type="objectList" id="Hz~%9u[w/d*yQT)wMZOX">
+              <field name="FIELDNAME">lamp_trigger</field>
             </block>
           </value>
         </block>
@@ -616,7 +622,408 @@
         </block>
       </value>
     </block>
-    <block xmlns="https://developers.google.com/blockly/xml" type="procedures_defnoreturn" id="Mi6sw]M:Un~}@J(MhzVE" x="3510" y="-710">
+    <block xmlns="https://developers.google.com/blockly/xml" type="variables_set" id="^~1yxz#xQF4eU~/5uA2+" x="1830" y="-550">
+      <field name="VAR" id="grZ/3NJG/q({L3bP}-iE">is_the_room_clicked?</field>
+      <value name="VALUE">
+        <block type="logic_boolean" id="wA1kt*T^H|?ZfL*OAj){">
+          <field name="BOOL">FALSE</field>
+        </block>
+      </value>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="procedures_defnoreturn" id="^CE{1RMefs3t6na1}mf$" x="1850" y="-450">
+      <mutation>
+        <arg name="Which room trigger?" varid="60tdU/T30Qk7^c|n(d:B"></arg>
+        <arg name="Which animation to play? (all the rooms - current one)" varid=")!VwqeCAsCHcRL_{y7:a"></arg>
+        <arg name="Which room does the camera look to?" varid="h[29:Bn6p!}!}sW%VnnG"></arg>
+        <arg name="Empty to move the camera to." varid="K|bc,]Uhzo32s4AE+Hz@"></arg>
+        <arg name="Camera selector zoom in" varid="29E;W`tSLl^,sr$o+]O|"></arg>
+        <arg name="Is there a wall? (zoom in)" varid="!D9sqt2x;o1nG=a:3gh8"></arg>
+        <arg name="Which room to reverse hover animation?" varid="ksvD3n81F4eg*~qwdV,e"></arg>
+      </mutation>
+      <field name="NAME">Zoom to clicked room</field>
+      <comment pinned="false" h="80" w="160">Describe this function...</comment>
+      <statement name="STACK">
+        <block type="whenClicked" id="Nzg,l+fm/aJVn[|#RpFh" inline="false">
+          <mutation xmlns="http://www.w3.org/1999/xhtml" adveventoptions="false" enableifmissed="false"></mutation>
+          <field name="X_RAY">FALSE</field>
+          <field name="DOUBLE_CLICK">FALSE</field>
+          <field name="LEFT_BUTTON">TRUE</field>
+          <field name="MIDDLE_BUTTON">TRUE</field>
+          <field name="RIGHT_BUTTON">TRUE</field>
+          <value name="VALUE">
+            <shadow type="objectList" id="UxMR,C/gaQn0.3gLWAW4">
+              <field name="FIELDNAME">entrance_trigger</field>
+            </shadow>
+            <block type="variables_get" id="!PpXhEFz;}8`3?yJhQN@">
+              <field name="VAR" id="60tdU/T30Qk7^c|n(d:B">Which room trigger?</field>
+            </block>
+          </value>
+          <statement name="DO">
+            <block type="variables_set" id="[4}|Os@r!KP}]F(U~Z-@">
+              <field name="VAR" id="txfEx.S%54273d7LVbI*">current_camera</field>
+              <value name="VALUE">
+                <block type="variables_get" id="!/m_mk-k+m3-i^V`}v5L">
+                  <field name="VAR" id="29E;W`tSLl^,sr$o+]O|">Camera selector zoom in</field>
+                </block>
+              </value>
+              <next>
+                <block type="variables_set" id="nSILIw$314@}{*S5R:Ue">
+                  <field name="VAR" id="grZ/3NJG/q({L3bP}-iE">is_the_room_clicked?</field>
+                  <value name="VALUE">
+                    <block type="logic_boolean" id="55g%T2=)%vmQ+4$tJjQ^">
+                      <field name="BOOL">TRUE</field>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="controls_if" id="M`H#NBJ(wZJd*1EYR=4e">
+                      <value name="IF0">
+                        <block type="logic_compare" id=";h`7_(RbmNxndLho+6g%">
+                          <field name="OP">EQ</field>
+                          <value name="A">
+                            <block type="variables_get" id="^-]j-NgFX5V67koos~eU">
+                              <field name="VAR" id="J@FII3x]r![1`]rdXcK,">zoomed_in</field>
+                            </block>
+                          </value>
+                          <value name="B">
+                            <block type="logic_boolean" id="o-n4M%AbqkA=BMf_Gv!e">
+                              <field name="BOOL">FALSE</field>
+                            </block>
+                          </value>
+                        </block>
+                      </value>
+                      <statement name="DO0">
+                        <block type="hide" id="^C~TqLGNY|)(`,o!q$-=">
+                          <value name="VALUE">
+                            <shadow type="objectList" id="z=R`XuC69}ycfcwh33Fr">
+                              <field name="FIELDNAME">&lt;none&gt;</field>
+                            </shadow>
+                            <block type="variables_get" id="iH?HY/.D5GREBk2Qjkg8">
+                              <field name="VAR" id="dvX?DWjvdey/WczArs@m">room_animation_triggers</field>
+                            </block>
+                          </value>
+                          <next>
+                            <block type="procedures_callnoreturn" id="+uHFdiqP8~)dwm3tlhKc">
+                              <mutation name="set_room_animation_frame_timer"></mutation>
+                              <next>
+                                <block type="setTimeout" id="ZDIfubF!oR]82a)6hvx,">
+                                  <value name="VALUE">
+                                    <shadow type="math_number" id="(%3`P%SU0@A8e3s12glK">
+                                      <field name="NUM">1</field>
+                                    </shadow>
+                                    <block type="math_arithmetic" id="qa15))!z6.r)[dU!qGXS">
+                                      <field name="OP">DIVIDE</field>
+                                      <value name="A">
+                                        <shadow type="math_number" id="im0X_Xuj3u@b{QNc*DM4">
+                                          <field name="NUM">2</field>
+                                        </shadow>
+                                        <block type="math_arithmetic" id="EzUW0-Y?pqXr*Q)J-.aE">
+                                          <field name="OP">DIVIDE</field>
+                                          <value name="A">
+                                            <shadow type="math_number" id="MEm(oezLbJKX!bM`I#;1">
+                                              <field name="NUM">1</field>
+                                            </shadow>
+                                            <block type="math_arithmetic" id="Rx-UZk(3XM-05HH@pt[u">
+                                              <field name="OP">ADD</field>
+                                              <value name="A">
+                                                <shadow type="math_number" id="QE%i0ig8yQHk{-G=cJ2h">
+                                                  <field name="NUM">1</field>
+                                                </shadow>
+                                                <block type="variables_get" id="R~dZ,K|jrF$/V;wpmdYD">
+                                                  <field name="VAR" id=":`=hU#np!zKIqRl,TMcW">room_animation_frame</field>
+                                                </block>
+                                              </value>
+                                              <value name="B">
+                                                <shadow type="math_number" id="mBQsLYvNWSf79Pzs!3R#">
+                                                  <field name="NUM">1</field>
+                                                </shadow>
+                                              </value>
+                                            </block>
+                                          </value>
+                                          <value name="B">
+                                            <shadow type="math_number" id="YOo)oT#~v*L5tyu~H_|,">
+                                              <field name="NUM">24</field>
+                                            </shadow>
+                                          </value>
+                                        </block>
+                                      </value>
+                                      <value name="B">
+                                        <shadow type="math_number" id="ytpB_*wYlT.lm|`;LX4R">
+                                          <field name="NUM">2</field>
+                                        </shadow>
+                                      </value>
+                                    </block>
+                                  </value>
+                                  <statement name="DO">
+                                    <block type="playAnimationAdv" id="V$`Vrs7/Acmj~wW3pN_H">
+                                      <mutation xmlns="http://www.w3.org/1999/xhtml" advplaybackoptions="true" enablewhenfinished="false"></mutation>
+                                      <field name="REVERSED">FALSE</field>
+                                      <field name="LOOP">LoopOnce</field>
+                                      <value name="VALUE">
+                                        <shadow type="animationList" id="P_-(U*$.o]8^-itpTSu,">
+                                          <field name="FIELDNAME">&lt;none&gt;</field>
+                                        </shadow>
+                                        <block type="getAnimations" id="{i#XdR2jG3SqQnBsRD+:">
+                                          <value name="OBJECTINPUT">
+                                            <shadow type="objectList" id="i-:zdr.][hz/eH..n|H*">
+                                              <field name="FIELDNAME">&lt;none&gt;</field>
+                                            </shadow>
+                                            <block type="variables_get" id="]a.@z4gAdobp)8]*Z43U">
+                                              <field name="VAR" id="!D9sqt2x;o1nG=a:3gh8">Is there a wall? (zoom in)</field>
+                                            </block>
+                                          </value>
+                                        </block>
+                                      </value>
+                                      <value name="FROM">
+                                        <shadow type="math_number" id="(;x_]NmyRRS*USg`%g]U">
+                                          <field name="NUM">40</field>
+                                        </shadow>
+                                      </value>
+                                      <value name="TO">
+                                        <shadow type="math_number" id="Q2r`Y2LQ|7gFv};*kGNe">
+                                          <field name="NUM">140</field>
+                                        </shadow>
+                                        <block type="variables_get" id="3_Wj2d|8oP#g|UpCx:0[">
+                                          <field name="VAR" id="Y7{d)3djf-@UHP5P#/%/">rooms_disapearing_duration</field>
+                                        </block>
+                                      </value>
+                                      <value name="SPEED">
+                                        <shadow type="math_number" id="q4cZzCEy{y[mr4jM=fD}">
+                                          <field name="NUM">6</field>
+                                        </shadow>
+                                      </value>
+                                      <next>
+                                        <block type="playAnimationAdv" id="9BkV)zdQh9u@U2.7pxf!">
+                                          <mutation xmlns="http://www.w3.org/1999/xhtml" advplaybackoptions="true" enablewhenfinished="true"></mutation>
+                                          <field name="REVERSED">FALSE</field>
+                                          <field name="LOOP">LoopOnce</field>
+                                          <value name="VALUE">
+                                            <shadow type="animationList" id="P_-(U*$.o]8^-itpTSu,">
+                                              <field name="FIELDNAME">&lt;none&gt;</field>
+                                            </shadow>
+                                            <block type="getAnimations" id="d;(=ji/MC5)E+9atbqDh">
+                                              <value name="OBJECTINPUT">
+                                                <shadow type="objectList" id="+rG!/(+yl_NAsLfud=R$">
+                                                  <field name="FIELDNAME">&lt;none&gt;</field>
+                                                </shadow>
+                                                <block type="variables_get" id="E(hPwwictK5ZIAnz@6|V">
+                                                  <field name="VAR" id=")!VwqeCAsCHcRL_{y7:a">Which animation to play? (all the rooms - current one)</field>
+                                                </block>
+                                              </value>
+                                            </block>
+                                          </value>
+                                          <value name="FROM">
+                                            <shadow type="math_number" id="QFE2ISN)/i~*~Uf|q$/`">
+                                              <field name="NUM">40</field>
+                                            </shadow>
+                                          </value>
+                                          <value name="TO">
+                                            <shadow type="math_number" id="Q2r`Y2LQ|7gFv};*kGNe">
+                                              <field name="NUM">140</field>
+                                            </shadow>
+                                            <block type="variables_get" id="@ItQ@W|z5FW!=MRM+*0)">
+                                              <field name="VAR" id="Y7{d)3djf-@UHP5P#/%/">rooms_disapearing_duration</field>
+                                            </block>
+                                          </value>
+                                          <value name="SPEED">
+                                            <shadow type="math_number" id="CzHDmOO1e@X?Z*%*ip;t">
+                                              <field name="NUM">6</field>
+                                            </shadow>
+                                          </value>
+                                          <statement name="DO">
+                                            <block type="variables_set" id="sMN5(TIk06+Hw2=!7K7}">
+                                              <field name="VAR" id="J@FII3x]r![1`]rdXcK,">zoomed_in</field>
+                                              <value name="VALUE">
+                                                <block type="logic_boolean" id="M.IM|KRiI4kJP{GuVsmJ">
+                                                  <field name="BOOL">TRUE</field>
+                                                </block>
+                                              </value>
+                                              <next>
+                                                <block type="show" id="Fh8pX?J6D]}xqgjl]ZKD">
+                                                  <value name="VALUE">
+                                                    <shadow type="objectList" id="fm?)[G%W0t.HNvN;E%W5">
+                                                      <field name="FIELDNAME">&lt;none&gt;</field>
+                                                    </shadow>
+                                                    <block type="getEntityByName" id="^/Sghw@mA__d{Ieh9Wk1">
+                                                      <field name="GET_WHAT">OBJECT</field>
+                                                      <value name="NAME">
+                                                        <shadow type="text" id="T8q3m(S`j;K$BY;0Z^kE">
+                                                          <field name="TEXT"></field>
+                                                        </shadow>
+                                                        <block type="variables_get" id="rfm/A.,N;,0X[d^Bn_TB">
+                                                          <field name="VAR" id="J6oW`R0+@yA6=I_KCzo)">furniture_triggers</field>
+                                                        </block>
+                                                      </value>
+                                                    </block>
+                                                  </value>
+                                                </block>
+                                              </next>
+                                            </block>
+                                          </statement>
+                                          <next>
+                                            <block type="tweenCameraExt" id="%spY8VTT)DI7mjRYen(m">
+                                              <mutation xmlns="http://www.w3.org/1999/xhtml" whenfinishedslot="false"></mutation>
+                                              <field name="MOVEMENT_TYPE">LINEAR</field>
+                                              <value name="POSITION">
+                                                <block type="variables_get" id="FaykT%X.uC/~)nfUcQK,">
+                                                  <field name="VAR" id="K|bc,]Uhzo32s4AE+Hz@">Empty to move the camera to.</field>
+                                                </block>
+                                              </value>
+                                              <value name="LOOKAT">
+                                                <block type="variables_get" id="U),7FYLKIfY4=?ZLQO~E">
+                                                  <field name="VAR" id="h[29:Bn6p!}!}sW%VnnG">Which room does the camera look to?</field>
+                                                </block>
+                                              </value>
+                                              <value name="DURATION">
+                                                <shadow type="math_number" id="S?uFEff=o*DtghM:H396">
+                                                  <field name="NUM">0.8</field>
+                                                </shadow>
+                                              </value>
+                                              <next>
+                                                <block type="setCameraParam" id="w9srx?2~y%N:2J,]#03!">
+                                                  <mutation xmlns="http://www.w3.org/1999/xhtml" type="ORBIT_MIN_DISTANCE_PERSP"></mutation>
+                                                  <field name="TYPE">ORBIT_MIN_DISTANCE_PERSP</field>
+                                                  <value name="ORBIT_MIN_DISTANCE_PERSP">
+                                                    <shadow type="math_number" id="UCM0ky1)1FV6bLLE_3O0">
+                                                      <field name="NUM">50</field>
+                                                    </shadow>
+                                                  </value>
+                                                  <value name="OBJECT">
+                                                    <shadow type="objectList" id="$Hl5J@wX4!r).tys1KvR">
+                                                      <field name="FIELDNAME">&lt;none&gt;</field>
+                                                    </shadow>
+                                                    <block type="objectList" id="AI[f-eN942[It5S7rQCp">
+                                                      <field name="FIELDNAME">camera</field>
+                                                    </block>
+                                                  </value>
+                                                  <next>
+                                                    <block type="setCameraParam" id="6h1q3p3+a;!N*Z5~a(-M">
+                                                      <mutation xmlns="http://www.w3.org/1999/xhtml" type="ORBIT_MAX_DISTANCE_PERSP"></mutation>
+                                                      <field name="TYPE">ORBIT_MAX_DISTANCE_PERSP</field>
+                                                      <value name="ORBIT_MAX_DISTANCE_PERSP">
+                                                        <shadow type="math_number" id="RYva6|d5@}KY:-R9Jmg$">
+                                                          <field name="NUM">100</field>
+                                                        </shadow>
+                                                      </value>
+                                                      <value name="OBJECT">
+                                                        <shadow type="objectList" id="$Hl5J@wX4!r).tys1KvR">
+                                                          <field name="FIELDNAME">&lt;none&gt;</field>
+                                                        </shadow>
+                                                        <block type="objectList" id="@}ZG#W%Gh^Rt=aepDPWU">
+                                                          <field name="FIELDNAME">camera</field>
+                                                        </block>
+                                                      </value>
+                                                    </block>
+                                                  </next>
+                                                </block>
+                                              </next>
+                                            </block>
+                                          </next>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </statement>
+                                  <next>
+                                    <block type="controls_if" id="Oa#$fnuhQRpPw}q_cmr?">
+                                      <mutation else="1"></mutation>
+                                      <value name="IF0">
+                                        <block type="isAnimationPlaying" id="GY.h8*#GZsYn]PjkY91l">
+                                          <value name="VALUE">
+                                            <shadow type="animationList" id="gRGMq)G^K0==z*Jv{({2">
+                                              <field name="FIELDNAME">&lt;none&gt;</field>
+                                            </shadow>
+                                            <block type="getAnimations" id="0h:k?%s=O2CQjap5}3t#">
+                                              <value name="OBJECTINPUT">
+                                                <shadow type="objectList" id="I$i:PvBDzwfpaf?g@OGi">
+                                                  <field name="FIELDNAME">&lt;none&gt;</field>
+                                                </shadow>
+                                                <block type="variables_get" id="7XNIO:4V5W6z#R(zNjD3">
+                                                  <field name="VAR" id="ksvD3n81F4eg*~qwdV,e">Which room to reverse hover animation?</field>
+                                                </block>
+                                              </value>
+                                            </block>
+                                          </value>
+                                        </block>
+                                      </value>
+                                      <statement name="DO0">
+                                        <block type="setAnimationSpeed" id="cP+vr17%?b|mu9u,VAXX">
+                                          <field name="REVERSED">TRUE</field>
+                                          <value name="VALUE">
+                                            <shadow type="animationList" id="}Ef3;:X2qfy`3s=9#iNS">
+                                              <field name="FIELDNAME">&lt;none&gt;</field>
+                                            </shadow>
+                                            <block type="getAnimations" id="]}~Ew%jK+jg!pV@!?:nv">
+                                              <value name="OBJECTINPUT">
+                                                <shadow type="objectList" id="!}--WZnoiN`[zI6.GX,q">
+                                                  <field name="FIELDNAME">&lt;none&gt;</field>
+                                                </shadow>
+                                                <block type="variables_get" id="pJ]XVbQ{*VD,Tnoy8_m+">
+                                                  <field name="VAR" id="ksvD3n81F4eg*~qwdV,e">Which room to reverse hover animation?</field>
+                                                </block>
+                                              </value>
+                                            </block>
+                                          </value>
+                                          <value name="SPEED">
+                                            <shadow type="math_number" id=";t6[YtZ;BUk`SV{*N{O5">
+                                              <field name="NUM">2</field>
+                                            </shadow>
+                                          </value>
+                                        </block>
+                                      </statement>
+                                      <statement name="ELSE">
+                                        <block type="playAnimationAdv" id="@YQ[lRSEx7FmYSYxC%:r">
+                                          <mutation xmlns="http://www.w3.org/1999/xhtml" advplaybackoptions="true" enablewhenfinished="false"></mutation>
+                                          <field name="REVERSED">TRUE</field>
+                                          <field name="LOOP">LoopOnce</field>
+                                          <value name="VALUE">
+                                            <shadow type="animationList" id="P_-(U*$.o]8^-itpTSu,">
+                                              <field name="FIELDNAME">&lt;none&gt;</field>
+                                            </shadow>
+                                            <block type="getAnimations" id="mA_A165}2s-/*Ol4W_tA">
+                                              <value name="OBJECTINPUT">
+                                                <shadow type="objectList" id="+}3o%g%.-WkgvO7*T4$-">
+                                                  <field name="FIELDNAME">&lt;none&gt;</field>
+                                                </shadow>
+                                                <block type="variables_get" id="CF{FII6(^jHh*#pt;c]|">
+                                                  <field name="VAR" id="ksvD3n81F4eg*~qwdV,e">Which room to reverse hover animation?</field>
+                                                </block>
+                                              </value>
+                                            </block>
+                                          </value>
+                                          <value name="FROM">
+                                            <shadow type="math_number" id="e.{$G$/w/A{_2N;]CdS_">
+                                              <field name="NUM">0</field>
+                                            </shadow>
+                                          </value>
+                                          <value name="TO">
+                                            <shadow type="math_number" id="[hvUgij;./ng,iD}5=t?">
+                                              <field name="NUM">20</field>
+                                            </shadow>
+                                          </value>
+                                          <value name="SPEED">
+                                            <shadow type="math_number" id="jPAC_WD_G1pz#[B+;mj$">
+                                              <field name="NUM">2</field>
+                                            </shadow>
+                                          </value>
+                                        </block>
+                                      </statement>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </statement>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </statement>
+        </block>
+      </statement>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="procedures_defnoreturn" id="Mi6sw]M:Un~}@J(MhzVE" x="3490" y="-450">
       <mutation>
         <arg name="What is the current camera?" varid="U~)`(c^[rvq;pQ31M{,t"></arg>
         <arg name="Which animation to play? (all rooms - the current one)" varid="7UegB-]uhENyB]8saN4z"></arg>
@@ -863,7 +1270,7 @@
         </block>
       </statement>
     </block>
-    <block xmlns="https://developers.google.com/blockly/xml" type="procedures_defnoreturn" id="N}b?:zubVb%=d[6OSECN" x="6990" y="-770">
+    <block xmlns="https://developers.google.com/blockly/xml" type="procedures_defnoreturn" id="N}b?:zubVb%=d[6OSECN" x="6990" y="-610">
       <mutation>
         <arg name="object_clicked" varid="iyuzO7wPce%i!#VRa!.$"></arg>
         <arg name="paragraph_text" varid="v.Xf?aMII{Cz9uMHLfYu"></arg>
@@ -871,185 +1278,7 @@
       <field name="NAME">Update the text in the Pop up</field>
       <comment pinned="false" h="80" w="160">Describe this function...</comment>
       <statement name="STACK">
-        <block type="whenHovered" id="`vW==_B[S!HZvZ$;FzVW" inline="true">
-          <mutation xmlns="http://www.w3.org/1999/xhtml" adveventoptions="true"></mutation>
-          <field name="X_RAY">FALSE</field>
-          <value name="VALUE">
-            <shadow type="objectList" id="umW/3KC!~%Km0R,5Sh^(">
-              <field name="FIELDNAME">background</field>
-            </shadow>
-            <block type="variables_get" id="HWZvQiDwWB*Gi{@7k9W:">
-              <field name="VAR" id="iyuzO7wPce%i!#VRa!.$">object_clicked</field>
-            </block>
-          </value>
-          <statement name="DO_OVER">
-            <block type="setHTMLElemStyle" id="YX4$F1z6Q$$EaFw*z|ZA">
-              <field name="PROPERTY">cursor</field>
-              <field name="PARENT">FALSE</field>
-              <value name="VALUE">
-                <shadow type="cursorDropdown" id="~W1,]#tXdS~KmEz:r}qc">
-                  <field name="TEXT">pointer</field>
-                </shadow>
-              </value>
-              <value name="ID">
-                <shadow type="text" id="Y?B1a)kXXDxa.,Ge`2vu">
-                  <field name="TEXT">myElem</field>
-                </shadow>
-                <block type="DOMObjectSelector" id="8)S_r-*Mgwsi|)Cl7Jp!">
-                  <field name="DOM_OBJECT">BODY</field>
-                </block>
-              </value>
-            </block>
-          </statement>
-          <statement name="DO_OUT">
-            <block type="setHTMLElemStyle" id="NrzzgF@pzhGKdiFdTlk!">
-              <field name="PROPERTY">cursor</field>
-              <field name="PARENT">FALSE</field>
-              <value name="VALUE">
-                <shadow type="cursorDropdown" id="U0R%)uvZxg%U/iWkTX%C">
-                  <field name="TEXT">default</field>
-                </shadow>
-              </value>
-              <value name="ID">
-                <shadow type="text" id="ipJ^u%bG_jSJt/z=|E(#">
-                  <field name="TEXT">myElem</field>
-                </shadow>
-                <block type="DOMObjectSelector" id="5nQROo^Qfhql{2UdH@SO">
-                  <field name="DOM_OBJECT">BODY</field>
-                </block>
-              </value>
-            </block>
-          </statement>
-          <next>
-            <block type="whenClicked" id="Cq3U3d++VkonNc3lkV8_" inline="false">
-              <mutation xmlns="http://www.w3.org/1999/xhtml" adveventoptions="false" enableifmissed="false"></mutation>
-              <field name="X_RAY">FALSE</field>
-              <field name="DOUBLE_CLICK">FALSE</field>
-              <field name="LEFT_BUTTON">TRUE</field>
-              <field name="MIDDLE_BUTTON">TRUE</field>
-              <field name="RIGHT_BUTTON">TRUE</field>
-              <value name="VALUE">
-                <shadow type="objectList" id="sIAQ2C=e[9*Dv??V3neZ">
-                  <field name="FIELDNAME">cupboard_trigger</field>
-                </shadow>
-                <block type="variables_get" id="-@{d~A=VqK%t:{5ThOcr">
-                  <field name="VAR" id="iyuzO7wPce%i!#VRa!.$">object_clicked</field>
-                </block>
-              </value>
-              <statement name="DO">
-                <block type="setHTMLElemStyle" id="stVTqxj^0,d-jE*(rr-9">
-                  <field name="PROPERTY">transform</field>
-                  <field name="PARENT">TRUE</field>
-                  <value name="VALUE">
-                    <shadow type="text" id="1838YENb;5tH*7[?_,Ne">
-                      <field name="TEXT">translate(-50%, -50%)</field>
-                    </shadow>
-                  </value>
-                  <value name="ID">
-                    <shadow type="text" id="$mBebcG~QwC%{L8Kvs94">
-                      <field name="TEXT">text-container-phone</field>
-                    </shadow>
-                  </value>
-                  <next>
-                    <block type="setHTMLElemAttribute" id=":ju$8A8clNo(.uBNDAD%">
-                      <field name="ATTRIBUTE">innerHTML</field>
-                      <field name="PARENT">TRUE</field>
-                      <value name="VALUE">
-                        <shadow type="text" id="=/.t_$bDbY~/vo^du{Cl">
-                          <field name="TEXT"></field>
-                        </shadow>
-                        <block type="variables_get" id="QX[[1A92af;koKZ^R-YB">
-                          <field name="VAR" id="v.Xf?aMII{Cz9uMHLfYu">paragraph_text</field>
-                        </block>
-                      </value>
-                      <value name="ID">
-                        <shadow type="text" id="adSVR?5b@i6_a@35.%lo">
-                          <field name="TEXT">text-block-phone</field>
-                        </shadow>
-                      </value>
-                      <next>
-                        <block type="setHTMLElemStyle" id="*pvyNKMF,h.pmb;KA*#0">
-                          <field name="PROPERTY">transform</field>
-                          <field name="PARENT">TRUE</field>
-                          <value name="VALUE">
-                            <shadow type="text" id="}Bs^832a[`kc93{%POcx">
-                              <field name="TEXT">translate(300%, -50%)</field>
-                            </shadow>
-                          </value>
-                          <value name="ID">
-                            <shadow type="text" id="HHOvite_jMYLL%_c`|79">
-                              <field name="TEXT">text-block</field>
-                            </shadow>
-                          </value>
-                          <next>
-                            <block type="setTimeout" id="Y*Q^(D,MMWrx|()1%=5=">
-                              <value name="VALUE">
-                                <shadow type="math_number" id="+TaUR6mT#L0Z3*ewhQG[">
-                                  <field name="NUM">0.4</field>
-                                </shadow>
-                              </value>
-                              <statement name="DO">
-                                <block type="setHTMLElemAttribute" id="tBF{tejW}BF,tFFT!m;g">
-                                  <field name="ATTRIBUTE">innerHTML</field>
-                                  <field name="PARENT">TRUE</field>
-                                  <value name="VALUE">
-                                    <shadow type="text" id="=/.t_$bDbY~/vo^du{Cl">
-                                      <field name="TEXT"></field>
-                                    </shadow>
-                                    <block type="variables_get" id="KgJN#AYG}p_J+A^x@/pw">
-                                      <field name="VAR" id="v.Xf?aMII{Cz9uMHLfYu">paragraph_text</field>
-                                    </block>
-                                  </value>
-                                  <value name="ID">
-                                    <shadow type="text" id="9/u`wBdluHL^cF^TZ4iA">
-                                      <field name="TEXT">text-block</field>
-                                    </shadow>
-                                  </value>
-                                  <next>
-                                    <block type="setHTMLElemStyle" id="#v#c1k8x7{4Yds4!!s^P">
-                                      <field name="PROPERTY">transform</field>
-                                      <field name="PARENT">TRUE</field>
-                                      <value name="VALUE">
-                                        <shadow type="text" id="F5l%WK};-Z_N87VkKhD@">
-                                          <field name="TEXT">translate(-50%, -50%)</field>
-                                        </shadow>
-                                      </value>
-                                      <value name="ID">
-                                        <shadow type="text" id="?K9eawu8Tx~Xo{YYx(v;">
-                                          <field name="TEXT">text-block</field>
-                                        </shadow>
-                                      </value>
-                                    </block>
-                                  </next>
-                                </block>
-                              </statement>
-                            </block>
-                          </next>
-                        </block>
-                      </next>
-                    </block>
-                  </next>
-                </block>
-              </statement>
-            </block>
-          </next>
-        </block>
-      </statement>
-    </block>
-    <block xmlns="https://developers.google.com/blockly/xml" type="procedures_defnoreturn" id="^CE{1RMefs3t6na1}mf$" x="1850" y="-450">
-      <mutation>
-        <arg name="Which room trigger?" varid="60tdU/T30Qk7^c|n(d:B"></arg>
-        <arg name="Which animation to play? (all the rooms - current one)" varid=")!VwqeCAsCHcRL_{y7:a"></arg>
-        <arg name="Which room does the camera look to?" varid="h[29:Bn6p!}!}sW%VnnG"></arg>
-        <arg name="Empty to move the camera to." varid="K|bc,]Uhzo32s4AE+Hz@"></arg>
-        <arg name="Camera selector zoom in" varid="29E;W`tSLl^,sr$o+]O|"></arg>
-        <arg name="Is there a wall? (zoom in)" varid="!D9sqt2x;o1nG=a:3gh8"></arg>
-        <arg name="Which room to reverse hover animation?" varid="ksvD3n81F4eg*~qwdV,e"></arg>
-      </mutation>
-      <field name="NAME">Zoom to clicked room</field>
-      <comment pinned="false" h="80" w="160">Describe this function...</comment>
-      <statement name="STACK">
-        <block type="whenClicked" id="Nzg,l+fm/aJVn[|#RpFh" inline="false">
+        <block type="whenClicked" id="Cq3U3d++VkonNc3lkV8_" inline="false">
           <mutation xmlns="http://www.w3.org/1999/xhtml" adveventoptions="false" enableifmissed="false"></mutation>
           <field name="X_RAY">FALSE</field>
           <field name="DOUBLE_CLICK">FALSE</field>
@@ -1057,271 +1286,65 @@
           <field name="MIDDLE_BUTTON">TRUE</field>
           <field name="RIGHT_BUTTON">TRUE</field>
           <value name="VALUE">
-            <shadow type="objectList" id="UxMR,C/gaQn0.3gLWAW4">
-              <field name="FIELDNAME">entrance_trigger</field>
+            <shadow type="objectList" id="sIAQ2C=e[9*Dv??V3neZ">
+              <field name="FIELDNAME">cupboard_trigger</field>
             </shadow>
-            <block type="variables_get" id="!PpXhEFz;}8`3?yJhQN@">
-              <field name="VAR" id="60tdU/T30Qk7^c|n(d:B">Which room trigger?</field>
+            <block type="variables_get" id="-@{d~A=VqK%t:{5ThOcr">
+              <field name="VAR" id="iyuzO7wPce%i!#VRa!.$">object_clicked</field>
             </block>
           </value>
           <statement name="DO">
-            <block type="variables_set" id="[4}|Os@r!KP}]F(U~Z-@">
-              <field name="VAR" id="txfEx.S%54273d7LVbI*">current_camera</field>
+            <block type="setHTMLElemStyle" id="*pvyNKMF,h.pmb;KA*#0">
+              <field name="PROPERTY">transform</field>
+              <field name="PARENT">TRUE</field>
               <value name="VALUE">
-                <block type="variables_get" id="!/m_mk-k+m3-i^V`}v5L">
-                  <field name="VAR" id="29E;W`tSLl^,sr$o+]O|">Camera selector zoom in</field>
-                </block>
+                <shadow type="text" id="}Bs^832a[`kc93{%POcx">
+                  <field name="TEXT">translate(300%, -50%)</field>
+                </shadow>
+              </value>
+              <value name="ID">
+                <shadow type="text" id="HHOvite_jMYLL%_c`|79">
+                  <field name="TEXT">text-block</field>
+                </shadow>
               </value>
               <next>
-                <block type="controls_if" id="M`H#NBJ(wZJd*1EYR=4e">
-                  <value name="IF0">
-                    <block type="logic_compare" id=";h`7_(RbmNxndLho+6g%">
-                      <field name="OP">EQ</field>
-                      <value name="A">
-                        <block type="variables_get" id="^-]j-NgFX5V67koos~eU">
-                          <field name="VAR" id="J@FII3x]r![1`]rdXcK,">zoomed_in</field>
-                        </block>
-                      </value>
-                      <value name="B">
-                        <block type="logic_boolean" id="o-n4M%AbqkA=BMf_Gv!e">
-                          <field name="BOOL">FALSE</field>
-                        </block>
-                      </value>
-                    </block>
+                <block type="setTimeout" id="Y*Q^(D,MMWrx|()1%=5=">
+                  <value name="VALUE">
+                    <shadow type="math_number" id="+TaUR6mT#L0Z3*ewhQG[">
+                      <field name="NUM">0.4</field>
+                    </shadow>
                   </value>
-                  <statement name="DO0">
-                    <block type="hide" id="^C~TqLGNY|)(`,o!q$-=">
+                  <statement name="DO">
+                    <block type="setHTMLElemAttribute" id="tBF{tejW}BF,tFFT!m;g">
+                      <field name="ATTRIBUTE">innerHTML</field>
+                      <field name="PARENT">TRUE</field>
                       <value name="VALUE">
-                        <shadow type="objectList" id="z=R`XuC69}ycfcwh33Fr">
-                          <field name="FIELDNAME">&lt;none&gt;</field>
+                        <shadow type="text" id="=/.t_$bDbY~/vo^du{Cl">
+                          <field name="TEXT"></field>
                         </shadow>
-                        <block type="variables_get" id="iH?HY/.D5GREBk2Qjkg8">
-                          <field name="VAR" id="dvX?DWjvdey/WczArs@m">room_animation_triggers</field>
+                        <block type="variables_get" id="KgJN#AYG}p_J+A^x@/pw">
+                          <field name="VAR" id="v.Xf?aMII{Cz9uMHLfYu">paragraph_text</field>
                         </block>
+                      </value>
+                      <value name="ID">
+                        <shadow type="text" id="9/u`wBdluHL^cF^TZ4iA">
+                          <field name="TEXT">text-block</field>
+                        </shadow>
                       </value>
                       <next>
-                        <block type="procedures_callnoreturn" id="+uHFdiqP8~)dwm3tlhKc">
-                          <mutation name="set_room_animation_frame_timer"></mutation>
-                          <next>
-                            <block type="setTimeout" id="ZDIfubF!oR]82a)6hvx,">
-                              <value name="VALUE">
-                                <shadow type="math_number" id="(%3`P%SU0@A8e3s12glK">
-                                  <field name="NUM">1</field>
-                                </shadow>
-                                <block type="math_arithmetic" id="qa15))!z6.r)[dU!qGXS">
-                                  <field name="OP">DIVIDE</field>
-                                  <value name="A">
-                                    <shadow type="math_number" id="im0X_Xuj3u@b{QNc*DM4">
-                                      <field name="NUM">2</field>
-                                    </shadow>
-                                    <block type="math_arithmetic" id="EzUW0-Y?pqXr*Q)J-.aE">
-                                      <field name="OP">ADD</field>
-                                      <value name="A">
-                                        <shadow type="math_number" id="MEm(oezLbJKX!bM`I#;1">
-                                          <field name="NUM">1</field>
-                                        </shadow>
-                                        <block type="math_arithmetic" id="Rx-UZk(3XM-05HH@pt[u">
-                                          <field name="OP">DIVIDE</field>
-                                          <value name="A">
-                                            <shadow type="math_number" id="QE%i0ig8yQHk{-G=cJ2h">
-                                              <field name="NUM">1</field>
-                                            </shadow>
-                                            <block type="variables_get" id="R~dZ,K|jrF$/V;wpmdYD">
-                                              <field name="VAR" id=":`=hU#np!zKIqRl,TMcW">room_animation_frame</field>
-                                            </block>
-                                          </value>
-                                          <value name="B">
-                                            <shadow type="math_number" id="mBQsLYvNWSf79Pzs!3R#">
-                                              <field name="NUM">2</field>
-                                            </shadow>
-                                          </value>
-                                        </block>
-                                      </value>
-                                      <value name="B">
-                                        <shadow type="math_number" id="YOo)oT#~v*L5tyu~H_|,">
-                                          <field name="NUM">0.5</field>
-                                        </shadow>
-                                      </value>
-                                    </block>
-                                  </value>
-                                  <value name="B">
-                                    <shadow type="math_number" id="ytpB_*wYlT.lm|`;LX4R">
-                                      <field name="NUM">24</field>
-                                    </shadow>
-                                  </value>
-                                </block>
-                              </value>
-                              <statement name="DO">
-                                <block type="playAnimationAdv" id="V$`Vrs7/Acmj~wW3pN_H">
-                                  <mutation xmlns="http://www.w3.org/1999/xhtml" advplaybackoptions="true" enablewhenfinished="false"></mutation>
-                                  <field name="REVERSED">FALSE</field>
-                                  <field name="LOOP">LoopOnce</field>
-                                  <value name="VALUE">
-                                    <shadow type="animationList" id="P_-(U*$.o]8^-itpTSu,">
-                                      <field name="FIELDNAME">&lt;none&gt;</field>
-                                    </shadow>
-                                    <block type="getAnimations" id="{i#XdR2jG3SqQnBsRD+:">
-                                      <value name="OBJECTINPUT">
-                                        <shadow type="objectList" id="i-:zdr.][hz/eH..n|H*">
-                                          <field name="FIELDNAME">&lt;none&gt;</field>
-                                        </shadow>
-                                        <block type="variables_get" id="]a.@z4gAdobp)8]*Z43U">
-                                          <field name="VAR" id="!D9sqt2x;o1nG=a:3gh8">Is there a wall? (zoom in)</field>
-                                        </block>
-                                      </value>
-                                    </block>
-                                  </value>
-                                  <value name="FROM">
-                                    <shadow type="math_number" id="(;x_]NmyRRS*USg`%g]U">
-                                      <field name="NUM">40</field>
-                                    </shadow>
-                                  </value>
-                                  <value name="TO">
-                                    <shadow type="math_number" id="Q2r`Y2LQ|7gFv};*kGNe">
-                                      <field name="NUM">140</field>
-                                    </shadow>
-                                    <block type="variables_get" id="3_Wj2d|8oP#g|UpCx:0[">
-                                      <field name="VAR" id="Y7{d)3djf-@UHP5P#/%/">rooms_disapearing_duration</field>
-                                    </block>
-                                  </value>
-                                  <value name="SPEED">
-                                    <shadow type="math_number" id="q4cZzCEy{y[mr4jM=fD}">
-                                      <field name="NUM">6</field>
-                                    </shadow>
-                                  </value>
-                                  <next>
-                                    <block type="playAnimationAdv" id="9BkV)zdQh9u@U2.7pxf!">
-                                      <mutation xmlns="http://www.w3.org/1999/xhtml" advplaybackoptions="true" enablewhenfinished="true"></mutation>
-                                      <field name="REVERSED">FALSE</field>
-                                      <field name="LOOP">LoopOnce</field>
-                                      <value name="VALUE">
-                                        <shadow type="animationList" id="P_-(U*$.o]8^-itpTSu,">
-                                          <field name="FIELDNAME">&lt;none&gt;</field>
-                                        </shadow>
-                                        <block type="getAnimations" id="d;(=ji/MC5)E+9atbqDh">
-                                          <value name="OBJECTINPUT">
-                                            <shadow type="objectList" id="+rG!/(+yl_NAsLfud=R$">
-                                              <field name="FIELDNAME">&lt;none&gt;</field>
-                                            </shadow>
-                                            <block type="variables_get" id="E(hPwwictK5ZIAnz@6|V">
-                                              <field name="VAR" id=")!VwqeCAsCHcRL_{y7:a">Which animation to play? (all the rooms - current one)</field>
-                                            </block>
-                                          </value>
-                                        </block>
-                                      </value>
-                                      <value name="FROM">
-                                        <shadow type="math_number" id="xe=U|0U~wa]bfd4qpEcu">
-                                          <field name="NUM">40</field>
-                                        </shadow>
-                                      </value>
-                                      <value name="TO">
-                                        <shadow type="math_number" id="GM/v0Kxqr`Pm944.*/,K">
-                                          <field name="NUM">99</field>
-                                        </shadow>
-                                        <block type="variables_get" id="@ItQ@W|z5FW!=MRM+*0)">
-                                          <field name="VAR" id="Y7{d)3djf-@UHP5P#/%/">rooms_disapearing_duration</field>
-                                        </block>
-                                      </value>
-                                      <value name="SPEED">
-                                        <shadow type="math_number" id="G:?9feweoX?3nx^uoH)2">
-                                          <field name="NUM">6</field>
-                                        </shadow>
-                                      </value>
-                                      <next>
-                                        <block type="tweenCameraExt" id="%spY8VTT)DI7mjRYen(m">
-                                          <mutation xmlns="http://www.w3.org/1999/xhtml" whenfinishedslot="true"></mutation>
-                                          <field name="MOVEMENT_TYPE">LINEAR</field>
-                                          <value name="POSITION">
-                                            <block type="variables_get" id="FaykT%X.uC/~)nfUcQK,">
-                                              <field name="VAR" id="K|bc,]Uhzo32s4AE+Hz@">Empty to move the camera to.</field>
-                                            </block>
-                                          </value>
-                                          <value name="LOOKAT">
-                                            <block type="variables_get" id="U),7FYLKIfY4=?ZLQO~E">
-                                              <field name="VAR" id="h[29:Bn6p!}!}sW%VnnG">Which room does the camera look to?</field>
-                                            </block>
-                                          </value>
-                                          <value name="DURATION">
-                                            <shadow type="math_number" id="S?uFEff=o*DtghM:H396">
-                                              <field name="NUM">0.8</field>
-                                            </shadow>
-                                          </value>
-                                          <statement name="DO">
-                                            <block type="variables_set" id="sMN5(TIk06+Hw2=!7K7}">
-                                              <field name="VAR" id="J@FII3x]r![1`]rdXcK,">zoomed_in</field>
-                                              <value name="VALUE">
-                                                <block type="logic_boolean" id="M.IM|KRiI4kJP{GuVsmJ">
-                                                  <field name="BOOL">TRUE</field>
-                                                </block>
-                                              </value>
-                                              <next>
-                                                <block type="show" id="Fh8pX?J6D]}xqgjl]ZKD">
-                                                  <value name="VALUE">
-                                                    <shadow type="objectList" id="fm?)[G%W0t.HNvN;E%W5">
-                                                      <field name="FIELDNAME">&lt;none&gt;</field>
-                                                    </shadow>
-                                                    <block type="getEntityByName" id="^/Sghw@mA__d{Ieh9Wk1">
-                                                      <field name="GET_WHAT">OBJECT</field>
-                                                      <value name="NAME">
-                                                        <shadow type="text" id="T8q3m(S`j;K$BY;0Z^kE">
-                                                          <field name="TEXT"></field>
-                                                        </shadow>
-                                                        <block type="variables_get" id="rfm/A.,N;,0X[d^Bn_TB">
-                                                          <field name="VAR" id="J6oW`R0+@yA6=I_KCzo)">furniture_triggers</field>
-                                                        </block>
-                                                      </value>
-                                                    </block>
-                                                  </value>
-                                                </block>
-                                              </next>
-                                            </block>
-                                          </statement>
-                                          <next>
-                                            <block type="setCameraParam" id="w9srx?2~y%N:2J,]#03!">
-                                              <mutation xmlns="http://www.w3.org/1999/xhtml" type="ORBIT_MIN_DISTANCE_PERSP"></mutation>
-                                              <field name="TYPE">ORBIT_MIN_DISTANCE_PERSP</field>
-                                              <value name="ORBIT_MIN_DISTANCE_PERSP">
-                                                <shadow type="math_number" id="UCM0ky1)1FV6bLLE_3O0">
-                                                  <field name="NUM">50</field>
-                                                </shadow>
-                                              </value>
-                                              <value name="OBJECT">
-                                                <shadow type="objectList" id="$Hl5J@wX4!r).tys1KvR">
-                                                  <field name="FIELDNAME">&lt;none&gt;</field>
-                                                </shadow>
-                                                <block type="objectList" id="AI[f-eN942[It5S7rQCp">
-                                                  <field name="FIELDNAME">camera</field>
-                                                </block>
-                                              </value>
-                                              <next>
-                                                <block type="setCameraParam" id="6h1q3p3+a;!N*Z5~a(-M">
-                                                  <mutation xmlns="http://www.w3.org/1999/xhtml" type="ORBIT_MAX_DISTANCE_PERSP"></mutation>
-                                                  <field name="TYPE">ORBIT_MAX_DISTANCE_PERSP</field>
-                                                  <value name="ORBIT_MAX_DISTANCE_PERSP">
-                                                    <shadow type="math_number" id="RYva6|d5@}KY:-R9Jmg$">
-                                                      <field name="NUM">100</field>
-                                                    </shadow>
-                                                  </value>
-                                                  <value name="OBJECT">
-                                                    <shadow type="objectList" id="$Hl5J@wX4!r).tys1KvR">
-                                                      <field name="FIELDNAME">&lt;none&gt;</field>
-                                                    </shadow>
-                                                    <block type="objectList" id="@}ZG#W%Gh^Rt=aepDPWU">
-                                                      <field name="FIELDNAME">camera</field>
-                                                    </block>
-                                                  </value>
-                                                </block>
-                                              </next>
-                                            </block>
-                                          </next>
-                                        </block>
-                                      </next>
-                                    </block>
-                                  </next>
-                                </block>
-                              </statement>
-                            </block>
-                          </next>
+                        <block type="setHTMLElemStyle" id="#v#c1k8x7{4Yds4!!s^P">
+                          <field name="PROPERTY">transform</field>
+                          <field name="PARENT">TRUE</field>
+                          <value name="VALUE">
+                            <shadow type="text" id="F5l%WK};-Z_N87VkKhD@">
+                              <field name="TEXT">translate(-50%, -50%)</field>
+                            </shadow>
+                          </value>
+                          <value name="ID">
+                            <shadow type="text" id="?K9eawu8Tx~Xo{YYx(v;">
+                              <field name="TEXT">text-block</field>
+                            </shadow>
+                          </value>
                         </block>
                       </next>
                     </block>
@@ -1349,7 +1372,7 @@
         </block>
       </value>
     </block>
-    <block xmlns="https://developers.google.com/blockly/xml" type="eventHTMLElem" id="(R,K%[1%$UvFChx87P.+" x="8110" y="-630">
+    <block xmlns="https://developers.google.com/blockly/xml" type="eventHTMLElem" id="(R,K%[1%$UvFChx87P.+" x="7850" y="-610">
       <field name="EVENT">click</field>
       <field name="PARENT">TRUE</field>
       <value name="ID">
@@ -1368,7 +1391,7 @@
           </value>
           <value name="ID">
             <shadow type="text" id="@Z7:5@EhLPEEEFQapCdH">
-              <field name="TEXT">text-container-phone</field>
+              <field name="TEXT">text-container</field>
             </shadow>
           </value>
         </block>
@@ -1480,72 +1503,6 @@
         </block>
       </value>
     </block>
-    <block xmlns="https://developers.google.com/blockly/xml" type="whenHovered" id=".B-c1DgyzVlYs1P5%M|S" inline="true" x="3510" y="-230">
-      <mutation xmlns="http://www.w3.org/1999/xhtml" adveventoptions="true"></mutation>
-      <field name="X_RAY">FALSE</field>
-      <value name="VALUE">
-        <shadow type="objectList" id="r)wZ[0Gkx:dZ.0)Z`y$%">
-          <field name="FIELDNAME">background</field>
-        </shadow>
-      </value>
-      <statement name="DO_OVER">
-        <block type="controls_if" id="WeAZ)dFT@d)|O^S{+XV~">
-          <value name="IF0">
-            <block type="logic_compare" id="Z*aPEc)N79wBUnSz{}Pv">
-              <field name="OP">EQ</field>
-              <value name="A">
-                <block type="variables_get" id="|_Y5YrjRnez|$VC%MrUA">
-                  <field name="VAR" id="J@FII3x]r![1`]rdXcK,">zoomed_in</field>
-                </block>
-              </value>
-              <value name="B">
-                <block type="logic_boolean" id="1IW~~=(M|L+]evgW:jzq">
-                  <field name="BOOL">TRUE</field>
-                </block>
-              </value>
-            </block>
-          </value>
-          <statement name="DO0">
-            <block type="setHTMLElemStyle" id=":lU5pIGNXuOfm?[LR`Ou">
-              <field name="PROPERTY">cursor</field>
-              <field name="PARENT">FALSE</field>
-              <value name="VALUE">
-                <shadow type="cursorDropdown" id="=+}k)m3EsM7y384lNHm$">
-                  <field name="TEXT">pointer</field>
-                </shadow>
-              </value>
-              <value name="ID">
-                <shadow type="text" id="Y?B1a)kXXDxa.,Ge`2vu">
-                  <field name="TEXT">myElem</field>
-                </shadow>
-                <block type="DOMObjectSelector" id="DG=RfNRcVFICC82sPj0#">
-                  <field name="DOM_OBJECT">BODY</field>
-                </block>
-              </value>
-            </block>
-          </statement>
-        </block>
-      </statement>
-      <statement name="DO_OUT">
-        <block type="setHTMLElemStyle" id="u%[Z*k-)@}SnfhV?@a(j">
-          <field name="PROPERTY">cursor</field>
-          <field name="PARENT">FALSE</field>
-          <value name="VALUE">
-            <shadow type="cursorDropdown" id="428#HSNIfIeMBfF]bXf6">
-              <field name="TEXT">default</field>
-            </shadow>
-          </value>
-          <value name="ID">
-            <shadow type="text" id="ipJ^u%bG_jSJt/z=|E(#">
-              <field name="TEXT">myElem</field>
-            </shadow>
-            <block type="DOMObjectSelector" id="HD1dv0kq=?HU6o57pZ/~">
-              <field name="DOM_OBJECT">BODY</field>
-            </block>
-          </value>
-        </block>
-      </statement>
-    </block>
     <block xmlns="https://developers.google.com/blockly/xml" type="whenHovered" id="cIyHH4`IV0e{Bm2xBVL2" inline="false" x="410" y="90">
       <mutation xmlns="http://www.w3.org/1999/xhtml" adveventoptions="false"></mutation>
       <field name="X_RAY">FALSE</field>
@@ -1589,35 +1546,35 @@
       <field name="NAME">Hoover over room animation</field>
       <comment pinned="false" h="80" w="160">Describe this function...</comment>
       <statement name="STACK">
-        <block type="whenHovered" id="sY:9s$6,6K[OZdQ[05Aj" inline="false">
-          <mutation xmlns="http://www.w3.org/1999/xhtml" adveventoptions="false"></mutation>
-          <field name="X_RAY">FALSE</field>
-          <value name="VALUE">
-            <shadow type="objectList" id="r)wZ[0Gkx:dZ.0)Z`y$%">
-              <field name="FIELDNAME">entrance_trigger</field>
-            </shadow>
-            <block type="variables_get" id="~ZiKnOW=/]}$t8-,.T98">
-              <field name="VAR" id="KNg=ZRDon@m+J4F;c`^5">Which room is hoovered?</field>
-            </block>
-          </value>
-          <statement name="DO_OVER">
-            <block type="setHTMLElemStyle" id="Vj6l)j@g5$cN.Q5#U_20">
-              <field name="PROPERTY">cursor</field>
-              <field name="PARENT">FALSE</field>
-              <value name="VALUE">
-                <shadow type="cursorDropdown" id="+F-mu-Pf/uu.j(g3_9s]">
-                  <field name="TEXT">pointer</field>
-                </shadow>
-              </value>
-              <value name="ID">
-                <shadow type="text" id="Y?B1a)kXXDxa.,Ge`2vu">
-                  <field name="TEXT">myElem</field>
-                </shadow>
-                <block type="DOMObjectSelector" id="IpTv3n)W{qA_gYT49BGZ">
-                  <field name="DOM_OBJECT">BODY</field>
+        <block type="controls_if" id="6kJ0]$O];sFNS+6C~:IE">
+          <value name="IF0">
+            <block type="logic_compare" id="^-9-9yg1L(BF$xu*Ticr">
+              <field name="OP">EQ</field>
+              <value name="A">
+                <block type="variables_get" id="KfZa7*CicFvVw?#l.LeC">
+                  <field name="VAR" id="grZ/3NJG/q({L3bP}-iE">is_the_room_clicked?</field>
                 </block>
               </value>
-              <next>
+              <value name="B">
+                <block type="logic_boolean" id="`AXQ-4+@c!SG|)`[]rpu">
+                  <field name="BOOL">TRUE</field>
+                </block>
+              </value>
+            </block>
+          </value>
+          <statement name="DO0">
+            <block type="whenHovered" id="sY:9s$6,6K[OZdQ[05Aj" inline="false">
+              <mutation xmlns="http://www.w3.org/1999/xhtml" adveventoptions="false"></mutation>
+              <field name="X_RAY">FALSE</field>
+              <value name="VALUE">
+                <shadow type="objectList" id="r)wZ[0Gkx:dZ.0)Z`y$%">
+                  <field name="FIELDNAME">entrance_trigger</field>
+                </shadow>
+                <block type="variables_get" id="~ZiKnOW=/]}$t8-,.T98">
+                  <field name="VAR" id="KNg=ZRDon@m+J4F;c`^5">Which room is hoovered?</field>
+                </block>
+              </value>
+              <statement name="DO_OVER">
                 <block type="setAnimationSpeed" id="LQ_lA3q;Mc@aCVE_~$Hv">
                   <field name="REVERSED">FALSE</field>
                   <value name="VALUE">
@@ -1681,27 +1638,8 @@
                     </block>
                   </next>
                 </block>
-              </next>
-            </block>
-          </statement>
-          <statement name="DO_OUT">
-            <block type="setHTMLElemStyle" id="id;EgNI@[o}otu.uCXEg">
-              <field name="PROPERTY">cursor</field>
-              <field name="PARENT">FALSE</field>
-              <value name="VALUE">
-                <shadow type="cursorDropdown" id="Y]*zPo:#*PsV#3Qax|_#">
-                  <field name="TEXT">default</field>
-                </shadow>
-              </value>
-              <value name="ID">
-                <shadow type="text" id="ipJ^u%bG_jSJt/z=|E(#">
-                  <field name="TEXT">myElem</field>
-                </shadow>
-                <block type="DOMObjectSelector" id="L#@`_0r(#y#NV`OW{j5[">
-                  <field name="DOM_OBJECT">BODY</field>
-                </block>
-              </value>
-              <next>
+              </statement>
+              <statement name="DO_OUT">
                 <block type="controls_if" id="uh6WB={JjMI[SPu0$vWa">
                   <mutation else="1"></mutation>
                   <value name="IF0">
@@ -1789,49 +1727,81 @@
                     </block>
                   </statement>
                 </block>
-              </next>
+              </statement>
             </block>
           </statement>
         </block>
       </statement>
     </block>
-    <block xmlns="https://developers.google.com/blockly/xml" type="procedures_callnoreturn" id="]dU}50%:d/oOLR3RGzFn" x="7039" y="-205">
+    <block xmlns="https://developers.google.com/blockly/xml" type="procedures_callnoreturn" id="]dU}50%:d/oOLR3RGzFn" x="7010" y="-230">
       <mutation name="Update the text in the Pop up">
         <arg name="object_clicked"></arg>
         <arg name="paragraph_text"></arg>
       </mutation>
       <value name="ARG0">
         <block type="objectList" id="t8II|NRb_*`7isye85_o">
-          <field name="FIELDNAME">radiator_living_room_trigger</field>
+          <field name="FIELDNAME">cupboard_trigger</field>
         </block>
       </value>
       <value name="ARG1">
         <block type="textMultiline" id="#ahfE;^Kg3N0.VxU5C/p">
           <field name="HIGHLIGHT_MODE">html</field>
-          <field name="TEXT" editor-height="14" editor-width="1927.9401895499418">          &lt;h1 id="popup_room"&gt;Séjour&lt;/h1&gt;&amp;#10;          &lt;h1 id="popup_object"&gt;Fenètres&lt;/h1&gt;&amp;#10;          &lt;div id="dividing_line"&gt;&lt;/div&gt;&amp;#10;          &lt;p id="popup_locataire"&gt;Locataire&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;•&lt;/span&gt; Remplacement des vitres brisées par sa faute.&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;•&lt;/span&gt; Nettoyage régulier des vitres accessibles.&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;•&lt;/span&gt; Remplacement des vitres brisées par sa faute.&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;•&lt;/span&gt; Réfection des griffes faites aux vitres et aux châssis.&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;•&lt;/span&gt; Maintenir libre écoulement des eaux de condensation des châssis, sous peine de voir sa responsabilité engagée pour les dégâts en résultant (humidité, mérules…).&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;•&lt;/span&gt; Réfection des griffes faites aux vitres et aux châssis. En l'absence de VMC  : aération quotidienne des locaux.&lt;/p&gt;&amp;#10;          &lt;div id="dividing_line"&gt;&lt;/div&gt;&amp;#10;          &lt;p id="popup_locataire"&gt;Propriétaire&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;•&lt;/span&gt; Réparations nécessaires, autres que locatives, et remplacement.&lt;/p&gt;</field>
+          <field name="TEXT" editor-height="18" editor-width="1927.9401895499418">          &lt;div class="popup-cross" id="popup-cross"&gt;&lt;/div&gt;&amp;#10;          &lt;h1 id="popup_room"&gt;Séjour&lt;/h1&gt;&amp;#10;          &lt;h1 id="popup_object"&gt;Fenètres&lt;/h1&gt;&amp;#10;          &lt;div id="dividing_line"&gt;&lt;/div&gt;&amp;#10;          &lt;p id="popup_locataire"&gt;Locataire&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;•&lt;/span&gt; Remplacement des vitres brisées par sa faute.&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;•&lt;/span&gt; Nettoyage régulier des vitres accessibles.&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;•&lt;/span&gt; Remplacement des vitres brisées par sa faute.&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;•&lt;/span&gt; Réfection des griffes faites aux vitres et aux châssis.&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;•&lt;/span&gt; Maintenir libre écoulement des eaux de condensation des châssis, sous peine de voir sa responsabilité engagée pour les dégâts en résultant (humidité, mérules…).&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;•&lt;/span&gt; Réfection des griffes faites aux vitres et aux châssis. En l'absence de VMC  : aération quotidienne des locaux.&lt;/p&gt;&amp;#10;          &lt;div id="dividing_line"&gt;&lt;/div&gt;&amp;#10;          &lt;p id="popup_locataire"&gt;Propriétaire&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;•&lt;/span&gt; Réparations nécessaires, autres que locatives, et remplacement.&lt;/p&gt;</field>
         </block>
       </value>
       <next>
-        <block type="procedures_callnoreturn" id="IxD{P_=`U!7MR/ibb.t;">
+        <block type="procedures_callnoreturn" id="`sSa3FYfcy4/`#xqgUf2">
           <mutation name="Update the text in the Pop up">
             <arg name="object_clicked"></arg>
             <arg name="paragraph_text"></arg>
           </mutation>
           <value name="ARG0">
-            <block type="objectList" id="-$y/Q!wv|?VE?OU{(.F-">
-              <field name="FIELDNAME">electricity_living_room_trigger</field>
+            <block type="objectList" id="e)R_rn^n%^fx@r~[2{-`">
+              <field name="FIELDNAME">background</field>
             </block>
           </value>
           <value name="ARG1">
-            <block type="textMultiline" id="EO5ynGs7xNDj^!FN[Q3V">
+            <block type="textMultiline" id="JwkXOVWYdQI0v#7ju:]2">
               <field name="HIGHLIGHT_MODE">html</field>
-              <field name="TEXT" editor-height="17" editor-width="806.2076162696285">          &lt;h1 id="popup_room"&gt;Séjour&lt;/h1&gt;&amp;#10;          &lt;h1 id="popup_object"&gt;Plafonnier, prise de courant, interrupteur.&lt;/h1&gt;&amp;#10;          &lt;div id="dividing_line"&gt;&lt;/div&gt;&amp;#10;          &lt;p id="popup_locataire"&gt;Locataire&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;•&lt;/span&gt; Remise en état des dégâts suite au placement des luminaires. &lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;•&lt;/span&gt; Le locataire est tenu de laisser aux points lumineux des fils en attente d'une longueur de plus ou moins 10 cm. S'il coupe les fils au raz du plafond ou du mur, il sera tenu au remplacement des fils dans la gaine.&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;•&lt;/span&gt; Le locataire doit veiller à entretenir l'installation électrique et ne pas surcharger celle-ci en tout ou en partie.&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;•&lt;/span&gt; Remplacement des ampoules, tubes d'éclairage, des interrupteurs, soquets et des prises de courant cassés, même suite un usage normal.&lt;/p&gt;&amp;#10;          &lt;div id="dividing_line"&gt;&lt;/div&gt;&amp;#10;          &lt;p id="popup_locataire"&gt;Propriétaire&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;•&lt;/span&gt; Tous remplacements des câblages pour tous services sauf si causés par des modifications du locataire. &lt;/p&gt;</field>
+              <field name="TEXT" editor-height="4" editor-width="370.9998495257747">          &lt;div class="popup-cross" id="popup-cross"&gt;&lt;/div&gt;&amp;#10;          &lt;h1 id="popup_room"&gt;Maquette PLE&lt;/h1&gt;&amp;#10;          &lt;h1 id="popup_object"&gt;Interactive et explorable&lt;/h1&gt;&amp;#10;          &lt;div id="dividing_line"&gt;&lt;/div&gt;&amp;#10;          &lt;p id="popup_locataire"&gt;Navigation&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;•&lt;/span&gt; Utiliser la souris pour tourner autour de la maquette.&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;•&lt;/span&gt; Clickez sur une pièce pour zoomer.&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;•&lt;/span&gt; Sélectionner un objet&lt;/p&gt;&amp;#10;          &lt;div id="dividing_line"&gt;&lt;/div&gt;&amp;#10;          &lt;p id="popup_locataire"&gt;Information&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;•&lt;/span&gt; Une fois l'objet cliqué, des informations s'affichent.&lt;/p&gt;</field>
             </block>
           </value>
+          <next>
+            <block type="procedures_callnoreturn" id="IxD{P_=`U!7MR/ibb.t;">
+              <mutation name="Update the text in the Pop up">
+                <arg name="object_clicked"></arg>
+                <arg name="paragraph_text"></arg>
+              </mutation>
+              <value name="ARG0">
+                <block type="objectList" id="-$y/Q!wv|?VE?OU{(.F-">
+                  <field name="FIELDNAME">lamp_trigger</field>
+                </block>
+              </value>
+              <value name="ARG1">
+                <block type="textMultiline" id="EO5ynGs7xNDj^!FN[Q3V">
+                  <field name="HIGHLIGHT_MODE">html</field>
+                  <field name="TEXT" editor-height="3" editor-width="368.44309486075963">          &lt;div class="popup-cross" id="popup-cross"&gt;&lt;/div&gt;&amp;#10;          &lt;h1 id="popup_room"&gt;Séjour&lt;/h1&gt;&amp;#10;          &lt;h1 id="popup_object"&gt;Plafonnier, prise de courant, interrupteur.&lt;/h1&gt;&amp;#10;          &lt;div id="dividing_line"&gt;&lt;/div&gt;&amp;#10;          &lt;p id="popup_locataire"&gt;Locataire&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;•&lt;/span&gt; Remise en état des dégâts suite au placement des luminaires. &lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;•&lt;/span&gt; Le locataire est tenu de laisser aux points lumineux des fils en attente d'une longueur de plus ou moins 10 cm. S'il coupe les fils au raz du plafond ou du mur, il sera tenu au remplacement des fils dans la gaine.&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;•&lt;/span&gt; Le locataire doit veiller à entretenir l'installation électrique et ne pas surcharger celle-ci en tout ou en partie.&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;•&lt;/span&gt; Remplacement des ampoules, tubes d'éclairage, des interrupteurs, soquets et des prises de courant cassés, même suite un usage normal.&lt;/p&gt;&amp;#10;          &lt;div id="dividing_line"&gt;&lt;/div&gt;&amp;#10;          &lt;p id="popup_locataire"&gt;Propriétaire&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;•&lt;/span&gt; Tous remplacements des câblages pour tous services sauf si causés par des modifications du locataire. &lt;/p&gt;</field>
+                </block>
+              </value>
+            </block>
+          </next>
         </block>
       </next>
     </block>
-    <block xmlns="https://developers.google.com/blockly/xml" type="procedures_callnoreturn" id="p{1x;bLTmf(Dy:;!zJy1" x="3510" y="10">
+    <block xmlns="https://developers.google.com/blockly/xml" type="whenClicked" id="7Wf(9rs,[T`2|F]v=^Ka" inline="false" x="1110" y="210">
+      <mutation xmlns="http://www.w3.org/1999/xhtml" adveventoptions="false" enableifmissed="true"></mutation>
+      <field name="X_RAY">FALSE</field>
+      <field name="DOUBLE_CLICK">FALSE</field>
+      <field name="LEFT_BUTTON">TRUE</field>
+      <field name="MIDDLE_BUTTON">TRUE</field>
+      <field name="RIGHT_BUTTON">TRUE</field>
+      <value name="VALUE">
+        <shadow type="objectList" id="W2^_{$0`wKdBWsp9Ol$=">
+          <field name="FIELDNAME">lamp_trigger</field>
+        </shadow>
+      </value>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="procedures_callnoreturn" id="p{1x;bLTmf(Dy:;!zJy1" x="3490" y="110">
       <mutation name="Play zoom out animation">
         <arg name="What is the current camera?"></arg>
         <arg name="Which animation to play? (all rooms - the current one)"></arg>
@@ -1866,7 +1836,7 @@
           </value>
           <value name="ARG2">
             <block type="objectList" id="[[/bL#$NPiHra30y10)(">
-              <field name="FIELDNAME">trigger_entrance_wall_animation</field>
+              <field name="FIELDNAME">wall_entrance</field>
             </block>
           </value>
           <next>
@@ -1888,7 +1858,7 @@
               </value>
               <value name="ARG2">
                 <block type="objectList" id=":]e$}e0o3[/1y-rOUyTz">
-                  <field name="FIELDNAME">trigger_kitchen_wall_animation</field>
+                  <field name="FIELDNAME">wall_kitchen</field>
                 </block>
               </value>
               <next>
@@ -1995,7 +1965,7 @@
                                       </value>
                                       <value name="ARG2">
                                         <block type="objectList" id="XkVn(4nNV85QehbLnL:9">
-                                          <field name="FIELDNAME">trigger_study_room_animation</field>
+                                          <field name="FIELDNAME">wall_entrance</field>
                                         </block>
                                       </value>
                                     </block>
@@ -2014,19 +1984,6 @@
           </next>
         </block>
       </next>
-    </block>
-    <block xmlns="https://developers.google.com/blockly/xml" type="whenClicked" id="7Wf(9rs,[T`2|F]v=^Ka" inline="false" x="1110" y="210">
-      <mutation xmlns="http://www.w3.org/1999/xhtml" adveventoptions="false" enableifmissed="true"></mutation>
-      <field name="X_RAY">FALSE</field>
-      <field name="DOUBLE_CLICK">FALSE</field>
-      <field name="LEFT_BUTTON">TRUE</field>
-      <field name="MIDDLE_BUTTON">TRUE</field>
-      <field name="RIGHT_BUTTON">TRUE</field>
-      <value name="VALUE">
-        <shadow type="objectList" id="W2^_{$0`wKdBWsp9Ol$=">
-          <field name="FIELDNAME">lamp_trigger</field>
-        </shadow>
-      </value>
     </block>
     <block xmlns="https://developers.google.com/blockly/xml" type="outline" id=".MiTqwgyh7p{^iPHjpLf" x="1130" y="370">
       <field name="DO_WHAT">ENABLE</field>
@@ -2117,7 +2074,7 @@
           </value>
           <value name="ARG5">
             <block type="objectList" id=":wvQoa{A2Z5Nrz~c}5FH">
-              <field name="FIELDNAME">trigger_entrance_wall_animation</field>
+              <field name="FIELDNAME">wall_entrance</field>
             </block>
           </value>
           <value name="ARG6">
@@ -2163,7 +2120,7 @@
               </value>
               <value name="ARG5">
                 <block type="objectList" id="E`DToodD?O_t:)kA~ae}">
-                  <field name="FIELDNAME">trigger_kitchen_wall_animation</field>
+                  <field name="FIELDNAME">wall_kitchen</field>
                 </block>
               </value>
               <value name="ARG6">
@@ -2414,11 +2371,171 @@
                                       </value>
                                       <value name="ARG5">
                                         <block type="objectList" id="2AVgi$|VFMlvnPfrs0%V">
-                                          <field name="FIELDNAME">trigger_study_room_animation</field>
+                                          <field name="FIELDNAME">wall_study_room</field>
                                         </block>
                                       </value>
                                       <value name="ARG6">
                                         <block type="groupList" id="9$kFDqCJf|gt,p|v(NCW">
+                                          <field name="FIELDNAME">study_room</field>
+                                        </block>
+                                      </value>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </next>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="procedures_callnoreturn" id="aijnD$_)=b]X(vc$v#td" x="5090" y="210">
+      <mutation name="Hoover over room animation">
+        <arg name="Which room is hoovered?"></arg>
+        <arg name="Which room to trigger hoover animation?"></arg>
+      </mutation>
+      <value name="ARG0">
+        <block type="objectList" id="SrQ/Qh%uB%aYYssGH%LS">
+          <field name="FIELDNAME">entrance_trigger</field>
+        </block>
+      </value>
+      <value name="ARG1">
+        <block type="groupList" id="$)ig.{52(ZQL%#=IsxY=">
+          <field name="FIELDNAME">entrance</field>
+        </block>
+      </value>
+      <next>
+        <block type="procedures_callnoreturn" id="@wZs=9Tc;eWI.[?Avx?D">
+          <mutation name="Hoover over room animation">
+            <arg name="Which room is hoovered?"></arg>
+            <arg name="Which room to trigger hoover animation?"></arg>
+          </mutation>
+          <value name="ARG0">
+            <block type="objectList" id="x{q+nuhfd@z}2n%_W[f)">
+              <field name="FIELDNAME">kitchen_trigger</field>
+            </block>
+          </value>
+          <value name="ARG1">
+            <block type="groupList" id="YI_E(p(WCmv*-1buPd|t">
+              <field name="FIELDNAME">kitchen</field>
+            </block>
+          </value>
+          <next>
+            <block type="procedures_callnoreturn" id="9*KPvVH(ICqL+iIo-#XX">
+              <mutation name="Hoover over room animation">
+                <arg name="Which room is hoovered?"></arg>
+                <arg name="Which room to trigger hoover animation?"></arg>
+              </mutation>
+              <value name="ARG0">
+                <block type="objectList" id="TgY=w$|R{VslOhD/R?@|">
+                  <field name="FIELDNAME">living_room_trigger</field>
+                </block>
+              </value>
+              <value name="ARG1">
+                <block type="groupList" id="yItP2Z.8T.wTueEXD2~~">
+                  <field name="FIELDNAME">living_room</field>
+                </block>
+              </value>
+              <next>
+                <block type="procedures_callnoreturn" id=")o5csN)065juo{Gf4eL*">
+                  <mutation name="Hoover over room animation">
+                    <arg name="Which room is hoovered?"></arg>
+                    <arg name="Which room to trigger hoover animation?"></arg>
+                  </mutation>
+                  <value name="ARG0">
+                    <block type="objectList" id="w~/hDgHX%8cL{yP%+#xU">
+                      <field name="FIELDNAME">bathroom_trigger</field>
+                    </block>
+                  </value>
+                  <value name="ARG1">
+                    <block type="groupList" id="=gKMq$E2k|dRFdDHFZ^|">
+                      <field name="FIELDNAME">bathroom</field>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="procedures_callnoreturn" id="we2y:y]o8.[Q.C41ggk%">
+                      <mutation name="Hoover over room animation">
+                        <arg name="Which room is hoovered?"></arg>
+                        <arg name="Which room to trigger hoover animation?"></arg>
+                      </mutation>
+                      <value name="ARG0">
+                        <block type="objectList" id="I}Hy)^mxsz26b?`p:zKa">
+                          <field name="FIELDNAME">toilet_trigger</field>
+                        </block>
+                      </value>
+                      <value name="ARG1">
+                        <block type="groupList" id="{)Tww|b0{!#/w-a`J:jz">
+                          <field name="FIELDNAME">toilet</field>
+                        </block>
+                      </value>
+                      <next>
+                        <block type="procedures_callnoreturn" id="4wxRuM(EclfxK*GS2+Ev">
+                          <mutation name="Hoover over room animation">
+                            <arg name="Which room is hoovered?"></arg>
+                            <arg name="Which room to trigger hoover animation?"></arg>
+                          </mutation>
+                          <value name="ARG0">
+                            <block type="objectList" id="*r=v!u8!Z(9ZT%j#2%su">
+                              <field name="FIELDNAME">boiler_room_trigger</field>
+                            </block>
+                          </value>
+                          <value name="ARG1">
+                            <block type="groupList" id="F1y#5jj?CqJllq)l|$xw">
+                              <field name="FIELDNAME">boiler_room</field>
+                            </block>
+                          </value>
+                          <next>
+                            <block type="procedures_callnoreturn" id="I{ux1~U8:9^/GIV1RZw`">
+                              <mutation name="Hoover over room animation">
+                                <arg name="Which room is hoovered?"></arg>
+                                <arg name="Which room to trigger hoover animation?"></arg>
+                              </mutation>
+                              <value name="ARG0">
+                                <block type="objectList" id="0D+kIp`_0{,fROTB7BbW">
+                                  <field name="FIELDNAME">bedroom_trigger</field>
+                                </block>
+                              </value>
+                              <value name="ARG1">
+                                <block type="groupList" id="(^T,?M[GPu}hDVzT0qAN">
+                                  <field name="FIELDNAME">bedroom</field>
+                                </block>
+                              </value>
+                              <next>
+                                <block type="procedures_callnoreturn" id="7G^kl@[e(-Kmx@#PnPus">
+                                  <mutation name="Hoover over room animation">
+                                    <arg name="Which room is hoovered?"></arg>
+                                    <arg name="Which room to trigger hoover animation?"></arg>
+                                  </mutation>
+                                  <value name="ARG0">
+                                    <block type="objectList" id="N_;.z_34xrV.?_37?A#,">
+                                      <field name="FIELDNAME">garden_trigger</field>
+                                    </block>
+                                  </value>
+                                  <value name="ARG1">
+                                    <block type="groupList" id="HNr%J7Rjn],VG!^CRh#r">
+                                      <field name="FIELDNAME">garden</field>
+                                    </block>
+                                  </value>
+                                  <next>
+                                    <block type="procedures_callnoreturn" id="|e}M^7Nn!(W4)lD7O^po">
+                                      <mutation name="Hoover over room animation">
+                                        <arg name="Which room is hoovered?"></arg>
+                                        <arg name="Which room to trigger hoover animation?"></arg>
+                                      </mutation>
+                                      <value name="ARG0">
+                                        <block type="objectList" id="j,op2[$-zb$g1GsH74Y9">
+                                          <field name="FIELDNAME">study_room_trigger</field>
+                                        </block>
+                                      </value>
+                                      <value name="ARG1">
+                                        <block type="groupList" id="uL_f#tWB!W1#ln}ja90J">
                                           <field name="FIELDNAME">study_room</field>
                                         </block>
                                       </value>
@@ -2631,202 +2748,6 @@
               </statement>
             </block>
           </statement>
-        </block>
-      </statement>
-    </block>
-    <block xmlns="https://developers.google.com/blockly/xml" type="procedures_callnoreturn" id="aijnD$_)=b]X(vc$v#td" x="5141" y="237">
-      <mutation name="Hoover over room animation">
-        <arg name="Which room is hoovered?"></arg>
-        <arg name="Which room to trigger hoover animation?"></arg>
-      </mutation>
-      <value name="ARG0">
-        <block type="objectList" id="SrQ/Qh%uB%aYYssGH%LS">
-          <field name="FIELDNAME">entrance_trigger</field>
-        </block>
-      </value>
-      <value name="ARG1">
-        <block type="groupList" id="$)ig.{52(ZQL%#=IsxY=">
-          <field name="FIELDNAME">entrance</field>
-        </block>
-      </value>
-      <next>
-        <block type="procedures_callnoreturn" id="@wZs=9Tc;eWI.[?Avx?D">
-          <mutation name="Hoover over room animation">
-            <arg name="Which room is hoovered?"></arg>
-            <arg name="Which room to trigger hoover animation?"></arg>
-          </mutation>
-          <value name="ARG0">
-            <block type="objectList" id="x{q+nuhfd@z}2n%_W[f)">
-              <field name="FIELDNAME">kitchen_trigger</field>
-            </block>
-          </value>
-          <value name="ARG1">
-            <block type="groupList" id="YI_E(p(WCmv*-1buPd|t">
-              <field name="FIELDNAME">kitchen</field>
-            </block>
-          </value>
-          <next>
-            <block type="procedures_callnoreturn" id="9*KPvVH(ICqL+iIo-#XX">
-              <mutation name="Hoover over room animation">
-                <arg name="Which room is hoovered?"></arg>
-                <arg name="Which room to trigger hoover animation?"></arg>
-              </mutation>
-              <value name="ARG0">
-                <block type="objectList" id="TgY=w$|R{VslOhD/R?@|">
-                  <field name="FIELDNAME">living_room_trigger</field>
-                </block>
-              </value>
-              <value name="ARG1">
-                <block type="groupList" id="yItP2Z.8T.wTueEXD2~~">
-                  <field name="FIELDNAME">living_room</field>
-                </block>
-              </value>
-              <next>
-                <block type="procedures_callnoreturn" id=")o5csN)065juo{Gf4eL*">
-                  <mutation name="Hoover over room animation">
-                    <arg name="Which room is hoovered?"></arg>
-                    <arg name="Which room to trigger hoover animation?"></arg>
-                  </mutation>
-                  <value name="ARG0">
-                    <block type="objectList" id="w~/hDgHX%8cL{yP%+#xU">
-                      <field name="FIELDNAME">bathroom_trigger</field>
-                    </block>
-                  </value>
-                  <value name="ARG1">
-                    <block type="groupList" id="=gKMq$E2k|dRFdDHFZ^|">
-                      <field name="FIELDNAME">bathroom</field>
-                    </block>
-                  </value>
-                  <next>
-                    <block type="procedures_callnoreturn" id="we2y:y]o8.[Q.C41ggk%">
-                      <mutation name="Hoover over room animation">
-                        <arg name="Which room is hoovered?"></arg>
-                        <arg name="Which room to trigger hoover animation?"></arg>
-                      </mutation>
-                      <value name="ARG0">
-                        <block type="objectList" id="I}Hy)^mxsz26b?`p:zKa">
-                          <field name="FIELDNAME">toilet_trigger</field>
-                        </block>
-                      </value>
-                      <value name="ARG1">
-                        <block type="groupList" id="{)Tww|b0{!#/w-a`J:jz">
-                          <field name="FIELDNAME">toilet</field>
-                        </block>
-                      </value>
-                      <next>
-                        <block type="procedures_callnoreturn" id="4wxRuM(EclfxK*GS2+Ev">
-                          <mutation name="Hoover over room animation">
-                            <arg name="Which room is hoovered?"></arg>
-                            <arg name="Which room to trigger hoover animation?"></arg>
-                          </mutation>
-                          <value name="ARG0">
-                            <block type="objectList" id="*r=v!u8!Z(9ZT%j#2%su">
-                              <field name="FIELDNAME">boiler_room_trigger</field>
-                            </block>
-                          </value>
-                          <value name="ARG1">
-                            <block type="groupList" id="F1y#5jj?CqJllq)l|$xw">
-                              <field name="FIELDNAME">boiler_room</field>
-                            </block>
-                          </value>
-                          <next>
-                            <block type="procedures_callnoreturn" id="I{ux1~U8:9^/GIV1RZw`">
-                              <mutation name="Hoover over room animation">
-                                <arg name="Which room is hoovered?"></arg>
-                                <arg name="Which room to trigger hoover animation?"></arg>
-                              </mutation>
-                              <value name="ARG0">
-                                <block type="objectList" id="0D+kIp`_0{,fROTB7BbW">
-                                  <field name="FIELDNAME">bedroom_trigger</field>
-                                </block>
-                              </value>
-                              <value name="ARG1">
-                                <block type="groupList" id="(^T,?M[GPu}hDVzT0qAN">
-                                  <field name="FIELDNAME">bedroom</field>
-                                </block>
-                              </value>
-                              <next>
-                                <block type="procedures_callnoreturn" id="7G^kl@[e(-Kmx@#PnPus">
-                                  <mutation name="Hoover over room animation">
-                                    <arg name="Which room is hoovered?"></arg>
-                                    <arg name="Which room to trigger hoover animation?"></arg>
-                                  </mutation>
-                                  <value name="ARG0">
-                                    <block type="objectList" id="N_;.z_34xrV.?_37?A#,">
-                                      <field name="FIELDNAME">garden_trigger</field>
-                                    </block>
-                                  </value>
-                                  <value name="ARG1">
-                                    <block type="groupList" id="HNr%J7Rjn],VG!^CRh#r">
-                                      <field name="FIELDNAME">garden</field>
-                                    </block>
-                                  </value>
-                                  <next>
-                                    <block type="procedures_callnoreturn" id="|e}M^7Nn!(W4)lD7O^po">
-                                      <mutation name="Hoover over room animation">
-                                        <arg name="Which room is hoovered?"></arg>
-                                        <arg name="Which room to trigger hoover animation?"></arg>
-                                      </mutation>
-                                      <value name="ARG0">
-                                        <block type="objectList" id="j,op2[$-zb$g1GsH74Y9">
-                                          <field name="FIELDNAME">study_room_trigger</field>
-                                        </block>
-                                      </value>
-                                      <value name="ARG1">
-                                        <block type="groupList" id="uL_f#tWB!W1#ln}ja90J">
-                                          <field name="FIELDNAME">study_room</field>
-                                        </block>
-                                      </value>
-                                    </block>
-                                  </next>
-                                </block>
-                              </next>
-                            </block>
-                          </next>
-                        </block>
-                      </next>
-                    </block>
-                  </next>
-                </block>
-              </next>
-            </block>
-          </next>
-        </block>
-      </next>
-    </block>
-    <block xmlns="https://developers.google.com/blockly/xml" type="controls_if" id="vy=+?z1.0;T|0~.0[8@-" x="7030" y="350">
-      <value name="IF0">
-        <block type="logic_compare" id="AD}_fwo)swRCiNGw=~PS">
-          <field name="OP">EQ</field>
-          <value name="A">
-            <block type="variables_get" id="t9=(cfF4{C9n:$${uAMZ">
-              <field name="VAR" id="J@FII3x]r![1`]rdXcK,">zoomed_in</field>
-            </block>
-          </value>
-          <value name="B">
-            <block type="logic_boolean" id=".VBI]I6v}.Z)l=!V,,*+">
-              <field name="BOOL">TRUE</field>
-            </block>
-          </value>
-        </block>
-      </value>
-      <statement name="DO0">
-        <block type="procedures_callnoreturn" id="`sSa3FYfcy4/`#xqgUf2">
-          <mutation name="Update the text in the Pop up">
-            <arg name="object_clicked"></arg>
-            <arg name="paragraph_text"></arg>
-          </mutation>
-          <value name="ARG0">
-            <block type="objectList" id="e)R_rn^n%^fx@r~[2{-`">
-              <field name="FIELDNAME">background</field>
-            </block>
-          </value>
-          <value name="ARG1">
-            <block type="textMultiline" id="JwkXOVWYdQI0v#7ju:]2">
-              <field name="HIGHLIGHT_MODE">html</field>
-              <field name="TEXT" editor-height="4" editor-width="370.9998495257747">          &lt;div class="popup-cross" id="popup-cross"&gt;&lt;/div&gt;&amp;#10;          &lt;h1 id="popup_room"&gt;Maquette PLE&lt;/h1&gt;&amp;#10;          &lt;h1 id="popup_object"&gt;Interactive et explorable&lt;/h1&gt;&amp;#10;          &lt;div id="dividing_line"&gt;&lt;/div&gt;&amp;#10;          &lt;p id="popup_locataire"&gt;Navigation&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;•&lt;/span&gt; Utiliser la souris pour tourner autour de la maquette.&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;•&lt;/span&gt; Clickez sur une pièce pour zoomer.&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;•&lt;/span&gt; Sélectionner un objet&lt;/p&gt;&amp;#10;          &lt;div id="dividing_line"&gt;&lt;/div&gt;&amp;#10;          &lt;p id="popup_locataire"&gt;Information&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;•&lt;/span&gt; Une fois l'objet cliqué, des informations s'affichent.&lt;/p&gt;</field>
-            </block>
-          </value>
         </block>
       </statement>
     </block>

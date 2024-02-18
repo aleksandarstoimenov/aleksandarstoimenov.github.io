@@ -84,9 +84,9 @@ body {
 }
 
 #loading-screen-header {
-  top: 150px;
+  top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, calc(-50% - 275px));
   position: absolute;
   color: white;
   font-size: 32pt;
@@ -94,21 +94,23 @@ body {
 }
 
 #loading-screen-paragraph {
-  position: absolute;
-  top: 350px;
+  top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, calc(-50% - 100px));
+  position: absolute;
   font-family: 'OpenSans';
   font-size: 15px;
   color: white;
   max-width: 500px;
+  display: block;
+  text-align: center;
 }
 
 #start-button {
-  position: absolute;
-  bottom: 80px;
+  top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, calc(-50% + 225px));
+  position: absolute;
   cursor: pointer;
   display: none;
 }
@@ -119,35 +121,37 @@ body {
 }
 
 #start-button-hovered {
-  position: absolute;
-  bottom: 80px;
+  top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, calc(-50% + 225px));
+  position: absolute;
   display: none;
 }
 
 #click-icon {
+  top: 50%;
+  left: 50%;
+  transform: translate(calc(-50% + 50px), calc(-50% + 100px));
   position: absolute;
-  bottom: 250px;
-  left: calc(50% + 50px);
-  transform: translate(-50%, -50%);
   height: 80px;
+  display: block;
 }
 
 #hover-icon {
+  top: 50%;
+  left: 50%;
+  transform: translate(calc(-50% - 50px), calc(-50% + 100px));
   position: absolute;
-  bottom: 250px;
-  left: calc(50% - 50px);
-  transform: translate(-50%, -50%);
   height: 80px;
   width: auto;
+  display: block;
 }
 
 #loading-icon {
-  position: absolute;
-  bottom: 70px;
+  top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, calc(-50% + 225px));
+  position: absolute;
 }
 
 .lds-ellipsis {
@@ -232,6 +236,11 @@ body {
     min-width: 500px;
     margin-left: 50px;
     margin-right: 50px;
+    display: block;
+}
+
+#text-container-phone {
+  display: none;
 }
 
 #text-block {
@@ -319,38 +328,6 @@ iframe {
     border: 0;
 }
 
-.popup-cross {
-    display: none;
-    position: absolute;
-    top: 50px;
-    right: 50px;
-    width: 40px;
-    height: 40px;
-    cursor: pointer;
-}
-
-.popup-cross::before,
-.popup-cross::after {
-    content: '';
-    position: absolute;
-    width: 2px;
-    height: 100%;
-    background-color: black;
-}
-
-.popup-cross::before {
-    transform: rotate(45deg);
-    left: 50%;
-    top: 0;
-}
-
-.popup-cross::after {
-    transform: rotate(-45deg);
-    left: 50%;
-    bottom: 0;
-}
-
-
 @media (min-width: 1920px) {
   #iframe-container {
       flex: 2;
@@ -368,17 +345,92 @@ iframe {
     }
 
     #text-container {
+        display: none;
+    }
+
+    #text-container-phone {
         position: absolute;
         height: 100%;
         width: 100%;
+        background-color: white;
         top: 50%;
         left: 50%;
-        transform: translate(-50%, -50%);
+        transform: translate(300%, -50%);
         transition: transform 0.5s ease;
         animation-duration: 4s;
+        display: block;
+    }
+
+    #text-block-phone {
+      min-width: 300px;
+      max-width:500px;
+      margin-left: 30px;
+      margin-right: 30px;
+    }
+
+    #popup_room{
+      margin-top: 50px;
     }
 
     .popup-cross {
         display: block;
+        top: 20px;
+        right: 30px;
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
     }
+
+    .popup-cross::before,
+    .popup-cross::after {
+        content: '';
+        position: absolute;
+        width: 2px;
+        height: 100%;
+        background-color: black;
+    }
+
+    .popup-cross::before {
+        transform: rotate(45deg);
+        left: 50%;
+        top: 0;
+    }
+
+    .popup-cross::after {
+        transform: rotate(-45deg);
+        left: 50%;
+        bottom: 0;
+    }
+
+    #click-icon {
+      display: none;
+    }
+
+    #hover-icon {
+      display: none;
+    }
+
+    #loading-screen-paragraph{
+      display: none;
+    }
+
+    #loading-screen-header {
+      transform: translate(-50%, calc(-50% - 100px));
+    }
+
+    #start-button {
+      transform: translate(-50%, calc(-50% + 100px));
+      height: 60px;
+    }
+
+    #start-button-hovered {
+      transform: translate(-50%, calc(-50% + 100px));
+      height: 60px;
+    }
+
+    #loading-icon {
+      transform: translate(-50%, calc(-50% + 100px));
+    }
+
 }

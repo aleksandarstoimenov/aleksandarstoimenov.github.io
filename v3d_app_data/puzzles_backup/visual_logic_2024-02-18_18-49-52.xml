@@ -35,7 +35,7 @@
       </statement>
     </block>
   </tab>
-  <tab name="New Tab" type="CommonTab" active="true" scrollx="-4254.913440324668" scrolly="626.9928800319883" scale="0.7462153966366275">
+  <tab name="New Tab" type="CommonTab" active="true" scrollx="-6613.1865234375" scrolly="538.4415283203125" scale="1">
     <variables xmlns="https://developers.google.com/blockly/xml">
       <variable id="V;R6qf}0gq6K:p/Q3TzO">animations_except_garden</variable>
       <variable id="J6oW`R0+@yA6=I_KCzo)">furniture_triggers</variable>
@@ -863,179 +863,6 @@
         </block>
       </statement>
     </block>
-    <block xmlns="https://developers.google.com/blockly/xml" type="procedures_defnoreturn" id="N}b?:zubVb%=d[6OSECN" x="6990" y="-770">
-      <mutation>
-        <arg name="object_clicked" varid="iyuzO7wPce%i!#VRa!.$"></arg>
-        <arg name="paragraph_text" varid="v.Xf?aMII{Cz9uMHLfYu"></arg>
-      </mutation>
-      <field name="NAME">Update the text in the Pop up</field>
-      <comment pinned="false" h="80" w="160">Describe this function...</comment>
-      <statement name="STACK">
-        <block type="whenHovered" id="`vW==_B[S!HZvZ$;FzVW" inline="true">
-          <mutation xmlns="http://www.w3.org/1999/xhtml" adveventoptions="true"></mutation>
-          <field name="X_RAY">FALSE</field>
-          <value name="VALUE">
-            <shadow type="objectList" id="umW/3KC!~%Km0R,5Sh^(">
-              <field name="FIELDNAME">background</field>
-            </shadow>
-            <block type="variables_get" id="HWZvQiDwWB*Gi{@7k9W:">
-              <field name="VAR" id="iyuzO7wPce%i!#VRa!.$">object_clicked</field>
-            </block>
-          </value>
-          <statement name="DO_OVER">
-            <block type="setHTMLElemStyle" id="YX4$F1z6Q$$EaFw*z|ZA">
-              <field name="PROPERTY">cursor</field>
-              <field name="PARENT">FALSE</field>
-              <value name="VALUE">
-                <shadow type="cursorDropdown" id="~W1,]#tXdS~KmEz:r}qc">
-                  <field name="TEXT">pointer</field>
-                </shadow>
-              </value>
-              <value name="ID">
-                <shadow type="text" id="Y?B1a)kXXDxa.,Ge`2vu">
-                  <field name="TEXT">myElem</field>
-                </shadow>
-                <block type="DOMObjectSelector" id="8)S_r-*Mgwsi|)Cl7Jp!">
-                  <field name="DOM_OBJECT">BODY</field>
-                </block>
-              </value>
-            </block>
-          </statement>
-          <statement name="DO_OUT">
-            <block type="setHTMLElemStyle" id="NrzzgF@pzhGKdiFdTlk!">
-              <field name="PROPERTY">cursor</field>
-              <field name="PARENT">FALSE</field>
-              <value name="VALUE">
-                <shadow type="cursorDropdown" id="U0R%)uvZxg%U/iWkTX%C">
-                  <field name="TEXT">default</field>
-                </shadow>
-              </value>
-              <value name="ID">
-                <shadow type="text" id="ipJ^u%bG_jSJt/z=|E(#">
-                  <field name="TEXT">myElem</field>
-                </shadow>
-                <block type="DOMObjectSelector" id="5nQROo^Qfhql{2UdH@SO">
-                  <field name="DOM_OBJECT">BODY</field>
-                </block>
-              </value>
-            </block>
-          </statement>
-          <next>
-            <block type="whenClicked" id="Cq3U3d++VkonNc3lkV8_" inline="false">
-              <mutation xmlns="http://www.w3.org/1999/xhtml" adveventoptions="false" enableifmissed="false"></mutation>
-              <field name="X_RAY">FALSE</field>
-              <field name="DOUBLE_CLICK">FALSE</field>
-              <field name="LEFT_BUTTON">TRUE</field>
-              <field name="MIDDLE_BUTTON">TRUE</field>
-              <field name="RIGHT_BUTTON">TRUE</field>
-              <value name="VALUE">
-                <shadow type="objectList" id="sIAQ2C=e[9*Dv??V3neZ">
-                  <field name="FIELDNAME">cupboard_trigger</field>
-                </shadow>
-                <block type="variables_get" id="-@{d~A=VqK%t:{5ThOcr">
-                  <field name="VAR" id="iyuzO7wPce%i!#VRa!.$">object_clicked</field>
-                </block>
-              </value>
-              <statement name="DO">
-                <block type="setHTMLElemStyle" id="stVTqxj^0,d-jE*(rr-9">
-                  <field name="PROPERTY">transform</field>
-                  <field name="PARENT">TRUE</field>
-                  <value name="VALUE">
-                    <shadow type="text" id="1838YENb;5tH*7[?_,Ne">
-                      <field name="TEXT">translate(-50%, -50%)</field>
-                    </shadow>
-                  </value>
-                  <value name="ID">
-                    <shadow type="text" id="$mBebcG~QwC%{L8Kvs94">
-                      <field name="TEXT">text-container-phone</field>
-                    </shadow>
-                  </value>
-                  <next>
-                    <block type="setHTMLElemAttribute" id=":ju$8A8clNo(.uBNDAD%">
-                      <field name="ATTRIBUTE">innerHTML</field>
-                      <field name="PARENT">TRUE</field>
-                      <value name="VALUE">
-                        <shadow type="text" id="=/.t_$bDbY~/vo^du{Cl">
-                          <field name="TEXT"></field>
-                        </shadow>
-                        <block type="variables_get" id="QX[[1A92af;koKZ^R-YB">
-                          <field name="VAR" id="v.Xf?aMII{Cz9uMHLfYu">paragraph_text</field>
-                        </block>
-                      </value>
-                      <value name="ID">
-                        <shadow type="text" id="adSVR?5b@i6_a@35.%lo">
-                          <field name="TEXT">text-block-phone</field>
-                        </shadow>
-                      </value>
-                      <next>
-                        <block type="setHTMLElemStyle" id="*pvyNKMF,h.pmb;KA*#0">
-                          <field name="PROPERTY">transform</field>
-                          <field name="PARENT">TRUE</field>
-                          <value name="VALUE">
-                            <shadow type="text" id="}Bs^832a[`kc93{%POcx">
-                              <field name="TEXT">translate(300%, -50%)</field>
-                            </shadow>
-                          </value>
-                          <value name="ID">
-                            <shadow type="text" id="HHOvite_jMYLL%_c`|79">
-                              <field name="TEXT">text-block</field>
-                            </shadow>
-                          </value>
-                          <next>
-                            <block type="setTimeout" id="Y*Q^(D,MMWrx|()1%=5=">
-                              <value name="VALUE">
-                                <shadow type="math_number" id="+TaUR6mT#L0Z3*ewhQG[">
-                                  <field name="NUM">0.4</field>
-                                </shadow>
-                              </value>
-                              <statement name="DO">
-                                <block type="setHTMLElemAttribute" id="tBF{tejW}BF,tFFT!m;g">
-                                  <field name="ATTRIBUTE">innerHTML</field>
-                                  <field name="PARENT">TRUE</field>
-                                  <value name="VALUE">
-                                    <shadow type="text" id="=/.t_$bDbY~/vo^du{Cl">
-                                      <field name="TEXT"></field>
-                                    </shadow>
-                                    <block type="variables_get" id="KgJN#AYG}p_J+A^x@/pw">
-                                      <field name="VAR" id="v.Xf?aMII{Cz9uMHLfYu">paragraph_text</field>
-                                    </block>
-                                  </value>
-                                  <value name="ID">
-                                    <shadow type="text" id="9/u`wBdluHL^cF^TZ4iA">
-                                      <field name="TEXT">text-block</field>
-                                    </shadow>
-                                  </value>
-                                  <next>
-                                    <block type="setHTMLElemStyle" id="#v#c1k8x7{4Yds4!!s^P">
-                                      <field name="PROPERTY">transform</field>
-                                      <field name="PARENT">TRUE</field>
-                                      <value name="VALUE">
-                                        <shadow type="text" id="F5l%WK};-Z_N87VkKhD@">
-                                          <field name="TEXT">translate(-50%, -50%)</field>
-                                        </shadow>
-                                      </value>
-                                      <value name="ID">
-                                        <shadow type="text" id="?K9eawu8Tx~Xo{YYx(v;">
-                                          <field name="TEXT">text-block</field>
-                                        </shadow>
-                                      </value>
-                                    </block>
-                                  </next>
-                                </block>
-                              </statement>
-                            </block>
-                          </next>
-                        </block>
-                      </next>
-                    </block>
-                  </next>
-                </block>
-              </statement>
-            </block>
-          </next>
-        </block>
-      </statement>
-    </block>
     <block xmlns="https://developers.google.com/blockly/xml" type="procedures_defnoreturn" id="^CE{1RMefs3t6na1}mf$" x="1850" y="-450">
       <mutation>
         <arg name="Which room trigger?" varid="60tdU/T30Qk7^c|n(d:B"></arg>
@@ -1333,6 +1160,92 @@
         </block>
       </statement>
     </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="procedures_defnoreturn" id="N}b?:zubVb%=d[6OSECN" x="6990" y="-610">
+      <mutation>
+        <arg name="object_clicked" varid="iyuzO7wPce%i!#VRa!.$"></arg>
+        <arg name="paragraph_text" varid="v.Xf?aMII{Cz9uMHLfYu"></arg>
+      </mutation>
+      <field name="NAME">Update the text in the Pop up</field>
+      <comment pinned="false" h="80" w="160">Describe this function...</comment>
+      <statement name="STACK">
+        <block type="whenClicked" id="Cq3U3d++VkonNc3lkV8_" inline="false">
+          <mutation xmlns="http://www.w3.org/1999/xhtml" adveventoptions="false" enableifmissed="false"></mutation>
+          <field name="X_RAY">FALSE</field>
+          <field name="DOUBLE_CLICK">FALSE</field>
+          <field name="LEFT_BUTTON">TRUE</field>
+          <field name="MIDDLE_BUTTON">TRUE</field>
+          <field name="RIGHT_BUTTON">TRUE</field>
+          <value name="VALUE">
+            <shadow type="objectList" id="sIAQ2C=e[9*Dv??V3neZ">
+              <field name="FIELDNAME">cupboard_trigger</field>
+            </shadow>
+            <block type="variables_get" id="-@{d~A=VqK%t:{5ThOcr">
+              <field name="VAR" id="iyuzO7wPce%i!#VRa!.$">object_clicked</field>
+            </block>
+          </value>
+          <statement name="DO">
+            <block type="setHTMLElemStyle" id="*pvyNKMF,h.pmb;KA*#0">
+              <field name="PROPERTY">transform</field>
+              <field name="PARENT">TRUE</field>
+              <value name="VALUE">
+                <shadow type="text" id="}Bs^832a[`kc93{%POcx">
+                  <field name="TEXT">translate(300%, -50%)</field>
+                </shadow>
+              </value>
+              <value name="ID">
+                <shadow type="text" id="HHOvite_jMYLL%_c`|79">
+                  <field name="TEXT">text-block</field>
+                </shadow>
+              </value>
+              <next>
+                <block type="setTimeout" id="Y*Q^(D,MMWrx|()1%=5=">
+                  <value name="VALUE">
+                    <shadow type="math_number" id="+TaUR6mT#L0Z3*ewhQG[">
+                      <field name="NUM">0.4</field>
+                    </shadow>
+                  </value>
+                  <statement name="DO">
+                    <block type="setHTMLElemAttribute" id="tBF{tejW}BF,tFFT!m;g">
+                      <field name="ATTRIBUTE">innerHTML</field>
+                      <field name="PARENT">TRUE</field>
+                      <value name="VALUE">
+                        <shadow type="text" id="=/.t_$bDbY~/vo^du{Cl">
+                          <field name="TEXT"></field>
+                        </shadow>
+                        <block type="variables_get" id="KgJN#AYG}p_J+A^x@/pw">
+                          <field name="VAR" id="v.Xf?aMII{Cz9uMHLfYu">paragraph_text</field>
+                        </block>
+                      </value>
+                      <value name="ID">
+                        <shadow type="text" id="9/u`wBdluHL^cF^TZ4iA">
+                          <field name="TEXT">text-block</field>
+                        </shadow>
+                      </value>
+                      <next>
+                        <block type="setHTMLElemStyle" id="#v#c1k8x7{4Yds4!!s^P">
+                          <field name="PROPERTY">transform</field>
+                          <field name="PARENT">TRUE</field>
+                          <value name="VALUE">
+                            <shadow type="text" id="F5l%WK};-Z_N87VkKhD@">
+                              <field name="TEXT">translate(-50%, -50%)</field>
+                            </shadow>
+                          </value>
+                          <value name="ID">
+                            <shadow type="text" id="?K9eawu8Tx~Xo{YYx(v;">
+                              <field name="TEXT">text-block</field>
+                            </shadow>
+                          </value>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                </block>
+              </next>
+            </block>
+          </statement>
+        </block>
+      </statement>
+    </block>
     <block xmlns="https://developers.google.com/blockly/xml" type="variables_set" id="Sf;?A4^IdSe;+WPKUox6" x="-70" y="-230">
       <field name="VAR" id="+X/(IbEgDFZlRBeEfdlP">room_animation_duration</field>
       <value name="VALUE">
@@ -1349,7 +1262,7 @@
         </block>
       </value>
     </block>
-    <block xmlns="https://developers.google.com/blockly/xml" type="eventHTMLElem" id="(R,K%[1%$UvFChx87P.+" x="8110" y="-630">
+    <block xmlns="https://developers.google.com/blockly/xml" type="eventHTMLElem" id="(R,K%[1%$UvFChx87P.+" x="7850" y="-610">
       <field name="EVENT">click</field>
       <field name="PARENT">TRUE</field>
       <value name="ID">
@@ -1795,7 +1708,7 @@
         </block>
       </statement>
     </block>
-    <block xmlns="https://developers.google.com/blockly/xml" type="procedures_callnoreturn" id="]dU}50%:d/oOLR3RGzFn" x="7039" y="-205">
+    <block xmlns="https://developers.google.com/blockly/xml" type="procedures_callnoreturn" id="]dU}50%:d/oOLR3RGzFn" x="7010" y="-230">
       <mutation name="Update the text in the Pop up">
         <arg name="object_clicked"></arg>
         <arg name="paragraph_text"></arg>
@@ -1808,7 +1721,7 @@
       <value name="ARG1">
         <block type="textMultiline" id="#ahfE;^Kg3N0.VxU5C/p">
           <field name="HIGHLIGHT_MODE">html</field>
-          <field name="TEXT" editor-height="14" editor-width="1927.9401895499418">          &lt;h1 id="popup_room"&gt;Séjour&lt;/h1&gt;&amp;#10;          &lt;h1 id="popup_object"&gt;Fenètres&lt;/h1&gt;&amp;#10;          &lt;div id="dividing_line"&gt;&lt;/div&gt;&amp;#10;          &lt;p id="popup_locataire"&gt;Locataire&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;•&lt;/span&gt; Remplacement des vitres brisées par sa faute.&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;•&lt;/span&gt; Nettoyage régulier des vitres accessibles.&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;•&lt;/span&gt; Remplacement des vitres brisées par sa faute.&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;•&lt;/span&gt; Réfection des griffes faites aux vitres et aux châssis.&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;•&lt;/span&gt; Maintenir libre écoulement des eaux de condensation des châssis, sous peine de voir sa responsabilité engagée pour les dégâts en résultant (humidité, mérules…).&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;•&lt;/span&gt; Réfection des griffes faites aux vitres et aux châssis. En l'absence de VMC  : aération quotidienne des locaux.&lt;/p&gt;&amp;#10;          &lt;div id="dividing_line"&gt;&lt;/div&gt;&amp;#10;          &lt;p id="popup_locataire"&gt;Propriétaire&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;•&lt;/span&gt; Réparations nécessaires, autres que locatives, et remplacement.&lt;/p&gt;</field>
+          <field name="TEXT" editor-height="18" editor-width="1927.9401895499418">          &lt;div class="popup-cross" id="popup-cross"&gt;&lt;/div&gt;&amp;#10;          &lt;h1 id="popup_room"&gt;Séjour&lt;/h1&gt;&amp;#10;          &lt;h1 id="popup_object"&gt;Fenètres&lt;/h1&gt;&amp;#10;          &lt;div id="dividing_line"&gt;&lt;/div&gt;&amp;#10;          &lt;p id="popup_locataire"&gt;Locataire&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;•&lt;/span&gt; Remplacement des vitres brisées par sa faute.&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;•&lt;/span&gt; Nettoyage régulier des vitres accessibles.&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;•&lt;/span&gt; Remplacement des vitres brisées par sa faute.&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;•&lt;/span&gt; Réfection des griffes faites aux vitres et aux châssis.&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;•&lt;/span&gt; Maintenir libre écoulement des eaux de condensation des châssis, sous peine de voir sa responsabilité engagée pour les dégâts en résultant (humidité, mérules…).&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;•&lt;/span&gt; Réfection des griffes faites aux vitres et aux châssis. En l'absence de VMC  : aération quotidienne des locaux.&lt;/p&gt;&amp;#10;          &lt;div id="dividing_line"&gt;&lt;/div&gt;&amp;#10;          &lt;p id="popup_locataire"&gt;Propriétaire&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;•&lt;/span&gt; Réparations nécessaires, autres que locatives, et remplacement.&lt;/p&gt;</field>
         </block>
       </value>
       <next>
@@ -1825,9 +1738,47 @@
           <value name="ARG1">
             <block type="textMultiline" id="EO5ynGs7xNDj^!FN[Q3V">
               <field name="HIGHLIGHT_MODE">html</field>
-              <field name="TEXT" editor-height="17" editor-width="806.2076162696285">          &lt;h1 id="popup_room"&gt;Séjour&lt;/h1&gt;&amp;#10;          &lt;h1 id="popup_object"&gt;Plafonnier, prise de courant, interrupteur.&lt;/h1&gt;&amp;#10;          &lt;div id="dividing_line"&gt;&lt;/div&gt;&amp;#10;          &lt;p id="popup_locataire"&gt;Locataire&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;•&lt;/span&gt; Remise en état des dégâts suite au placement des luminaires. &lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;•&lt;/span&gt; Le locataire est tenu de laisser aux points lumineux des fils en attente d'une longueur de plus ou moins 10 cm. S'il coupe les fils au raz du plafond ou du mur, il sera tenu au remplacement des fils dans la gaine.&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;•&lt;/span&gt; Le locataire doit veiller à entretenir l'installation électrique et ne pas surcharger celle-ci en tout ou en partie.&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;•&lt;/span&gt; Remplacement des ampoules, tubes d'éclairage, des interrupteurs, soquets et des prises de courant cassés, même suite un usage normal.&lt;/p&gt;&amp;#10;          &lt;div id="dividing_line"&gt;&lt;/div&gt;&amp;#10;          &lt;p id="popup_locataire"&gt;Propriétaire&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;•&lt;/span&gt; Tous remplacements des câblages pour tous services sauf si causés par des modifications du locataire. &lt;/p&gt;</field>
+              <field name="TEXT" editor-height="3" editor-width="368.44309486075963">          &lt;div class="popup-cross" id="popup-cross"&gt;&lt;/div&gt;&amp;#10;          &lt;h1 id="popup_room"&gt;Séjour&lt;/h1&gt;&amp;#10;          &lt;h1 id="popup_object"&gt;Plafonnier, prise de courant, interrupteur.&lt;/h1&gt;&amp;#10;          &lt;div id="dividing_line"&gt;&lt;/div&gt;&amp;#10;          &lt;p id="popup_locataire"&gt;Locataire&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;•&lt;/span&gt; Remise en état des dégâts suite au placement des luminaires. &lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;•&lt;/span&gt; Le locataire est tenu de laisser aux points lumineux des fils en attente d'une longueur de plus ou moins 10 cm. S'il coupe les fils au raz du plafond ou du mur, il sera tenu au remplacement des fils dans la gaine.&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;•&lt;/span&gt; Le locataire doit veiller à entretenir l'installation électrique et ne pas surcharger celle-ci en tout ou en partie.&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;•&lt;/span&gt; Remplacement des ampoules, tubes d'éclairage, des interrupteurs, soquets et des prises de courant cassés, même suite un usage normal.&lt;/p&gt;&amp;#10;          &lt;div id="dividing_line"&gt;&lt;/div&gt;&amp;#10;          &lt;p id="popup_locataire"&gt;Propriétaire&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;•&lt;/span&gt; Tous remplacements des câblages pour tous services sauf si causés par des modifications du locataire. &lt;/p&gt;</field>
             </block>
           </value>
+          <next>
+            <block type="controls_if" id="vy=+?z1.0;T|0~.0[8@-">
+              <value name="IF0">
+                <block type="logic_compare" id="AD}_fwo)swRCiNGw=~PS">
+                  <field name="OP">EQ</field>
+                  <value name="A">
+                    <block type="variables_get" id="t9=(cfF4{C9n:$${uAMZ">
+                      <field name="VAR" id="J@FII3x]r![1`]rdXcK,">zoomed_in</field>
+                    </block>
+                  </value>
+                  <value name="B">
+                    <block type="logic_boolean" id=".VBI]I6v}.Z)l=!V,,*+">
+                      <field name="BOOL">TRUE</field>
+                    </block>
+                  </value>
+                </block>
+              </value>
+              <statement name="DO0">
+                <block type="procedures_callnoreturn" id="`sSa3FYfcy4/`#xqgUf2">
+                  <mutation name="Update the text in the Pop up">
+                    <arg name="object_clicked"></arg>
+                    <arg name="paragraph_text"></arg>
+                  </mutation>
+                  <value name="ARG0">
+                    <block type="objectList" id="e)R_rn^n%^fx@r~[2{-`">
+                      <field name="FIELDNAME">background</field>
+                    </block>
+                  </value>
+                  <value name="ARG1">
+                    <block type="textMultiline" id="JwkXOVWYdQI0v#7ju:]2">
+                      <field name="HIGHLIGHT_MODE">html</field>
+                      <field name="TEXT" editor-height="4" editor-width="370.9998495257747">          &lt;div class="popup-cross" id="popup-cross"&gt;&lt;/div&gt;&amp;#10;          &lt;h1 id="popup_room"&gt;Maquette PLE&lt;/h1&gt;&amp;#10;          &lt;h1 id="popup_object"&gt;Interactive et explorable&lt;/h1&gt;&amp;#10;          &lt;div id="dividing_line"&gt;&lt;/div&gt;&amp;#10;          &lt;p id="popup_locataire"&gt;Navigation&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;•&lt;/span&gt; Utiliser la souris pour tourner autour de la maquette.&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;•&lt;/span&gt; Clickez sur une pièce pour zoomer.&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;•&lt;/span&gt; Sélectionner un objet&lt;/p&gt;&amp;#10;          &lt;div id="dividing_line"&gt;&lt;/div&gt;&amp;#10;          &lt;p id="popup_locataire"&gt;Information&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;•&lt;/span&gt; Une fois l'objet cliqué, des informations s'affichent.&lt;/p&gt;</field>
+                    </block>
+                  </value>
+                </block>
+              </statement>
+            </block>
+          </next>
         </block>
       </next>
     </block>
@@ -2793,42 +2744,6 @@
           </next>
         </block>
       </next>
-    </block>
-    <block xmlns="https://developers.google.com/blockly/xml" type="controls_if" id="vy=+?z1.0;T|0~.0[8@-" x="7030" y="350">
-      <value name="IF0">
-        <block type="logic_compare" id="AD}_fwo)swRCiNGw=~PS">
-          <field name="OP">EQ</field>
-          <value name="A">
-            <block type="variables_get" id="t9=(cfF4{C9n:$${uAMZ">
-              <field name="VAR" id="J@FII3x]r![1`]rdXcK,">zoomed_in</field>
-            </block>
-          </value>
-          <value name="B">
-            <block type="logic_boolean" id=".VBI]I6v}.Z)l=!V,,*+">
-              <field name="BOOL">TRUE</field>
-            </block>
-          </value>
-        </block>
-      </value>
-      <statement name="DO0">
-        <block type="procedures_callnoreturn" id="`sSa3FYfcy4/`#xqgUf2">
-          <mutation name="Update the text in the Pop up">
-            <arg name="object_clicked"></arg>
-            <arg name="paragraph_text"></arg>
-          </mutation>
-          <value name="ARG0">
-            <block type="objectList" id="e)R_rn^n%^fx@r~[2{-`">
-              <field name="FIELDNAME">background</field>
-            </block>
-          </value>
-          <value name="ARG1">
-            <block type="textMultiline" id="JwkXOVWYdQI0v#7ju:]2">
-              <field name="HIGHLIGHT_MODE">html</field>
-              <field name="TEXT" editor-height="4" editor-width="370.9998495257747">          &lt;div class="popup-cross" id="popup-cross"&gt;&lt;/div&gt;&amp;#10;          &lt;h1 id="popup_room"&gt;Maquette PLE&lt;/h1&gt;&amp;#10;          &lt;h1 id="popup_object"&gt;Interactive et explorable&lt;/h1&gt;&amp;#10;          &lt;div id="dividing_line"&gt;&lt;/div&gt;&amp;#10;          &lt;p id="popup_locataire"&gt;Navigation&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;•&lt;/span&gt; Utiliser la souris pour tourner autour de la maquette.&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;•&lt;/span&gt; Clickez sur une pièce pour zoomer.&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;•&lt;/span&gt; Sélectionner un objet&lt;/p&gt;&amp;#10;          &lt;div id="dividing_line"&gt;&lt;/div&gt;&amp;#10;          &lt;p id="popup_locataire"&gt;Information&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;•&lt;/span&gt; Une fois l'objet cliqué, des informations s'affichent.&lt;/p&gt;</field>
-            </block>
-          </value>
-        </block>
-      </statement>
     </block>
     <block xmlns="https://developers.google.com/blockly/xml" type="whenClicked" id="*`)]$:2)/F^(G^Tw})iY" inline="false" x="350" y="910">
       <mutation xmlns="http://www.w3.org/1999/xhtml" adveventoptions="false" enableifmissed="true"></mutation>
