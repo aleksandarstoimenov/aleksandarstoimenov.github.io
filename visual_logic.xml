@@ -1,5 +1,5 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <tab name="Init" type="InitTab" active="false" scrollx="579.6976280523975" scrolly="-139.2093545443896" scale="0.5568374181775593">
+  <tab name="Init" type="InitTab" active="false" scrollx="401.92343198952653" scrolly="-139.2093545443896" scale="0.5568374181775593">
     <block xmlns="https://developers.google.com/blockly/xml" type="initPreloader" id="BNy-![:j+%#?R05x(Xxc" x="250" y="250">
       <statement name="DO_END">
         <block type="setHTMLElemStyle" id="#v#c1k8x7{4Yds4!!s^P">
@@ -35,7 +35,7 @@
       </statement>
     </block>
   </tab>
-  <tab name="New Tab" type="CommonTab" active="true" scrollx="-4254.913440324668" scrolly="626.9928800319883" scale="0.7462153966366275">
+  <tab name="New Tab" type="CommonTab" active="true" scrollx="-971.6741333007812" scrolly="2004.455078125" scale="1">
     <variables xmlns="https://developers.google.com/blockly/xml">
       <variable id="V;R6qf}0gq6K:p/Q3TzO">animations_except_garden</variable>
       <variable id="J6oW`R0+@yA6=I_KCzo)">furniture_triggers</variable>
@@ -43,6 +43,8 @@
       <variable id="U~)`(c^[rvq;pQ31M{,t">What is the current camera?</variable>
       <variable id="7UegB-]uhENyB]8saN4z">Which animation to play? (all rooms - the current one)</variable>
       <variable id="MVm!|Ti{MzL[z(LZ]`O,">Is there a wall? (zoom out)</variable>
+      <variable id="iyuzO7wPce%i!#VRa!.$">object_clicked</variable>
+      <variable id="v.Xf?aMII{Cz9uMHLfYu">paragraph_text</variable>
       <variable id="60tdU/T30Qk7^c|n(d:B">Which room trigger?</variable>
       <variable id=")!VwqeCAsCHcRL_{y7:a">Which animation to play? (all the rooms - current one)</variable>
       <variable id="h[29:Bn6p!}!}sW%VnnG">Which room does the camera look to?</variable>
@@ -50,8 +52,8 @@
       <variable id="29E;W`tSLl^,sr$o+]O|">Camera selector zoom in</variable>
       <variable id="!D9sqt2x;o1nG=a:3gh8">Is there a wall? (zoom in)</variable>
       <variable id="ksvD3n81F4eg*~qwdV,e">Which room to reverse hover animation?</variable>
-      <variable id="iyuzO7wPce%i!#VRa!.$">object_clicked</variable>
-      <variable id="v.Xf?aMII{Cz9uMHLfYu">paragraph_text</variable>
+      <variable id="4GSJ8w|Ew75zB}p!86Qq">Outline trigger?</variable>
+      <variable id="mBOUZk/g[#6qDMWcg}mF">Outline object?</variable>
       <variable id="+X/(IbEgDFZlRBeEfdlP">room_animation_duration</variable>
       <variable id="Y7{d)3djf-@UHP5P#/%/">rooms_disapearing_duration</variable>
       <variable id="J@FII3x]r![1`]rdXcK,">zoomed_in</variable>
@@ -517,6 +519,213 @@
         </block>
       </next>
     </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="whenClicked" id="UGE`v@1DPypIkx]-]qt~" inline="false" x="1510" y="-1690">
+      <mutation xmlns="http://www.w3.org/1999/xhtml" adveventoptions="false" enableifmissed="true"></mutation>
+      <field name="X_RAY">FALSE</field>
+      <field name="DOUBLE_CLICK">FALSE</field>
+      <field name="LEFT_BUTTON">TRUE</field>
+      <field name="MIDDLE_BUTTON">TRUE</field>
+      <field name="RIGHT_BUTTON">TRUE</field>
+      <value name="VALUE">
+        <shadow type="objectList" id="sIAQ2C=e[9*Dv??V3neZ">
+          <field name="FIELDNAME">cupboard_trigger</field>
+        </shadow>
+        <block type="objectList" id="X;%A2.!?|0B2KW1G1YJA">
+          <field name="FIELDNAME">radiator_living_room_trigger</field>
+        </block>
+      </value>
+      <statement name="DO">
+        <block type="setAnimationSpeed" id="8I#%(UX6OOeD.D(sD6#B">
+          <field name="REVERSED">FALSE</field>
+          <value name="VALUE">
+            <shadow type="animationList" id="}Ef3;:X2qfy`3s=9#iNS">
+              <field name="FIELDNAME">&lt;none&gt;</field>
+            </shadow>
+            <block type="getAnimations" id=",zyd;XFRa{Sm1CW-oW}0">
+              <value name="OBJECTINPUT">
+                <shadow type="objectList" id="Fh[ZMQaY_6hI1]gwP7cj">
+                  <field name="FIELDNAME">&lt;none&gt;</field>
+                </shadow>
+                <block type="groupList" id="0Te+O]@O)h0./Zl_E9C~">
+                  <field name="FIELDNAME">radiator_living_room</field>
+                </block>
+              </value>
+            </block>
+          </value>
+          <value name="SPEED">
+            <shadow type="math_number" id="K}F03ou^Y.}LcO]st3uh">
+              <field name="NUM">1</field>
+            </shadow>
+          </value>
+          <next>
+            <block type="playAnimationAdv" id="yu#;($qg)oVS|`B%qJfo">
+              <mutation xmlns="http://www.w3.org/1999/xhtml" advplaybackoptions="true" enablewhenfinished="false"></mutation>
+              <field name="REVERSED">FALSE</field>
+              <field name="LOOP">LoopOnce</field>
+              <value name="VALUE">
+                <shadow type="animationList" id="P_-(U*$.o]8^-itpTSu,">
+                  <field name="FIELDNAME">&lt;none&gt;</field>
+                </shadow>
+                <block type="getAnimations" id="JR|VB9L3gEdO%dcw~BQ!">
+                  <value name="OBJECTINPUT">
+                    <shadow type="objectList" id="+rG!/(+yl_NAsLfud=R$">
+                      <field name="FIELDNAME">Point</field>
+                    </shadow>
+                    <block type="groupList" id="iU5F/c#tC8:/[t[uE{vB">
+                      <field name="FIELDNAME">radiator_living_room</field>
+                    </block>
+                  </value>
+                </block>
+              </value>
+              <value name="FROM">
+                <shadow type="math_number" id="6`;Xpskvc@cq%diaH#-L">
+                  <field name="NUM">150</field>
+                </shadow>
+              </value>
+              <value name="TO">
+                <shadow type="math_number" id="3F#Z-7]#_zyG0je$PH)7">
+                  <field name="NUM">170</field>
+                </shadow>
+              </value>
+              <value name="SPEED">
+                <shadow type="math_number" id="tm=}BP)/a).{A,1A1I*0">
+                  <field name="NUM">0.5</field>
+                </shadow>
+              </value>
+            </block>
+          </next>
+        </block>
+      </statement>
+      <statement name="IF_MISSED_DO">
+        <block type="controls_if" id="O/4LJ?LuAsMnDkMl@r/|">
+          <value name="IF0">
+            <block type="logic_operation" id="{eSM]0l2I[{=8o$VtvCC">
+              <field name="OP">AND</field>
+              <value name="A">
+                <block type="logic_compare" id="h.M8T/jREPPHG(o,-e[+">
+                  <field name="OP">EQ</field>
+                  <value name="A">
+                    <block type="variables_get" id="3[R6xRsKe:vh9/n_[s|D">
+                      <field name="VAR" id="J@FII3x]r![1`]rdXcK,">zoomed_in</field>
+                    </block>
+                  </value>
+                  <value name="B">
+                    <block type="logic_boolean" id="=z5Iku1sfbkbkYGvtX-P">
+                      <field name="BOOL">TRUE</field>
+                    </block>
+                  </value>
+                </block>
+              </value>
+              <value name="B">
+                <block type="logic_compare" id="THJQw*^ib8^|h;u53cy~">
+                  <field name="OP">EQ</field>
+                  <value name="A">
+                    <block type="getAnimationFrame" id="9]vHW$P9a3w8g[(Gk*qr">
+                      <value name="VALUE">
+                        <shadow type="animationList" id="iHuEHU(II5Uy:+-FERG+">
+                          <field name="FIELDNAME">Cylinder.013</field>
+                        </shadow>
+                      </value>
+                    </block>
+                  </value>
+                  <value name="B">
+                    <block type="math_number" id="/2OF,~q9G9K90wd_Apd#">
+                      <field name="NUM">170</field>
+                    </block>
+                  </value>
+                </block>
+              </value>
+            </block>
+          </value>
+          <statement name="DO0">
+            <block type="controls_if" id="a|?BC5dF{zE3_[,_4;r5">
+              <mutation else="1"></mutation>
+              <value name="IF0">
+                <block type="isAnimationPlaying" id="}=Z3;1xM{E~e`E!bWdk#">
+                  <value name="VALUE">
+                    <shadow type="animationList" id="gRGMq)G^K0==z*Jv{({2">
+                      <field name="FIELDNAME">&lt;none&gt;</field>
+                    </shadow>
+                    <block type="getAnimations" id="HDyg7^FVLeHFv.}/5a!3">
+                      <value name="OBJECTINPUT">
+                        <shadow type="objectList" id="}=xcD].?q_=?vDQotX{j">
+                          <field name="FIELDNAME">Point</field>
+                        </shadow>
+                        <block type="groupList" id="m?nG4]Ltd[-vuJm4+fff">
+                          <field name="FIELDNAME">radiator_living_room</field>
+                        </block>
+                      </value>
+                    </block>
+                  </value>
+                </block>
+              </value>
+              <statement name="DO0">
+                <block type="setAnimationSpeed" id="Vzz:TczdL3bE[=+4V2p@">
+                  <field name="REVERSED">TRUE</field>
+                  <value name="VALUE">
+                    <shadow type="animationList" id="}Ef3;:X2qfy`3s=9#iNS">
+                      <field name="FIELDNAME">&lt;none&gt;</field>
+                    </shadow>
+                    <block type="getAnimations" id="9p}0WFZ*6qJy#-R[O?Ss">
+                      <value name="OBJECTINPUT">
+                        <shadow type="objectList" id="9N3;DVAiY?oUSX0xD$E0">
+                          <field name="FIELDNAME">Point</field>
+                        </shadow>
+                        <block type="groupList" id="kOnw$+H6R=g,Co#/cS`S">
+                          <field name="FIELDNAME">radiator_living_room</field>
+                        </block>
+                      </value>
+                    </block>
+                  </value>
+                  <value name="SPEED">
+                    <shadow type="math_number" id=".uNux4kn|-4wg~YU%/~G">
+                      <field name="NUM">1</field>
+                    </shadow>
+                  </value>
+                </block>
+              </statement>
+              <statement name="ELSE">
+                <block type="playAnimationAdv" id="KX_8OTGHv+EtW!@-:^uw">
+                  <mutation xmlns="http://www.w3.org/1999/xhtml" advplaybackoptions="true" enablewhenfinished="false"></mutation>
+                  <field name="REVERSED">TRUE</field>
+                  <field name="LOOP">LoopOnce</field>
+                  <value name="VALUE">
+                    <shadow type="animationList" id="P_-(U*$.o]8^-itpTSu,">
+                      <field name="FIELDNAME">&lt;none&gt;</field>
+                    </shadow>
+                    <block type="getAnimations" id="*{,j~[ShoyuChgO{=_Kq">
+                      <value name="OBJECTINPUT">
+                        <shadow type="objectList" id="X#)H}LBL]C[2(J8LaOGH">
+                          <field name="FIELDNAME">Point</field>
+                        </shadow>
+                        <block type="groupList" id="}5puSl57|hIzGMG~7C=y">
+                          <field name="FIELDNAME">radiator_living_room</field>
+                        </block>
+                      </value>
+                    </block>
+                  </value>
+                  <value name="FROM">
+                    <shadow type="math_number" id="g4N)xRSeFKwZit3{dhC$">
+                      <field name="NUM">150</field>
+                    </shadow>
+                  </value>
+                  <value name="TO">
+                    <shadow type="math_number" id="mxB;j{|oBXh~cWg,w4W$">
+                      <field name="NUM">170</field>
+                    </shadow>
+                  </value>
+                  <value name="SPEED">
+                    <shadow type="math_number" id=".jB2Tl{XA@[5tP*1pvom">
+                      <field name="NUM">1</field>
+                    </shadow>
+                  </value>
+                </block>
+              </statement>
+            </block>
+          </statement>
+        </block>
+      </statement>
+    </block>
     <block xmlns="https://developers.google.com/blockly/xml" type="stopAnimation" id="I8k3zHtlsevFMU)qh*sz" x="-610" y="-1450">
       <value name="VALUE">
         <shadow type="animationList" id="huqJx%T%Ebv;y*I9Wb|(">
@@ -616,6 +825,265 @@
         </block>
       </value>
     </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="animateParam" id="GG/+ugsZNH.99/2]3EWs" x="1670" y="-1270">
+      <mutation xmlns="http://www.w3.org/1999/xhtml" whenfinishedslot="false"></mutation>
+      <field name="EASING">Linear</field>
+      <field name="EASING2">InOut</field>
+      <field name="YOYO">FALSE</field>
+      <value name="FROM">
+        <shadow type="math_number" id="$$|yB+L)oHa7vjsWmQKP">
+          <field name="NUM">0</field>
+        </shadow>
+      </value>
+      <value name="TO">
+        <shadow type="math_number" id="v3$zXrl-Snv%c`+F1+p_">
+          <field name="NUM">10</field>
+        </shadow>
+      </value>
+      <value name="DURATION">
+        <shadow type="math_number" id="z[gfOgE*Ea@.{99w~FvA">
+          <field name="NUM">3</field>
+        </shadow>
+      </value>
+      <value name="REPEAT">
+        <shadow type="math_number" id="n$NAox0~w)4h9E$jjZaa">
+          <field name="NUM">0</field>
+        </shadow>
+      </value>
+      <statement name="ON_UPDATE">
+        <block type="setMaterialColor" id="fW0AP19^x{Nb?ckj9tIg">
+          <mutation xmlns="http://www.w3.org/1999/xhtml" flexcolinput="false" usecsscolor="false"></mutation>
+          <field name="MAT_COL_NAME">&lt;no colors&gt;</field>
+          <value name="MATERIAL">
+            <shadow type="materialList" id=":7$Y)vSF}UPKqF_w~M.a">
+              <field name="FIELDNAME">Base white  material dark shade anim</field>
+            </shadow>
+          </value>
+          <value name="R">
+            <shadow type="math_number" id="?~+ik/z)_$Nrv+s[cZt9">
+              <field name="NUM">0.5</field>
+            </shadow>
+          </value>
+          <value name="G">
+            <shadow type="math_number" id="UCnlg=ls)L[|wo}-Hq[=">
+              <field name="NUM">0.5</field>
+            </shadow>
+          </value>
+          <value name="B">
+            <shadow type="math_number" id="MHh;@m+L+jS^g@#8LbRE">
+              <field name="NUM">0.5</field>
+            </shadow>
+          </value>
+        </block>
+      </statement>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="whenClicked" id="*`)]$:2)/F^(G^Tw})iY" inline="false" x="1510" y="-950">
+      <mutation xmlns="http://www.w3.org/1999/xhtml" adveventoptions="false" enableifmissed="true"></mutation>
+      <field name="X_RAY">FALSE</field>
+      <field name="DOUBLE_CLICK">FALSE</field>
+      <field name="LEFT_BUTTON">TRUE</field>
+      <field name="MIDDLE_BUTTON">TRUE</field>
+      <field name="RIGHT_BUTTON">TRUE</field>
+      <value name="VALUE">
+        <shadow type="objectList" id="sIAQ2C=e[9*Dv??V3neZ">
+          <field name="FIELDNAME">cupboard_trigger</field>
+        </shadow>
+        <block type="objectList" id="am:Aq?gvb7BujWH|!,{5">
+          <field name="FIELDNAME">cupboard_trigger</field>
+        </block>
+      </value>
+      <statement name="DO">
+        <block type="setAnimationSpeed" id="^-0Wdct^-TVm@Ll|Oq-.">
+          <field name="REVERSED">FALSE</field>
+          <value name="VALUE">
+            <shadow type="animationList" id="}Ef3;:X2qfy`3s=9#iNS">
+              <field name="FIELDNAME">&lt;none&gt;</field>
+            </shadow>
+            <block type="getAnimations" id="1%}^d#PW3fNrE?PY[?iT">
+              <value name="OBJECTINPUT">
+                <shadow type="objectList" id="cK;k;Vj#2BEw_7/kU}iM">
+                  <field name="FIELDNAME">&lt;none&gt;</field>
+                </shadow>
+                <block type="groupList" id="H,IgK:kRR]/y68z$Z[-`">
+                  <field name="FIELDNAME">cuboard</field>
+                </block>
+              </value>
+            </block>
+          </value>
+          <value name="SPEED">
+            <shadow type="math_number" id="V;+~E=ED5YAu8QyvwOFo">
+              <field name="NUM">1</field>
+            </shadow>
+          </value>
+          <next>
+            <block type="playAnimationAdv" id="ED@@K1XI0!GpS6}NnNg!">
+              <mutation xmlns="http://www.w3.org/1999/xhtml" advplaybackoptions="true" enablewhenfinished="false"></mutation>
+              <field name="REVERSED">FALSE</field>
+              <field name="LOOP">LoopOnce</field>
+              <value name="VALUE">
+                <shadow type="animationList" id="P_-(U*$.o]8^-itpTSu,">
+                  <field name="FIELDNAME">&lt;none&gt;</field>
+                </shadow>
+                <block type="getAnimations" id="~=nuV.q{-DjfDwP^@7EH">
+                  <value name="OBJECTINPUT">
+                    <shadow type="objectList" id="iO91x4YWNWUKKs7acky@">
+                      <field name="FIELDNAME">&lt;none&gt;</field>
+                    </shadow>
+                    <block type="groupList" id="(18mJQ6~uhEGB#*#kJNA">
+                      <field name="FIELDNAME">cuboard</field>
+                    </block>
+                  </value>
+                </block>
+              </value>
+              <value name="FROM">
+                <shadow type="math_number" id="(d2m$jEO[F@[-YU]KRJj">
+                  <field name="NUM">150</field>
+                </shadow>
+              </value>
+              <value name="TO">
+                <shadow type="math_number" id="MQ#d65qCj2bdG2ITcs6!">
+                  <field name="NUM">170</field>
+                </shadow>
+              </value>
+              <value name="SPEED">
+                <shadow type="math_number" id="n2F3UOXKx:U2BxMP7(@)">
+                  <field name="NUM">1</field>
+                </shadow>
+              </value>
+            </block>
+          </next>
+        </block>
+      </statement>
+      <statement name="IF_MISSED_DO">
+        <block type="controls_if" id="WH3yC{@*u76yWruG*7pi">
+          <value name="IF0">
+            <block type="logic_operation" id="#vr.Em%Ro2deQAgACt/R">
+              <field name="OP">AND</field>
+              <value name="A">
+                <block type="logic_compare" id="Tb5{N0#_23zGAb8ZiBAf">
+                  <field name="OP">EQ</field>
+                  <value name="A">
+                    <block type="variables_get" id="a`pCxvT(+(ZYN:iiw^Ou">
+                      <field name="VAR" id="J@FII3x]r![1`]rdXcK,">zoomed_in</field>
+                    </block>
+                  </value>
+                  <value name="B">
+                    <block type="logic_boolean" id="Dd8^dhi{v+jF{A89-]^t">
+                      <field name="BOOL">TRUE</field>
+                    </block>
+                  </value>
+                </block>
+              </value>
+              <value name="B">
+                <block type="logic_compare" id="eWd)ZrKX/b`2q%kG?t`9">
+                  <field name="OP">EQ</field>
+                  <value name="A">
+                    <block type="getAnimationFrame" id=".bS8JJ`R.v(ZF@7Y0nM2">
+                      <value name="VALUE">
+                        <shadow type="animationList" id="ua]BX:gj]Mo60o.HU)`5">
+                          <field name="FIELDNAME">cupboard_trigger</field>
+                        </shadow>
+                      </value>
+                    </block>
+                  </value>
+                  <value name="B">
+                    <block type="math_number" id="Z^$![luecWT%1CwUZnFL">
+                      <field name="NUM">170</field>
+                    </block>
+                  </value>
+                </block>
+              </value>
+            </block>
+          </value>
+          <statement name="DO0">
+            <block type="controls_if" id="I=ujoS#ZL[I^Mc!3deGD">
+              <mutation else="1"></mutation>
+              <value name="IF0">
+                <block type="isAnimationPlaying" id="]3K`_!f@IJ#7+nN2.LA7">
+                  <value name="VALUE">
+                    <shadow type="animationList" id="gRGMq)G^K0==z*Jv{({2">
+                      <field name="FIELDNAME">&lt;none&gt;</field>
+                    </shadow>
+                    <block type="getAnimations" id="iZT|o{IOW[rU.^*+$H#D">
+                      <value name="OBJECTINPUT">
+                        <shadow type="objectList" id="_zUPd0QCy_OweIN%9`:)">
+                          <field name="FIELDNAME">&lt;none&gt;</field>
+                        </shadow>
+                        <block type="groupList" id="~,YAUMfh^3^VUA]gT//N">
+                          <field name="FIELDNAME">cuboard</field>
+                        </block>
+                      </value>
+                    </block>
+                  </value>
+                </block>
+              </value>
+              <statement name="DO0">
+                <block type="setAnimationSpeed" id="=@j/ufRvx8IFVwW7f)9X">
+                  <field name="REVERSED">TRUE</field>
+                  <value name="VALUE">
+                    <shadow type="animationList" id="}Ef3;:X2qfy`3s=9#iNS">
+                      <field name="FIELDNAME">&lt;none&gt;</field>
+                    </shadow>
+                    <block type="getAnimations" id="8!w;Rz:s,3ac#fksVHR?">
+                      <value name="OBJECTINPUT">
+                        <shadow type="objectList" id="-r+iv%bG/[a]FFK?(Et,">
+                          <field name="FIELDNAME">&lt;none&gt;</field>
+                        </shadow>
+                        <block type="groupList" id="9VDiOpq+;x^1761|#)eu">
+                          <field name="FIELDNAME">cuboard</field>
+                        </block>
+                      </value>
+                    </block>
+                  </value>
+                  <value name="SPEED">
+                    <shadow type="math_number" id="i*`}X0vdPx~mb;}@1d~3">
+                      <field name="NUM">1</field>
+                    </shadow>
+                  </value>
+                </block>
+              </statement>
+              <statement name="ELSE">
+                <block type="playAnimationAdv" id="U`3za}(;v!ry#L{N9S36">
+                  <mutation xmlns="http://www.w3.org/1999/xhtml" advplaybackoptions="true" enablewhenfinished="false"></mutation>
+                  <field name="REVERSED">TRUE</field>
+                  <field name="LOOP">LoopOnce</field>
+                  <value name="VALUE">
+                    <shadow type="animationList" id="P_-(U*$.o]8^-itpTSu,">
+                      <field name="FIELDNAME">&lt;none&gt;</field>
+                    </shadow>
+                    <block type="getAnimations" id="7!U%crKT7E)*Qxjt_yba">
+                      <value name="OBJECTINPUT">
+                        <shadow type="objectList" id="th,|ID)L4Z[oR)C=M2]q">
+                          <field name="FIELDNAME">&lt;none&gt;</field>
+                        </shadow>
+                        <block type="groupList" id="3ot72WTuP}|Mf)VlY#d:">
+                          <field name="FIELDNAME">cuboard</field>
+                        </block>
+                      </value>
+                    </block>
+                  </value>
+                  <value name="FROM">
+                    <shadow type="math_number" id="VB6J}u5~k(+em]oPVxoq">
+                      <field name="NUM">150</field>
+                    </shadow>
+                  </value>
+                  <value name="TO">
+                    <shadow type="math_number" id="rm}:m_RvJq7J5sRK:s6/">
+                      <field name="NUM">170</field>
+                    </shadow>
+                  </value>
+                  <value name="SPEED">
+                    <shadow type="math_number" id="13E,H)i,z+Ho+aKeS#t.">
+                      <field name="NUM">1</field>
+                    </shadow>
+                  </value>
+                </block>
+              </statement>
+            </block>
+          </statement>
+        </block>
+      </statement>
+    </block>
     <block xmlns="https://developers.google.com/blockly/xml" type="procedures_defnoreturn" id="Mi6sw]M:Un~}@J(MhzVE" x="3510" y="-710">
       <mutation>
         <arg name="What is the current camera?" varid="U~)`(c^[rvq;pQ31M{,t"></arg>
@@ -627,8 +1095,8 @@
       <statement name="STACK">
         <block type="whenClicked" id="1#{];75j]K%e/X[q`K3!" inline="true">
           <mutation xmlns="http://www.w3.org/1999/xhtml" adveventoptions="true" enableifmissed="false"></mutation>
-          <field name="X_RAY">FALSE</field>
-          <field name="DOUBLE_CLICK">FALSE</field>
+          <field name="X_RAY">TRUE</field>
+          <field name="DOUBLE_CLICK">TRUE</field>
           <field name="LEFT_BUTTON">TRUE</field>
           <field name="MIDDLE_BUTTON">TRUE</field>
           <field name="RIGHT_BUTTON">TRUE</field>
@@ -783,7 +1251,7 @@
                                 </shadow>
                                 <block type="getAnimations" id="e~Hav)SGpZ;G[-YvXW@=">
                                   <value name="OBJECTINPUT">
-                                    <shadow type="objectList" id="+rG!/(+yl_NAsLfud=R$">
+                                    <shadow type="objectList" id="`sz?,Em~GE?AiMR0m^a{">
                                       <field name="FIELDNAME">&lt;none&gt;</field>
                                     </shadow>
                                     <block type="variables_get" id="R2cMK~gCx?d%fG{wgXxT">
@@ -863,7 +1331,7 @@
         </block>
       </statement>
     </block>
-    <block xmlns="https://developers.google.com/blockly/xml" type="procedures_defnoreturn" id="N}b?:zubVb%=d[6OSECN" x="6990" y="-770">
+    <block xmlns="https://developers.google.com/blockly/xml" type="procedures_defnoreturn" id="N}b?:zubVb%=d[6OSECN" x="7030" y="-750">
       <mutation>
         <arg name="object_clicked" varid="iyuzO7wPce%i!#VRa!.$"></arg>
         <arg name="paragraph_text" varid="v.Xf?aMII{Cz9uMHLfYu"></arg>
@@ -921,8 +1389,8 @@
             </block>
           </statement>
           <next>
-            <block type="whenClicked" id="Cq3U3d++VkonNc3lkV8_" inline="false">
-              <mutation xmlns="http://www.w3.org/1999/xhtml" adveventoptions="false" enableifmissed="false"></mutation>
+            <block type="whenClicked" id="Cq3U3d++VkonNc3lkV8_" inline="true">
+              <mutation xmlns="http://www.w3.org/1999/xhtml" adveventoptions="true" enableifmissed="false"></mutation>
               <field name="X_RAY">FALSE</field>
               <field name="DOUBLE_CLICK">FALSE</field>
               <field name="LEFT_BUTTON">TRUE</field>
@@ -1200,7 +1668,7 @@
                                         </shadow>
                                         <block type="getAnimations" id="d;(=ji/MC5)E+9atbqDh">
                                           <value name="OBJECTINPUT">
-                                            <shadow type="objectList" id="+rG!/(+yl_NAsLfud=R$">
+                                            <shadow type="objectList" id="MM0$m0M2;YyU~PxOq1mg">
                                               <field name="FIELDNAME">&lt;none&gt;</field>
                                             </shadow>
                                             <block type="variables_get" id="E(hPwwictK5ZIAnz@6|V">
@@ -1282,7 +1750,7 @@
                                               <field name="TYPE">ORBIT_MIN_DISTANCE_PERSP</field>
                                               <value name="ORBIT_MIN_DISTANCE_PERSP">
                                                 <shadow type="math_number" id="UCM0ky1)1FV6bLLE_3O0">
-                                                  <field name="NUM">50</field>
+                                                  <field name="NUM">10</field>
                                                 </shadow>
                                               </value>
                                               <value name="OBJECT">
@@ -1333,23 +1801,55 @@
         </block>
       </statement>
     </block>
-    <block xmlns="https://developers.google.com/blockly/xml" type="variables_set" id="Sf;?A4^IdSe;+WPKUox6" x="-70" y="-230">
-      <field name="VAR" id="+X/(IbEgDFZlRBeEfdlP">room_animation_duration</field>
-      <value name="VALUE">
-        <block type="math_number" id="2acdkhx3(!Z(^?jNmVR7">
-          <field name="NUM">20</field>
+    <block xmlns="https://developers.google.com/blockly/xml" type="procedures_defnoreturn" id="Vbv#XK0)s@%DP}xsk]RH" x="8390" y="-750">
+      <mutation>
+        <arg name="Outline trigger?" varid="4GSJ8w|Ew75zB}p!86Qq"></arg>
+        <arg name="Outline object?" varid="mBOUZk/g[#6qDMWcg}mF"></arg>
+      </mutation>
+      <field name="NAME">Outline hovered object</field>
+      <comment pinned="false" h="80" w="160">Describe this function...</comment>
+      <statement name="STACK">
+        <block type="whenHovered" id="cIyHH4`IV0e{Bm2xBVL2" inline="false">
+          <mutation xmlns="http://www.w3.org/1999/xhtml" adveventoptions="false"></mutation>
+          <field name="X_RAY">FALSE</field>
+          <value name="VALUE">
+            <shadow type="objectList" id="}t~[LN^u#rOcBow}y|ku">
+              <field name="FIELDNAME">electricity_living_room_trigger</field>
+            </shadow>
+            <block type="variables_get" id="84zFTlLv8rkZ?cd+;hQM">
+              <field name="VAR" id="4GSJ8w|Ew75zB}p!86Qq">Outline trigger?</field>
+            </block>
+          </value>
+          <statement name="DO_OVER">
+            <block type="outline" id="*NqC;9Ko)QXRi?=+inAu">
+              <field name="DO_WHAT">ENABLE</field>
+              <value name="TARGET">
+                <shadow type="objectList" id="{?%TSOQ9}8;|[To$}zd2">
+                  <field name="FIELDNAME">&lt;none&gt;</field>
+                </shadow>
+                <block type="variables_get" id=")FNG4TW|u#Ll@5|k$5K8">
+                  <field name="VAR" id="mBOUZk/g[#6qDMWcg}mF">Outline object?</field>
+                </block>
+              </value>
+            </block>
+          </statement>
+          <statement name="DO_OUT">
+            <block type="outline" id="Lswv:it2x^0CD/$=IL/M">
+              <field name="DO_WHAT">DISABLE</field>
+              <value name="TARGET">
+                <shadow type="objectList" id="ljZD*Uc*-zvpws=Bd2Y7">
+                  <field name="FIELDNAME">&lt;none&gt;</field>
+                </shadow>
+                <block type="variables_get" id="aXkUzjn~TXh*oG@y-#YR">
+                  <field name="VAR" id="mBOUZk/g[#6qDMWcg}mF">Outline object?</field>
+                </block>
+              </value>
+            </block>
+          </statement>
         </block>
-      </value>
+      </statement>
     </block>
-    <block xmlns="https://developers.google.com/blockly/xml" type="variables_set" id="h2wiEP{z1s5SsXaYP?{i" x="270" y="-230">
-      <field name="VAR" id="Y7{d)3djf-@UHP5P#/%/">rooms_disapearing_duration</field>
-      <value name="VALUE">
-        <block type="math_number" id="l$EGScH}n0~=u4(69Zbb">
-          <field name="NUM">135</field>
-        </block>
-      </value>
-    </block>
-    <block xmlns="https://developers.google.com/blockly/xml" type="eventHTMLElem" id="(R,K%[1%$UvFChx87P.+" x="8110" y="-630">
+    <block xmlns="https://developers.google.com/blockly/xml" type="eventHTMLElem" id="(R,K%[1%$UvFChx87P.+" x="8950" y="-750">
       <field name="EVENT">click</field>
       <field name="PARENT">TRUE</field>
       <value name="ID">
@@ -1373,6 +1873,22 @@
           </value>
         </block>
       </statement>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="variables_set" id="Sf;?A4^IdSe;+WPKUox6" x="-70" y="-230">
+      <field name="VAR" id="+X/(IbEgDFZlRBeEfdlP">room_animation_duration</field>
+      <value name="VALUE">
+        <block type="math_number" id="2acdkhx3(!Z(^?jNmVR7">
+          <field name="NUM">20</field>
+        </block>
+      </value>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="variables_set" id="h2wiEP{z1s5SsXaYP?{i" x="270" y="-230">
+      <field name="VAR" id="Y7{d)3djf-@UHP5P#/%/">rooms_disapearing_duration</field>
+      <value name="VALUE">
+        <block type="math_number" id="l$EGScH}n0~=u4(69Zbb">
+          <field name="NUM">135</field>
+        </block>
+      </value>
     </block>
     <block xmlns="https://developers.google.com/blockly/xml" type="procedures_defnoreturn" id="/H-+DfeS3WYF=mBCcMzs" x="5090" y="-450">
       <field name="NAME">set_room_animation_frame_timer</field>
@@ -1546,41 +2062,6 @@
         </block>
       </statement>
     </block>
-    <block xmlns="https://developers.google.com/blockly/xml" type="whenHovered" id="cIyHH4`IV0e{Bm2xBVL2" inline="false" x="410" y="90">
-      <mutation xmlns="http://www.w3.org/1999/xhtml" adveventoptions="false"></mutation>
-      <field name="X_RAY">FALSE</field>
-      <value name="VALUE">
-        <shadow type="objectList" id="}t~[LN^u#rOcBow}y|ku">
-          <field name="FIELDNAME">cupboard_trigger</field>
-        </shadow>
-      </value>
-      <statement name="DO_OVER">
-        <block type="outline" id="[t|{nBV6Rl9Qtqd06%FB">
-          <field name="DO_WHAT">ENABLE</field>
-          <value name="TARGET">
-            <shadow type="objectList" id=",u:H][IrE5:/GKztCHp1">
-              <field name="FIELDNAME">&lt;none&gt;</field>
-            </shadow>
-            <block type="groupList" id="LR-#Jb=@|ymMTmM__1!8">
-              <field name="FIELDNAME">cuboard</field>
-            </block>
-          </value>
-        </block>
-      </statement>
-      <statement name="DO_OUT">
-        <block type="outline" id="CIvF?38CZ0bsc%`oYf{]">
-          <field name="DO_WHAT">DISABLE</field>
-          <value name="TARGET">
-            <shadow type="objectList" id=",u:H][IrE5:/GKztCHp1">
-              <field name="FIELDNAME">&lt;none&gt;</field>
-            </shadow>
-            <block type="groupList" id="#ojqOuSTsT-}_!+y+[%Q">
-              <field name="FIELDNAME">cuboard</field>
-            </block>
-          </value>
-        </block>
-      </statement>
-    </block>
     <block xmlns="https://developers.google.com/blockly/xml" type="procedures_defnoreturn" id="Z[U?;,YLBYGJTcV_:01|" x="5090" y="-150">
       <mutation>
         <arg name="Which room is hoovered?" varid="KNg=ZRDon@m+J4F;c`^5"></arg>
@@ -1593,7 +2074,7 @@
           <mutation xmlns="http://www.w3.org/1999/xhtml" adveventoptions="false"></mutation>
           <field name="X_RAY">FALSE</field>
           <value name="VALUE">
-            <shadow type="objectList" id="r)wZ[0Gkx:dZ.0)Z`y$%">
+            <shadow type="objectList" id="Trr9xL?Y{mYHT2MmYaN?">
               <field name="FIELDNAME">entrance_trigger</field>
             </shadow>
             <block type="variables_get" id="~ZiKnOW=/]}$t8-,.T98">
@@ -1626,7 +2107,7 @@
                     </shadow>
                     <block type="getAnimations" id="0U[ZZA,f4LA:(6-u|})S">
                       <value name="OBJECTINPUT">
-                        <shadow type="objectList" id="+rG!/(+yl_NAsLfud=R$">
+                        <shadow type="objectList" id="lI|l~xgLZI%eWJF(q=5i">
                           <field name="FIELDNAME">&lt;none&gt;</field>
                         </shadow>
                         <block type="variables_get" id="f1Oi_ZLn.qah=?E+6Y.-">
@@ -1651,7 +2132,7 @@
                         </shadow>
                         <block type="getAnimations" id="Mc|j*K6zBs[Xo{2lbg`h">
                           <value name="OBJECTINPUT">
-                            <shadow type="objectList" id="+rG!/(+yl_NAsLfud=R$">
+                            <shadow type="objectList" id="{JD9~vpKL~A8q.bI1LaF">
                               <field name="FIELDNAME">&lt;none&gt;</field>
                             </shadow>
                             <block type="variables_get" id="|I)5,ztSV=6LAD|uQeEj">
@@ -1712,7 +2193,7 @@
                         </shadow>
                         <block type="getAnimations" id="VLP]V;CFry-gPA46+:4m">
                           <value name="OBJECTINPUT">
-                            <shadow type="objectList" id="+rG!/(+yl_NAsLfud=R$">
+                            <shadow type="objectList" id="f}[.jJ}!,bv]7=~jjIHB">
                               <field name="FIELDNAME">&lt;none&gt;</field>
                             </shadow>
                             <block type="variables_get" id="fu,P,#9K~xI/G$fN/6xP">
@@ -1732,7 +2213,7 @@
                         </shadow>
                         <block type="getAnimations" id="$6M|a~uj2f}Vkph=Q1m.">
                           <value name="OBJECTINPUT">
-                            <shadow type="objectList" id="+rG!/(+yl_NAsLfud=R$">
+                            <shadow type="objectList" id="[gS_70}uX{Wj4@OyB-X;">
                               <field name="FIELDNAME">&lt;none&gt;</field>
                             </shadow>
                             <block type="variables_get" id="A5Gxr4c/.B-Vc_:IMj!d">
@@ -1759,7 +2240,7 @@
                         </shadow>
                         <block type="getAnimations" id="1BWsKVNU^*9wgH=cW}eV">
                           <value name="OBJECTINPUT">
-                            <shadow type="objectList" id="+rG!/(+yl_NAsLfud=R$">
+                            <shadow type="objectList" id="83bN~Fg2I3nMF(-g%;^d">
                               <field name="FIELDNAME">&lt;none&gt;</field>
                             </shadow>
                             <block type="variables_get" id="tIQH+:B+G7!?RYmFwB8_">
@@ -1808,7 +2289,7 @@
       <value name="ARG1">
         <block type="textMultiline" id="#ahfE;^Kg3N0.VxU5C/p">
           <field name="HIGHLIGHT_MODE">html</field>
-          <field name="TEXT" editor-height="14" editor-width="1927.9401895499418">          &lt;h1 id="popup_room"&gt;Séjour&lt;/h1&gt;&amp;#10;          &lt;h1 id="popup_object"&gt;Fenètres&lt;/h1&gt;&amp;#10;          &lt;div id="dividing_line"&gt;&lt;/div&gt;&amp;#10;          &lt;p id="popup_locataire"&gt;Locataire&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;•&lt;/span&gt; Remplacement des vitres brisées par sa faute.&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;•&lt;/span&gt; Nettoyage régulier des vitres accessibles.&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;•&lt;/span&gt; Remplacement des vitres brisées par sa faute.&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;•&lt;/span&gt; Réfection des griffes faites aux vitres et aux châssis.&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;•&lt;/span&gt; Maintenir libre écoulement des eaux de condensation des châssis, sous peine de voir sa responsabilité engagée pour les dégâts en résultant (humidité, mérules…).&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;•&lt;/span&gt; Réfection des griffes faites aux vitres et aux châssis. En l'absence de VMC  : aération quotidienne des locaux.&lt;/p&gt;&amp;#10;          &lt;div id="dividing_line"&gt;&lt;/div&gt;&amp;#10;          &lt;p id="popup_locataire"&gt;Propriétaire&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;•&lt;/span&gt; Réparations nécessaires, autres que locatives, et remplacement.&lt;/p&gt;</field>
+          <field name="TEXT" editor-height="1" editor-width="120">          &lt;h1 id="popup_room"&gt;Séjour&lt;/h1&gt;&amp;#10;          &lt;h1 id="popup_object"&gt;Radiateur.&lt;/h1&gt;&amp;#10;          &lt;div id="dividing_line"&gt;&lt;/div&gt;&amp;#10;          &lt;p id="popup_locataire"&gt;Locataire&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;•&lt;/span&gt; Dépoussiérage et purge.&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;•&lt;/span&gt; Entretien et contrôle périodique conformément aux dispositions du bail et à la réglementation en vigueur. Gaz : tous les 2 ans. Autres énergies : tous les ans.&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;•&lt;/span&gt; Chauffage suffisant de l'habitation.&lt;/p&gt;&amp;#10;          &lt;div id="dividing_line"&gt;&lt;/div&gt;&amp;#10;          &lt;p id="popup_locataire"&gt;Propriétaire&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;•&lt;/span&gt; Tous remplacements.&lt;/p&gt;</field>
         </block>
       </value>
       <next>
@@ -1825,9 +2306,66 @@
           <value name="ARG1">
             <block type="textMultiline" id="EO5ynGs7xNDj^!FN[Q3V">
               <field name="HIGHLIGHT_MODE">html</field>
-              <field name="TEXT" editor-height="17" editor-width="806.2076162696285">          &lt;h1 id="popup_room"&gt;Séjour&lt;/h1&gt;&amp;#10;          &lt;h1 id="popup_object"&gt;Plafonnier, prise de courant, interrupteur.&lt;/h1&gt;&amp;#10;          &lt;div id="dividing_line"&gt;&lt;/div&gt;&amp;#10;          &lt;p id="popup_locataire"&gt;Locataire&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;•&lt;/span&gt; Remise en état des dégâts suite au placement des luminaires. &lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;•&lt;/span&gt; Le locataire est tenu de laisser aux points lumineux des fils en attente d'une longueur de plus ou moins 10 cm. S'il coupe les fils au raz du plafond ou du mur, il sera tenu au remplacement des fils dans la gaine.&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;•&lt;/span&gt; Le locataire doit veiller à entretenir l'installation électrique et ne pas surcharger celle-ci en tout ou en partie.&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;•&lt;/span&gt; Remplacement des ampoules, tubes d'éclairage, des interrupteurs, soquets et des prises de courant cassés, même suite un usage normal.&lt;/p&gt;&amp;#10;          &lt;div id="dividing_line"&gt;&lt;/div&gt;&amp;#10;          &lt;p id="popup_locataire"&gt;Propriétaire&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;•&lt;/span&gt; Tous remplacements des câblages pour tous services sauf si causés par des modifications du locataire. &lt;/p&gt;</field>
+              <field name="TEXT" editor-height="1" editor-width="120">          &lt;h1 id="popup_room"&gt;Séjour&lt;/h1&gt;&amp;#10;          &lt;h1 id="popup_object"&gt;Plafonnier, prise de courant, interrupteur.&lt;/h1&gt;&amp;#10;          &lt;div id="dividing_line"&gt;&lt;/div&gt;&amp;#10;          &lt;p id="popup_locataire"&gt;Locataire&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;•&lt;/span&gt; Remise en état des dégâts suite au placement des luminaires. &lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;•&lt;/span&gt; Le locataire est tenu de laisser aux points lumineux des fils en attente d'une longueur de plus ou moins 10 cm. S'il coupe les fils au raz du plafond ou du mur, il sera tenu au remplacement des fils dans la gaine.&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;•&lt;/span&gt; Le locataire doit veiller à entretenir l'installation électrique et ne pas surcharger celle-ci en tout ou en partie.&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;•&lt;/span&gt; Remplacement des ampoules, tubes d'éclairage, des interrupteurs, soquets et des prises de courant cassés, même suite un usage normal.&lt;/p&gt;&amp;#10;          &lt;div id="dividing_line"&gt;&lt;/div&gt;&amp;#10;          &lt;p id="popup_locataire"&gt;Propriétaire&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;•&lt;/span&gt; Tous remplacements des câblages pour tous services sauf si causés par des modifications du locataire. &lt;/p&gt;</field>
             </block>
           </value>
+          <next>
+            <block type="procedures_callnoreturn" id="qN.iFtg@g;{bO{pQ!l3o">
+              <mutation name="Update the text in the Pop up">
+                <arg name="object_clicked"></arg>
+                <arg name="paragraph_text"></arg>
+              </mutation>
+              <value name="ARG0">
+                <block type="objectList" id="~YFSfXnr6-BfMDKX6+8[">
+                  <field name="FIELDNAME">window_living_room_trigger</field>
+                </block>
+              </value>
+              <value name="ARG1">
+                <block type="textMultiline" id="D74:(M16frnr@xmCL-PW">
+                  <field name="HIGHLIGHT_MODE">html</field>
+                  <field name="TEXT" editor-height="1" editor-width="120">          &lt;h1 id="popup_room"&gt;Séjour&lt;/h1&gt;&amp;#10;          &lt;h1 id="popup_object"&gt;Fenètres&lt;/h1&gt;&amp;#10;          &lt;div id="dividing_line"&gt;&lt;/div&gt;&amp;#10;          &lt;p id="popup_locataire"&gt;Locataire&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;•&lt;/span&gt; Remplacement des vitres brisées par sa faute.&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;•&lt;/span&gt; Nettoyage régulier des vitres accessibles.&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;•&lt;/span&gt; Remplacement des vitres brisées par sa faute.&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;•&lt;/span&gt; Réfection des griffes faites aux vitres et aux châssis.&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;•&lt;/span&gt; Maintenir libre écoulement des eaux de condensation des châssis, sous peine de voir sa responsabilité engagée pour les dégâts en résultant (humidité, mérules…).&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;•&lt;/span&gt; Réfection des griffes faites aux vitres et aux châssis. En l'absence de VMC  : aération quotidienne des locaux.&lt;/p&gt;&amp;#10;          &lt;div id="dividing_line"&gt;&lt;/div&gt;&amp;#10;          &lt;p id="popup_locataire"&gt;Propriétaire&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;•&lt;/span&gt; Réparations nécessaires, autres que locatives, et remplacement.&lt;/p&gt;</field>
+                </block>
+              </value>
+              <next>
+                <block type="procedures_callnoreturn" id="(]EZsYLH`s,]P:)KX4o3">
+                  <mutation name="Update the text in the Pop up">
+                    <arg name="object_clicked"></arg>
+                    <arg name="paragraph_text"></arg>
+                  </mutation>
+                  <value name="ARG0">
+                    <block type="objectList" id="fo2eK+(D0U3stEcCza=|">
+                      <field name="FIELDNAME">fireplace_living_room_trigger</field>
+                    </block>
+                  </value>
+                  <value name="ARG1">
+                    <block type="textMultiline" id="bO2A5?{|SING[z4oBFSd">
+                      <field name="HIGHLIGHT_MODE">html</field>
+                      <field name="TEXT" editor-height="1" editor-width="120">          &lt;h1 id="popup_room"&gt;Séjour&lt;/h1&gt;&amp;#10;          &lt;h1 id="popup_object"&gt;Feu ouvert&lt;/h1&gt;&amp;#10;          &lt;div id="dividing_line"&gt;&lt;/div&gt;&amp;#10;          &lt;p id="popup_locataire"&gt;Locataire&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;•&lt;/span&gt; Ramonage annuel, par un professionnel, des conduits d'évacuation et à tout le moins avant sa sortie des lieux loués.&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;•&lt;/span&gt; Entretien et réparation notamment de l’âtre, du contre-cœur, des chambranles et de la tablette de l’âtre.&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;•&lt;/span&gt; Nettoyage, cirage éventuel. Le locataire n'est toutefois pas responsable du brunissement naturel causé par la chaleur ou la fumée résultant d'un usage normal.&lt;/p&gt;&amp;#10;          &lt;div id="dividing_line"&gt;&lt;/div&gt;&amp;#10;          &lt;p id="popup_locataire"&gt;Propriétaire&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;•&lt;/span&gt; Réparations nécessaires, autres que locatives, et remplacement.&lt;/p&gt;</field>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="procedures_callnoreturn" id="fv#E16iL9i;1yt$TY!}G">
+                      <mutation name="Update the text in the Pop up">
+                        <arg name="object_clicked"></arg>
+                        <arg name="paragraph_text"></arg>
+                      </mutation>
+                      <value name="ARG0">
+                        <block type="objectList" id="5oV+_]kbLF;1i%.;-Lpu">
+                          <field name="FIELDNAME">ventilation_opening_living_room_trigger</field>
+                        </block>
+                      </value>
+                      <value name="ARG1">
+                        <block type="textMultiline" id="AogLP@ZJ,J[@|I-y5s15">
+                          <field name="HIGHLIGHT_MODE">html</field>
+                          <field name="TEXT" editor-height="1" editor-width="120">          &lt;h1 id="popup_room"&gt;Séjour&lt;/h1&gt;&amp;#10;          &lt;h1 id="popup_object"&gt;Bouche de ventilation&lt;/h1&gt;&amp;#10;          &lt;div id="dividing_line"&gt;&lt;/div&gt;&amp;#10;          &lt;p id="popup_locataire"&gt;Locataire&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;•&lt;/span&gt; Nettoyage des bouches qui doivent rester ouvertes en permanence.&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;•&lt;/span&gt; Nettoyage et/ou remplacement régulier des filtres.&lt;/p&gt;&amp;#10;          &lt;div id="dividing_line"&gt;&lt;/div&gt;&amp;#10;          &lt;p id="popup_locataire"&gt;Propriétaire&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;•&lt;/span&gt; Réparations nécessaires, autres que locatives, et remplacement.&lt;/p&gt;</field>
+                        </block>
+                      </value>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
         </block>
       </next>
     </block>
@@ -2006,6 +2544,94 @@
                           </next>
                         </block>
                       </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </next>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="procedures_callnoreturn" id="|UbszLG5BM^_|$.0(UVt" x="8430" y="-190">
+      <mutation name="Outline hovered object">
+        <arg name="Outline trigger?"></arg>
+        <arg name="Outline object?"></arg>
+      </mutation>
+      <value name="ARG0">
+        <block type="objectList" id="qh7A^rHO!U}5^3%,F_!a">
+          <field name="FIELDNAME">electricity_living_room_trigger</field>
+        </block>
+      </value>
+      <value name="ARG1">
+        <block type="groupList" id="LR-#Jb=@|ymMTmM__1!8">
+          <field name="FIELDNAME">switch_living_room</field>
+        </block>
+      </value>
+      <next>
+        <block type="procedures_callnoreturn" id="`Q4]D@:[?6A+^RZQ_110">
+          <mutation name="Outline hovered object">
+            <arg name="Outline trigger?"></arg>
+            <arg name="Outline object?"></arg>
+          </mutation>
+          <value name="ARG0">
+            <block type="objectList" id="jSO()B*NWMec9tC?e:It">
+              <field name="FIELDNAME">window_living_room_trigger</field>
+            </block>
+          </value>
+          <value name="ARG1">
+            <block type="groupList" id="!C#iyL=M~fkK5NdVAt$g">
+              <field name="FIELDNAME">window_living_room</field>
+            </block>
+          </value>
+          <next>
+            <block type="procedures_callnoreturn" id="ZvaU?g@dongwwOT+lXWI">
+              <mutation name="Outline hovered object">
+                <arg name="Outline trigger?"></arg>
+                <arg name="Outline object?"></arg>
+              </mutation>
+              <value name="ARG0">
+                <block type="objectList" id="O?y{bwbfev7W-p]2yuRn">
+                  <field name="FIELDNAME">radiator_living_room_trigger</field>
+                </block>
+              </value>
+              <value name="ARG1">
+                <block type="groupList" id="Axxp}D-OsDbF,sxsR|xt">
+                  <field name="FIELDNAME">radiator_living_room</field>
+                </block>
+              </value>
+              <next>
+                <block type="procedures_callnoreturn" id="O{ulT1ocpq#y9x47i?~H">
+                  <mutation name="Outline hovered object">
+                    <arg name="Outline trigger?"></arg>
+                    <arg name="Outline object?"></arg>
+                  </mutation>
+                  <value name="ARG0">
+                    <block type="objectList" id="}Y=kRl]TI?G}I#J(^+)Z">
+                      <field name="FIELDNAME">fireplace_living_room_trigger</field>
+                    </block>
+                  </value>
+                  <value name="ARG1">
+                    <block type="groupList" id="qIm^1CL@S[Ey?(^d{-#b">
+                      <field name="FIELDNAME">fireplace_living_room</field>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="procedures_callnoreturn" id="@tFMwVF)ej)k8QX9mB6w">
+                      <mutation name="Outline hovered object">
+                        <arg name="Outline trigger?"></arg>
+                        <arg name="Outline object?"></arg>
+                      </mutation>
+                      <value name="ARG0">
+                        <block type="objectList" id="ns=.9q9GeQZy^8vejM:0">
+                          <field name="FIELDNAME">ventilation_opening_living_room_trigger</field>
+                        </block>
+                      </value>
+                      <value name="ARG1">
+                        <block type="groupList" id="Zsyp]v(#NxGuH/^6Fqt%">
+                          <field name="FIELDNAME">ventilation_opening_living_room</field>
+                        </block>
+                      </value>
                     </block>
                   </next>
                 </block>
@@ -2439,201 +3065,6 @@
         </block>
       </next>
     </block>
-    <block xmlns="https://developers.google.com/blockly/xml" type="whenClicked" id="UGE`v@1DPypIkx]-]qt~" inline="false" x="350" y="470">
-      <mutation xmlns="http://www.w3.org/1999/xhtml" adveventoptions="false" enableifmissed="true"></mutation>
-      <field name="X_RAY">FALSE</field>
-      <field name="DOUBLE_CLICK">FALSE</field>
-      <field name="LEFT_BUTTON">TRUE</field>
-      <field name="MIDDLE_BUTTON">TRUE</field>
-      <field name="RIGHT_BUTTON">TRUE</field>
-      <value name="VALUE">
-        <shadow type="objectList" id="sIAQ2C=e[9*Dv??V3neZ">
-          <field name="FIELDNAME">cupboard_trigger</field>
-        </shadow>
-        <block type="objectList" id="X;%A2.!?|0B2KW1G1YJA">
-          <field name="FIELDNAME">lamp_trigger</field>
-        </block>
-      </value>
-      <statement name="DO">
-        <block type="setAnimationSpeed" id="8I#%(UX6OOeD.D(sD6#B">
-          <field name="REVERSED">FALSE</field>
-          <value name="VALUE">
-            <shadow type="animationList" id="}Ef3;:X2qfy`3s=9#iNS">
-              <field name="FIELDNAME">&lt;none&gt;</field>
-            </shadow>
-            <block type="getAnimations" id=",zyd;XFRa{Sm1CW-oW}0">
-              <value name="OBJECTINPUT">
-                <shadow type="objectList" id="Fh[ZMQaY_6hI1]gwP7cj">
-                  <field name="FIELDNAME">&lt;none&gt;</field>
-                </shadow>
-                <block type="groupList" id="0Te+O]@O)h0./Zl_E9C~">
-                  <field name="FIELDNAME">light_entrance</field>
-                </block>
-              </value>
-            </block>
-          </value>
-          <value name="SPEED">
-            <shadow type="math_number" id="K}F03ou^Y.}LcO]st3uh">
-              <field name="NUM">1</field>
-            </shadow>
-          </value>
-          <next>
-            <block type="playAnimationAdv" id="yu#;($qg)oVS|`B%qJfo">
-              <mutation xmlns="http://www.w3.org/1999/xhtml" advplaybackoptions="true" enablewhenfinished="false"></mutation>
-              <field name="REVERSED">FALSE</field>
-              <field name="LOOP">LoopOnce</field>
-              <value name="VALUE">
-                <shadow type="animationList" id="P_-(U*$.o]8^-itpTSu,">
-                  <field name="FIELDNAME">&lt;none&gt;</field>
-                </shadow>
-                <block type="getAnimations" id="JR|VB9L3gEdO%dcw~BQ!">
-                  <value name="OBJECTINPUT">
-                    <shadow type="objectList" id="+rG!/(+yl_NAsLfud=R$">
-                      <field name="FIELDNAME">Point</field>
-                    </shadow>
-                  </value>
-                </block>
-              </value>
-              <value name="FROM">
-                <shadow type="math_number" id="6`;Xpskvc@cq%diaH#-L">
-                  <field name="NUM">150</field>
-                </shadow>
-              </value>
-              <value name="TO">
-                <shadow type="math_number" id="3F#Z-7]#_zyG0je$PH)7">
-                  <field name="NUM">170</field>
-                </shadow>
-              </value>
-              <value name="SPEED">
-                <shadow type="math_number" id="tm=}BP)/a).{A,1A1I*0">
-                  <field name="NUM">2</field>
-                </shadow>
-              </value>
-            </block>
-          </next>
-        </block>
-      </statement>
-      <statement name="IF_MISSED_DO">
-        <block type="controls_if" id="O/4LJ?LuAsMnDkMl@r/|">
-          <value name="IF0">
-            <block type="logic_operation" id="{eSM]0l2I[{=8o$VtvCC">
-              <field name="OP">AND</field>
-              <value name="A">
-                <block type="logic_compare" id="h.M8T/jREPPHG(o,-e[+">
-                  <field name="OP">EQ</field>
-                  <value name="A">
-                    <block type="variables_get" id="3[R6xRsKe:vh9/n_[s|D">
-                      <field name="VAR" id="J@FII3x]r![1`]rdXcK,">zoomed_in</field>
-                    </block>
-                  </value>
-                  <value name="B">
-                    <block type="logic_boolean" id="=z5Iku1sfbkbkYGvtX-P">
-                      <field name="BOOL">TRUE</field>
-                    </block>
-                  </value>
-                </block>
-              </value>
-              <value name="B">
-                <block type="logic_compare" id="THJQw*^ib8^|h;u53cy~">
-                  <field name="OP">EQ</field>
-                  <value name="A">
-                    <block type="getAnimationFrame" id="9]vHW$P9a3w8g[(Gk*qr">
-                      <value name="VALUE">
-                        <shadow type="animationList" id="iHuEHU(II5Uy:+-FERG+">
-                          <field name="FIELDNAME">Point</field>
-                        </shadow>
-                      </value>
-                    </block>
-                  </value>
-                  <value name="B">
-                    <block type="math_number" id="/2OF,~q9G9K90wd_Apd#">
-                      <field name="NUM">170</field>
-                    </block>
-                  </value>
-                </block>
-              </value>
-            </block>
-          </value>
-          <statement name="DO0">
-            <block type="controls_if" id="a|?BC5dF{zE3_[,_4;r5">
-              <mutation else="1"></mutation>
-              <value name="IF0">
-                <block type="isAnimationPlaying" id="}=Z3;1xM{E~e`E!bWdk#">
-                  <value name="VALUE">
-                    <shadow type="animationList" id="gRGMq)G^K0==z*Jv{({2">
-                      <field name="FIELDNAME">&lt;none&gt;</field>
-                    </shadow>
-                    <block type="getAnimations" id="HDyg7^FVLeHFv.}/5a!3">
-                      <value name="OBJECTINPUT">
-                        <shadow type="objectList" id="}=xcD].?q_=?vDQotX{j">
-                          <field name="FIELDNAME">Point</field>
-                        </shadow>
-                      </value>
-                    </block>
-                  </value>
-                </block>
-              </value>
-              <statement name="DO0">
-                <block type="setAnimationSpeed" id="Vzz:TczdL3bE[=+4V2p@">
-                  <field name="REVERSED">TRUE</field>
-                  <value name="VALUE">
-                    <shadow type="animationList" id="}Ef3;:X2qfy`3s=9#iNS">
-                      <field name="FIELDNAME">&lt;none&gt;</field>
-                    </shadow>
-                    <block type="getAnimations" id="9p}0WFZ*6qJy#-R[O?Ss">
-                      <value name="OBJECTINPUT">
-                        <shadow type="objectList" id="9N3;DVAiY?oUSX0xD$E0">
-                          <field name="FIELDNAME">Point</field>
-                        </shadow>
-                      </value>
-                    </block>
-                  </value>
-                  <value name="SPEED">
-                    <shadow type="math_number" id=".uNux4kn|-4wg~YU%/~G">
-                      <field name="NUM">1</field>
-                    </shadow>
-                  </value>
-                </block>
-              </statement>
-              <statement name="ELSE">
-                <block type="playAnimationAdv" id="KX_8OTGHv+EtW!@-:^uw">
-                  <mutation xmlns="http://www.w3.org/1999/xhtml" advplaybackoptions="true" enablewhenfinished="false"></mutation>
-                  <field name="REVERSED">TRUE</field>
-                  <field name="LOOP">LoopOnce</field>
-                  <value name="VALUE">
-                    <shadow type="animationList" id="P_-(U*$.o]8^-itpTSu,">
-                      <field name="FIELDNAME">&lt;none&gt;</field>
-                    </shadow>
-                    <block type="getAnimations" id="*{,j~[ShoyuChgO{=_Kq">
-                      <value name="OBJECTINPUT">
-                        <shadow type="objectList" id="X#)H}LBL]C[2(J8LaOGH">
-                          <field name="FIELDNAME">Point</field>
-                        </shadow>
-                      </value>
-                    </block>
-                  </value>
-                  <value name="FROM">
-                    <shadow type="math_number" id="g4N)xRSeFKwZit3{dhC$">
-                      <field name="NUM">150</field>
-                    </shadow>
-                  </value>
-                  <value name="TO">
-                    <shadow type="math_number" id="mxB;j{|oBXh~cWg,w4W$">
-                      <field name="NUM">170</field>
-                    </shadow>
-                  </value>
-                  <value name="SPEED">
-                    <shadow type="math_number" id=".jB2Tl{XA@[5tP*1pvom">
-                      <field name="NUM">2</field>
-                    </shadow>
-                  </value>
-                </block>
-              </statement>
-            </block>
-          </statement>
-        </block>
-      </statement>
-    </block>
     <block xmlns="https://developers.google.com/blockly/xml" type="procedures_callnoreturn" id="aijnD$_)=b]X(vc$v#td" x="5141" y="237">
       <mutation name="Hoover over room animation">
         <arg name="Which room is hoovered?"></arg>
@@ -2794,7 +3225,7 @@
         </block>
       </next>
     </block>
-    <block xmlns="https://developers.google.com/blockly/xml" type="controls_if" id="vy=+?z1.0;T|0~.0[8@-" x="7030" y="350">
+    <block xmlns="https://developers.google.com/blockly/xml" type="controls_if" id="vy=+?z1.0;T|0~.0[8@-" x="7290" y="2710">
       <value name="IF0">
         <block type="logic_compare" id="AD}_fwo)swRCiNGw=~PS">
           <field name="OP">EQ</field>
@@ -2827,213 +3258,6 @@
               <field name="TEXT" editor-height="4" editor-width="370.9998495257747">          &lt;div class="popup-cross" id="popup-cross"&gt;&lt;/div&gt;&amp;#10;          &lt;h1 id="popup_room"&gt;Maquette PLE&lt;/h1&gt;&amp;#10;          &lt;h1 id="popup_object"&gt;Interactive et explorable&lt;/h1&gt;&amp;#10;          &lt;div id="dividing_line"&gt;&lt;/div&gt;&amp;#10;          &lt;p id="popup_locataire"&gt;Navigation&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;•&lt;/span&gt; Utiliser la souris pour tourner autour de la maquette.&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;•&lt;/span&gt; Clickez sur une pièce pour zoomer.&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;•&lt;/span&gt; Sélectionner un objet&lt;/p&gt;&amp;#10;          &lt;div id="dividing_line"&gt;&lt;/div&gt;&amp;#10;          &lt;p id="popup_locataire"&gt;Information&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;•&lt;/span&gt; Une fois l'objet cliqué, des informations s'affichent.&lt;/p&gt;</field>
             </block>
           </value>
-        </block>
-      </statement>
-    </block>
-    <block xmlns="https://developers.google.com/blockly/xml" type="whenClicked" id="*`)]$:2)/F^(G^Tw})iY" inline="false" x="350" y="910">
-      <mutation xmlns="http://www.w3.org/1999/xhtml" adveventoptions="false" enableifmissed="true"></mutation>
-      <field name="X_RAY">FALSE</field>
-      <field name="DOUBLE_CLICK">FALSE</field>
-      <field name="LEFT_BUTTON">TRUE</field>
-      <field name="MIDDLE_BUTTON">TRUE</field>
-      <field name="RIGHT_BUTTON">TRUE</field>
-      <value name="VALUE">
-        <shadow type="objectList" id="sIAQ2C=e[9*Dv??V3neZ">
-          <field name="FIELDNAME">cupboard_trigger</field>
-        </shadow>
-        <block type="objectList" id="am:Aq?gvb7BujWH|!,{5">
-          <field name="FIELDNAME">cupboard_trigger</field>
-        </block>
-      </value>
-      <statement name="DO">
-        <block type="setAnimationSpeed" id="^-0Wdct^-TVm@Ll|Oq-.">
-          <field name="REVERSED">FALSE</field>
-          <value name="VALUE">
-            <shadow type="animationList" id="}Ef3;:X2qfy`3s=9#iNS">
-              <field name="FIELDNAME">&lt;none&gt;</field>
-            </shadow>
-            <block type="getAnimations" id="1%}^d#PW3fNrE?PY[?iT">
-              <value name="OBJECTINPUT">
-                <shadow type="objectList" id="cK;k;Vj#2BEw_7/kU}iM">
-                  <field name="FIELDNAME">&lt;none&gt;</field>
-                </shadow>
-                <block type="groupList" id="H,IgK:kRR]/y68z$Z[-`">
-                  <field name="FIELDNAME">cuboard</field>
-                </block>
-              </value>
-            </block>
-          </value>
-          <value name="SPEED">
-            <shadow type="math_number" id="V;+~E=ED5YAu8QyvwOFo">
-              <field name="NUM">1</field>
-            </shadow>
-          </value>
-          <next>
-            <block type="playAnimationAdv" id="ED@@K1XI0!GpS6}NnNg!">
-              <mutation xmlns="http://www.w3.org/1999/xhtml" advplaybackoptions="true" enablewhenfinished="false"></mutation>
-              <field name="REVERSED">FALSE</field>
-              <field name="LOOP">LoopOnce</field>
-              <value name="VALUE">
-                <shadow type="animationList" id="P_-(U*$.o]8^-itpTSu,">
-                  <field name="FIELDNAME">&lt;none&gt;</field>
-                </shadow>
-                <block type="getAnimations" id="~=nuV.q{-DjfDwP^@7EH">
-                  <value name="OBJECTINPUT">
-                    <shadow type="objectList" id="iO91x4YWNWUKKs7acky@">
-                      <field name="FIELDNAME">&lt;none&gt;</field>
-                    </shadow>
-                    <block type="groupList" id="(18mJQ6~uhEGB#*#kJNA">
-                      <field name="FIELDNAME">cuboard</field>
-                    </block>
-                  </value>
-                </block>
-              </value>
-              <value name="FROM">
-                <shadow type="math_number" id="(d2m$jEO[F@[-YU]KRJj">
-                  <field name="NUM">150</field>
-                </shadow>
-              </value>
-              <value name="TO">
-                <shadow type="math_number" id="MQ#d65qCj2bdG2ITcs6!">
-                  <field name="NUM">170</field>
-                </shadow>
-              </value>
-              <value name="SPEED">
-                <shadow type="math_number" id="n2F3UOXKx:U2BxMP7(@)">
-                  <field name="NUM">1</field>
-                </shadow>
-              </value>
-            </block>
-          </next>
-        </block>
-      </statement>
-      <statement name="IF_MISSED_DO">
-        <block type="controls_if" id="WH3yC{@*u76yWruG*7pi">
-          <value name="IF0">
-            <block type="logic_operation" id="#vr.Em%Ro2deQAgACt/R">
-              <field name="OP">AND</field>
-              <value name="A">
-                <block type="logic_compare" id="Tb5{N0#_23zGAb8ZiBAf">
-                  <field name="OP">EQ</field>
-                  <value name="A">
-                    <block type="variables_get" id="a`pCxvT(+(ZYN:iiw^Ou">
-                      <field name="VAR" id="J@FII3x]r![1`]rdXcK,">zoomed_in</field>
-                    </block>
-                  </value>
-                  <value name="B">
-                    <block type="logic_boolean" id="Dd8^dhi{v+jF{A89-]^t">
-                      <field name="BOOL">TRUE</field>
-                    </block>
-                  </value>
-                </block>
-              </value>
-              <value name="B">
-                <block type="logic_compare" id="eWd)ZrKX/b`2q%kG?t`9">
-                  <field name="OP">EQ</field>
-                  <value name="A">
-                    <block type="getAnimationFrame" id=".bS8JJ`R.v(ZF@7Y0nM2">
-                      <value name="VALUE">
-                        <shadow type="animationList" id="ua]BX:gj]Mo60o.HU)`5">
-                          <field name="FIELDNAME">cupboard_trigger</field>
-                        </shadow>
-                      </value>
-                    </block>
-                  </value>
-                  <value name="B">
-                    <block type="math_number" id="Z^$![luecWT%1CwUZnFL">
-                      <field name="NUM">170</field>
-                    </block>
-                  </value>
-                </block>
-              </value>
-            </block>
-          </value>
-          <statement name="DO0">
-            <block type="controls_if" id="I=ujoS#ZL[I^Mc!3deGD">
-              <mutation else="1"></mutation>
-              <value name="IF0">
-                <block type="isAnimationPlaying" id="]3K`_!f@IJ#7+nN2.LA7">
-                  <value name="VALUE">
-                    <shadow type="animationList" id="gRGMq)G^K0==z*Jv{({2">
-                      <field name="FIELDNAME">&lt;none&gt;</field>
-                    </shadow>
-                    <block type="getAnimations" id="iZT|o{IOW[rU.^*+$H#D">
-                      <value name="OBJECTINPUT">
-                        <shadow type="objectList" id="_zUPd0QCy_OweIN%9`:)">
-                          <field name="FIELDNAME">&lt;none&gt;</field>
-                        </shadow>
-                        <block type="groupList" id="~,YAUMfh^3^VUA]gT//N">
-                          <field name="FIELDNAME">cuboard</field>
-                        </block>
-                      </value>
-                    </block>
-                  </value>
-                </block>
-              </value>
-              <statement name="DO0">
-                <block type="setAnimationSpeed" id="=@j/ufRvx8IFVwW7f)9X">
-                  <field name="REVERSED">TRUE</field>
-                  <value name="VALUE">
-                    <shadow type="animationList" id="}Ef3;:X2qfy`3s=9#iNS">
-                      <field name="FIELDNAME">&lt;none&gt;</field>
-                    </shadow>
-                    <block type="getAnimations" id="8!w;Rz:s,3ac#fksVHR?">
-                      <value name="OBJECTINPUT">
-                        <shadow type="objectList" id="-r+iv%bG/[a]FFK?(Et,">
-                          <field name="FIELDNAME">&lt;none&gt;</field>
-                        </shadow>
-                        <block type="groupList" id="9VDiOpq+;x^1761|#)eu">
-                          <field name="FIELDNAME">cuboard</field>
-                        </block>
-                      </value>
-                    </block>
-                  </value>
-                  <value name="SPEED">
-                    <shadow type="math_number" id="i*`}X0vdPx~mb;}@1d~3">
-                      <field name="NUM">1</field>
-                    </shadow>
-                  </value>
-                </block>
-              </statement>
-              <statement name="ELSE">
-                <block type="playAnimationAdv" id="U`3za}(;v!ry#L{N9S36">
-                  <mutation xmlns="http://www.w3.org/1999/xhtml" advplaybackoptions="true" enablewhenfinished="false"></mutation>
-                  <field name="REVERSED">TRUE</field>
-                  <field name="LOOP">LoopOnce</field>
-                  <value name="VALUE">
-                    <shadow type="animationList" id="P_-(U*$.o]8^-itpTSu,">
-                      <field name="FIELDNAME">&lt;none&gt;</field>
-                    </shadow>
-                    <block type="getAnimations" id="7!U%crKT7E)*Qxjt_yba">
-                      <value name="OBJECTINPUT">
-                        <shadow type="objectList" id="th,|ID)L4Z[oR)C=M2]q">
-                          <field name="FIELDNAME">&lt;none&gt;</field>
-                        </shadow>
-                        <block type="groupList" id="3ot72WTuP}|Mf)VlY#d:">
-                          <field name="FIELDNAME">cuboard</field>
-                        </block>
-                      </value>
-                    </block>
-                  </value>
-                  <value name="FROM">
-                    <shadow type="math_number" id="VB6J}u5~k(+em]oPVxoq">
-                      <field name="NUM">150</field>
-                    </shadow>
-                  </value>
-                  <value name="TO">
-                    <shadow type="math_number" id="rm}:m_RvJq7J5sRK:s6/">
-                      <field name="NUM">170</field>
-                    </shadow>
-                  </value>
-                  <value name="SPEED">
-                    <shadow type="math_number" id="13E,H)i,z+Ho+aKeS#t.">
-                      <field name="NUM">1</field>
-                    </shadow>
-                  </value>
-                </block>
-              </statement>
-            </block>
-          </statement>
         </block>
       </statement>
     </block>
