@@ -35,7 +35,7 @@
       </statement>
     </block>
   </tab>
-  <tab name="New Tab" type="CommonTab" active="true" scrollx="-971.6741333007812" scrolly="2004.455078125" scale="1">
+  <tab name="New Tab" type="CommonTab" active="true" scrollx="-1054.2000732421875" scrolly="2056.95361328125" scale="1">
     <variables xmlns="https://developers.google.com/blockly/xml">
       <variable id="V;R6qf}0gq6K:p/Q3TzO">animations_except_garden</variable>
       <variable id="J6oW`R0+@yA6=I_KCzo)">furniture_triggers</variable>
@@ -825,59 +825,7 @@
         </block>
       </value>
     </block>
-    <block xmlns="https://developers.google.com/blockly/xml" type="animateParam" id="GG/+ugsZNH.99/2]3EWs" x="1670" y="-1270">
-      <mutation xmlns="http://www.w3.org/1999/xhtml" whenfinishedslot="false"></mutation>
-      <field name="EASING">Linear</field>
-      <field name="EASING2">InOut</field>
-      <field name="YOYO">FALSE</field>
-      <value name="FROM">
-        <shadow type="math_number" id="$$|yB+L)oHa7vjsWmQKP">
-          <field name="NUM">0</field>
-        </shadow>
-      </value>
-      <value name="TO">
-        <shadow type="math_number" id="v3$zXrl-Snv%c`+F1+p_">
-          <field name="NUM">10</field>
-        </shadow>
-      </value>
-      <value name="DURATION">
-        <shadow type="math_number" id="z[gfOgE*Ea@.{99w~FvA">
-          <field name="NUM">3</field>
-        </shadow>
-      </value>
-      <value name="REPEAT">
-        <shadow type="math_number" id="n$NAox0~w)4h9E$jjZaa">
-          <field name="NUM">0</field>
-        </shadow>
-      </value>
-      <statement name="ON_UPDATE">
-        <block type="setMaterialColor" id="fW0AP19^x{Nb?ckj9tIg">
-          <mutation xmlns="http://www.w3.org/1999/xhtml" flexcolinput="false" usecsscolor="false"></mutation>
-          <field name="MAT_COL_NAME">&lt;no colors&gt;</field>
-          <value name="MATERIAL">
-            <shadow type="materialList" id=":7$Y)vSF}UPKqF_w~M.a">
-              <field name="FIELDNAME">Base white  material dark shade anim</field>
-            </shadow>
-          </value>
-          <value name="R">
-            <shadow type="math_number" id="?~+ik/z)_$Nrv+s[cZt9">
-              <field name="NUM">0.5</field>
-            </shadow>
-          </value>
-          <value name="G">
-            <shadow type="math_number" id="UCnlg=ls)L[|wo}-Hq[=">
-              <field name="NUM">0.5</field>
-            </shadow>
-          </value>
-          <value name="B">
-            <shadow type="math_number" id="MHh;@m+L+jS^g@#8LbRE">
-              <field name="NUM">0.5</field>
-            </shadow>
-          </value>
-        </block>
-      </statement>
-    </block>
-    <block xmlns="https://developers.google.com/blockly/xml" type="whenClicked" id="*`)]$:2)/F^(G^Tw})iY" inline="false" x="1510" y="-950">
+    <block xmlns="https://developers.google.com/blockly/xml" type="whenClicked" id=";`x6c}X6.[*v}`t;ihJ{" inline="false" x="1490" y="-1310">
       <mutation xmlns="http://www.w3.org/1999/xhtml" adveventoptions="false" enableifmissed="true"></mutation>
       <field name="X_RAY">FALSE</field>
       <field name="DOUBLE_CLICK">FALSE</field>
@@ -888,35 +836,35 @@
         <shadow type="objectList" id="sIAQ2C=e[9*Dv??V3neZ">
           <field name="FIELDNAME">cupboard_trigger</field>
         </shadow>
-        <block type="objectList" id="am:Aq?gvb7BujWH|!,{5">
-          <field name="FIELDNAME">cupboard_trigger</field>
+        <block type="objectList" id="m]IlD-%l?h/gy:c^!KbT">
+          <field name="FIELDNAME">electricity_living_room_trigger</field>
         </block>
       </value>
       <statement name="DO">
-        <block type="setAnimationSpeed" id="^-0Wdct^-TVm@Ll|Oq-.">
+        <block type="setAnimationSpeed" id="X!OBL+OVvox/3u1c[39b">
           <field name="REVERSED">FALSE</field>
           <value name="VALUE">
             <shadow type="animationList" id="}Ef3;:X2qfy`3s=9#iNS">
               <field name="FIELDNAME">&lt;none&gt;</field>
             </shadow>
-            <block type="getAnimations" id="1%}^d#PW3fNrE?PY[?iT">
+            <block type="getAnimations" id="Jm+fW28RZ:l$u_X*Fdtg">
               <value name="OBJECTINPUT">
-                <shadow type="objectList" id="cK;k;Vj#2BEw_7/kU}iM">
+                <shadow type="objectList" id="Fh[ZMQaY_6hI1]gwP7cj">
                   <field name="FIELDNAME">&lt;none&gt;</field>
                 </shadow>
-                <block type="groupList" id="H,IgK:kRR]/y68z$Z[-`">
-                  <field name="FIELDNAME">cuboard</field>
+                <block type="groupList" id="L7,0wG8thkMDh7`aSJdv">
+                  <field name="FIELDNAME">switch_living_room</field>
                 </block>
               </value>
             </block>
           </value>
           <value name="SPEED">
-            <shadow type="math_number" id="V;+~E=ED5YAu8QyvwOFo">
-              <field name="NUM">1</field>
+            <shadow type="math_number" id="_:CnE,[y7Z3OEV;u_ut(">
+              <field name="NUM">1.5</field>
             </shadow>
           </value>
           <next>
-            <block type="playAnimationAdv" id="ED@@K1XI0!GpS6}NnNg!">
+            <block type="playAnimationAdv" id="r:;Rhsq([e{4H6_`Mo?[">
               <mutation xmlns="http://www.w3.org/1999/xhtml" advplaybackoptions="true" enablewhenfinished="false"></mutation>
               <field name="REVERSED">FALSE</field>
               <field name="LOOP">LoopOnce</field>
@@ -924,30 +872,30 @@
                 <shadow type="animationList" id="P_-(U*$.o]8^-itpTSu,">
                   <field name="FIELDNAME">&lt;none&gt;</field>
                 </shadow>
-                <block type="getAnimations" id="~=nuV.q{-DjfDwP^@7EH">
+                <block type="getAnimations" id="vwU#euxKe[N(/s`,eu]E">
                   <value name="OBJECTINPUT">
-                    <shadow type="objectList" id="iO91x4YWNWUKKs7acky@">
-                      <field name="FIELDNAME">&lt;none&gt;</field>
+                    <shadow type="objectList" id="+rG!/(+yl_NAsLfud=R$">
+                      <field name="FIELDNAME">Point</field>
                     </shadow>
-                    <block type="groupList" id="(18mJQ6~uhEGB#*#kJNA">
-                      <field name="FIELDNAME">cuboard</field>
+                    <block type="groupList" id="f]+$Cu_dMQM-dq-OIXh0">
+                      <field name="FIELDNAME">switch_living_room</field>
                     </block>
                   </value>
                 </block>
               </value>
               <value name="FROM">
-                <shadow type="math_number" id="(d2m$jEO[F@[-YU]KRJj">
+                <shadow type="math_number" id="3FW$bRBw5NT}Eo0jt|,9">
                   <field name="NUM">150</field>
                 </shadow>
               </value>
               <value name="TO">
-                <shadow type="math_number" id="MQ#d65qCj2bdG2ITcs6!">
+                <shadow type="math_number" id="fO/tTAwoLyQ=d7*d:)Eu">
                   <field name="NUM">170</field>
                 </shadow>
               </value>
               <value name="SPEED">
-                <shadow type="math_number" id="n2F3UOXKx:U2BxMP7(@)">
-                  <field name="NUM">1</field>
+                <shadow type="math_number" id="xYW6[Wd([mcSay$tSHm$">
+                  <field name="NUM">1.5</field>
                 </shadow>
               </value>
             </block>
@@ -955,39 +903,39 @@
         </block>
       </statement>
       <statement name="IF_MISSED_DO">
-        <block type="controls_if" id="WH3yC{@*u76yWruG*7pi">
+        <block type="controls_if" id=";R(Q@kLhw/}~?7[lW92o">
           <value name="IF0">
-            <block type="logic_operation" id="#vr.Em%Ro2deQAgACt/R">
+            <block type="logic_operation" id="bNp].rJ%wUhkJ`Z/T+-b">
               <field name="OP">AND</field>
               <value name="A">
-                <block type="logic_compare" id="Tb5{N0#_23zGAb8ZiBAf">
+                <block type="logic_compare" id="9y7g{(kH!DsR3N@^2gTv">
                   <field name="OP">EQ</field>
                   <value name="A">
-                    <block type="variables_get" id="a`pCxvT(+(ZYN:iiw^Ou">
+                    <block type="variables_get" id="H)Ea|RM!a31JmC6,MlG6">
                       <field name="VAR" id="J@FII3x]r![1`]rdXcK,">zoomed_in</field>
                     </block>
                   </value>
                   <value name="B">
-                    <block type="logic_boolean" id="Dd8^dhi{v+jF{A89-]^t">
+                    <block type="logic_boolean" id="p^^(5nbSNZ,2+xCJ+PG~">
                       <field name="BOOL">TRUE</field>
                     </block>
                   </value>
                 </block>
               </value>
               <value name="B">
-                <block type="logic_compare" id="eWd)ZrKX/b`2q%kG?t`9">
+                <block type="logic_compare" id="V3/tp=jN#Y%_E2B^-ee%">
                   <field name="OP">EQ</field>
                   <value name="A">
-                    <block type="getAnimationFrame" id=".bS8JJ`R.v(ZF@7Y0nM2">
+                    <block type="getAnimationFrame" id="X45F{PFTh8O;i!E`#9H]">
                       <value name="VALUE">
-                        <shadow type="animationList" id="ua]BX:gj]Mo60o.HU)`5">
-                          <field name="FIELDNAME">cupboard_trigger</field>
+                        <shadow type="animationList" id="Ij5;QIaiOe`[jyNZ@X%=">
+                          <field name="FIELDNAME">Point.001</field>
                         </shadow>
                       </value>
                     </block>
                   </value>
                   <value name="B">
-                    <block type="math_number" id="Z^$![luecWT%1CwUZnFL">
+                    <block type="math_number" id="#uZ@Hp@HT$h#EHX(emt9">
                       <field name="NUM">170</field>
                     </block>
                   </value>
@@ -996,21 +944,21 @@
             </block>
           </value>
           <statement name="DO0">
-            <block type="controls_if" id="I=ujoS#ZL[I^Mc!3deGD">
+            <block type="controls_if" id="TxLFR_HNHESG2.7eBFW}">
               <mutation else="1"></mutation>
               <value name="IF0">
-                <block type="isAnimationPlaying" id="]3K`_!f@IJ#7+nN2.LA7">
+                <block type="isAnimationPlaying" id="1Z|).)bq`4:O3c7x?cn.">
                   <value name="VALUE">
                     <shadow type="animationList" id="gRGMq)G^K0==z*Jv{({2">
                       <field name="FIELDNAME">&lt;none&gt;</field>
                     </shadow>
-                    <block type="getAnimations" id="iZT|o{IOW[rU.^*+$H#D">
+                    <block type="getAnimations" id="Huc8Hh9!UcL!t9uTY[rL">
                       <value name="OBJECTINPUT">
-                        <shadow type="objectList" id="_zUPd0QCy_OweIN%9`:)">
-                          <field name="FIELDNAME">&lt;none&gt;</field>
+                        <shadow type="objectList" id="}=xcD].?q_=?vDQotX{j">
+                          <field name="FIELDNAME">Point</field>
                         </shadow>
-                        <block type="groupList" id="~,YAUMfh^3^VUA]gT//N">
-                          <field name="FIELDNAME">cuboard</field>
+                        <block type="groupList" id="^^J!1zso/{Ew}4))Ofwb">
+                          <field name="FIELDNAME">switch_living_room</field>
                         </block>
                       </value>
                     </block>
@@ -1018,32 +966,32 @@
                 </block>
               </value>
               <statement name="DO0">
-                <block type="setAnimationSpeed" id="=@j/ufRvx8IFVwW7f)9X">
+                <block type="setAnimationSpeed" id=")xE43Gw$gGOF3H#Eb.$2">
                   <field name="REVERSED">TRUE</field>
                   <value name="VALUE">
                     <shadow type="animationList" id="}Ef3;:X2qfy`3s=9#iNS">
                       <field name="FIELDNAME">&lt;none&gt;</field>
                     </shadow>
-                    <block type="getAnimations" id="8!w;Rz:s,3ac#fksVHR?">
+                    <block type="getAnimations" id="x1-Y0IoPDIK.eId0V)Zl">
                       <value name="OBJECTINPUT">
-                        <shadow type="objectList" id="-r+iv%bG/[a]FFK?(Et,">
-                          <field name="FIELDNAME">&lt;none&gt;</field>
+                        <shadow type="objectList" id="9N3;DVAiY?oUSX0xD$E0">
+                          <field name="FIELDNAME">Point</field>
                         </shadow>
-                        <block type="groupList" id="9VDiOpq+;x^1761|#)eu">
-                          <field name="FIELDNAME">cuboard</field>
+                        <block type="groupList" id="!5WZn_{s.,(Ix7~*]^2x">
+                          <field name="FIELDNAME">switch_living_room</field>
                         </block>
                       </value>
                     </block>
                   </value>
                   <value name="SPEED">
-                    <shadow type="math_number" id="i*`}X0vdPx~mb;}@1d~3">
-                      <field name="NUM">1</field>
+                    <shadow type="math_number" id="=rlc]gV/50z+zs`7R]To">
+                      <field name="NUM">1.5</field>
                     </shadow>
                   </value>
                 </block>
               </statement>
               <statement name="ELSE">
-                <block type="playAnimationAdv" id="U`3za}(;v!ry#L{N9S36">
+                <block type="playAnimationAdv" id="rpi:H^nY8be!,rv(BOJW">
                   <mutation xmlns="http://www.w3.org/1999/xhtml" advplaybackoptions="true" enablewhenfinished="false"></mutation>
                   <field name="REVERSED">TRUE</field>
                   <field name="LOOP">LoopOnce</field>
@@ -1051,30 +999,30 @@
                     <shadow type="animationList" id="P_-(U*$.o]8^-itpTSu,">
                       <field name="FIELDNAME">&lt;none&gt;</field>
                     </shadow>
-                    <block type="getAnimations" id="7!U%crKT7E)*Qxjt_yba">
+                    <block type="getAnimations" id="_;mQ[FC5TK`Qw~=a0Yo*">
                       <value name="OBJECTINPUT">
-                        <shadow type="objectList" id="th,|ID)L4Z[oR)C=M2]q">
-                          <field name="FIELDNAME">&lt;none&gt;</field>
+                        <shadow type="objectList" id="X#)H}LBL]C[2(J8LaOGH">
+                          <field name="FIELDNAME">Point</field>
                         </shadow>
-                        <block type="groupList" id="3ot72WTuP}|Mf)VlY#d:">
-                          <field name="FIELDNAME">cuboard</field>
+                        <block type="groupList" id="Jt~BP[WW}:yY[1g~DWQ9">
+                          <field name="FIELDNAME">switch_living_room</field>
                         </block>
                       </value>
                     </block>
                   </value>
                   <value name="FROM">
-                    <shadow type="math_number" id="VB6J}u5~k(+em]oPVxoq">
+                    <shadow type="math_number" id="EnC7%0Tp0%.AF[_E}bQ(">
                       <field name="NUM">150</field>
                     </shadow>
                   </value>
                   <value name="TO">
-                    <shadow type="math_number" id="rm}:m_RvJq7J5sRK:s6/">
+                    <shadow type="math_number" id="XWcJUzlCfwFuN$0MsCo-">
                       <field name="NUM">170</field>
                     </shadow>
                   </value>
                   <value name="SPEED">
-                    <shadow type="math_number" id="13E,H)i,z+Ho+aKeS#t.">
-                      <field name="NUM">1</field>
+                    <shadow type="math_number" id="#?lxsDSFk0HjsJ5}-pYu">
+                      <field name="NUM">1.5</field>
                     </shadow>
                   </value>
                 </block>

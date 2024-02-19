@@ -95,11 +95,11 @@ body {
 #loading-screen-header {
   top: 50%;
   left: 50%;
-  transform: translate(-50%, calc(-50% - 275px));
+  transform: translate(-50%, calc(-50% - 250px));
   position: absolute;
   color: white;
   font-size: 32pt;
-  font-family: 'GillSansBold';
+  font-family: 'GillSansSemiBold';
 }
 
 #loading-screen-paragraph {
@@ -112,12 +112,13 @@ body {
   color: white;
   max-width: auto;
   display: block;
+  line-height: 20px;
 }
 
 #start-button {
   top: 50%;
   left: 50%;
-  transform: translate(-50%, calc(-50% + 225px));
+  transform: translate(-50%, calc(-50% + 170px));
   position: absolute;
   cursor: pointer;
   display: none;
@@ -131,7 +132,7 @@ body {
 #start-button-hovered {
   top: 50%;
   left: 50%;
-  transform: translate(-50%, calc(-50% + 225px));
+  transform: translate(-50%, calc(-50% + 170px));
   position: absolute;
   display: none;
 }
@@ -139,48 +140,16 @@ body {
 #click-icon {
   top: 50%;
   left: 50%;
-  transform: translate(-50%, calc(-50% + 100px));
+  transform: translate(-50%, calc(-50% + 60px));
   position: absolute;
-  height: 80px;
+  height: 60px;
   display: block;
-  animation: flicker 4s infinite;
-}
-
-@keyframes flicker {
-  0%, 5%, 10%, 100% {
-    opacity: 1;
-  }
-  91%{
-    opacity: 1;
-  }
-  92%{
-    opacity: 0.4;
-  }
-  94%{
-    opacity: 1;
-  }
-  96% {
-    opacity: 0.4;
-  }
-  98% {
-    opacity: 1;
-  }
-}
-
-#hover-icon {
-  top: 50%;
-  left: 50%;
-  transform: translate(calc(-50% - 50px), calc(-50% + 100px));
-  position: absolute;
-  height: 80px;
-  width: auto;
-  display: none;
 }
 
 #loading-icon {
   top: 50%;
   left: 50%;
-  transform: translate(-50%, calc(-50% + 225px));
+  transform: translate(-50%, calc(-50% + 170px));
   position: absolute;
 }
 
