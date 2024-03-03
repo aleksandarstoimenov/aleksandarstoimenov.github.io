@@ -35,7 +35,7 @@
       </statement>
     </block>
   </tab>
-  <tab name="New Tab" type="CommonTab" active="true" scrollx="-2375.4130755254396" scrolly="1435.021199486655" scale="0.7959893115433263">
+  <tab name="New Tab" type="CommonTab" active="true" scrollx="-7024.681152343751" scrolly="616.8355712890625" scale="1">
     <variables xmlns="https://developers.google.com/blockly/xml">
       <variable id="V;R6qf}0gq6K:p/Q3TzO">animations_except_garden</variable>
       <variable id="J6oW`R0+@yA6=I_KCzo)">furniture_triggers</variable>
@@ -1210,84 +1210,6 @@
                                       <field name="NUM">6</field>
                                     </shadow>
                                   </value>
-                                  <next>
-                                    <block type="setHTMLElemStyle" id="v,@LcAd=f~./~[$.1s{E">
-                                      <field name="PROPERTY">transform</field>
-                                      <field name="PARENT">TRUE</field>
-                                      <value name="VALUE">
-                                        <shadow type="text" id="zKo5}5HX{e3}Mt*W)ysE">
-                                          <field name="TEXT">translate(-50%, -50%)</field>
-                                        </shadow>
-                                      </value>
-                                      <value name="ID">
-                                        <shadow type="text" id="+bqS6B=Ab0lN$@bC!hBW">
-                                          <field name="TEXT">text-container-phone</field>
-                                        </shadow>
-                                      </value>
-                                      <next>
-                                        <block type="setHTMLElemStyle" id="tu44,Y|{M=Vo02NJ[{UD">
-                                          <field name="PROPERTY">transform</field>
-                                          <field name="PARENT">TRUE</field>
-                                          <value name="VALUE">
-                                            <shadow type="text" id="D]eDZO#ol#.{*0phADvZ">
-                                              <field name="TEXT">translate(300%, -50%)</field>
-                                            </shadow>
-                                          </value>
-                                          <value name="ID">
-                                            <shadow type="text" id="Rp:)S{wnO3bC,}H8M=T0">
-                                              <field name="TEXT">text-block</field>
-                                            </shadow>
-                                          </value>
-                                          <next>
-                                            <block type="setTimeout" id="nxn.dv01@xu(0}tbTx@Q">
-                                              <value name="VALUE">
-                                                <shadow type="math_number" id="^3gwrUu~40aowzztg1sw">
-                                                  <field name="NUM">0.4</field>
-                                                </shadow>
-                                              </value>
-                                              <statement name="DO">
-                                                <block type="procedures_callnoreturn" id="gH3xz#;BM9?hrR),y`gt">
-                                                  <mutation name="Hide all the pop-up elements"></mutation>
-                                                  <next>
-                                                    <block type="setHTMLElemStyle" id="q[pIx9s}YyZ~q3YO]V,b">
-                                                      <field name="PROPERTY">display</field>
-                                                      <field name="PARENT">TRUE</field>
-                                                      <value name="VALUE">
-                                                        <shadow type="displayDropdown" id="~~zXY/YO,pjJkitAl7.w">
-                                                          <field name="TEXT">block</field>
-                                                        </shadow>
-                                                      </value>
-                                                      <value name="ID">
-                                                        <shadow type="text" id="FUu8!6#rd)EUf,:l*Zx5">
-                                                          <field name="TEXT">zoomed-out-text</field>
-                                                        </shadow>
-                                                      </value>
-                                                      <next>
-                                                        <block type="setHTMLElemStyle" id="AHb`%N`DvSZsN#KHL;w_">
-                                                          <field name="PROPERTY">transform</field>
-                                                          <field name="PARENT">TRUE</field>
-                                                          <value name="VALUE">
-                                                            <shadow type="text" id="}Ku6bA(y_-Pwdn^Bt(Qi">
-                                                              <field name="TEXT">translate(-50%, -50%)</field>
-                                                            </shadow>
-                                                          </value>
-                                                          <value name="ID">
-                                                            <shadow type="text" id="[:n6rBzLL!?b9snfEk,d">
-                                                              <field name="TEXT">text-block</field>
-                                                            </shadow>
-                                                          </value>
-                                                        </block>
-                                                      </next>
-                                                    </block>
-                                                  </next>
-                                                </block>
-                                              </statement>
-                                            </block>
-                                          </next>
-                                        </block>
-                                      </next>
-                                    </block>
-                                  </next>
                                 </block>
                               </next>
                             </block>
@@ -1298,6 +1220,84 @@
                   </next>
                 </block>
               </statement>
+              <next>
+                <block type="setHTMLElemStyle" id="v,@LcAd=f~./~[$.1s{E">
+                  <field name="PROPERTY">transform</field>
+                  <field name="PARENT">TRUE</field>
+                  <value name="VALUE">
+                    <shadow type="text" id="zKo5}5HX{e3}Mt*W)ysE">
+                      <field name="TEXT">translate(-50%, -50%)</field>
+                    </shadow>
+                  </value>
+                  <value name="ID">
+                    <shadow type="text" id="+bqS6B=Ab0lN$@bC!hBW">
+                      <field name="TEXT">text-container-phone</field>
+                    </shadow>
+                  </value>
+                  <next>
+                    <block type="setHTMLElemStyle" id="tu44,Y|{M=Vo02NJ[{UD">
+                      <field name="PROPERTY">transform</field>
+                      <field name="PARENT">TRUE</field>
+                      <value name="VALUE">
+                        <shadow type="text" id="D]eDZO#ol#.{*0phADvZ">
+                          <field name="TEXT">translate(300%, -50%)</field>
+                        </shadow>
+                      </value>
+                      <value name="ID">
+                        <shadow type="text" id="Rp:)S{wnO3bC,}H8M=T0">
+                          <field name="TEXT">text-block</field>
+                        </shadow>
+                      </value>
+                      <next>
+                        <block type="setTimeout" id="nxn.dv01@xu(0}tbTx@Q">
+                          <value name="VALUE">
+                            <shadow type="math_number" id="^3gwrUu~40aowzztg1sw">
+                              <field name="NUM">0.4</field>
+                            </shadow>
+                          </value>
+                          <statement name="DO">
+                            <block type="procedures_callnoreturn" id="gH3xz#;BM9?hrR),y`gt">
+                              <mutation name="Hide all the pop-up elements"></mutation>
+                              <next>
+                                <block type="setHTMLElemStyle" id="q[pIx9s}YyZ~q3YO]V,b">
+                                  <field name="PROPERTY">display</field>
+                                  <field name="PARENT">TRUE</field>
+                                  <value name="VALUE">
+                                    <shadow type="displayDropdown" id="~~zXY/YO,pjJkitAl7.w">
+                                      <field name="TEXT">block</field>
+                                    </shadow>
+                                  </value>
+                                  <value name="ID">
+                                    <shadow type="text" id="FUu8!6#rd)EUf,:l*Zx5">
+                                      <field name="TEXT">zoomed-out-text</field>
+                                    </shadow>
+                                  </value>
+                                  <next>
+                                    <block type="setHTMLElemStyle" id="AHb`%N`DvSZsN#KHL;w_">
+                                      <field name="PROPERTY">transform</field>
+                                      <field name="PARENT">TRUE</field>
+                                      <value name="VALUE">
+                                        <shadow type="text" id="}Ku6bA(y_-Pwdn^Bt(Qi">
+                                          <field name="TEXT">translate(-50%, -50%)</field>
+                                        </shadow>
+                                      </value>
+                                      <value name="ID">
+                                        <shadow type="text" id="[:n6rBzLL!?b9snfEk,d">
+                                          <field name="TEXT">text-block</field>
+                                        </shadow>
+                                      </value>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </statement>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
             </block>
           </statement>
           <next>
@@ -1517,84 +1517,6 @@
                                           <field name="NUM">6</field>
                                         </shadow>
                                       </value>
-                                      <next>
-                                        <block type="setHTMLElemStyle" id="vM8Yn-F1:nJ0|*f?IZJY">
-                                          <field name="PROPERTY">transform</field>
-                                          <field name="PARENT">TRUE</field>
-                                          <value name="VALUE">
-                                            <shadow type="text" id="[l{~DM7W:=oJT!6~X@bg">
-                                              <field name="TEXT">translate(-50%, -50%)</field>
-                                            </shadow>
-                                          </value>
-                                          <value name="ID">
-                                            <shadow type="text" id="PDNB!H0F.SH0tXu}d)%L">
-                                              <field name="TEXT">text-container-phone</field>
-                                            </shadow>
-                                          </value>
-                                          <next>
-                                            <block type="setHTMLElemStyle" id="Z4(/nq$nT6lAtIBH:O[P">
-                                              <field name="PROPERTY">transform</field>
-                                              <field name="PARENT">TRUE</field>
-                                              <value name="VALUE">
-                                                <shadow type="text" id="8h-k9!WW7Z6?GY%C+6?U">
-                                                  <field name="TEXT">translate(300%, -50%)</field>
-                                                </shadow>
-                                              </value>
-                                              <value name="ID">
-                                                <shadow type="text" id="Ts*/}QuBMi}~O4|Ad_}i">
-                                                  <field name="TEXT">text-block</field>
-                                                </shadow>
-                                              </value>
-                                              <next>
-                                                <block type="setTimeout" id="0Anqw241Di?L(lnO.rS6">
-                                                  <value name="VALUE">
-                                                    <shadow type="math_number" id="It:,7A;|/jy~,%2Z%eES">
-                                                      <field name="NUM">0.4</field>
-                                                    </shadow>
-                                                  </value>
-                                                  <statement name="DO">
-                                                    <block type="procedures_callnoreturn" id="dg9L.0gd]A(_KchdiL0F">
-                                                      <mutation name="Hide all the pop-up elements"></mutation>
-                                                      <next>
-                                                        <block type="setHTMLElemStyle" id="n2y[9!G*?IeI^Ev.Jj5s">
-                                                          <field name="PROPERTY">display</field>
-                                                          <field name="PARENT">TRUE</field>
-                                                          <value name="VALUE">
-                                                            <shadow type="displayDropdown" id="JlVFOBnjuiU+5XIF-V41">
-                                                              <field name="TEXT">block</field>
-                                                            </shadow>
-                                                          </value>
-                                                          <value name="ID">
-                                                            <shadow type="text" id="77LRl=nsEY6AP#D|0*p,">
-                                                              <field name="TEXT">zoomed-out-text</field>
-                                                            </shadow>
-                                                          </value>
-                                                          <next>
-                                                            <block type="setHTMLElemStyle" id="QvwjS:du*JgM+!b,!90?">
-                                                              <field name="PROPERTY">transform</field>
-                                                              <field name="PARENT">TRUE</field>
-                                                              <value name="VALUE">
-                                                                <shadow type="text" id="m|XBc3aSrg}O|)uNyQj|">
-                                                                  <field name="TEXT">translate(-50%, -50%)</field>
-                                                                </shadow>
-                                                              </value>
-                                                              <value name="ID">
-                                                                <shadow type="text" id="BHz6(e;o^E9OM_y?O[7t">
-                                                                  <field name="TEXT">text-block</field>
-                                                                </shadow>
-                                                              </value>
-                                                            </block>
-                                                          </next>
-                                                        </block>
-                                                      </next>
-                                                    </block>
-                                                  </statement>
-                                                </block>
-                                              </next>
-                                            </block>
-                                          </next>
-                                        </block>
-                                      </next>
                                     </block>
                                   </next>
                                 </block>
@@ -1605,6 +1527,84 @@
                       </next>
                     </block>
                   </statement>
+                  <next>
+                    <block type="setHTMLElemStyle" id="vM8Yn-F1:nJ0|*f?IZJY">
+                      <field name="PROPERTY">transform</field>
+                      <field name="PARENT">TRUE</field>
+                      <value name="VALUE">
+                        <shadow type="text" id="[l{~DM7W:=oJT!6~X@bg">
+                          <field name="TEXT">translate(-50%, -50%)</field>
+                        </shadow>
+                      </value>
+                      <value name="ID">
+                        <shadow type="text" id="PDNB!H0F.SH0tXu}d)%L">
+                          <field name="TEXT">text-container-phone</field>
+                        </shadow>
+                      </value>
+                      <next>
+                        <block type="setHTMLElemStyle" id="Z4(/nq$nT6lAtIBH:O[P">
+                          <field name="PROPERTY">transform</field>
+                          <field name="PARENT">TRUE</field>
+                          <value name="VALUE">
+                            <shadow type="text" id="8h-k9!WW7Z6?GY%C+6?U">
+                              <field name="TEXT">translate(300%, -50%)</field>
+                            </shadow>
+                          </value>
+                          <value name="ID">
+                            <shadow type="text" id="Ts*/}QuBMi}~O4|Ad_}i">
+                              <field name="TEXT">text-block</field>
+                            </shadow>
+                          </value>
+                          <next>
+                            <block type="setTimeout" id="0Anqw241Di?L(lnO.rS6">
+                              <value name="VALUE">
+                                <shadow type="math_number" id="It:,7A;|/jy~,%2Z%eES">
+                                  <field name="NUM">0.4</field>
+                                </shadow>
+                              </value>
+                              <statement name="DO">
+                                <block type="procedures_callnoreturn" id="dg9L.0gd]A(_KchdiL0F">
+                                  <mutation name="Hide all the pop-up elements"></mutation>
+                                  <next>
+                                    <block type="setHTMLElemStyle" id="n2y[9!G*?IeI^Ev.Jj5s">
+                                      <field name="PROPERTY">display</field>
+                                      <field name="PARENT">TRUE</field>
+                                      <value name="VALUE">
+                                        <shadow type="displayDropdown" id="JlVFOBnjuiU+5XIF-V41">
+                                          <field name="TEXT">block</field>
+                                        </shadow>
+                                      </value>
+                                      <value name="ID">
+                                        <shadow type="text" id="77LRl=nsEY6AP#D|0*p,">
+                                          <field name="TEXT">zoomed-out-text</field>
+                                        </shadow>
+                                      </value>
+                                      <next>
+                                        <block type="setHTMLElemStyle" id="QvwjS:du*JgM+!b,!90?">
+                                          <field name="PROPERTY">transform</field>
+                                          <field name="PARENT">TRUE</field>
+                                          <value name="VALUE">
+                                            <shadow type="text" id="m|XBc3aSrg}O|)uNyQj|">
+                                              <field name="TEXT">translate(-50%, -50%)</field>
+                                            </shadow>
+                                          </value>
+                                          <value name="ID">
+                                            <shadow type="text" id="BHz6(e;o^E9OM_y?O[7t">
+                                              <field name="TEXT">text-block</field>
+                                            </shadow>
+                                          </value>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block>
+                              </statement>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
                 </block>
               </statement>
             </block>

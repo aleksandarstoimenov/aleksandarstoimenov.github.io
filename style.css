@@ -226,6 +226,105 @@ body {
     height: 100%;
 }
 
+.back_arrow {
+  height: 20px;
+  padding-bottom: 40px;
+  cursor: pointer;
+}
+
+#back_arrow_room_popup {
+  display: none;
+}
+
+
+
+
+#back_arrow_living_room_popup {
+  display: none;
+}
+
+#back_arrow_entrance_popup {
+  display: none;
+}
+
+#back_arrow_kitchen_popup {
+  display: none;
+}
+
+#back_arrow_bathroom_popup {
+  display: none;
+}
+
+#back_arrow_boiler_room_popup {
+  display: none;
+}
+
+#back_arrow_bedroom_popup {
+  display: none;
+}
+
+#back_arrow_toilet_popup {
+  display: none;
+}
+
+#back_arrow_garden_popup {
+  display: none;
+}
+
+#back_arrow_study_room_popup {
+  display: none;
+}
+
+
+
+
+
+
+
+#updated-object-text {
+  display: none;
+}
+
+#zoomed-out-text {
+  display: block;
+}
+
+#living-room-text{
+  display: none;
+}
+
+#entrance-text{
+  display: none;
+}
+
+#kitchen-text{
+  display: none;
+}
+
+#bathroom-text{
+  display: none;
+}
+
+#boiler-room-text{
+  display: none;
+}
+
+#bedroom-text{
+  display: none;
+}
+
+#toilet-text{
+  display: none;
+}
+
+#garden-text{
+  display: none;
+}
+
+#study-room-text{
+  display: none;
+}
+
 #text-container {
     flex: 1;
     height: 100%;
@@ -237,6 +336,7 @@ body {
     margin-right: 50px;
     display: block;
     overflow: auto; /* Enable scrolling */
+    display: block;
 }
 
 #text-container-phone {
@@ -291,6 +391,15 @@ body {
   margin-bottom: 50px;
 }
 
+#dividing_line_2{
+  height: 1px;
+  background-color: #e5e5e5;
+  width: 100%;
+  max-width: 600px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
 #popup_locataire{
   font-family: 'GillSansSemiBold';
   max-width: 100%;
@@ -302,6 +411,25 @@ body {
   padding-top: 0px;
   padding-bottom: 20px;
   max-width: 600px;
+}
+
+.popup_naviguation_chambre{
+  font-family: 'GillSansSemiBold';
+  max-width: 100%;
+  color: #282828;
+  font-size: 18px;
+  line-height: 0px;
+  padding: 0;
+  margin: 0;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  max-width: 600px;
+  cursor: pointer;
+}
+
+.popup_naviguation_chambre_color_overwrite{
+  color: #C20016;
+  font-size: 18px;
 }
 
 #popup_paragraph {

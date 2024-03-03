@@ -21,22 +21,144 @@
           <iframe id="my_iframe" src="ple_maquette_1.html"></iframe>
       </div>
 
-      <!-- SLIDING MENU -->
+      <!-- SLIDING MENU
 
-      <div id="text-container">
-        <div id="text-block">
-          <h1 id="popup_room">Maquette PLE</h1>
-          <h1 id="popup_object">Interactive et explorable</h1>
-          <div id="dividing_line"></div>
-          <p id="popup_locataire">Navigation</p>
-          <p id="popup_paragraph"><span id="color_overwrite">•</span> Utiliser la souris pour tourner autour de la maquette.</p>
-          <p id="popup_paragraph"><span id="color_overwrite">•</span> Clickez sur une pièce pour zoomer.</p>
-          <p id="popup_paragraph"><span id="color_overwrite">•</span> Sélectionner un objet</p>
-          <div id="dividing_line"></div>
-          <p id="popup_locataire">Information</p>
-          <p id="popup_paragraph"><span id="color_overwrite">•</span> Une fois l'objet cliqué, des informations s'affichent.</p>
-        </div>
-      </div>
+       <div id="text-container">
+         <div id="text-block">
+           <h1 id="popup_room">Maquette PLE</h1>
+           <h1 id="popup_object">Sélectionnez une pièce</h1>
+           <div id="dividing_line_2"></div>
+           <p class="popup_naviguation_chambre" id="megamenu_entrance"><span class="popup_naviguation_chambre_color_overwrite">+  </span>Entrée</p>
+           <div id="dividing_line_2"></div>
+           <p class="popup_naviguation_chambre" id="megamenu_living_room"><span class="popup_naviguation_chambre_color_overwrite">+  </span>Séjour</p>
+           <div id="dividing_line_2"></div>
+           <p class="popup_naviguation_chambre" id="megamenu_kitchen"><span class="popup_naviguation_chambre_color_overwrite">+  </span>Cuisine</p>
+           <div id="dividing_line_2"></div>
+           <p class="popup_naviguation_chambre" id="megamenu_bedroom"><span class="popup_naviguation_chambre_color_overwrite">+  </span>Chambre</p>
+           <div id="dividing_line_2"></div>
+           <p class="popup_naviguation_chambre" id="megamenu_bathroom"><span class="popup_naviguation_chambre_color_overwrite">+  </span>Salle de bain</p>
+           <div id="dividing_line_2"></div>
+           <p class="popup_naviguation_chambre" id="megamenu_study_room"><span class="popup_naviguation_chambre_color_overwrite">+  </span>Bureau</p>
+           <div id="dividing_line_2"></div>
+           <p class="popup_naviguation_chambre" id="megamenu_toilet"><span class="popup_naviguation_chambre_color_overwrite">+  </span>Toilettes</p>
+           <div id="dividing_line_2"></div>
+           <p class="popup_naviguation_chambre" id="megamenu_boiler_room"><span class="popup_naviguation_chambre_color_overwrite">+  </span>Grenier</p>
+           <div id="dividing_line_2"></div>
+           <p class="popup_naviguation_chambre" id="megamenu_garden"><span class="popup_naviguation_chambre_color_overwrite">+  </span>Jardin</p>
+           <div id="dividing_line_2"></div>
+         </div>
+       </div>
+
+       -->
+
+       <div id="text-container">
+         <div id="text-block">
+
+           <img src="images/back_arrow.png" alt="" class="back_arrow" id="back_arrow_room_popup">
+
+           <img src="images/back_arrow.png" alt="" class="back_arrow" id="back_arrow_living_room_popup">
+           <img src="images/back_arrow.png" alt="" class="back_arrow" id="back_arrow_entrance_popup">
+           <img src="images/back_arrow.png" alt="" class="back_arrow" id="back_arrow_kitchen_popup">
+           <img src="images/back_arrow.png" alt="" class="back_arrow" id="back_arrow_bathroom_popup">
+           <img src="images/back_arrow.png" alt="" class="back_arrow" id="back_arrow_boiler_room_popup">
+           <img src="images/back_arrow.png" alt="" class="back_arrow" id="back_arrow_bedroom_popup">
+           <img src="images/back_arrow.png" alt="" class="back_arrow" id="back_arrow_toilet_popup">
+           <img src="images/back_arrow.png" alt="" class="back_arrow" id="back_arrow_garden_popup">
+           <img src="images/back_arrow.png" alt="" class="back_arrow" id="back_arrow_study_room_popup">
+
+           <div id="updated-object-text">
+           </div>
+
+           <div id="zoomed-out-text">
+              <h1 id="popup_room">Maquette PLE</h1>
+              <h1 id="popup_object">Sélectionnez une pièce</h1>
+              <div id="dividing_line_2"></div>
+              <p class="popup_naviguation_chambre" id="megamenu_entrance"><span class="popup_naviguation_chambre_color_overwrite">+  </span>Entrée</p>
+              <div id="dividing_line_2"></div>
+              <p class="popup_naviguation_chambre" id="megamenu_living_room"><span class="popup_naviguation_chambre_color_overwrite">+  </span>Séjour</p>
+              <div id="dividing_line_2"></div>
+              <p class="popup_naviguation_chambre" id="megamenu_kitchen"><span class="popup_naviguation_chambre_color_overwrite">+  </span>Cuisine</p>
+              <div id="dividing_line_2"></div>
+              <p class="popup_naviguation_chambre" id="megamenu_bedroom"><span class="popup_naviguation_chambre_color_overwrite">+  </span>Chambre</p>
+              <div id="dividing_line_2"></div>
+              <p class="popup_naviguation_chambre" id="megamenu_bathroom"><span class="popup_naviguation_chambre_color_overwrite">+  </span>Salle de bain</p>
+              <div id="dividing_line_2"></div>
+              <p class="popup_naviguation_chambre" id="megamenu_study_room"><span class="popup_naviguation_chambre_color_overwrite">+  </span>Bureau</p>
+              <div id="dividing_line_2"></div>
+              <p class="popup_naviguation_chambre" id="megamenu_toilet"><span class="popup_naviguation_chambre_color_overwrite">+  </span>Toilettes</p>
+              <div id="dividing_line_2"></div>
+              <p class="popup_naviguation_chambre" id="megamenu_boiler_room"><span class="popup_naviguation_chambre_color_overwrite">+  </span>Grenier</p>
+              <div id="dividing_line_2"></div>
+              <p class="popup_naviguation_chambre" id="megamenu_garden"><span class="popup_naviguation_chambre_color_overwrite">+  </span>Jardin</p>
+              <div id="dividing_line_2"></div>
+           </div>
+
+           <div id="living-room-text">
+             <h1 id="popup_room">Séjour</h1>
+             <h1 id="popup_object">Sélectionnez un élément</h1>
+             <div id="dividing_line_2"></div>
+             <p class="popup_naviguation_chambre" id="megamenu_living_room_electricity"><span class="popup_naviguation_chambre_color_overwrite">+  </span>Plafonnier, prise de courant, interrupteur</p>
+             <div id="dividing_line_2"></div>
+             <p class="popup_naviguation_chambre" id="megamenu_living_room_radiator"><span class="popup_naviguation_chambre_color_overwrite">+  </span>Radiateur</p>
+             <div id="dividing_line_2"></div>
+             <p class="popup_naviguation_chambre" id="megamenu_living_room_window"><span class="popup_naviguation_chambre_color_overwrite">+  </span>Fenètres</p>
+             <div id="dividing_line_2"></div>
+             <p class="popup_naviguation_chambre" id="megamenu_living_room_fireplace"><span class="popup_naviguation_chambre_color_overwrite">+  </span>Feu ouvert</p>
+             <div id="dividing_line_2"></div>
+             <p class="popup_naviguation_chambre" id="megamenu_living_room_ventilation_opening"><span class="popup_naviguation_chambre_color_overwrite">+  </span>Bouche de ventilation</p>
+             <div id="dividing_line_2"></div>
+           </div>
+
+           <div id="entrance-text">
+             <h1 id="popup_room">Entrée</h1>
+             <h1 id="popup_object">Sélectionnez un élément</h1>
+             <div id="dividing_line_2"></div>
+           </div>
+
+           <div id="kitchen-text">
+             <h1 id="popup_room">Cuisine</h1>
+             <h1 id="popup_object">Sélectionnez un élément</h1>
+             <div id="dividing_line_2"></div>
+           </div>
+
+           <div id="bathroom-text">
+             <h1 id="popup_room">Salle de bain</h1>
+             <h1 id="popup_object">Sélectionnez un élément</h1>
+             <div id="dividing_line_2"></div>
+           </div>
+
+           <div id="boiler-room-text">
+             <h1 id="popup_room">Grenier</h1>
+             <h1 id="popup_object">Sélectionnez un élément</h1>
+             <div id="dividing_line_2"></div>
+           </div>
+
+           <div id="bedroom-text">
+             <h1 id="popup_room">Chambre</h1>
+             <h1 id="popup_object">Sélectionnez un élément</h1>
+             <div id="dividing_line_2"></div>
+           </div>
+
+           <div id="toilet-text">
+             <h1 id="popup_room">Toilette</h1>
+             <h1 id="popup_object">Sélectionnez un élément</h1>
+             <div id="dividing_line_2"></div>
+           </div>
+
+           <div id="garden-text">
+             <h1 id="popup_room">Jardin</h1>
+             <h1 id="popup_object">Sélectionnez un élément</h1>
+             <div id="dividing_line_2"></div>
+           </div>
+
+           <div id="study-room-text">
+             <h1 id="popup_room">Bureau</h1>
+             <h1 id="popup_object">Sélectionnez un élément</h1>
+             <div id="dividing_line_2"></div>
+           </div>
+
+         </div>
+       </div>
 
       <!-- PHONE SLIDING MENU -->
 
@@ -57,7 +179,7 @@
       </div>
     </div>
 
-    <!-- LOADING SCREEN -->
+    <!-- LOADING SCREEN     -->
 
     <div id="loading-screen">
       <div id="loading-icon">
@@ -73,6 +195,7 @@
       <img src="images/start-button-hovered.png" alt="" id="start-button-hovered">
       <img src="images/start-button.png" alt="" id="start-button">
     </div>
+
 
     <!-- HEADER -->
 
