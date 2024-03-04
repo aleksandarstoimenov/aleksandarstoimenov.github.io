@@ -227,8 +227,8 @@ body {
 }
 
 .back_arrow {
-  height: 20px;
-  padding-bottom: 40px;
+  height: 18px;
+  padding-bottom: 4px;
   cursor: pointer;
 }
 
@@ -349,7 +349,8 @@ body {
     height: 100%; /* Add this to define a fixed height */
     overflow-y: auto; /* Add this to enable vertical scrolling within #text-block */
     transform: translateX(0);
-    transition: transform 0.5s ease;
+    opacity: 1;
+    transition: opacity 0.2s ease-out, transform 2s ease;
     animation-duration: 4s;
     position: absolute;
     top: 50%;
@@ -396,8 +397,8 @@ body {
   background-color: #e5e5e5;
   width: 100%;
   max-width: 600px;
-  margin-top: 30px;
-  margin-bottom: 30px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 #popup_locataire{
@@ -436,10 +437,10 @@ body {
     font-family: 'OpenSans';
     word-wrap: break-word;
     max-width: 100%;
-    line-height: 31px;
+    line-height: 28px;
     padding: 0;
     margin: 0;
-    padding-top: 5px;
+    padding-top: 10px;
     max-width: 600px;
     font-size: 17px;
 }

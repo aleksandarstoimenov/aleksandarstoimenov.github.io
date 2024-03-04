@@ -35,7 +35,7 @@
       </statement>
     </block>
   </tab>
-  <tab name="New Tab" type="CommonTab" active="true" scrollx="-5042.465588500432" scrolly="326.65015754635533" scale="0.8227024747918816">
+  <tab name="New Tab" type="CommonTab" active="true" scrollx="-2077.6356578836567" scrolly="1403.3376784976972" scale="0.7462153966366272">
     <variables xmlns="https://developers.google.com/blockly/xml">
       <variable id="V;R6qf}0gq6K:p/Q3TzO">animations_except_garden</variable>
       <variable id="J6oW`R0+@yA6=I_KCzo)">furniture_triggers</variable>
@@ -2400,7 +2400,7 @@
                                                           <field name="PARENT">TRUE</field>
                                                           <value name="VALUE">
                                                             <shadow type="text" id="%_Tio5j_vO2IdqTiZ7a#">
-                                                              <field name="TEXT">translate(0%, -50%)</field>
+                                                              <field name="TEXT">translate(300%, -50%)</field>
                                                             </shadow>
                                                           </value>
                                                           <value name="ID">
@@ -2409,100 +2409,68 @@
                                                             </shadow>
                                                           </value>
                                                           <next>
-                                                            <block type="setHTMLElemStyle" id="t8rG@fLfEPN8MpjYP!+u">
-                                                              <field name="PROPERTY">opacity</field>
-                                                              <field name="PARENT">TRUE</field>
+                                                            <block type="setTimeout" id="oydt)Ayis7qvjoNSRs^y">
                                                               <value name="VALUE">
-                                                                <shadow type="text" id="-0|0O{ok.8g*Lwd+|+V5">
-                                                                  <field name="TEXT">0</field>
+                                                                <shadow type="math_number" id="Lc_)OQdn+f@%0R!O~z0~">
+                                                                  <field name="NUM">0.4</field>
                                                                 </shadow>
                                                               </value>
-                                                              <value name="ID">
-                                                                <shadow type="text" id="R[T2pG;OUKYd//C1w7Kk">
-                                                                  <field name="TEXT">text-block</field>
-                                                                </shadow>
-                                                              </value>
-                                                              <next>
-                                                                <block type="setTimeout" id="oydt)Ayis7qvjoNSRs^y">
-                                                                  <value name="VALUE">
-                                                                    <shadow type="math_number" id="Lc_)OQdn+f@%0R!O~z0~">
-                                                                      <field name="NUM">0.4</field>
-                                                                    </shadow>
-                                                                  </value>
-                                                                  <statement name="DO">
-                                                                    <block type="procedures_callnoreturn" id="=EmriOq}sclXy?S47koy">
-                                                                      <mutation name="Hide all the pop-up elements"></mutation>
+                                                              <statement name="DO">
+                                                                <block type="procedures_callnoreturn" id="=EmriOq}sclXy?S47koy">
+                                                                  <mutation name="Hide all the pop-up elements"></mutation>
+                                                                  <next>
+                                                                    <block type="setHTMLElemStyle" id="~e!xxsZk[G!j$n5=Q(N:">
+                                                                      <field name="PROPERTY">display</field>
+                                                                      <field name="PARENT">TRUE</field>
+                                                                      <value name="VALUE">
+                                                                        <shadow type="displayDropdown" id="2]MvqE`s(])qHGv?hQlO">
+                                                                          <field name="TEXT">block</field>
+                                                                        </shadow>
+                                                                      </value>
+                                                                      <value name="ID">
+                                                                        <shadow type="text" id="ePG{-Qh]My`,c]~PrQ3!">
+                                                                          <field name="TEXT">study-room-text</field>
+                                                                        </shadow>
+                                                                        <block type="variables_get" id="8M6$Z4S*i%2hY|^l?2Ta">
+                                                                          <field name="VAR" id="{YSCnzanX_Ix(f!@^r`E">Pop Up for specific room</field>
+                                                                        </block>
+                                                                      </value>
                                                                       <next>
-                                                                        <block type="setHTMLElemStyle" id="~e!xxsZk[G!j$n5=Q(N:">
+                                                                        <block type="setHTMLElemStyle" id="=8.x/yqxl*cK;=~=+MDU">
                                                                           <field name="PROPERTY">display</field>
                                                                           <field name="PARENT">TRUE</field>
                                                                           <value name="VALUE">
-                                                                            <shadow type="displayDropdown" id="2]MvqE`s(])qHGv?hQlO">
+                                                                            <shadow type="displayDropdown" id="T11((uQOVDuI=xT$av}b">
                                                                               <field name="TEXT">block</field>
                                                                             </shadow>
                                                                           </value>
                                                                           <value name="ID">
-                                                                            <shadow type="text" id="ePG{-Qh]My`,c]~PrQ3!">
-                                                                              <field name="TEXT">study-room-text</field>
+                                                                            <shadow type="text" id="c`(fM6DB_4RquE1*H3mq">
+                                                                              <field name="TEXT">back_arrow_room_popup</field>
                                                                             </shadow>
-                                                                            <block type="variables_get" id="8M6$Z4S*i%2hY|^l?2Ta">
-                                                                              <field name="VAR" id="{YSCnzanX_Ix(f!@^r`E">Pop Up for specific room</field>
-                                                                            </block>
                                                                           </value>
                                                                           <next>
-                                                                            <block type="setHTMLElemStyle" id="=8.x/yqxl*cK;=~=+MDU">
-                                                                              <field name="PROPERTY">display</field>
+                                                                            <block type="setHTMLElemStyle" id="71RZm!$Uo4F2nYuACu~c">
+                                                                              <field name="PROPERTY">transform</field>
                                                                               <field name="PARENT">TRUE</field>
                                                                               <value name="VALUE">
-                                                                                <shadow type="displayDropdown" id="T11((uQOVDuI=xT$av}b">
-                                                                                  <field name="TEXT">block</field>
+                                                                                <shadow type="text" id="Mb2HBcBN(+;61]}A5-.+">
+                                                                                  <field name="TEXT">translate(-50%, -50%)</field>
                                                                                 </shadow>
                                                                               </value>
                                                                               <value name="ID">
-                                                                                <shadow type="text" id="c`(fM6DB_4RquE1*H3mq">
-                                                                                  <field name="TEXT">back_arrow_room_popup</field>
+                                                                                <shadow type="text" id="t`Z]pnJ6!MiGAa|=c,dA">
+                                                                                  <field name="TEXT">text-block</field>
                                                                                 </shadow>
                                                                               </value>
-                                                                              <next>
-                                                                                <block type="setHTMLElemStyle" id="71RZm!$Uo4F2nYuACu~c">
-                                                                                  <field name="PROPERTY">transform</field>
-                                                                                  <field name="PARENT">TRUE</field>
-                                                                                  <value name="VALUE">
-                                                                                    <shadow type="text" id="Mb2HBcBN(+;61]}A5-.+">
-                                                                                      <field name="TEXT">translate(-50%, -50%)</field>
-                                                                                    </shadow>
-                                                                                  </value>
-                                                                                  <value name="ID">
-                                                                                    <shadow type="text" id="t`Z]pnJ6!MiGAa|=c,dA">
-                                                                                      <field name="TEXT">text-block</field>
-                                                                                    </shadow>
-                                                                                  </value>
-                                                                                  <next>
-                                                                                    <block type="setHTMLElemStyle" id="N0n^_jO-B^:+Nnw$$w*C">
-                                                                                      <field name="PROPERTY">opacity</field>
-                                                                                      <field name="PARENT">TRUE</field>
-                                                                                      <value name="VALUE">
-                                                                                        <shadow type="text" id="C?W]v49:b]j)GGF~]oc=">
-                                                                                          <field name="TEXT">1</field>
-                                                                                        </shadow>
-                                                                                      </value>
-                                                                                      <value name="ID">
-                                                                                        <shadow type="text" id="H[5:ms;,[RQF*VwB!cdY">
-                                                                                          <field name="TEXT">text-block</field>
-                                                                                        </shadow>
-                                                                                      </value>
-                                                                                    </block>
-                                                                                  </next>
-                                                                                </block>
-                                                                              </next>
                                                                             </block>
                                                                           </next>
                                                                         </block>
                                                                       </next>
                                                                     </block>
-                                                                  </statement>
+                                                                  </next>
                                                                 </block>
-                                                              </next>
+                                                              </statement>
                                                             </block>
                                                           </next>
                                                         </block>
@@ -2817,7 +2785,7 @@
                                           <field name="PARENT">TRUE</field>
                                           <value name="VALUE">
                                             <shadow type="text" id="@mUeP:]9yo2MZl9nVpzL">
-                                              <field name="TEXT">translate(0%, -50%)</field>
+                                              <field name="TEXT">translate(300%, -50%)</field>
                                             </shadow>
                                           </value>
                                           <value name="ID">
@@ -2826,100 +2794,68 @@
                                             </shadow>
                                           </value>
                                           <next>
-                                            <block type="setHTMLElemStyle" id="Mze7qA-m_*zs@0[f*TSX">
-                                              <field name="PROPERTY">opacity</field>
-                                              <field name="PARENT">TRUE</field>
+                                            <block type="setTimeout" id="eH6%mjKt%h]2dHOB@%JV">
                                               <value name="VALUE">
-                                                <shadow type="text" id="GlXSyFNfnCKKRqSgbR11">
-                                                  <field name="TEXT">0</field>
+                                                <shadow type="math_number" id="~G[YB7QH_xqovJEe+61r">
+                                                  <field name="NUM">0.4</field>
                                                 </shadow>
                                               </value>
-                                              <value name="ID">
-                                                <shadow type="text" id="c0kSZLrW6l(cjWto6JL`">
-                                                  <field name="TEXT">text-block</field>
-                                                </shadow>
-                                              </value>
-                                              <next>
-                                                <block type="setTimeout" id="eH6%mjKt%h]2dHOB@%JV">
-                                                  <value name="VALUE">
-                                                    <shadow type="math_number" id="~G[YB7QH_xqovJEe+61r">
-                                                      <field name="NUM">0.4</field>
-                                                    </shadow>
-                                                  </value>
-                                                  <statement name="DO">
-                                                    <block type="procedures_callnoreturn" id="dLoNwIDN_eY-.oq[6R$/">
-                                                      <mutation name="Hide all the pop-up elements"></mutation>
+                                              <statement name="DO">
+                                                <block type="procedures_callnoreturn" id="dLoNwIDN_eY-.oq[6R$/">
+                                                  <mutation name="Hide all the pop-up elements"></mutation>
+                                                  <next>
+                                                    <block type="setHTMLElemStyle" id="|$Ipx``0S*vIn64?9]qh">
+                                                      <field name="PROPERTY">display</field>
+                                                      <field name="PARENT">TRUE</field>
+                                                      <value name="VALUE">
+                                                        <shadow type="displayDropdown" id="fyP@?V%9v@zP;h:HTtM.">
+                                                          <field name="TEXT">block</field>
+                                                        </shadow>
+                                                      </value>
+                                                      <value name="ID">
+                                                        <shadow type="text" id="ePG{-Qh]My`,c]~PrQ3!">
+                                                          <field name="TEXT">study-room-text</field>
+                                                        </shadow>
+                                                        <block type="variables_get" id=",O%(8hW;l)YFQca^Z}a;">
+                                                          <field name="VAR" id="{YSCnzanX_Ix(f!@^r`E">Pop Up for specific room</field>
+                                                        </block>
+                                                      </value>
                                                       <next>
-                                                        <block type="setHTMLElemStyle" id="|$Ipx``0S*vIn64?9]qh">
+                                                        <block type="setHTMLElemStyle" id="T~E~Q?MoPy+mh}9o1GAf">
                                                           <field name="PROPERTY">display</field>
                                                           <field name="PARENT">TRUE</field>
                                                           <value name="VALUE">
-                                                            <shadow type="displayDropdown" id="fyP@?V%9v@zP;h:HTtM.">
+                                                            <shadow type="displayDropdown" id="P*_l4mgGvMj55gT.F@DF">
                                                               <field name="TEXT">block</field>
                                                             </shadow>
                                                           </value>
                                                           <value name="ID">
-                                                            <shadow type="text" id="ePG{-Qh]My`,c]~PrQ3!">
-                                                              <field name="TEXT">study-room-text</field>
+                                                            <shadow type="text" id="}IQ,)$wmdwGoxqNV`rOB">
+                                                              <field name="TEXT">back_arrow_room_popup</field>
                                                             </shadow>
-                                                            <block type="variables_get" id=",O%(8hW;l)YFQca^Z}a;">
-                                                              <field name="VAR" id="{YSCnzanX_Ix(f!@^r`E">Pop Up for specific room</field>
-                                                            </block>
                                                           </value>
                                                           <next>
-                                                            <block type="setHTMLElemStyle" id="T~E~Q?MoPy+mh}9o1GAf">
-                                                              <field name="PROPERTY">display</field>
+                                                            <block type="setHTMLElemStyle" id="1X(x92,]/wdST)[eKIh]">
+                                                              <field name="PROPERTY">transform</field>
                                                               <field name="PARENT">TRUE</field>
                                                               <value name="VALUE">
-                                                                <shadow type="displayDropdown" id="P*_l4mgGvMj55gT.F@DF">
-                                                                  <field name="TEXT">block</field>
+                                                                <shadow type="text" id="tnCb-+8_CDDE%Hl9ztEQ">
+                                                                  <field name="TEXT">translate(-50%, -50%)</field>
                                                                 </shadow>
                                                               </value>
                                                               <value name="ID">
-                                                                <shadow type="text" id="}IQ,)$wmdwGoxqNV`rOB">
-                                                                  <field name="TEXT">back_arrow_room_popup</field>
+                                                                <shadow type="text" id="tq[L$!;J}AiFjULL*E!?">
+                                                                  <field name="TEXT">text-block</field>
                                                                 </shadow>
                                                               </value>
-                                                              <next>
-                                                                <block type="setHTMLElemStyle" id="1X(x92,]/wdST)[eKIh]">
-                                                                  <field name="PROPERTY">transform</field>
-                                                                  <field name="PARENT">TRUE</field>
-                                                                  <value name="VALUE">
-                                                                    <shadow type="text" id="tnCb-+8_CDDE%Hl9ztEQ">
-                                                                      <field name="TEXT">translate(-50%, -50%)</field>
-                                                                    </shadow>
-                                                                  </value>
-                                                                  <value name="ID">
-                                                                    <shadow type="text" id="tq[L$!;J}AiFjULL*E!?">
-                                                                      <field name="TEXT">text-block</field>
-                                                                    </shadow>
-                                                                  </value>
-                                                                  <next>
-                                                                    <block type="setHTMLElemStyle" id="9Z*!*aX3z;2.#*?@lz_N">
-                                                                      <field name="PROPERTY">opacity</field>
-                                                                      <field name="PARENT">TRUE</field>
-                                                                      <value name="VALUE">
-                                                                        <shadow type="text" id="17vcTDLRR=AB,pG;*/!;">
-                                                                          <field name="TEXT">1</field>
-                                                                        </shadow>
-                                                                      </value>
-                                                                      <value name="ID">
-                                                                        <shadow type="text" id="DvItxuKEOCAoDFZ;WtI_">
-                                                                          <field name="TEXT">text-block</field>
-                                                                        </shadow>
-                                                                      </value>
-                                                                    </block>
-                                                                  </next>
-                                                                </block>
-                                                              </next>
                                                             </block>
                                                           </next>
                                                         </block>
                                                       </next>
                                                     </block>
-                                                  </statement>
+                                                  </next>
                                                 </block>
-                                              </next>
+                                              </statement>
                                             </block>
                                           </next>
                                         </block>
@@ -3721,7 +3657,7 @@
       <value name="ARG1">
         <block type="textMultiline" id="#ahfE;^Kg3N0.VxU5C/p">
           <field name="HIGHLIGHT_MODE">html</field>
-          <field name="TEXT" editor-height="29" editor-width="739.333251953125">          &lt;h1 id="popup_object"&gt;Radiateur.&lt;/h1&gt;&amp;#10;          &lt;div id="dividing_line_2"&gt;&lt;/div&gt;&amp;#10;          &lt;p id="popup_locataire"&gt;Locataire&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;•&lt;/span&gt; Dépoussiérage et purge.&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;•&lt;/span&gt; Entretien et contrôle périodique conformément aux dispositions du bail et à la réglementation en vigueur. Gaz : tous les 2 ans. Autres énergies : tous les ans.&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;•&lt;/span&gt; Chauffage suffisant de l'habitation.&lt;/p&gt;&amp;#10;          &lt;div id="dividing_line_2"&gt;&lt;/div&gt;&amp;#10;          &lt;p id="popup_locataire"&gt;Propriétaire&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;•&lt;/span&gt; Tous remplacements.&lt;/p&gt;</field>
+          <field name="TEXT" editor-height="1" editor-width="120">          &lt;h1 id="popup_object"&gt;Radiateur.&lt;/h1&gt;&amp;#10;          &lt;div id="dividing_line"&gt;&lt;/div&gt;&amp;#10;          &lt;p id="popup_locataire"&gt;Locataire&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;•&lt;/span&gt; Dépoussiérage et purge.&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;•&lt;/span&gt; Entretien et contrôle périodique conformément aux dispositions du bail et à la réglementation en vigueur. Gaz : tous les 2 ans. Autres énergies : tous les ans.&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;•&lt;/span&gt; Chauffage suffisant de l'habitation.&lt;/p&gt;&amp;#10;          &lt;div id="dividing_line"&gt;&lt;/div&gt;&amp;#10;          &lt;p id="popup_locataire"&gt;Propriétaire&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;•&lt;/span&gt; Tous remplacements.&lt;/p&gt;</field>
         </block>
       </value>
       <value name="ARG2">
@@ -3750,7 +3686,7 @@
           <value name="ARG1">
             <block type="textMultiline" id="EO5ynGs7xNDj^!FN[Q3V">
               <field name="HIGHLIGHT_MODE">html</field>
-              <field name="TEXT" editor-height="31" editor-width="1247.9898000000005">          &lt;h1 id="popup_object"&gt;Plafonnier, prise de courant, interrupteur.&lt;/h1&gt;&amp;#10;          &lt;div id="dividing_line_2"&gt;&lt;/div&gt;&amp;#10;          &lt;p id="popup_locataire"&gt;Locataire&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;•&lt;/span&gt; Remise en état des dégâts suite au placement des luminaires. &lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;•&lt;/span&gt; Le locataire est tenu de laisser aux points lumineux des fils en attente d'une longueur de plus ou moins 10 cm. S'il coupe les fils au raz du plafond ou du mur, il sera tenu au remplacement des fils dans la gaine.&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;•&lt;/span&gt; Le locataire doit veiller à entretenir l'installation électrique et ne pas surcharger celle-ci en tout ou en partie.&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;•&lt;/span&gt; Remplacement des ampoules, tubes d'éclairage, des interrupteurs, soquets et des prises de courant cassés, même suite un usage normal.&lt;/p&gt;&amp;#10;          &lt;div id="dividing_line_2"&gt;&lt;/div&gt;&amp;#10;          &lt;p id="popup_locataire"&gt;Propriétaire&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;•&lt;/span&gt; Tous remplacements des câblages pour tous services sauf si causés par des modifications du locataire. &lt;/p&gt;</field>
+              <field name="TEXT" editor-height="1" editor-width="120">          &lt;h1 id="popup_object"&gt;Plafonnier, prise de courant, interrupteur.&lt;/h1&gt;&amp;#10;          &lt;div id="dividing_line_2"&gt;&lt;/div&gt;&amp;#10;          &lt;p id="popup_locataire"&gt;Locataire&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;•&lt;/span&gt; Remise en état des dégâts suite au placement des luminaires. &lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;•&lt;/span&gt; Le locataire est tenu de laisser aux points lumineux des fils en attente d'une longueur de plus ou moins 10 cm. S'il coupe les fils au raz du plafond ou du mur, il sera tenu au remplacement des fils dans la gaine.&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;•&lt;/span&gt; Le locataire doit veiller à entretenir l'installation électrique et ne pas surcharger celle-ci en tout ou en partie.&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;•&lt;/span&gt; Remplacement des ampoules, tubes d'éclairage, des interrupteurs, soquets et des prises de courant cassés, même suite un usage normal.&lt;/p&gt;&amp;#10;          &lt;div id="dividing_line_2"&gt;&lt;/div&gt;&amp;#10;          &lt;p id="popup_locataire"&gt;Propriétaire&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;•&lt;/span&gt; Tous remplacements des câblages pour tous services sauf si causés par des modifications du locataire. &lt;/p&gt;</field>
             </block>
           </value>
           <value name="ARG2">
@@ -3779,7 +3715,7 @@
               <value name="ARG1">
                 <block type="textMultiline" id="D74:(M16frnr@xmCL-PW">
                   <field name="HIGHLIGHT_MODE">html</field>
-                  <field name="TEXT" editor-height="13" editor-width="851.7347625000003">          &lt;h1 id="popup_object"&gt;Fenètres&lt;/h1&gt;&amp;#10;          &lt;div id="dividing_line_2"&gt;&lt;/div&gt;&amp;#10;          &lt;p id="popup_locataire"&gt;Locataire&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;•&lt;/span&gt; Remplacement des vitres brisées par sa faute.&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;•&lt;/span&gt; Nettoyage régulier des vitres accessibles.&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;•&lt;/span&gt; Remplacement des vitres brisées par sa faute.&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;•&lt;/span&gt; Réfection des griffes faites aux vitres et aux châssis.&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;•&lt;/span&gt; Maintenir libre écoulement des eaux de condensation des châssis, sous peine de voir sa responsabilité engagée pour les dégâts en résultant (humidité, mérules…).&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;•&lt;/span&gt; Réfection des griffes faites aux vitres et aux châssis. En l'absence de VMC  : aération quotidienne des locaux.&lt;/p&gt;&amp;#10;          &lt;div id="dividing_line_2"&gt;&lt;/div&gt;&amp;#10;          &lt;p id="popup_locataire"&gt;Propriétaire&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;•&lt;/span&gt; Réparations nécessaires, autres que locatives, et remplacement.&lt;/p&gt;</field>
+                  <field name="TEXT" editor-height="1" editor-width="120">          &lt;h1 id="popup_object"&gt;Fenètres&lt;/h1&gt;&amp;#10;          &lt;div id="dividing_line_2"&gt;&lt;/div&gt;&amp;#10;          &lt;p id="popup_locataire"&gt;Locataire&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;•&lt;/span&gt; Remplacement des vitres brisées par sa faute.&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;•&lt;/span&gt; Nettoyage régulier des vitres accessibles.&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;•&lt;/span&gt; Remplacement des vitres brisées par sa faute.&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;•&lt;/span&gt; Réfection des griffes faites aux vitres et aux châssis.&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;•&lt;/span&gt; Maintenir libre écoulement des eaux de condensation des châssis, sous peine de voir sa responsabilité engagée pour les dégâts en résultant (humidité, mérules…).&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;•&lt;/span&gt; Réfection des griffes faites aux vitres et aux châssis. En l'absence de VMC  : aération quotidienne des locaux.&lt;/p&gt;&amp;#10;          &lt;div id="dividing_line_2"&gt;&lt;/div&gt;&amp;#10;          &lt;p id="popup_locataire"&gt;Propriétaire&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;•&lt;/span&gt; Réparations nécessaires, autres que locatives, et remplacement.&lt;/p&gt;</field>
                 </block>
               </value>
               <value name="ARG2">
