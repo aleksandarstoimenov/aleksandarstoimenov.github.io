@@ -236,18 +236,7 @@ body {
   display: none;
 }
 
-
-
-
-#back_arrow_living_room_popup {
-  display: none;
-}
-
-#back_arrow_entrance_popup {
-  display: none;
-}
-
-#back_arrow_kitchen_popup {
+#back_arrow_attic_room_popup {
   display: none;
 }
 
@@ -255,7 +244,7 @@ body {
   display: none;
 }
 
-#back_arrow_boiler_room_popup {
+#back_arrow_toilet_popup {
   display: none;
 }
 
@@ -263,20 +252,29 @@ body {
   display: none;
 }
 
-#back_arrow_toilet_popup {
+#back_arrow_entrance_popup {
+  display: none;
+}
+
+#back_arrow_living_room_popup {
+  display: none;
+}
+
+#back_arrow_kitchen_popup {
+  display: none;
+}
+
+#back_arrow_boiler_room_popup {
+  display: none;
+}
+
+#back_arrow_laundry_room_popup {
   display: none;
 }
 
 #back_arrow_garden_popup {
   display: none;
 }
-
-#back_arrow_study_room_popup {
-  display: none;
-}
-
-
-
 
 
 
@@ -289,15 +287,7 @@ body {
   display: block;
 }
 
-#living-room-text{
-  display: none;
-}
-
-#entrance-text{
-  display: none;
-}
-
-#kitchen-text{
+#attic-room-text{
   display: none;
 }
 
@@ -305,7 +295,7 @@ body {
   display: none;
 }
 
-#boiler-room-text{
+#toilet-text{
   display: none;
 }
 
@@ -313,15 +303,27 @@ body {
   display: none;
 }
 
-#toilet-text{
+#entrance-text{
+  display: none;
+}
+
+#living-room-text{
+  display: none;
+}
+
+#kitchen-text{
+  display: none;
+}
+
+#boiler-room-text{
+  display: none;
+}
+
+#laundry-room-text{
   display: none;
 }
 
 #garden-text{
-  display: none;
-}
-
-#study-room-text{
   display: none;
 }
 
