@@ -35,7 +35,7 @@
       </statement>
     </block>
   </tab>
-  <tab name="New Tab" type="CommonTab" active="true" scrollx="-2309.11083984375" scrolly="1087.1956481933594" scale="1">
+  <tab name="New Tab" type="CommonTab" active="true" scrollx="2328.25732421875" scrolly="2929.489990234375" scale="1">
     <variables xmlns="https://developers.google.com/blockly/xml">
       <variable id="j/HUb@Mn9F_XrMhZQS[b">animations_except_attic_room</variable>
       <variable id="J6oW`R0+@yA6=I_KCzo)">furniture_triggers</variable>
