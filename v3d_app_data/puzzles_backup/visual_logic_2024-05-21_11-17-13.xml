@@ -35,7 +35,7 @@
       </statement>
     </block>
   </tab>
-  <tab name="New Tab" type="CommonTab" active="true" scrollx="-1300.977878880537" scrolly="118.49883347009461" scale="0.8227024747918809">
+  <tab name="New Tab" type="CommonTab" active="true" scrollx="-1803.2149179054686" scrolly="508.02495926850565" scale="0.613913253540759">
     <variables xmlns="https://developers.google.com/blockly/xml">
       <variable id="j/HUb@Mn9F_XrMhZQS[b">animations_except_attic_room</variable>
       <variable id="J6oW`R0+@yA6=I_KCzo)">furniture_triggers</variable>
@@ -1612,7 +1612,73 @@
         </block>
       </statement>
     </block>
-    <block xmlns="https://developers.google.com/blockly/xml" type="procedures_defnoreturn" id="^CE{1RMefs3t6na1}mf$" x="1490" y="-790">
+    <block xmlns="https://developers.google.com/blockly/xml" type="whenHovered" id=".B-c1DgyzVlYs1P5%M|S" inline="true" x="2690" y="-830">
+      <mutation xmlns="http://www.w3.org/1999/xhtml" adveventoptions="true"></mutation>
+      <field name="X_RAY">FALSE</field>
+      <value name="VALUE">
+        <shadow type="objectList" id="r)wZ[0Gkx:dZ.0)Z`y$%">
+          <field name="FIELDNAME">background_sphere</field>
+        </shadow>
+      </value>
+      <statement name="DO_OVER">
+        <block type="controls_if" id="WeAZ)dFT@d)|O^S{+XV~">
+          <value name="IF0">
+            <block type="logic_compare" id="Z*aPEc)N79wBUnSz{}Pv">
+              <field name="OP">EQ</field>
+              <value name="A">
+                <block type="variables_get" id="|_Y5YrjRnez|$VC%MrUA">
+                  <field name="VAR" id="J@FII3x]r![1`]rdXcK,">zoomed_in</field>
+                </block>
+              </value>
+              <value name="B">
+                <block type="logic_boolean" id="1IW~~=(M|L+]evgW:jzq">
+                  <field name="BOOL">TRUE</field>
+                </block>
+              </value>
+            </block>
+          </value>
+          <statement name="DO0">
+            <block type="setHTMLElemStyle" id=":lU5pIGNXuOfm?[LR`Ou">
+              <field name="PROPERTY">cursor</field>
+              <field name="PARENT">FALSE</field>
+              <value name="VALUE">
+                <shadow type="cursorDropdown" id="=+}k)m3EsM7y384lNHm$">
+                  <field name="TEXT">pointer</field>
+                </shadow>
+              </value>
+              <value name="ID">
+                <shadow type="text" id="Y?B1a)kXXDxa.,Ge`2vu">
+                  <field name="TEXT">myElem</field>
+                </shadow>
+                <block type="DOMObjectSelector" id="DG=RfNRcVFICC82sPj0#">
+                  <field name="DOM_OBJECT">BODY</field>
+                </block>
+              </value>
+            </block>
+          </statement>
+        </block>
+      </statement>
+      <statement name="DO_OUT">
+        <block type="setHTMLElemStyle" id="u%[Z*k-)@}SnfhV?@a(j">
+          <field name="PROPERTY">cursor</field>
+          <field name="PARENT">FALSE</field>
+          <value name="VALUE">
+            <shadow type="cursorDropdown" id="428#HSNIfIeMBfF]bXf6">
+              <field name="TEXT">default</field>
+            </shadow>
+          </value>
+          <value name="ID">
+            <shadow type="text" id="ipJ^u%bG_jSJt/z=|E(#">
+              <field name="TEXT">myElem</field>
+            </shadow>
+            <block type="DOMObjectSelector" id="HD1dv0kq=?HU6o57pZ/~">
+              <field name="DOM_OBJECT">BODY</field>
+            </block>
+          </value>
+        </block>
+      </statement>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="procedures_defnoreturn" id="^CE{1RMefs3t6na1}mf$" x="1490" y="-690">
       <mutation>
         <arg name="Which room trigger?" varid="60tdU/T30Qk7^c|n(d:B"></arg>
         <arg name="Which megamenu trigger?" varid="$i%?MtHh75[0Mf82h4AF"></arg>
@@ -2578,72 +2644,6 @@
         </block>
       </statement>
     </block>
-    <block xmlns="https://developers.google.com/blockly/xml" type="whenHovered" id=".B-c1DgyzVlYs1P5%M|S" inline="true" x="2690" y="-830">
-      <mutation xmlns="http://www.w3.org/1999/xhtml" adveventoptions="true"></mutation>
-      <field name="X_RAY">FALSE</field>
-      <value name="VALUE">
-        <shadow type="objectList" id="r)wZ[0Gkx:dZ.0)Z`y$%">
-          <field name="FIELDNAME">background_sphere</field>
-        </shadow>
-      </value>
-      <statement name="DO_OVER">
-        <block type="controls_if" id="WeAZ)dFT@d)|O^S{+XV~">
-          <value name="IF0">
-            <block type="logic_compare" id="Z*aPEc)N79wBUnSz{}Pv">
-              <field name="OP">EQ</field>
-              <value name="A">
-                <block type="variables_get" id="|_Y5YrjRnez|$VC%MrUA">
-                  <field name="VAR" id="J@FII3x]r![1`]rdXcK,">zoomed_in</field>
-                </block>
-              </value>
-              <value name="B">
-                <block type="logic_boolean" id="1IW~~=(M|L+]evgW:jzq">
-                  <field name="BOOL">TRUE</field>
-                </block>
-              </value>
-            </block>
-          </value>
-          <statement name="DO0">
-            <block type="setHTMLElemStyle" id=":lU5pIGNXuOfm?[LR`Ou">
-              <field name="PROPERTY">cursor</field>
-              <field name="PARENT">FALSE</field>
-              <value name="VALUE">
-                <shadow type="cursorDropdown" id="=+}k)m3EsM7y384lNHm$">
-                  <field name="TEXT">pointer</field>
-                </shadow>
-              </value>
-              <value name="ID">
-                <shadow type="text" id="Y?B1a)kXXDxa.,Ge`2vu">
-                  <field name="TEXT">myElem</field>
-                </shadow>
-                <block type="DOMObjectSelector" id="DG=RfNRcVFICC82sPj0#">
-                  <field name="DOM_OBJECT">BODY</field>
-                </block>
-              </value>
-            </block>
-          </statement>
-        </block>
-      </statement>
-      <statement name="DO_OUT">
-        <block type="setHTMLElemStyle" id="u%[Z*k-)@}SnfhV?@a(j">
-          <field name="PROPERTY">cursor</field>
-          <field name="PARENT">FALSE</field>
-          <value name="VALUE">
-            <shadow type="cursorDropdown" id="428#HSNIfIeMBfF]bXf6">
-              <field name="TEXT">default</field>
-            </shadow>
-          </value>
-          <value name="ID">
-            <shadow type="text" id="ipJ^u%bG_jSJt/z=|E(#">
-              <field name="TEXT">myElem</field>
-            </shadow>
-            <block type="DOMObjectSelector" id="HD1dv0kq=?HU6o57pZ/~">
-              <field name="DOM_OBJECT">BODY</field>
-            </block>
-          </value>
-        </block>
-      </statement>
-    </block>
     <block xmlns="https://developers.google.com/blockly/xml" type="setCameraParam" id="}+p=AN?7K7.TC^2Oc48{" x="830" y="-390">
       <mutation xmlns="http://www.w3.org/1999/xhtml" type="ORBIT_MIN_DISTANCE_PERSP"></mutation>
       <field name="TYPE">ORBIT_MIN_DISTANCE_PERSP</field>
@@ -2873,7 +2873,7 @@
         </block>
       </statement>
     </block>
-    <block xmlns="https://developers.google.com/blockly/xml" type="variables_set" id=",%M{Gw?)2f=DCr~TeJSP" x="3150" y="-490">
+    <block xmlns="https://developers.google.com/blockly/xml" type="variables_set" id=",%M{Gw?)2f=DCr~TeJSP" x="3310" y="-510">
       <field name="VAR" id="{(w!oho~6U?K|A?KJo~l">allow_background_click</field>
       <value name="VALUE">
         <block type="logic_boolean" id="}.4NMWTD{Z*jaBN=P%=0">
@@ -5038,7 +5038,7 @@
         </block>
       </statement>
     </block>
-    <block xmlns="https://developers.google.com/blockly/xml" type="procedures_callnoreturn" id="*UGEZiJco*Wb%W|PXp]w" x="1510" y="1270">
+    <block xmlns="https://developers.google.com/blockly/xml" type="procedures_callnoreturn" id="*UGEZiJco*Wb%W|PXp]w" x="1510" y="1250">
       <mutation name="Zoom to clicked room">
         <arg name="Which room trigger?"></arg>
         <arg name="Which megamenu trigger?"></arg>

@@ -35,7 +35,7 @@
       </statement>
     </block>
   </tab>
-  <tab name="New Tab" type="CommonTab" active="true" scrollx="-1300.977878880537" scrolly="118.49883347009461" scale="0.8227024747918809">
+  <tab name="New Tab" type="CommonTab" active="true" scrollx="-3060.4363722749586" scrolly="577.861284063863" scale="0.9675299831141096">
     <variables xmlns="https://developers.google.com/blockly/xml">
       <variable id="j/HUb@Mn9F_XrMhZQS[b">animations_except_attic_room</variable>
       <variable id="J6oW`R0+@yA6=I_KCzo)">furniture_triggers</variable>
@@ -63,7 +63,6 @@
       <variable id="MVm!|Ti{MzL[z(LZ]`O,">Is there a wall? (zoom out)</variable>
       <variable id="KNg=ZRDon@m+J4F;c`^5">Which room is hoovered?</variable>
       <variable id="U;CKWy,0W(X}ZJ)U1.KM">Which html element is hovered?</variable>
-      <variable id="{(w!oho~6U?K|A?KJo~l">allow_background_click</variable>
       <variable id="tP6:wE0I=7+Bs0KCY,y7">animations_except_bathroom</variable>
       <variable id=":`=hU#np!zKIqRl,TMcW">room_animation_frame</variable>
       <variable id="]CgrD`v4[icHgPAQpA)@">animations_except_toilet</variable>
@@ -1612,7 +1611,73 @@
         </block>
       </statement>
     </block>
-    <block xmlns="https://developers.google.com/blockly/xml" type="procedures_defnoreturn" id="^CE{1RMefs3t6na1}mf$" x="1490" y="-790">
+    <block xmlns="https://developers.google.com/blockly/xml" type="whenHovered" id=".B-c1DgyzVlYs1P5%M|S" inline="true" x="2690" y="-830">
+      <mutation xmlns="http://www.w3.org/1999/xhtml" adveventoptions="true"></mutation>
+      <field name="X_RAY">FALSE</field>
+      <value name="VALUE">
+        <shadow type="objectList" id="r)wZ[0Gkx:dZ.0)Z`y$%">
+          <field name="FIELDNAME">background_sphere</field>
+        </shadow>
+      </value>
+      <statement name="DO_OVER">
+        <block type="controls_if" id="WeAZ)dFT@d)|O^S{+XV~">
+          <value name="IF0">
+            <block type="logic_compare" id="Z*aPEc)N79wBUnSz{}Pv">
+              <field name="OP">EQ</field>
+              <value name="A">
+                <block type="variables_get" id="|_Y5YrjRnez|$VC%MrUA">
+                  <field name="VAR" id="J@FII3x]r![1`]rdXcK,">zoomed_in</field>
+                </block>
+              </value>
+              <value name="B">
+                <block type="logic_boolean" id="1IW~~=(M|L+]evgW:jzq">
+                  <field name="BOOL">TRUE</field>
+                </block>
+              </value>
+            </block>
+          </value>
+          <statement name="DO0">
+            <block type="setHTMLElemStyle" id=":lU5pIGNXuOfm?[LR`Ou">
+              <field name="PROPERTY">cursor</field>
+              <field name="PARENT">FALSE</field>
+              <value name="VALUE">
+                <shadow type="cursorDropdown" id="=+}k)m3EsM7y384lNHm$">
+                  <field name="TEXT">pointer</field>
+                </shadow>
+              </value>
+              <value name="ID">
+                <shadow type="text" id="Y?B1a)kXXDxa.,Ge`2vu">
+                  <field name="TEXT">myElem</field>
+                </shadow>
+                <block type="DOMObjectSelector" id="DG=RfNRcVFICC82sPj0#">
+                  <field name="DOM_OBJECT">BODY</field>
+                </block>
+              </value>
+            </block>
+          </statement>
+        </block>
+      </statement>
+      <statement name="DO_OUT">
+        <block type="setHTMLElemStyle" id="u%[Z*k-)@}SnfhV?@a(j">
+          <field name="PROPERTY">cursor</field>
+          <field name="PARENT">FALSE</field>
+          <value name="VALUE">
+            <shadow type="cursorDropdown" id="428#HSNIfIeMBfF]bXf6">
+              <field name="TEXT">default</field>
+            </shadow>
+          </value>
+          <value name="ID">
+            <shadow type="text" id="ipJ^u%bG_jSJt/z=|E(#">
+              <field name="TEXT">myElem</field>
+            </shadow>
+            <block type="DOMObjectSelector" id="HD1dv0kq=?HU6o57pZ/~">
+              <field name="DOM_OBJECT">BODY</field>
+            </block>
+          </value>
+        </block>
+      </statement>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="procedures_defnoreturn" id="^CE{1RMefs3t6na1}mf$" x="1490" y="-690">
       <mutation>
         <arg name="Which room trigger?" varid="60tdU/T30Qk7^c|n(d:B"></arg>
         <arg name="Which megamenu trigger?" varid="$i%?MtHh75[0Mf82h4AF"></arg>
@@ -1938,33 +2003,23 @@
                                                         </shadow>
                                                       </value>
                                                       <statement name="DO">
-                                                        <block type="variables_set" id="o2.`m%+a9(tK~f6dQJ!y">
-                                                          <field name="VAR" id="{(w!oho~6U?K|A?KJo~l">allow_background_click</field>
+                                                        <block type="show" id="Fh8pX?J6D]}xqgjl]ZKD">
                                                           <value name="VALUE">
-                                                            <block type="logic_boolean" id="!5)pRBhiFlhDl??[X!ZA">
-                                                              <field name="BOOL">TRUE</field>
-                                                            </block>
-                                                          </value>
-                                                          <next>
-                                                            <block type="show" id="Fh8pX?J6D]}xqgjl]ZKD">
-                                                              <value name="VALUE">
-                                                                <shadow type="objectList" id="fm?)[G%W0t.HNvN;E%W5">
-                                                                  <field name="FIELDNAME">&lt;none&gt;</field>
+                                                            <shadow type="objectList" id="fm?)[G%W0t.HNvN;E%W5">
+                                                              <field name="FIELDNAME">&lt;none&gt;</field>
+                                                            </shadow>
+                                                            <block type="getEntityByName" id="^/Sghw@mA__d{Ieh9Wk1">
+                                                              <field name="GET_WHAT">OBJECT</field>
+                                                              <value name="NAME">
+                                                                <shadow type="text" id="T8q3m(S`j;K$BY;0Z^kE">
+                                                                  <field name="TEXT"></field>
                                                                 </shadow>
-                                                                <block type="getEntityByName" id="^/Sghw@mA__d{Ieh9Wk1">
-                                                                  <field name="GET_WHAT">OBJECT</field>
-                                                                  <value name="NAME">
-                                                                    <shadow type="text" id="T8q3m(S`j;K$BY;0Z^kE">
-                                                                      <field name="TEXT"></field>
-                                                                    </shadow>
-                                                                    <block type="variables_get" id="rfm/A.,N;,0X[d^Bn_TB">
-                                                                      <field name="VAR" id="J6oW`R0+@yA6=I_KCzo)">furniture_triggers</field>
-                                                                    </block>
-                                                                  </value>
+                                                                <block type="variables_get" id="rfm/A.,N;,0X[d^Bn_TB">
+                                                                  <field name="VAR" id="J6oW`R0+@yA6=I_KCzo)">furniture_triggers</field>
                                                                 </block>
                                                               </value>
                                                             </block>
-                                                          </next>
+                                                          </value>
                                                         </block>
                                                       </statement>
                                                       <next>
@@ -2194,236 +2249,226 @@
                         </block>
                       </value>
                       <statement name="DO0">
-                        <block type="variables_set" id="P7(?NpQV$l[SFzH7MMtH">
-                          <field name="VAR" id="J@FII3x]r![1`]rdXcK,">zoomed_in</field>
+                        <block type="hide" id="U3{!A3gl/#=,78Ls?b2K">
                           <value name="VALUE">
-                            <block type="logic_boolean" id="+;B7vji?=RFNh[U=YG3[">
-                              <field name="BOOL">TRUE</field>
+                            <shadow type="objectList" id="z=R`XuC69}ycfcwh33Fr">
+                              <field name="FIELDNAME">&lt;none&gt;</field>
+                            </shadow>
+                            <block type="variables_get" id="o}V83V#~wAe=Aal8?:G+">
+                              <field name="VAR" id="dvX?DWjvdey/WczArs@m">room_animation_triggers</field>
                             </block>
                           </value>
                           <next>
-                            <block type="hide" id="U3{!A3gl/#=,78Ls?b2K">
-                              <value name="VALUE">
-                                <shadow type="objectList" id="z=R`XuC69}ycfcwh33Fr">
-                                  <field name="FIELDNAME">&lt;none&gt;</field>
-                                </shadow>
-                                <block type="variables_get" id="o}V83V#~wAe=Aal8?:G+">
-                                  <field name="VAR" id="dvX?DWjvdey/WczArs@m">room_animation_triggers</field>
-                                </block>
-                              </value>
+                            <block type="procedures_callnoreturn" id="1Gu|{`.@K?[35XzeDp@7">
+                              <mutation name="set_room_animation_frame_timer"></mutation>
                               <next>
-                                <block type="procedures_callnoreturn" id="1Gu|{`.@K?[35XzeDp@7">
-                                  <mutation name="set_room_animation_frame_timer"></mutation>
-                                  <next>
-                                    <block type="setTimeout" id="{^5zU;DvXwr4AI]/aKH^">
-                                      <value name="VALUE">
-                                        <shadow type="math_number" id="(%3`P%SU0@A8e3s12glK">
-                                          <field name="NUM">1</field>
+                                <block type="setTimeout" id="{^5zU;DvXwr4AI]/aKH^">
+                                  <value name="VALUE">
+                                    <shadow type="math_number" id="(%3`P%SU0@A8e3s12glK">
+                                      <field name="NUM">1</field>
+                                    </shadow>
+                                    <block type="math_arithmetic" id="HJq.aa[Jr)G#XSigLzGT">
+                                      <field name="OP">DIVIDE</field>
+                                      <value name="A">
+                                        <shadow type="math_number" id="im0X_Xuj3u@b{QNc*DM4">
+                                          <field name="NUM">2</field>
                                         </shadow>
-                                        <block type="math_arithmetic" id="HJq.aa[Jr)G#XSigLzGT">
-                                          <field name="OP">DIVIDE</field>
+                                        <block type="math_arithmetic" id="@-{i?KvLbSlJZAh(}^D(">
+                                          <field name="OP">ADD</field>
                                           <value name="A">
-                                            <shadow type="math_number" id="im0X_Xuj3u@b{QNc*DM4">
-                                              <field name="NUM">2</field>
+                                            <shadow type="math_number" id="MEm(oezLbJKX!bM`I#;1">
+                                              <field name="NUM">1</field>
                                             </shadow>
-                                            <block type="math_arithmetic" id="@-{i?KvLbSlJZAh(}^D(">
-                                              <field name="OP">ADD</field>
+                                            <block type="math_arithmetic" id="5F64pZc_p6Amnc6oG%M/">
+                                              <field name="OP">DIVIDE</field>
                                               <value name="A">
-                                                <shadow type="math_number" id="MEm(oezLbJKX!bM`I#;1">
+                                                <shadow type="math_number" id="QE%i0ig8yQHk{-G=cJ2h">
                                                   <field name="NUM">1</field>
                                                 </shadow>
-                                                <block type="math_arithmetic" id="5F64pZc_p6Amnc6oG%M/">
-                                                  <field name="OP">DIVIDE</field>
-                                                  <value name="A">
-                                                    <shadow type="math_number" id="QE%i0ig8yQHk{-G=cJ2h">
-                                                      <field name="NUM">1</field>
-                                                    </shadow>
-                                                    <block type="variables_get" id="]VvehW~.YN}q_~a.s4$F">
-                                                      <field name="VAR" id=":`=hU#np!zKIqRl,TMcW">room_animation_frame</field>
-                                                    </block>
-                                                  </value>
-                                                  <value name="B">
-                                                    <shadow type="math_number" id="B4*ZXgSD,nX|(4fq|?8J">
-                                                      <field name="NUM">2</field>
-                                                    </shadow>
-                                                  </value>
+                                                <block type="variables_get" id="]VvehW~.YN}q_~a.s4$F">
+                                                  <field name="VAR" id=":`=hU#np!zKIqRl,TMcW">room_animation_frame</field>
                                                 </block>
                                               </value>
                                               <value name="B">
-                                                <shadow type="math_number" id="7_ri)?}j4[A4z3n2b{bb">
-                                                  <field name="NUM">0.5</field>
+                                                <shadow type="math_number" id="B4*ZXgSD,nX|(4fq|?8J">
+                                                  <field name="NUM">2</field>
                                                 </shadow>
                                               </value>
                                             </block>
                                           </value>
                                           <value name="B">
-                                            <shadow type="math_number" id="@tp4mqAQe9K#SpdTovm_">
-                                              <field name="NUM">24</field>
+                                            <shadow type="math_number" id="7_ri)?}j4[A4z3n2b{bb">
+                                              <field name="NUM">0.5</field>
                                             </shadow>
                                           </value>
                                         </block>
                                       </value>
-                                      <statement name="DO">
-                                        <block type="playAnimationAdv" id="LNtYxBx.TLaJ$VQ@(N4S">
-                                          <mutation xmlns="http://www.w3.org/1999/xhtml" advplaybackoptions="true" enablewhenfinished="false"></mutation>
+                                      <value name="B">
+                                        <shadow type="math_number" id="@tp4mqAQe9K#SpdTovm_">
+                                          <field name="NUM">24</field>
+                                        </shadow>
+                                      </value>
+                                    </block>
+                                  </value>
+                                  <statement name="DO">
+                                    <block type="playAnimationAdv" id="LNtYxBx.TLaJ$VQ@(N4S">
+                                      <mutation xmlns="http://www.w3.org/1999/xhtml" advplaybackoptions="true" enablewhenfinished="false"></mutation>
+                                      <field name="REVERSED">FALSE</field>
+                                      <field name="LOOP">LoopOnce</field>
+                                      <value name="VALUE">
+                                        <shadow type="animationList" id="P_-(U*$.o]8^-itpTSu,">
+                                          <field name="FIELDNAME">&lt;none&gt;</field>
+                                        </shadow>
+                                        <block type="getAnimations" id="?BwaIuG@kp#%PWrWdC$}">
+                                          <value name="OBJECTINPUT">
+                                            <shadow type="objectList" id="i-:zdr.][hz/eH..n|H*">
+                                              <field name="FIELDNAME">&lt;none&gt;</field>
+                                            </shadow>
+                                            <block type="variables_get" id="hhHoT|mo6uK@|vxr?OD.">
+                                              <field name="VAR" id="!D9sqt2x;o1nG=a:3gh8">Is there a wall? (zoom in)</field>
+                                            </block>
+                                          </value>
+                                        </block>
+                                      </value>
+                                      <value name="FROM">
+                                        <shadow type="math_number" id="5RIV_QyL_L=nH.$GG_yB">
+                                          <field name="NUM">40</field>
+                                        </shadow>
+                                      </value>
+                                      <value name="TO">
+                                        <shadow type="math_number" id="Q2r`Y2LQ|7gFv};*kGNe">
+                                          <field name="NUM">140</field>
+                                        </shadow>
+                                        <block type="variables_get" id="C@l|FG*v#ama?$LlTE00">
+                                          <field name="VAR" id="Y7{d)3djf-@UHP5P#/%/">rooms_disapearing_duration</field>
+                                        </block>
+                                      </value>
+                                      <value name="SPEED">
+                                        <shadow type="math_number" id="@t_ko~rD5Z@J]Aw]2SOV">
+                                          <field name="NUM">6</field>
+                                        </shadow>
+                                      </value>
+                                      <next>
+                                        <block type="playAnimationAdv" id="}]A7kVrZ;QV?p[%CS4xl">
+                                          <mutation xmlns="http://www.w3.org/1999/xhtml" advplaybackoptions="true" enablewhenfinished="true"></mutation>
                                           <field name="REVERSED">FALSE</field>
                                           <field name="LOOP">LoopOnce</field>
                                           <value name="VALUE">
                                             <shadow type="animationList" id="P_-(U*$.o]8^-itpTSu,">
                                               <field name="FIELDNAME">&lt;none&gt;</field>
                                             </shadow>
-                                            <block type="getAnimations" id="?BwaIuG@kp#%PWrWdC$}">
+                                            <block type="getAnimations" id="E_TD!rC#!6)Fq,kr%Jtm">
                                               <value name="OBJECTINPUT">
-                                                <shadow type="objectList" id="i-:zdr.][hz/eH..n|H*">
+                                                <shadow type="objectList" id="MM0$m0M2;YyU~PxOq1mg">
                                                   <field name="FIELDNAME">&lt;none&gt;</field>
                                                 </shadow>
-                                                <block type="variables_get" id="hhHoT|mo6uK@|vxr?OD.">
-                                                  <field name="VAR" id="!D9sqt2x;o1nG=a:3gh8">Is there a wall? (zoom in)</field>
+                                                <block type="variables_get" id="+m`}t#xrvah3;#@-)A@}">
+                                                  <field name="VAR" id=")!VwqeCAsCHcRL_{y7:a">Which animation to play? (all the rooms - current one)</field>
                                                 </block>
                                               </value>
                                             </block>
                                           </value>
                                           <value name="FROM">
-                                            <shadow type="math_number" id="5RIV_QyL_L=nH.$GG_yB">
+                                            <shadow type="math_number" id="oT3RCP-#sW:3ryqQiHs%">
                                               <field name="NUM">40</field>
                                             </shadow>
                                           </value>
                                           <value name="TO">
-                                            <shadow type="math_number" id="Q2r`Y2LQ|7gFv};*kGNe">
-                                              <field name="NUM">140</field>
+                                            <shadow type="math_number" id="GM/v0Kxqr`Pm944.*/,K">
+                                              <field name="NUM">99</field>
                                             </shadow>
-                                            <block type="variables_get" id="C@l|FG*v#ama?$LlTE00">
+                                            <block type="variables_get" id="?GjzHnDXNR2ka@yvMrQV">
                                               <field name="VAR" id="Y7{d)3djf-@UHP5P#/%/">rooms_disapearing_duration</field>
                                             </block>
                                           </value>
                                           <value name="SPEED">
-                                            <shadow type="math_number" id="@t_ko~rD5Z@J]Aw]2SOV">
+                                            <shadow type="math_number" id=":1aVBe,T@9KY^0i{NDAg">
                                               <field name="NUM">6</field>
                                             </shadow>
                                           </value>
                                           <next>
-                                            <block type="playAnimationAdv" id="}]A7kVrZ;QV?p[%CS4xl">
-                                              <mutation xmlns="http://www.w3.org/1999/xhtml" advplaybackoptions="true" enablewhenfinished="true"></mutation>
-                                              <field name="REVERSED">FALSE</field>
-                                              <field name="LOOP">LoopOnce</field>
-                                              <value name="VALUE">
-                                                <shadow type="animationList" id="P_-(U*$.o]8^-itpTSu,">
-                                                  <field name="FIELDNAME">&lt;none&gt;</field>
-                                                </shadow>
-                                                <block type="getAnimations" id="E_TD!rC#!6)Fq,kr%Jtm">
-                                                  <value name="OBJECTINPUT">
-                                                    <shadow type="objectList" id="MM0$m0M2;YyU~PxOq1mg">
-                                                      <field name="FIELDNAME">&lt;none&gt;</field>
-                                                    </shadow>
-                                                    <block type="variables_get" id="+m`}t#xrvah3;#@-)A@}">
-                                                      <field name="VAR" id=")!VwqeCAsCHcRL_{y7:a">Which animation to play? (all the rooms - current one)</field>
-                                                    </block>
-                                                  </value>
+                                            <block type="tweenCameraExt" id="89J`dO0(y82Jeb4~4[#k">
+                                              <mutation xmlns="http://www.w3.org/1999/xhtml" whenfinishedslot="true"></mutation>
+                                              <field name="MOVEMENT_TYPE">LINEAR</field>
+                                              <value name="POSITION">
+                                                <block type="variables_get" id="wj177RIH!m;K$BGb]Oy2">
+                                                  <field name="VAR" id="K|bc,]Uhzo32s4AE+Hz@">Empty to move the camera to.</field>
                                                 </block>
                                               </value>
-                                              <value name="FROM">
-                                                <shadow type="math_number" id="oT3RCP-#sW:3ryqQiHs%">
-                                                  <field name="NUM">40</field>
-                                                </shadow>
-                                              </value>
-                                              <value name="TO">
-                                                <shadow type="math_number" id="GM/v0Kxqr`Pm944.*/,K">
-                                                  <field name="NUM">99</field>
-                                                </shadow>
-                                                <block type="variables_get" id="?GjzHnDXNR2ka@yvMrQV">
-                                                  <field name="VAR" id="Y7{d)3djf-@UHP5P#/%/">rooms_disapearing_duration</field>
+                                              <value name="LOOKAT">
+                                                <block type="variables_get" id="Raq5YeyP=|yP8951MMfD">
+                                                  <field name="VAR" id="h[29:Bn6p!}!}sW%VnnG">Which room does the camera look to?</field>
                                                 </block>
                                               </value>
-                                              <value name="SPEED">
-                                                <shadow type="math_number" id=":1aVBe,T@9KY^0i{NDAg">
-                                                  <field name="NUM">6</field>
+                                              <value name="DURATION">
+                                                <shadow type="math_number" id="o95n8d]IOfL1=ST6s:-c">
+                                                  <field name="NUM">0.8</field>
                                                 </shadow>
                                               </value>
-                                              <next>
-                                                <block type="tweenCameraExt" id="89J`dO0(y82Jeb4~4[#k">
-                                                  <mutation xmlns="http://www.w3.org/1999/xhtml" whenfinishedslot="true"></mutation>
-                                                  <field name="MOVEMENT_TYPE">LINEAR</field>
-                                                  <value name="POSITION">
-                                                    <block type="variables_get" id="wj177RIH!m;K$BGb]Oy2">
-                                                      <field name="VAR" id="K|bc,]Uhzo32s4AE+Hz@">Empty to move the camera to.</field>
+                                              <statement name="DO">
+                                                <block type="variables_set" id=".8GFYB{a~Lsr@ZO_PPTH">
+                                                  <field name="VAR" id="J@FII3x]r![1`]rdXcK,">zoomed_in</field>
+                                                  <value name="VALUE">
+                                                    <block type="logic_boolean" id="U3$aJ9[,/H/^t-E]gQ,W">
+                                                      <field name="BOOL">TRUE</field>
                                                     </block>
                                                   </value>
-                                                  <value name="LOOKAT">
-                                                    <block type="variables_get" id="Raq5YeyP=|yP8951MMfD">
-                                                      <field name="VAR" id="h[29:Bn6p!}!}sW%VnnG">Which room does the camera look to?</field>
-                                                    </block>
-                                                  </value>
-                                                  <value name="DURATION">
-                                                    <shadow type="math_number" id="o95n8d]IOfL1=ST6s:-c">
-                                                      <field name="NUM">0.8</field>
-                                                    </shadow>
-                                                  </value>
-                                                  <statement name="DO">
-                                                    <block type="variables_set" id="!3sF!{V(nY%Q`|!5*f4|">
-                                                      <field name="VAR" id="{(w!oho~6U?K|A?KJo~l">allow_background_click</field>
+                                                  <next>
+                                                    <block type="show" id="8d4$={U_(87u@sP~T+/p">
                                                       <value name="VALUE">
-                                                        <block type="logic_boolean" id="VuQ^/kqcNFp`#*dl`vF+">
-                                                          <field name="BOOL">TRUE</field>
-                                                        </block>
-                                                      </value>
-                                                      <next>
-                                                        <block type="show" id="8d4$={U_(87u@sP~T+/p">
-                                                          <value name="VALUE">
-                                                            <shadow type="objectList" id="fm?)[G%W0t.HNvN;E%W5">
-                                                              <field name="FIELDNAME">&lt;none&gt;</field>
+                                                        <shadow type="objectList" id="fm?)[G%W0t.HNvN;E%W5">
+                                                          <field name="FIELDNAME">&lt;none&gt;</field>
+                                                        </shadow>
+                                                        <block type="getEntityByName" id="e.![#u66@f@kYR_Y1|lu">
+                                                          <field name="GET_WHAT">OBJECT</field>
+                                                          <value name="NAME">
+                                                            <shadow type="text" id="T8q3m(S`j;K$BY;0Z^kE">
+                                                              <field name="TEXT"></field>
                                                             </shadow>
-                                                            <block type="getEntityByName" id="e.![#u66@f@kYR_Y1|lu">
-                                                              <field name="GET_WHAT">OBJECT</field>
-                                                              <value name="NAME">
-                                                                <shadow type="text" id="T8q3m(S`j;K$BY;0Z^kE">
-                                                                  <field name="TEXT"></field>
-                                                                </shadow>
-                                                                <block type="variables_get" id="|I+oGAwE-s0rNw|%LVVT">
-                                                                  <field name="VAR" id="J6oW`R0+@yA6=I_KCzo)">furniture_triggers</field>
-                                                                </block>
-                                                              </value>
+                                                            <block type="variables_get" id="|I+oGAwE-s0rNw|%LVVT">
+                                                              <field name="VAR" id="J6oW`R0+@yA6=I_KCzo)">furniture_triggers</field>
                                                             </block>
                                                           </value>
                                                         </block>
-                                                      </next>
+                                                      </value>
                                                     </block>
-                                                  </statement>
+                                                  </next>
+                                                </block>
+                                              </statement>
+                                              <next>
+                                                <block type="setCameraParam" id="]h}D,923Xnb-*@MvG,[W">
+                                                  <mutation xmlns="http://www.w3.org/1999/xhtml" type="ORBIT_MIN_DISTANCE_PERSP"></mutation>
+                                                  <field name="TYPE">ORBIT_MIN_DISTANCE_PERSP</field>
+                                                  <value name="ORBIT_MIN_DISTANCE_PERSP">
+                                                    <shadow type="math_number" id="|WBF}4`V!z2j{=r4c@ov">
+                                                      <field name="NUM">30</field>
+                                                    </shadow>
+                                                  </value>
+                                                  <value name="OBJECT">
+                                                    <shadow type="objectList" id="$Hl5J@wX4!r).tys1KvR">
+                                                      <field name="FIELDNAME">&lt;none&gt;</field>
+                                                    </shadow>
+                                                    <block type="objectList" id="%zl3[b/$E9,rqCSGq`N/">
+                                                      <field name="FIELDNAME">camera</field>
+                                                    </block>
+                                                  </value>
                                                   <next>
-                                                    <block type="setCameraParam" id="]h}D,923Xnb-*@MvG,[W">
-                                                      <mutation xmlns="http://www.w3.org/1999/xhtml" type="ORBIT_MIN_DISTANCE_PERSP"></mutation>
-                                                      <field name="TYPE">ORBIT_MIN_DISTANCE_PERSP</field>
-                                                      <value name="ORBIT_MIN_DISTANCE_PERSP">
-                                                        <shadow type="math_number" id="|WBF}4`V!z2j{=r4c@ov">
-                                                          <field name="NUM">30</field>
+                                                    <block type="setCameraParam" id="TL,=o4_@Z%V`jU(PkGN~">
+                                                      <mutation xmlns="http://www.w3.org/1999/xhtml" type="ORBIT_MAX_DISTANCE_PERSP"></mutation>
+                                                      <field name="TYPE">ORBIT_MAX_DISTANCE_PERSP</field>
+                                                      <value name="ORBIT_MAX_DISTANCE_PERSP">
+                                                        <shadow type="math_number" id="XQ(U1.Z|c2jh2]|H|#OH">
+                                                          <field name="NUM">90</field>
                                                         </shadow>
                                                       </value>
                                                       <value name="OBJECT">
                                                         <shadow type="objectList" id="$Hl5J@wX4!r).tys1KvR">
                                                           <field name="FIELDNAME">&lt;none&gt;</field>
                                                         </shadow>
-                                                        <block type="objectList" id="%zl3[b/$E9,rqCSGq`N/">
+                                                        <block type="objectList" id="0fj/7YhXM+:|GgHwE7#i">
                                                           <field name="FIELDNAME">camera</field>
                                                         </block>
                                                       </value>
-                                                      <next>
-                                                        <block type="setCameraParam" id="TL,=o4_@Z%V`jU(PkGN~">
-                                                          <mutation xmlns="http://www.w3.org/1999/xhtml" type="ORBIT_MAX_DISTANCE_PERSP"></mutation>
-                                                          <field name="TYPE">ORBIT_MAX_DISTANCE_PERSP</field>
-                                                          <value name="ORBIT_MAX_DISTANCE_PERSP">
-                                                            <shadow type="math_number" id="XQ(U1.Z|c2jh2]|H|#OH">
-                                                              <field name="NUM">90</field>
-                                                            </shadow>
-                                                          </value>
-                                                          <value name="OBJECT">
-                                                            <shadow type="objectList" id="$Hl5J@wX4!r).tys1KvR">
-                                                              <field name="FIELDNAME">&lt;none&gt;</field>
-                                                            </shadow>
-                                                            <block type="objectList" id="0fj/7YhXM+:|GgHwE7#i">
-                                                              <field name="FIELDNAME">camera</field>
-                                                            </block>
-                                                          </value>
-                                                        </block>
-                                                      </next>
                                                     </block>
                                                   </next>
                                                 </block>
@@ -2431,120 +2476,120 @@
                                             </block>
                                           </next>
                                         </block>
-                                      </statement>
+                                      </next>
+                                    </block>
+                                  </statement>
+                                  <next>
+                                    <block type="setHTMLElemStyle" id="]VzH^/sbUOc9e-g(qYKQ">
+                                      <field name="PROPERTY">transform</field>
+                                      <field name="PARENT">TRUE</field>
+                                      <value name="VALUE">
+                                        <shadow type="text" id="d2|-}mutqW{|L_5I=8$x">
+                                          <field name="TEXT">translate(-50%, -50%)</field>
+                                        </shadow>
+                                      </value>
+                                      <value name="ID">
+                                        <shadow type="text" id="U{l,0OnrwQF^o+}@Iw5m">
+                                          <field name="TEXT">text-container-phone</field>
+                                        </shadow>
+                                      </value>
                                       <next>
-                                        <block type="setHTMLElemStyle" id="]VzH^/sbUOc9e-g(qYKQ">
+                                        <block type="setHTMLElemStyle" id="sTDS;sZWHQ9M#^c-/e/9">
                                           <field name="PROPERTY">transform</field>
                                           <field name="PARENT">TRUE</field>
                                           <value name="VALUE">
-                                            <shadow type="text" id="d2|-}mutqW{|L_5I=8$x">
-                                              <field name="TEXT">translate(-50%, -50%)</field>
+                                            <shadow type="text" id="@mUeP:]9yo2MZl9nVpzL">
+                                              <field name="TEXT">translate(0%, -50%)</field>
                                             </shadow>
                                           </value>
                                           <value name="ID">
-                                            <shadow type="text" id="U{l,0OnrwQF^o+}@Iw5m">
-                                              <field name="TEXT">text-container-phone</field>
+                                            <shadow type="text" id="f-POTl.+=Q4h.%Q|3nkp">
+                                              <field name="TEXT">text-block</field>
                                             </shadow>
                                           </value>
                                           <next>
-                                            <block type="setHTMLElemStyle" id="sTDS;sZWHQ9M#^c-/e/9">
-                                              <field name="PROPERTY">transform</field>
+                                            <block type="setHTMLElemStyle" id="Mze7qA-m_*zs@0[f*TSX">
+                                              <field name="PROPERTY">opacity</field>
                                               <field name="PARENT">TRUE</field>
                                               <value name="VALUE">
-                                                <shadow type="text" id="@mUeP:]9yo2MZl9nVpzL">
-                                                  <field name="TEXT">translate(0%, -50%)</field>
+                                                <shadow type="text" id="GlXSyFNfnCKKRqSgbR11">
+                                                  <field name="TEXT">0</field>
                                                 </shadow>
                                               </value>
                                               <value name="ID">
-                                                <shadow type="text" id="f-POTl.+=Q4h.%Q|3nkp">
+                                                <shadow type="text" id="c0kSZLrW6l(cjWto6JL`">
                                                   <field name="TEXT">text-block</field>
                                                 </shadow>
                                               </value>
                                               <next>
-                                                <block type="setHTMLElemStyle" id="Mze7qA-m_*zs@0[f*TSX">
-                                                  <field name="PROPERTY">opacity</field>
-                                                  <field name="PARENT">TRUE</field>
+                                                <block type="setTimeout" id="eH6%mjKt%h]2dHOB@%JV">
                                                   <value name="VALUE">
-                                                    <shadow type="text" id="GlXSyFNfnCKKRqSgbR11">
-                                                      <field name="TEXT">0</field>
+                                                    <shadow type="math_number" id="~G[YB7QH_xqovJEe+61r">
+                                                      <field name="NUM">0.4</field>
                                                     </shadow>
                                                   </value>
-                                                  <value name="ID">
-                                                    <shadow type="text" id="c0kSZLrW6l(cjWto6JL`">
-                                                      <field name="TEXT">text-block</field>
-                                                    </shadow>
-                                                  </value>
-                                                  <next>
-                                                    <block type="setTimeout" id="eH6%mjKt%h]2dHOB@%JV">
-                                                      <value name="VALUE">
-                                                        <shadow type="math_number" id="~G[YB7QH_xqovJEe+61r">
-                                                          <field name="NUM">0.4</field>
-                                                        </shadow>
-                                                      </value>
-                                                      <statement name="DO">
-                                                        <block type="procedures_callnoreturn" id="dLoNwIDN_eY-.oq[6R$/">
-                                                          <mutation name="Hide all the pop-up elements"></mutation>
+                                                  <statement name="DO">
+                                                    <block type="procedures_callnoreturn" id="dLoNwIDN_eY-.oq[6R$/">
+                                                      <mutation name="Hide all the pop-up elements"></mutation>
+                                                      <next>
+                                                        <block type="setHTMLElemStyle" id="|$Ipx``0S*vIn64?9]qh">
+                                                          <field name="PROPERTY">display</field>
+                                                          <field name="PARENT">TRUE</field>
+                                                          <value name="VALUE">
+                                                            <shadow type="displayDropdown" id="fyP@?V%9v@zP;h:HTtM.">
+                                                              <field name="TEXT">block</field>
+                                                            </shadow>
+                                                          </value>
+                                                          <value name="ID">
+                                                            <shadow type="text" id="ePG{-Qh]My`,c]~PrQ3!">
+                                                              <field name="TEXT">study-room-text</field>
+                                                            </shadow>
+                                                            <block type="variables_get" id=",O%(8hW;l)YFQca^Z}a;">
+                                                              <field name="VAR" id="{YSCnzanX_Ix(f!@^r`E">Pop Up for specific room</field>
+                                                            </block>
+                                                          </value>
                                                           <next>
-                                                            <block type="setHTMLElemStyle" id="|$Ipx``0S*vIn64?9]qh">
+                                                            <block type="setHTMLElemStyle" id="T~E~Q?MoPy+mh}9o1GAf">
                                                               <field name="PROPERTY">display</field>
                                                               <field name="PARENT">TRUE</field>
                                                               <value name="VALUE">
-                                                                <shadow type="displayDropdown" id="fyP@?V%9v@zP;h:HTtM.">
+                                                                <shadow type="displayDropdown" id="P*_l4mgGvMj55gT.F@DF">
                                                                   <field name="TEXT">block</field>
                                                                 </shadow>
                                                               </value>
                                                               <value name="ID">
-                                                                <shadow type="text" id="ePG{-Qh]My`,c]~PrQ3!">
-                                                                  <field name="TEXT">study-room-text</field>
+                                                                <shadow type="text" id="}IQ,)$wmdwGoxqNV`rOB">
+                                                                  <field name="TEXT">back_arrow_room_popup</field>
                                                                 </shadow>
-                                                                <block type="variables_get" id=",O%(8hW;l)YFQca^Z}a;">
-                                                                  <field name="VAR" id="{YSCnzanX_Ix(f!@^r`E">Pop Up for specific room</field>
-                                                                </block>
                                                               </value>
                                                               <next>
-                                                                <block type="setHTMLElemStyle" id="T~E~Q?MoPy+mh}9o1GAf">
-                                                                  <field name="PROPERTY">display</field>
+                                                                <block type="setHTMLElemStyle" id="1X(x92,]/wdST)[eKIh]">
+                                                                  <field name="PROPERTY">transform</field>
                                                                   <field name="PARENT">TRUE</field>
                                                                   <value name="VALUE">
-                                                                    <shadow type="displayDropdown" id="P*_l4mgGvMj55gT.F@DF">
-                                                                      <field name="TEXT">block</field>
+                                                                    <shadow type="text" id="tnCb-+8_CDDE%Hl9ztEQ">
+                                                                      <field name="TEXT">translate(-50%, -50%)</field>
                                                                     </shadow>
                                                                   </value>
                                                                   <value name="ID">
-                                                                    <shadow type="text" id="}IQ,)$wmdwGoxqNV`rOB">
-                                                                      <field name="TEXT">back_arrow_room_popup</field>
+                                                                    <shadow type="text" id="tq[L$!;J}AiFjULL*E!?">
+                                                                      <field name="TEXT">text-block</field>
                                                                     </shadow>
                                                                   </value>
                                                                   <next>
-                                                                    <block type="setHTMLElemStyle" id="1X(x92,]/wdST)[eKIh]">
-                                                                      <field name="PROPERTY">transform</field>
+                                                                    <block type="setHTMLElemStyle" id="9Z*!*aX3z;2.#*?@lz_N">
+                                                                      <field name="PROPERTY">opacity</field>
                                                                       <field name="PARENT">TRUE</field>
                                                                       <value name="VALUE">
-                                                                        <shadow type="text" id="tnCb-+8_CDDE%Hl9ztEQ">
-                                                                          <field name="TEXT">translate(-50%, -50%)</field>
+                                                                        <shadow type="text" id="17vcTDLRR=AB,pG;*/!;">
+                                                                          <field name="TEXT">1</field>
                                                                         </shadow>
                                                                       </value>
                                                                       <value name="ID">
-                                                                        <shadow type="text" id="tq[L$!;J}AiFjULL*E!?">
+                                                                        <shadow type="text" id="DvItxuKEOCAoDFZ;WtI_">
                                                                           <field name="TEXT">text-block</field>
                                                                         </shadow>
                                                                       </value>
-                                                                      <next>
-                                                                        <block type="setHTMLElemStyle" id="9Z*!*aX3z;2.#*?@lz_N">
-                                                                          <field name="PROPERTY">opacity</field>
-                                                                          <field name="PARENT">TRUE</field>
-                                                                          <value name="VALUE">
-                                                                            <shadow type="text" id="17vcTDLRR=AB,pG;*/!;">
-                                                                              <field name="TEXT">1</field>
-                                                                            </shadow>
-                                                                          </value>
-                                                                          <value name="ID">
-                                                                            <shadow type="text" id="DvItxuKEOCAoDFZ;WtI_">
-                                                                              <field name="TEXT">text-block</field>
-                                                                            </shadow>
-                                                                          </value>
-                                                                        </block>
-                                                                      </next>
                                                                     </block>
                                                                   </next>
                                                                 </block>
@@ -2552,9 +2597,9 @@
                                                             </block>
                                                           </next>
                                                         </block>
-                                                      </statement>
+                                                      </next>
                                                     </block>
-                                                  </next>
+                                                  </statement>
                                                 </block>
                                               </next>
                                             </block>
@@ -2575,72 +2620,6 @@
               </statement>
             </block>
           </next>
-        </block>
-      </statement>
-    </block>
-    <block xmlns="https://developers.google.com/blockly/xml" type="whenHovered" id=".B-c1DgyzVlYs1P5%M|S" inline="true" x="2690" y="-830">
-      <mutation xmlns="http://www.w3.org/1999/xhtml" adveventoptions="true"></mutation>
-      <field name="X_RAY">FALSE</field>
-      <value name="VALUE">
-        <shadow type="objectList" id="r)wZ[0Gkx:dZ.0)Z`y$%">
-          <field name="FIELDNAME">background_sphere</field>
-        </shadow>
-      </value>
-      <statement name="DO_OVER">
-        <block type="controls_if" id="WeAZ)dFT@d)|O^S{+XV~">
-          <value name="IF0">
-            <block type="logic_compare" id="Z*aPEc)N79wBUnSz{}Pv">
-              <field name="OP">EQ</field>
-              <value name="A">
-                <block type="variables_get" id="|_Y5YrjRnez|$VC%MrUA">
-                  <field name="VAR" id="J@FII3x]r![1`]rdXcK,">zoomed_in</field>
-                </block>
-              </value>
-              <value name="B">
-                <block type="logic_boolean" id="1IW~~=(M|L+]evgW:jzq">
-                  <field name="BOOL">TRUE</field>
-                </block>
-              </value>
-            </block>
-          </value>
-          <statement name="DO0">
-            <block type="setHTMLElemStyle" id=":lU5pIGNXuOfm?[LR`Ou">
-              <field name="PROPERTY">cursor</field>
-              <field name="PARENT">FALSE</field>
-              <value name="VALUE">
-                <shadow type="cursorDropdown" id="=+}k)m3EsM7y384lNHm$">
-                  <field name="TEXT">pointer</field>
-                </shadow>
-              </value>
-              <value name="ID">
-                <shadow type="text" id="Y?B1a)kXXDxa.,Ge`2vu">
-                  <field name="TEXT">myElem</field>
-                </shadow>
-                <block type="DOMObjectSelector" id="DG=RfNRcVFICC82sPj0#">
-                  <field name="DOM_OBJECT">BODY</field>
-                </block>
-              </value>
-            </block>
-          </statement>
-        </block>
-      </statement>
-      <statement name="DO_OUT">
-        <block type="setHTMLElemStyle" id="u%[Z*k-)@}SnfhV?@a(j">
-          <field name="PROPERTY">cursor</field>
-          <field name="PARENT">FALSE</field>
-          <value name="VALUE">
-            <shadow type="cursorDropdown" id="428#HSNIfIeMBfF]bXf6">
-              <field name="TEXT">default</field>
-            </shadow>
-          </value>
-          <value name="ID">
-            <shadow type="text" id="ipJ^u%bG_jSJt/z=|E(#">
-              <field name="TEXT">myElem</field>
-            </shadow>
-            <block type="DOMObjectSelector" id="HD1dv0kq=?HU6o57pZ/~">
-              <field name="DOM_OBJECT">BODY</field>
-            </block>
-          </value>
         </block>
       </statement>
     </block>
@@ -2873,14 +2852,6 @@
         </block>
       </statement>
     </block>
-    <block xmlns="https://developers.google.com/blockly/xml" type="variables_set" id=",%M{Gw?)2f=DCr~TeJSP" x="3150" y="-490">
-      <field name="VAR" id="{(w!oho~6U?K|A?KJo~l">allow_background_click</field>
-      <value name="VALUE">
-        <block type="logic_boolean" id="}.4NMWTD{Z*jaBN=P%=0">
-          <field name="BOOL">FALSE</field>
-        </block>
-      </value>
-    </block>
     <block xmlns="https://developers.google.com/blockly/xml" type="procedures_defnoreturn" id="Mi6sw]M:Un~}@J(MhzVE" x="3150" y="-430">
       <mutation>
         <arg name="What is the current camera?" varid="U~)`(c^[rvq;pQ31M{,t"></arg>
@@ -2915,7 +2886,7 @@
                       <field name="OP">EQ</field>
                       <value name="A">
                         <block type="variables_get" id="wtw@dpA;yM2XMVv{a=m_">
-                          <field name="VAR" id="{(w!oho~6U?K|A?KJo~l">allow_background_click</field>
+                          <field name="VAR" id="J@FII3x]r![1`]rdXcK,">zoomed_in</field>
                         </block>
                       </value>
                       <value name="B">
@@ -3022,42 +2993,32 @@
                                     </block>
                                   </value>
                                   <next>
-                                    <block type="variables_set" id="H2JP9D=!%n1y95#hUiwT">
-                                      <field name="VAR" id="{(w!oho~6U?K|A?KJo~l">allow_background_click</field>
+                                    <block type="show" id="ZsRzvwAIh3BJ*]|tGJsv">
                                       <value name="VALUE">
-                                        <block type="logic_boolean" id="?lLKuU9X@8yEreOji`Nl">
-                                          <field name="BOOL">FALSE</field>
+                                        <shadow type="objectList" id="3T4K,wU`cV6HiB.JG17N">
+                                          <field name="FIELDNAME">&lt;none&gt;</field>
+                                        </shadow>
+                                        <block type="variables_get" id="@b]#WdQ-@k,NX:iHr%~x">
+                                          <field name="VAR" id="dvX?DWjvdey/WczArs@m">room_animation_triggers</field>
                                         </block>
                                       </value>
                                       <next>
-                                        <block type="show" id="ZsRzvwAIh3BJ*]|tGJsv">
-                                          <value name="VALUE">
-                                            <shadow type="objectList" id="3T4K,wU`cV6HiB.JG17N">
+                                        <block type="setCameraParam" id="qbmdRX-(v?JoY0$hn4R7">
+                                          <mutation xmlns="http://www.w3.org/1999/xhtml" type="ORBIT_MIN_DISTANCE_PERSP"></mutation>
+                                          <field name="TYPE">ORBIT_MIN_DISTANCE_PERSP</field>
+                                          <value name="ORBIT_MIN_DISTANCE_PERSP">
+                                            <shadow type="math_number" id="NI~x-Eyk1Dfdk{5xKw!d">
+                                              <field name="NUM">100</field>
+                                            </shadow>
+                                          </value>
+                                          <value name="OBJECT">
+                                            <shadow type="objectList" id="$Hl5J@wX4!r).tys1KvR">
                                               <field name="FIELDNAME">&lt;none&gt;</field>
                                             </shadow>
-                                            <block type="variables_get" id="@b]#WdQ-@k,NX:iHr%~x">
-                                              <field name="VAR" id="dvX?DWjvdey/WczArs@m">room_animation_triggers</field>
+                                            <block type="objectList" id="e99n%cTuF}`iNL^*8tcp">
+                                              <field name="FIELDNAME">camera</field>
                                             </block>
                                           </value>
-                                          <next>
-                                            <block type="setCameraParam" id="qbmdRX-(v?JoY0$hn4R7">
-                                              <mutation xmlns="http://www.w3.org/1999/xhtml" type="ORBIT_MIN_DISTANCE_PERSP"></mutation>
-                                              <field name="TYPE">ORBIT_MIN_DISTANCE_PERSP</field>
-                                              <value name="ORBIT_MIN_DISTANCE_PERSP">
-                                                <shadow type="math_number" id="NI~x-Eyk1Dfdk{5xKw!d">
-                                                  <field name="NUM">100</field>
-                                                </shadow>
-                                              </value>
-                                              <value name="OBJECT">
-                                                <shadow type="objectList" id="$Hl5J@wX4!r).tys1KvR">
-                                                  <field name="FIELDNAME">&lt;none&gt;</field>
-                                                </shadow>
-                                                <block type="objectList" id="e99n%cTuF}`iNL^*8tcp">
-                                                  <field name="FIELDNAME">camera</field>
-                                                </block>
-                                              </value>
-                                            </block>
-                                          </next>
                                         </block>
                                       </next>
                                     </block>
@@ -3283,7 +3244,7 @@
                           <field name="OP">EQ</field>
                           <value name="A">
                             <block type="variables_get" id="]%w+=*~/1-r0V))?:Kx_">
-                              <field name="VAR" id="{(w!oho~6U?K|A?KJo~l">allow_background_click</field>
+                              <field name="VAR" id="J@FII3x]r![1`]rdXcK,">zoomed_in</field>
                             </block>
                           </value>
                           <value name="B">
@@ -3365,50 +3326,40 @@
                                 </shadow>
                               </value>
                               <statement name="DO">
-                                <block type="variables_set" id="Z3;6|lVE1uo@UDqYg;v]">
-                                  <field name="VAR" id="{(w!oho~6U?K|A?KJo~l">allow_background_click</field>
+                                <block type="variables_set" id="cH4r$3~CqwV,imdXC?]w">
+                                  <field name="VAR" id="J@FII3x]r![1`]rdXcK,">zoomed_in</field>
                                   <value name="VALUE">
-                                    <block type="logic_boolean" id="8v#u?H|TPOH^SMk$5--{">
+                                    <block type="logic_boolean" id="{%N6|$HSE2S*Gw-LovL7">
                                       <field name="BOOL">FALSE</field>
                                     </block>
                                   </value>
                                   <next>
-                                    <block type="variables_set" id="cH4r$3~CqwV,imdXC?]w">
-                                      <field name="VAR" id="J@FII3x]r![1`]rdXcK,">zoomed_in</field>
+                                    <block type="show" id="7GZTZ4JZt(WAfHl/k[BY">
                                       <value name="VALUE">
-                                        <block type="logic_boolean" id="{%N6|$HSE2S*Gw-LovL7">
-                                          <field name="BOOL">FALSE</field>
+                                        <shadow type="objectList" id="3T4K,wU`cV6HiB.JG17N">
+                                          <field name="FIELDNAME">&lt;none&gt;</field>
+                                        </shadow>
+                                        <block type="variables_get" id="6AD3RAtP/[apAW)[f^H4">
+                                          <field name="VAR" id="dvX?DWjvdey/WczArs@m">room_animation_triggers</field>
                                         </block>
                                       </value>
                                       <next>
-                                        <block type="show" id="7GZTZ4JZt(WAfHl/k[BY">
-                                          <value name="VALUE">
-                                            <shadow type="objectList" id="3T4K,wU`cV6HiB.JG17N">
+                                        <block type="setCameraParam" id="V*#^`uyf-lgPJ/cwXHL`">
+                                          <mutation xmlns="http://www.w3.org/1999/xhtml" type="ORBIT_MIN_DISTANCE_PERSP"></mutation>
+                                          <field name="TYPE">ORBIT_MIN_DISTANCE_PERSP</field>
+                                          <value name="ORBIT_MIN_DISTANCE_PERSP">
+                                            <shadow type="math_number" id="^pafOs35^S26%T{.i2tK">
+                                              <field name="NUM">100</field>
+                                            </shadow>
+                                          </value>
+                                          <value name="OBJECT">
+                                            <shadow type="objectList" id="$Hl5J@wX4!r).tys1KvR">
                                               <field name="FIELDNAME">&lt;none&gt;</field>
                                             </shadow>
-                                            <block type="variables_get" id="6AD3RAtP/[apAW)[f^H4">
-                                              <field name="VAR" id="dvX?DWjvdey/WczArs@m">room_animation_triggers</field>
+                                            <block type="objectList" id="=OJ,Hzi#AYgL5;@b{0^/">
+                                              <field name="FIELDNAME">camera</field>
                                             </block>
                                           </value>
-                                          <next>
-                                            <block type="setCameraParam" id="V*#^`uyf-lgPJ/cwXHL`">
-                                              <mutation xmlns="http://www.w3.org/1999/xhtml" type="ORBIT_MIN_DISTANCE_PERSP"></mutation>
-                                              <field name="TYPE">ORBIT_MIN_DISTANCE_PERSP</field>
-                                              <value name="ORBIT_MIN_DISTANCE_PERSP">
-                                                <shadow type="math_number" id="^pafOs35^S26%T{.i2tK">
-                                                  <field name="NUM">100</field>
-                                                </shadow>
-                                              </value>
-                                              <value name="OBJECT">
-                                                <shadow type="objectList" id="$Hl5J@wX4!r).tys1KvR">
-                                                  <field name="FIELDNAME">&lt;none&gt;</field>
-                                                </shadow>
-                                                <block type="objectList" id="=OJ,Hzi#AYgL5;@b{0^/">
-                                                  <field name="FIELDNAME">camera</field>
-                                                </block>
-                                              </value>
-                                            </block>
-                                          </next>
                                         </block>
                                       </next>
                                     </block>
@@ -5038,7 +4989,7 @@
         </block>
       </statement>
     </block>
-    <block xmlns="https://developers.google.com/blockly/xml" type="procedures_callnoreturn" id="*UGEZiJco*Wb%W|PXp]w" x="1510" y="1270">
+    <block xmlns="https://developers.google.com/blockly/xml" type="procedures_callnoreturn" id="*UGEZiJco*Wb%W|PXp]w" x="1510" y="1250">
       <mutation name="Zoom to clicked room">
         <arg name="Which room trigger?"></arg>
         <arg name="Which megamenu trigger?"></arg>
