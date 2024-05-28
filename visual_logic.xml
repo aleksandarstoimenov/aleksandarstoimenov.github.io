@@ -1,5 +1,5 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <tab name="Init" type="InitTab" active="false" scrollx="401.92343198952676" scrolly="-139.2093545443896" scale="0.5568374181775593">
+  <tab name="Init" type="InitTab" active="false" scrollx="329.81353759765625" scrolly="294.91577148437506" scale="1">
     <block xmlns="https://developers.google.com/blockly/xml" type="initPreloader" id="BNy-![:j+%#?R05x(Xxc" x="250" y="250">
       <statement name="DO_END">
         <block type="setHTMLElemStyle" id="#v#c1k8x7{4Yds4!!s^P">
@@ -35,7 +35,7 @@
       </statement>
     </block>
   </tab>
-  <tab name="New Tab" type="CommonTab" active="true" scrollx="2328.25732421875" scrolly="2929.489990234375" scale="1">
+  <tab name="New Tab" type="CommonTab" active="true" scrollx="-734.4681161153349" scrolly="618.6162777881682" scale="0.7462153966366272">
     <variables xmlns="https://developers.google.com/blockly/xml">
       <variable id="j/HUb@Mn9F_XrMhZQS[b">animations_except_attic_room</variable>
       <variable id="J6oW`R0+@yA6=I_KCzo)">furniture_triggers</variable>
@@ -714,13 +714,6 @@
         </block>
       </value>
     </block>
-    <block xmlns="https://developers.google.com/blockly/xml" type="setScreenScale" id="/2f@p6H[lZtuO/`bB+VN" x="-1570" y="-2410">
-      <value name="FACTOR">
-        <shadow type="math_number" id="Q4UhUFWV4X/0aO=){H9;">
-          <field name="NUM">1.5</field>
-        </shadow>
-      </value>
-    </block>
     <block xmlns="https://developers.google.com/blockly/xml" type="variables_set" id="@,k8%qI4mVTj3{hbap-." x="-350" y="-2470">
       <field name="VAR" id="dvX?DWjvdey/WczArs@m">room_animation_triggers</field>
       <value name="VALUE">
@@ -777,6 +770,14 @@
             </block>
           </value>
         </block>
+      </value>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="setScreenScale" id="/2f@p6H[lZtuO/`bB+VN" x="-1690" y="-2230">
+      <value name="FACTOR">
+        <shadow type="math_number" id="Q4UhUFWV4X/0aO=){H9;">
+          <field name="NUM">2</field>
+        </shadow>
+        <block type="nativeScreenScale" id="SW7Af6LHocSVv`-5r;v}"></block>
       </value>
     </block>
     <block xmlns="https://developers.google.com/blockly/xml" type="variables_set" id=":2(Uw{2+/7Qu^yr0oQQj" x="-350" y="-2170">
@@ -2519,7 +2520,7 @@
       <field name="TYPE">ORBIT_MIN_DISTANCE_PERSP</field>
       <value name="ORBIT_MIN_DISTANCE_PERSP">
         <shadow type="math_number" id="_+/=0!j3$YC=A8r{HQnI">
-          <field name="NUM">100</field>
+          <field name="NUM">150</field>
         </shadow>
       </value>
       <value name="OBJECT">
@@ -2536,7 +2537,7 @@
           <field name="TYPE">ORBIT_MAX_DISTANCE_PERSP</field>
           <value name="ORBIT_MAX_DISTANCE_PERSP">
             <shadow type="math_number" id="[+V^4J%,AuGqakq^{L:K">
-              <field name="NUM">200</field>
+              <field name="NUM">180</field>
             </shadow>
           </value>
           <value name="OBJECT">
@@ -3440,6 +3441,36 @@
           </next>
         </block>
       </statement>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="setCameraParam" id="t#x[h7xNqrlacI{j)Qa(" x="850" y="-130">
+      <mutation xmlns="http://www.w3.org/1999/xhtml" type="CLIP_END"></mutation>
+      <field name="TYPE">CLIP_END</field>
+      <value name="CLIP_END">
+        <shadow type="math_number" id="Z3?FOI:71nMPUby73O=J">
+          <field name="NUM">205</field>
+        </shadow>
+      </value>
+      <value name="OBJECT">
+        <shadow type="objectList" id="T%E/_9OZ/ht[0Olq0X]|">
+          <field name="FIELDNAME">camera</field>
+        </shadow>
+      </value>
+      <next>
+        <block type="setCameraParam" id="a;Iv+E9}|dXfpv9i/,1C">
+          <mutation xmlns="http://www.w3.org/1999/xhtml" type="CLIP_START"></mutation>
+          <field name="TYPE">CLIP_START</field>
+          <value name="CLIP_START">
+            <shadow type="math_number" id="]/=fxYjejx^n^knwk-1`">
+              <field name="NUM">3</field>
+            </shadow>
+          </value>
+          <value name="OBJECT">
+            <shadow type="objectList" id="fFRgUVGK+aI41g!lW~IV">
+              <field name="FIELDNAME">camera</field>
+            </shadow>
+          </value>
+        </block>
+      </next>
     </block>
     <block xmlns="https://developers.google.com/blockly/xml" type="procedures_defnoreturn" id="Z[U?;,YLBYGJTcV_:01|" x="5090" y="-230">
       <mutation>
