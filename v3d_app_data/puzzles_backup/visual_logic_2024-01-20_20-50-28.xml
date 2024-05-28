@@ -1,0 +1,31 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <tab name="Init" type="InitTab" active="false" scrollx="19.999999999999773" scrolly="0" scale="0.9"></tab>
+  <tab name="New Tab" type="CommonTab" active="true" scrollx="95.79997253417957" scrolly="1231.917694777012" scale="1">
+    <block xmlns="https://developers.google.com/blockly/xml" type="whenClicked" id="zWMp0tU}xkH?7_ckiSB%" inline="false" x="150" y="-930">
+      <mutation xmlns="http://www.w3.org/1999/xhtml" adveventoptions="false" enableifmissed="false"></mutation>
+      <field name="X_RAY">FALSE</field>
+      <field name="DOUBLE_CLICK">FALSE</field>
+      <field name="LEFT_BUTTON">TRUE</field>
+      <field name="MIDDLE_BUTTON">TRUE</field>
+      <field name="RIGHT_BUTTON">TRUE</field>
+      <value name="VALUE">
+        <shadow type="objectList" id=":a/g@:X!yx^R8/sxhU{0">
+          <field name="FIELDNAME">Background</field>
+        </shadow>
+      </value>
+      <statement name="DO">
+        <block type="playAnimationAdv" id="$~-Lmj}d`Th{a#P8Hzff">
+          <mutation xmlns="http://www.w3.org/1999/xhtml" advplaybackoptions="false" enablewhenfinished="false"></mutation>
+          <field name="REVERSED">FALSE</field>
+          <field name="LOOP">LoopPingPong</field>
+          <value name="VALUE">
+            <shadow type="animationList" id="NT/fK6S?GgZHZI*F=dCC">
+              <field name="FIELDNAME">Cube.003</field>
+            </shadow>
+          </value>
+        </block>
+      </statement>
+    </block>
+  </tab>
+  <editorsettings viewport-x="849.3333129882812" viewport-y="25.333335876464844" viewport-w="431.333" viewport-h="318.5" viewport-hidden="false" toolbox-library-mode="false" toolbox-minimized-mode="false"></editorsettings>
+</xml>

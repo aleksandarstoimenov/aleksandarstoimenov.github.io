@@ -1,0 +1,119 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <tab name="Init" type="InitTab" active="false" scrollx="19.999999999999773" scrolly="0" scale="0.9"></tab>
+  <tab name="New Tab" type="CommonTab" active="true" scrollx="417.0558074306337" scrolly="-66.1819251892389" scale="0.8944731661082129">
+    <block xmlns="https://developers.google.com/blockly/xml" type="stopAnimation" id="I8k3zHtlsevFMU)qh*sz" x="-450" y="130">
+      <value name="VALUE">
+        <shadow type="animationList" id="huqJx%T%Ebv;y*I9Wb|(">
+          <field name="FIELDNAME">&lt;none&gt;</field>
+        </shadow>
+        <block type="getAnimations" id="_ix(ikI.b{rLW-UV|eU.">
+          <value name="OBJECTINPUT">
+            <shadow type="objectList" id="+rG!/(+yl_NAsLfud=R$">
+              <field name="FIELDNAME">&lt;none&gt;</field>
+            </shadow>
+            <block type="allObjectList" id="S~fDrj;,s}]F1$J770xg"></block>
+          </value>
+        </block>
+      </value>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="groupList" id="L|d7xP-b41KE|+{tYcGY" x="-90" y="230">
+      <field name="FIELDNAME">entrance</field>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="whenHovered" id="I,u3QG^dV]v`h03:a$1y" inline="false" x="-450" y="270">
+      <mutation xmlns="http://www.w3.org/1999/xhtml" adveventoptions="false"></mutation>
+      <field name="X_RAY">FALSE</field>
+      <value name="VALUE">
+        <shadow type="objectList" id="ZQVj;6LaLp).|Dz=R_HL">
+          <field name="FIELDNAME">entrance_trigger</field>
+        </shadow>
+      </value>
+      <statement name="DO_OVER">
+        <block type="onAnimationFrameDo" id="{=1M=[_eJpG!k)uw$jW-">
+          <value name="ANIM">
+            <shadow type="animationList" id="(]=[D{QvWl_0d.t|p$g6">
+              <field name="FIELDNAME">&lt;none&gt;</field>
+            </shadow>
+            <block type="getAnimations" id="@+@f%qD(d2sEWcs%Xk9+">
+              <value name="OBJECTINPUT">
+                <shadow type="objectList" id="+rG!/(+yl_NAsLfud=R$">
+                  <field name="FIELDNAME">&lt;none&gt;</field>
+                </shadow>
+                <block type="groupList" id="[bW,NTb^KO22_v![H4$O">
+                  <field name="FIELDNAME">entrance</field>
+                </block>
+              </value>
+            </block>
+          </value>
+          <value name="FRAME">
+            <shadow type="math_number" id="S^LgTJ0pl)4YhI!)6;{{">
+              <field name="NUM">0</field>
+            </shadow>
+          </value>
+          <statement name="DO">
+            <block type="playAnimationAdv" id="Koxr@s,X.uNiu;2=mJ6~">
+              <mutation xmlns="http://www.w3.org/1999/xhtml" advplaybackoptions="true" enablewhenfinished="false"></mutation>
+              <field name="REVERSED">FALSE</field>
+              <field name="LOOP">LoopOnce</field>
+              <value name="VALUE">
+                <shadow type="animationList" id="P_-(U*$.o]8^-itpTSu,">
+                  <field name="FIELDNAME">&lt;none&gt;</field>
+                </shadow>
+                <block type="getAnimations" id="wq4cp+g)G*M|}#qXV:Z0">
+                  <value name="OBJECTINPUT">
+                    <shadow type="objectList" id="+rG!/(+yl_NAsLfud=R$">
+                      <field name="FIELDNAME">&lt;none&gt;</field>
+                    </shadow>
+                    <block type="groupList" id="5nZ/l8U|,n-cYcsZucmN">
+                      <field name="FIELDNAME">entrance</field>
+                    </block>
+                  </value>
+                </block>
+              </value>
+              <value name="FROM">
+                <shadow type="math_number" id="bNfhNMAuQP+VFpgxh.05">
+                  <field name="NUM">0</field>
+                </shadow>
+              </value>
+              <value name="TO">
+                <shadow type="math_number" id="d^;QURkQ+|$|h7+}DTv1">
+                  <field name="NUM">40</field>
+                </shadow>
+              </value>
+              <value name="SPEED">
+                <shadow type="math_number" id="Dz1MWKvyX%tRJ9R;j)p%">
+                  <field name="NUM">1</field>
+                </shadow>
+              </value>
+            </block>
+          </statement>
+        </block>
+      </statement>
+      <statement name="DO_OUT">
+        <block type="setAnimationSpeed" id=";+DiaZZa~~:o4VcNJQ,Q">
+          <field name="REVERSED">TRUE</field>
+          <value name="VALUE">
+            <shadow type="animationList" id="}Ef3;:X2qfy`3s=9#iNS">
+              <field name="FIELDNAME">&lt;none&gt;</field>
+            </shadow>
+            <block type="getAnimations" id="JB#y|E$=/r[JG=YfC:pt">
+              <value name="OBJECTINPUT">
+                <shadow type="objectList" id="+rG!/(+yl_NAsLfud=R$">
+                  <field name="FIELDNAME">&lt;none&gt;</field>
+                </shadow>
+                <block type="groupList" id="9%(+Jcd3!|SC,6kBtJ9_">
+                  <field name="FIELDNAME">entrance</field>
+                </block>
+              </value>
+            </block>
+          </value>
+          <value name="SPEED">
+            <shadow type="math_number" id="T)Zr;)]o!}_HPt#8Wq9*">
+              <field name="NUM">1</field>
+            </shadow>
+          </value>
+        </block>
+      </statement>
+    </block>
+  </tab>
+  <editorsettings viewport-x="1081.3333129882812" viewport-y="29.333335876464844" viewport-w="431.333" viewport-h="318.5" viewport-hidden="true" toolbox-library-mode="false" toolbox-minimized-mode="false"></editorsettings>
+</xml>
