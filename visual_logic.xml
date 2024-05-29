@@ -1,5 +1,5 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <tab name="Init" type="InitTab" active="true" scrollx="264.5102949561898" scrolly="-226.7573696145124" scale="0.9070294784580495">
+  <tab name="Init" type="InitTab" active="false" scrollx="884.9136656787923" scrolly="405.00012616183994" scale="0.6139132535407589">
     <block xmlns="https://developers.google.com/blockly/xml" type="initPreloader" id="BNy-![:j+%#?R05x(Xxc" x="250" y="250">
       <statement name="DO_END">
         <block type="setHTMLElemStyle" id="#v#c1k8x7{4Yds4!!s^P">
@@ -42,7 +42,7 @@
       <field name="FADE_ANNOTATIONS">TRUE</field>
     </block>
   </tab>
-  <tab name="New Tab" type="CommonTab" active="false" scrollx="147.08210437871458" scrolly="773.4303128914935" scale="1">
+  <tab name="New Tab" type="CommonTab" active="true" scrollx="-1089.2693408484556" scrolly="507.4313502348832" scale="0.7462153966366272">
     <variables xmlns="https://developers.google.com/blockly/xml">
       <variable id="j/HUb@Mn9F_XrMhZQS[b">animations_except_attic_room</variable>
       <variable id="J6oW`R0+@yA6=I_KCzo)">furniture_triggers</variable>
@@ -2656,7 +2656,7 @@
       <field name="TYPE">ORBIT_MIN_DISTANCE_PERSP</field>
       <value name="ORBIT_MIN_DISTANCE_PERSP">
         <shadow type="math_number" id="_+/=0!j3$YC=A8r{HQnI">
-          <field name="NUM">100</field>
+          <field name="NUM">130</field>
         </shadow>
       </value>
       <value name="OBJECT">
@@ -2673,7 +2673,7 @@
           <field name="TYPE">ORBIT_MAX_DISTANCE_PERSP</field>
           <value name="ORBIT_MAX_DISTANCE_PERSP">
             <shadow type="math_number" id="[+V^4J%,AuGqakq^{L:K">
-              <field name="NUM">200</field>
+              <field name="NUM">130</field>
             </shadow>
           </value>
           <value name="OBJECT">
@@ -2724,7 +2724,7 @@
                       <field name="TYPE">ORBIT_MIN_HORIZONTAL_ANGLE</field>
                       <value name="ORBIT_MIN_HORIZONTAL_ANGLE">
                         <shadow type="math_number" id="FxO%4r.T0K*/EU$0}vtY">
-                          <field name="NUM">50</field>
+                          <field name="NUM">0</field>
                         </shadow>
                       </value>
                       <value name="OBJECT">
@@ -2741,7 +2741,7 @@
                           <field name="TYPE">ORBIT_MAX_HORIZONTAL_ANGLE</field>
                           <value name="ORBIT_MAX_HORIZONTAL_ANGLE">
                             <shadow type="math_number" id="gL0=b[Tkozml6Yk93m%]">
-                              <field name="NUM">70</field>
+                              <field name="NUM">90</field>
                             </shadow>
                           </value>
                           <value name="OBJECT">
@@ -2990,7 +2990,7 @@
                           <field name="TYPE">ORBIT_MAX_DISTANCE_PERSP</field>
                           <value name="ORBIT_MAX_DISTANCE_PERSP">
                             <shadow type="math_number" id="_Q-Jb5QeoI]-7;WNcfBi">
-                              <field name="NUM">200</field>
+                              <field name="NUM">130</field>
                             </shadow>
                           </value>
                           <value name="OBJECT">
@@ -3052,7 +3052,7 @@
                                               <field name="TYPE">ORBIT_MIN_DISTANCE_PERSP</field>
                                               <value name="ORBIT_MIN_DISTANCE_PERSP">
                                                 <shadow type="math_number" id="NI~x-Eyk1Dfdk{5xKw!d">
-                                                  <field name="NUM">100</field>
+                                                  <field name="NUM">130</field>
                                                 </shadow>
                                               </value>
                                               <value name="OBJECT">
@@ -3341,7 +3341,7 @@
                           <field name="TYPE">ORBIT_MAX_DISTANCE_PERSP</field>
                           <value name="ORBIT_MAX_DISTANCE_PERSP">
                             <shadow type="math_number" id="!l`Q^h|A`z$aPgmZNEJw">
-                              <field name="NUM">200</field>
+                              <field name="NUM">130</field>
                             </shadow>
                           </value>
                           <value name="OBJECT">
@@ -3403,7 +3403,7 @@
                                               <field name="TYPE">ORBIT_MIN_DISTANCE_PERSP</field>
                                               <value name="ORBIT_MIN_DISTANCE_PERSP">
                                                 <shadow type="math_number" id="^pafOs35^S26%T{.i2tK">
-                                                  <field name="NUM">100</field>
+                                                  <field name="NUM">130</field>
                                                 </shadow>
                                               </value>
                                               <value name="OBJECT">
