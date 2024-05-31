@@ -42,7 +42,7 @@
       <field name="FADE_ANNOTATIONS">TRUE</field>
     </block>
   </tab>
-  <tab name="New Tab" type="CommonTab" active="true" scrollx="-3586.0864873425817" scrolly="-2.3317149916738344" scale="0.6139132535407592">
+  <tab name="New Tab" type="CommonTab" active="true" scrollx="-8969.951171875" scrolly="-1509.3017578125" scale="1">
     <variables xmlns="https://developers.google.com/blockly/xml">
       <variable id="j/HUb@Mn9F_XrMhZQS[b">animations_except_attic_room</variable>
       <variable id="J6oW`R0+@yA6=I_KCzo)">furniture_triggers</variable>
@@ -72,8 +72,6 @@
       <variable id="KNg=ZRDon@m+J4F;c`^5">Which room is hoovered?</variable>
       <variable id="U;CKWy,0W(X}ZJ)U1.KM">Which html element is hovered?</variable>
       <variable id="gA9wzGBp=$jIX$kXb8%6">room object is selected</variable>
-      <variable id="HJ_X/U:?k#%~dqDL|fM~">Trigger object to turn red</variable>
-      <variable id="Hy5Yu4(D{sLgP%{F_S;-">Group object to turn red</variable>
       <variable id="tP6:wE0I=7+Bs0KCY,y7">animations_except_bathroom</variable>
       <variable id=":`=hU#np!zKIqRl,TMcW">room_animation_frame</variable>
       <variable id="]CgrD`v4[icHgPAQpA)@">animations_except_toilet</variable>
@@ -3974,7 +3972,7 @@
       <value name="ARG1">
         <block type="textMultiline" id="#ahfE;^Kg3N0.VxU5C/p">
           <field name="HIGHLIGHT_MODE">html</field>
-          <field name="TEXT" editor-height="28" editor-width="814.666748046875">          &lt;h1 id="popup_object"&gt;Radiateur.&lt;/h1&gt;&amp;#10;              &lt;div id="dividing_line_header"&gt;&lt;/div&gt;&amp;#10;          &lt;p id="popup_locataire"&gt;Locataire&lt;/p&gt;&amp;#10;          &lt;ul id="popup_paragraph"&gt;&amp;#10;            &lt;li&gt;Dépoussiérage et purge.&lt;/li&gt;&amp;#10;            &lt;li&gt;Entretien et contrôle périodique conformément aux dispositions du bail et à la réglementation en vigueur. Gaz : tous les 2 ans. Autres énergies : tous les ans.&lt;/li&gt;&amp;#10;            &lt;li&gt;Chauffage suffisant de l'habitation.&lt;/li&gt;&amp;#10;          &lt;/ul&gt;   &amp;#10;          &lt;div id="dividing_line_2"&gt;&lt;/div&gt;&amp;#10;          &lt;p id="popup_locataire"&gt;Propriétaire&lt;/p&gt;&amp;#10;          &lt;ul id="popup_paragraph"&gt;&amp;#10;            &lt;li&gt;Tous remplacements.&lt;/li&gt;&amp;#10;          &lt;/ul&gt;   </field>
+          <field name="TEXT" editor-height="28" editor-width="814.666748046875">          &lt;h1 id="popup_object"&gt;Radiateur.&lt;/h1&gt;&amp;#10;              &lt;div id="dividing_line_header"&gt;&lt;/div&gt;&amp;#10;          &lt;p id="popup_locataire"&gt;Locataire&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;-&lt;/span&gt; Dépoussiérage et purge.&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;-&lt;/span&gt; Entretien et contrôle périodique conformément aux dispositions du bail et à la réglementation en vigueur. Gaz : tous les 2 ans. Autres énergies : tous les ans.&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;-&lt;/span&gt; Chauffage suffisant de l'habitation.&lt;/p&gt;&amp;#10;          &lt;div id="dividing_line_2"&gt;&lt;/div&gt;&amp;#10;          &lt;p id="popup_locataire"&gt;Propriétaire&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;-&lt;/span&gt; Tous remplacements.&lt;/p&gt;</field>
         </block>
       </value>
       <value name="ARG2">
@@ -4018,7 +4016,7 @@
           <value name="ARG1">
             <block type="textMultiline" id="EO5ynGs7xNDj^!FN[Q3V">
               <field name="HIGHLIGHT_MODE">html</field>
-              <field name="TEXT" editor-height="17" editor-width="756">          &lt;h1 id="popup_object"&gt;Plafonnier, prise de courant, interrupteur.&lt;/h1&gt;&amp;#10;            &lt;div id="dividing_line_header"&gt;&lt;/div&gt;&amp;#10;          &lt;p id="popup_locataire"&gt;Locataire&lt;/p&gt;&amp;#10;          &amp;#10;          &lt;ul id="popup_paragraph"&gt;&amp;#10;              &lt;li&gt;Remise en état des dégâts suite au placement des luminaires.&lt;/li&gt;&amp;#10;              &lt;li&gt;Le locataire est tenu de laisser aux points lumineux des fils en attente d'une longueur de plus ou moins 10 cm. S'il coupe les fils au raz du plafond ou du mur, il sera tenu au remplacement des fils dans la gaine.&lt;/li&gt;&amp;#10;              &lt;li&gt;Le locataire doit veiller à entretenir l'installation électrique et ne pas surcharger celle-ci en tout ou en partie.&lt;/li&gt;&amp;#10;              &lt;li&gt;Remplacement des ampoules, tubes d'éclairage, des interrupteurs, soquets et des prises de courant cassés, même suite un usage normal.&lt;/li&gt;&amp;#10;          &lt;/ul&gt;          &amp;#10;&amp;#10;          &lt;div id="dividing_line_2"&gt;&lt;/div&gt;&amp;#10;          &lt;p id="popup_locataire"&gt;Propriétaire&lt;/p&gt;&amp;#10;          &amp;#10;          &lt;ul id="popup_paragraph"&gt;&amp;#10;            &lt;li&gt;Tous remplacements des câblages pour tous services sauf si causés par des modifications du locataire.&lt;/li&gt;&amp;#10;          &lt;/ul&gt;   &amp;#10;</field>
+              <field name="TEXT" editor-height="17" editor-width="756">          &lt;h1 id="popup_object"&gt;Plafonnier, prise de courant, interrupteur.&lt;/h1&gt;&amp;#10;            &lt;div id="dividing_line_header"&gt;&lt;/div&gt;&amp;#10;          &lt;p id="popup_locataire"&gt;Locataire&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;-&lt;/span&gt; Remise en état des dégâts suite au placement des luminaires. &lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;-&lt;/span&gt; Le locataire est tenu de laisser aux points lumineux des fils en attente d'une longueur de plus ou moins 10 cm. S'il coupe les fils au raz du plafond ou du mur, il sera tenu au remplacement des fils dans la gaine.&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;-&lt;/span&gt; Le locataire doit veiller à entretenir l'installation électrique et ne pas surcharger celle-ci en tout ou en partie.&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;-&lt;/span&gt; Remplacement des ampoules, tubes d'éclairage, des interrupteurs, soquets et des prises de courant cassés, même suite un usage normal.&lt;/p&gt;&amp;#10;          &lt;div id="dividing_line_2"&gt;&lt;/div&gt;&amp;#10;          &lt;p id="popup_locataire"&gt;Propriétaire&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;-&lt;/span&gt; Tous remplacements des câblages pour tous services sauf si causés par des modifications du locataire. &lt;/p&gt;</field>
             </block>
           </value>
           <value name="ARG2">
@@ -4047,7 +4045,7 @@
               <value name="ARG1">
                 <block type="textMultiline" id="D74:(M16frnr@xmCL-PW">
                   <field name="HIGHLIGHT_MODE">html</field>
-                  <field name="TEXT" editor-height="16" editor-width="724.5118244590761">          &lt;h1 id="popup_object"&gt;Fenètres&lt;/h1&gt;&amp;#10;              &lt;div id="dividing_line_header"&gt;&lt;/div&gt;&amp;#10;          &lt;p id="popup_locataire"&gt;Locataire&lt;/p&gt;&amp;#10;          &amp;#10;          &lt;ul id="popup_paragraph"&gt;&amp;#10;              &lt;li&gt;Remplacement des vitres brisées par sa faute.&lt;/li&gt;&amp;#10;              &lt;li&gt;Nettoyage régulier des vitres accessibles.&lt;/li&gt;&amp;#10;              &lt;li&gt;Remplacement des vitres brisées par sa faute.&lt;/li&gt;&amp;#10;              &lt;li&gt;Réfection des griffes faites aux vitres et aux châssis.&lt;/li&gt;&amp;#10;              &lt;li&gt;Maintenir libre écoulement des eaux de condensation des châssis, sous peine de voir sa responsabilité engagée pour les dégâts en résultant (humidité, mérules…).&lt;/li&gt;&amp;#10;              &lt;li&gt;Réfection des griffes faites aux vitres et aux châssis. En l'absence de VMC  : aération quotidienne des locaux.&lt;/li&gt;&amp;#10;          &lt;/ul&gt;     &amp;#10;          &amp;#10;          &lt;div id="dividing_line_2"&gt;&lt;/div&gt;&amp;#10;          &lt;p id="popup_locataire"&gt;Propriétaire&lt;/p&gt;&amp;#10;          &lt;ul id="popup_paragraph"&gt;&amp;#10;            &lt;li&gt;Réparations nécessaires, autres que locatives, et remplacement.&lt;/li&gt;&amp;#10;          &lt;/ul&gt;          &amp;#10;</field>
+                  <field name="TEXT" editor-height="16" editor-width="724.5118244590761">          &lt;h1 id="popup_object"&gt;Fenètres&lt;/h1&gt;&amp;#10;              &lt;div id="dividing_line_header"&gt;&lt;/div&gt;&amp;#10;          &lt;p id="popup_locataire"&gt;Locataire&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;-&lt;/span&gt; Remplacement des vitres brisées par sa faute.&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;-&lt;/span&gt; Nettoyage régulier des vitres accessibles.&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;-&lt;/span&gt; Remplacement des vitres brisées par sa faute.&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;-&lt;/span&gt; Réfection des griffes faites aux vitres et aux châssis.&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;-&lt;/span&gt; Maintenir libre écoulement des eaux de condensation des châssis, sous peine de voir sa responsabilité engagée pour les dégâts en résultant (humidité, mérules…).&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;-&lt;/span&gt; Réfection des griffes faites aux vitres et aux châssis. En l'absence de VMC  : aération quotidienne des locaux.&lt;/p&gt;&amp;#10;          &lt;div id="dividing_line_2"&gt;&lt;/div&gt;&amp;#10;          &lt;p id="popup_locataire"&gt;Propriétaire&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;-&lt;/span&gt; Réparations nécessaires, autres que locatives, et remplacement.&lt;/p&gt;</field>
                 </block>
               </value>
               <value name="ARG2">
@@ -4076,7 +4074,7 @@
                   <value name="ARG1">
                     <block type="textMultiline" id="bO2A5?{|SING[z4oBFSd">
                       <field name="HIGHLIGHT_MODE">html</field>
-                      <field name="TEXT" editor-height="21" editor-width="1076.1982005409245">          &lt;h1 id="popup_object"&gt;Feu ouvert&lt;/h1&gt;&amp;#10;              &lt;div id="dividing_line_header"&gt;&lt;/div&gt;&amp;#10;          &lt;p id="popup_locataire"&gt;Locataire&lt;/p&gt;&amp;#10;          &lt;ul id="popup_paragraph"&gt;&amp;#10;              &lt;li&gt;Ramonage annuel, par un professionnel, des conduits d'évacuation et à tout le moins avant sa sortie des lieux loués.&lt;/li&gt;&amp;#10;              &lt;li&gt;Entretien et réparation notamment de l’âtre, du contre-cœur, des chambranles et de la tablette de l’âtre.&lt;/li&gt;&amp;#10;              &lt;li&gt;Nettoyage, cirage éventuel. Le locataire n'est toutefois pas responsable du brunissement naturel causé par la chaleur ou la fumée résultant d'un usage normal.&lt;/li&gt;&amp;#10;          &lt;/ul&gt;&amp;#10;&amp;#10;          &lt;div id="dividing_line_2"&gt;&lt;/div&gt;&amp;#10;          &lt;p id="popup_locataire"&gt;Propriétaire&lt;/p&gt;&amp;#10;          &amp;#10;          &lt;ul id="popup_paragraph"&gt;&amp;#10;              &lt;li&gt;Réparations nécessaires, autres que locatives, et remplacement.&lt;/li&gt;&amp;#10;          &lt;/ul&gt;&amp;#10;</field>
+                      <field name="TEXT" editor-height="21" editor-width="1076.1982005409245">          &lt;h1 id="popup_object"&gt;Feu ouvert&lt;/h1&gt;&amp;#10;              &lt;div id="dividing_line_header"&gt;&lt;/div&gt;&amp;#10;          &lt;p id="popup_locataire"&gt;Locataire&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;-&lt;/span&gt; Ramonage annuel, par un professionnel, des conduits d'évacuation et à tout le moins avant sa sortie des lieux loués.&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;-&lt;/span&gt; Entretien et réparation notamment de l’âtre, du contre-cœur, des chambranles et de la tablette de l’âtre.&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;-&lt;/span&gt; Nettoyage, cirage éventuel. Le locataire n'est toutefois pas responsable du brunissement naturel causé par la chaleur ou la fumée résultant d'un usage normal.&lt;/p&gt;&amp;#10;          &lt;div id="dividing_line_2"&gt;&lt;/div&gt;&amp;#10;          &lt;p id="popup_locataire"&gt;Propriétaire&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;-&lt;/span&gt; Réparations nécessaires, autres que locatives, et remplacement.&lt;/p&gt;</field>
                     </block>
                   </value>
                   <value name="ARG2">
@@ -4105,7 +4103,7 @@
                       <value name="ARG1">
                         <block type="textMultiline" id="AogLP@ZJ,J[@|I-y5s15">
                           <field name="HIGHLIGHT_MODE">html</field>
-                          <field name="TEXT" editor-height="30" editor-width="1219.6280122295382">          &lt;h1 id="popup_object"&gt;Bouche de ventilation&lt;/h1&gt;&amp;#10;              &lt;div id="dividing_line_header"&gt;&lt;/div&gt;&amp;#10;          &lt;p id="popup_locataire"&gt;Locataire&lt;/p&gt;&amp;#10;          &lt;ul id="popup_paragraph"&gt;&amp;#10;              &lt;li&gt;Nettoyage des bouches qui doivent rester ouvertes en permanence.&lt;/li&gt;&amp;#10;              &lt;li&gt;Nettoyage et/ou remplacement régulier des filtres.&lt;/li&gt;&amp;#10;          &lt;/ul&gt;&amp;#10;&amp;#10;          &lt;div id="dividing_line_2"&gt;&lt;/div&gt;&amp;#10;          &lt;p id="popup_locataire"&gt;Propriétaire&lt;/p&gt;&amp;#10;          &lt;ul id="popup_paragraph"&gt;&amp;#10;              &lt;li&gt;Réparations nécessaires, autres que locatives, et remplacement.&lt;/li&gt;&amp;#10;          &lt;/ul&gt;</field>
+                          <field name="TEXT" editor-height="30" editor-width="1219.6280122295382">          &lt;h1 id="popup_object"&gt;Bouche de ventilation&lt;/h1&gt;&amp;#10;              &lt;div id="dividing_line_header"&gt;&lt;/div&gt;&amp;#10;          &lt;p id="popup_locataire"&gt;Locataire&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;-&lt;/span&gt; Nettoyage des bouches qui doivent rester ouvertes en permanence.&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;-&lt;/span&gt; Nettoyage et/ou remplacement régulier des filtres.&lt;/p&gt;&amp;#10;          &lt;div id="dividing_line_2"&gt;&lt;/div&gt;&amp;#10;          &lt;p id="popup_locataire"&gt;Propriétaire&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;-&lt;/span&gt; Réparations nécessaires, autres que locatives, et remplacement.&lt;/p&gt;</field>
                         </block>
                       </value>
                       <value name="ARG2">
@@ -4134,7 +4132,7 @@
                           <value name="ARG1">
                             <block type="textMultiline" id="gD!ZH7q-?SQIOT#faZP{">
                               <field name="HIGHLIGHT_MODE">html</field>
-                              <field name="TEXT" editor-height="31" editor-width="1520.2632000000003">          &lt;h1 id="popup_object"&gt;Radiateur&lt;/h1&gt;&amp;#10;              &lt;div id="dividing_line_header"&gt;&lt;/div&gt;&amp;#10;          &lt;p id="popup_locataire"&gt;Locataire&lt;/p&gt;&amp;#10;          &lt;ul id="popup_paragraph"&gt;&amp;#10;              &lt;li&gt;Dépoussiérage et purge.&lt;/li&gt;&amp;#10;              &lt;li&gt;Entretien et contrôle périodique conformément aux dispositions du bail et à la réglementation en vigueur. Gaz : tous les 2 ans. Autres énergies : tous les ans.&lt;/li&gt;&amp;#10;              &lt;li&gt;Chauffage suffisant de l'habitation.&lt;/li&gt;&amp;#10;          &lt;/ul&gt;&amp;#10;          &lt;div id="dividing_line_2"&gt;&lt;/div&gt;&amp;#10;          &lt;p id="popup_locataire"&gt;Propriétaire&lt;/p&gt;&amp;#10;          &lt;ul id="popup_paragraph"&gt;&amp;#10;              &lt;li&gt;Tous remplacements.&lt;/li&gt;&amp;#10;          &lt;/ul&gt;&amp;#10;</field>
+                              <field name="TEXT" editor-height="31" editor-width="1520.2632000000003">          &lt;h1 id="popup_object"&gt;Radiateur.&lt;/h1&gt;&amp;#10;              &lt;div id="dividing_line_header"&gt;&lt;/div&gt;&amp;#10;          &lt;p id="popup_locataire"&gt;Locataire&lt;/p&gt;&amp;#10;          &lt;ul id="popup_paragraph"&gt;&amp;#10;              &lt;li&gt;Dépoussiérage et purge.&lt;/li&gt;&amp;#10;              &lt;li&gt;Entretien et contrôle périodique conformément aux dispositions du bail et à la réglementation en vigueur. Gaz : tous les 2 ans. Autres énergies : tous les ans.&lt;/li&gt;&amp;#10;              &lt;li&gt;Chauffage suffisant de l'habitation.&lt;/li&gt;&amp;#10;          &lt;/ul&gt;&amp;#10;          &lt;div id="dividing_line_2"&gt;&lt;/div&gt;&amp;#10;          &lt;p id="popup_locataire"&gt;Propriétaire&lt;/p&gt;&amp;#10;          &lt;ul id="popup_paragraph"&gt;&amp;#10;              &lt;li&gt;Tous remplacements.&lt;/li&gt;&amp;#10;          &lt;/ul&gt;&amp;#10;</field>
                             </block>
                           </value>
                           <value name="ARG2">
@@ -4163,7 +4161,7 @@
                               <value name="ARG1">
                                 <block type="textMultiline" id="V4FX^ly[}?.d;+z;GmaL">
                                   <field name="HIGHLIGHT_MODE">html</field>
-                                  <field name="TEXT" editor-height="18" editor-width="1096.4567369590764">          &lt;h1 id="popup_object"&gt;Bouche de ventilation&lt;/h1&gt;&amp;#10;              &lt;div id="dividing_line_header"&gt;&lt;/div&gt;&amp;#10;          &lt;p id="popup_locataire"&gt;Locataire&lt;/p&gt;&amp;#10;          &lt;ul id="popup_paragraph"&gt;&amp;#10;              &lt;li&gt;Nettoyage des bouches qui doivent rester ouvertes en permanence.&lt;/li&gt;&amp;#10;              &lt;li&gt;Nettoyage et/ou remplacement régulier des filtres.&lt;/li&gt;&amp;#10;          &lt;/ul&gt;&amp;#10;          &lt;div id="dividing_line_2"&gt;&lt;/div&gt;&amp;#10;          &lt;p id="popup_locataire"&gt;Propriétaire&lt;/p&gt;&amp;#10;          &lt;ul id="popup_paragraph"&gt;&amp;#10;              &lt;li&gt;Réparations nécessaires, autres que locatives, et remplacement.&lt;/li&gt;&amp;#10;          &lt;/ul&gt;&amp;#10;</field>
+                                  <field name="TEXT" editor-height="18" editor-width="1096.4567369590764">          &lt;h1 id="popup_object"&gt;Bouche de ventilation&lt;/h1&gt;&amp;#10;              &lt;div id="dividing_line_header"&gt;&lt;/div&gt;&amp;#10;          &lt;p id="popup_locataire"&gt;Locataire&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;-&lt;/span&gt; Nettoyage des bouches qui doivent rester ouvertes en permanence.&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;-&lt;/span&gt; Nettoyage et/ou remplacement régulier des filtres.&lt;/p&gt;&amp;#10;          &lt;div id="dividing_line_2"&gt;&lt;/div&gt;&amp;#10;          &lt;p id="popup_locataire"&gt;Propriétaire&lt;/p&gt;&amp;#10;          &lt;p id="popup_paragraph"&gt;&lt;span id="color_overwrite"&gt;-&lt;/span&gt; Réparations nécessaires, autres que locatives, et remplacement.&lt;/p&gt;</field>
                                 </block>
                               </value>
                               <value name="ARG2">
@@ -6107,7 +6105,28 @@
         </block>
       </next>
     </block>
-    <block xmlns="https://developers.google.com/blockly/xml" type="variables_set" id=";ch(z#e$x$F(Z^5(sv:#" x="9410" y="2250">
+    <block xmlns="https://developers.google.com/blockly/xml" type="variables_get" id="YqIk?03TggsL}Cg)-09I" x="9450" y="1750">
+      <field name="VAR" id="gA9wzGBp=$jIX$kXb8%6">room object is selected</field>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="controls_if" id="N@Hau2z7jn0iKY%bbD.d" x="10090" y="1730">
+      <mutation else="1"></mutation>
+      <value name="IF0">
+        <block type="logic_compare" id="Ym^aT27r@qla/sg`WQZs">
+          <field name="OP">EQ</field>
+          <value name="A">
+            <block type="variables_get" id="PJ_=6ErSKou$#}Vv,gMX">
+              <field name="VAR" id="gA9wzGBp=$jIX$kXb8%6">room object is selected</field>
+            </block>
+          </value>
+          <value name="B">
+            <block type="logic_boolean" id="USmkq]^T2~/J=pB8flzs">
+              <field name="BOOL">FALSE</field>
+            </block>
+          </value>
+        </block>
+      </value>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="variables_set" id=";ch(z#e$x$F(Z^5(sv:#" x="9710" y="1810">
       <field name="VAR" id="gA9wzGBp=$jIX$kXb8%6">room object is selected</field>
       <value name="VALUE">
         <block type="logic_boolean" id="JZu9RRsn-r$%)#Ws6!?V">
@@ -6115,100 +6134,154 @@
         </block>
       </value>
     </block>
-    <block xmlns="https://developers.google.com/blockly/xml" type="procedures_defnoreturn" id="!9,:bMPH0NoFzEFo]8ox" x="9370" y="2330">
-      <mutation>
-        <arg name="Trigger object to turn red" varid="HJ_X/U:?k#%~dqDL|fM~"></arg>
-        <arg name="Group object to turn red" varid="Hy5Yu4(D{sLgP%{F_S;-"></arg>
-      </mutation>
-      <field name="NAME">Turn object red when hovered</field>
-      <comment pinned="false" h="80" w="160">Describe this function...</comment>
-      <statement name="STACK">
-        <block type="whenHovered" id="nQhSAYed,v(Kd-$0+hJ," inline="false">
-          <mutation xmlns="http://www.w3.org/1999/xhtml" adveventoptions="false"></mutation>
-          <field name="X_RAY">FALSE</field>
+    <block xmlns="https://developers.google.com/blockly/xml" type="whenHovered" id="nQhSAYed,v(Kd-$0+hJ," inline="false" x="9730" y="1870">
+      <mutation xmlns="http://www.w3.org/1999/xhtml" adveventoptions="false"></mutation>
+      <field name="X_RAY">FALSE</field>
+      <value name="VALUE">
+        <shadow type="objectList" id="^^}OTCSh$VqpX`yo7|?D">
+          <field name="FIELDNAME">wall_covering_kitchen_trigger</field>
+        </shadow>
+        <block type="objectList" id="I0H:F3i~Thb[|WAg~;}4">
+          <field name="FIELDNAME">wall_covering_kitchen_trigger</field>
+        </block>
+      </value>
+      <statement name="DO_OVER">
+        <block type="setHTMLElemStyle" id="/,z$i_BcOKN)Zi|9zSiY">
+          <field name="PROPERTY">cursor</field>
+          <field name="PARENT">FALSE</field>
           <value name="VALUE">
-            <shadow type="objectList" id="^^}OTCSh$VqpX`yo7|?D">
-              <field name="FIELDNAME">wall_covering_kitchen_trigger</field>
+            <shadow type="cursorDropdown" id=".IoJ8OrpF7RbeJ|%aK):">
+              <field name="TEXT">pointer</field>
             </shadow>
-            <block type="variables_get" id="D|0s8|S5#Icaww;;y=%*">
-              <field name="VAR" id="HJ_X/U:?k#%~dqDL|fM~">Trigger object to turn red</field>
+          </value>
+          <value name="ID">
+            <shadow type="text" id="Y?B1a)kXXDxa.,Ge`2vu">
+              <field name="TEXT">myElem</field>
+            </shadow>
+            <block type="DOMObjectSelector" id="@`J*8:M[Rzv|Igf3d,Q;">
+              <field name="DOM_OBJECT">BODY</field>
             </block>
           </value>
-          <statement name="DO_OVER">
-            <block type="setHTMLElemStyle" id="/,z$i_BcOKN)Zi|9zSiY">
-              <field name="PROPERTY">cursor</field>
-              <field name="PARENT">FALSE</field>
-              <value name="VALUE">
-                <shadow type="cursorDropdown" id=".IoJ8OrpF7RbeJ|%aK):">
-                  <field name="TEXT">pointer</field>
+          <next>
+            <block type="assignMaterial" id="B4lSp6aUV=C0K~4/|H53">
+              <value name="VALUE2">
+                <shadow type="materialList" id="}ts,@z]H:j=#w5!#+_NI">
+                  <field name="FIELDNAME">toon_shader_red_bright</field>
                 </shadow>
               </value>
-              <value name="ID">
-                <shadow type="text" id="Y?B1a)kXXDxa.,Ge`2vu">
-                  <field name="TEXT">myElem</field>
+              <value name="VALUE1">
+                <shadow type="objectList" id="+|B_Rg4S/4.PHuzq;52k">
+                  <field name="FIELDNAME">&lt;none&gt;</field>
                 </shadow>
-                <block type="DOMObjectSelector" id="@`J*8:M[Rzv|Igf3d,Q;">
-                  <field name="DOM_OBJECT">BODY</field>
+                <block type="groupList" id="==Xt/_upRDw`?IbzNr1G">
+                  <field name="FIELDNAME">wall_covering_kitchen</field>
+                </block>
+              </value>
+            </block>
+          </next>
+        </block>
+      </statement>
+      <statement name="DO_OUT">
+        <block type="controls_if" id="qZq10w2Re31VfX-5DoP_">
+          <mutation else="1"></mutation>
+          <value name="IF0">
+            <block type="logic_compare" id="]OCQtqwZj,tZZ9q[-x[|">
+              <field name="OP">EQ</field>
+              <value name="A">
+                <block type="variables_get" id="so,;h{CFA]agPJVW)lCr">
+                  <field name="VAR" id="gA9wzGBp=$jIX$kXb8%6">room object is selected</field>
+                </block>
+              </value>
+              <value name="B">
+                <block type="logic_boolean" id="`Qq*Q8Hm,FmL9[Q$/uy/">
+                  <field name="BOOL">FALSE</field>
+                </block>
+              </value>
+            </block>
+          </value>
+          <statement name="DO0">
+            <block type="assignMaterial" id="OO;Or/)!3V}L(FBC4ct3">
+              <value name="VALUE2">
+                <shadow type="materialList" id="_zPuq#UBL!gXI2eIi7.n">
+                  <field name="FIELDNAME">toon_shader_white</field>
+                </shadow>
+              </value>
+              <value name="VALUE1">
+                <shadow type="objectList" id="+|B_Rg4S/4.PHuzq;52k">
+                  <field name="FIELDNAME">&lt;none&gt;</field>
+                </shadow>
+                <block type="groupList" id="IYX(GNXj(@tj;^%,~d+h">
+                  <field name="FIELDNAME">wall_covering_kitchen</field>
                 </block>
               </value>
               <next>
-                <block type="assignMaterial" id="B4lSp6aUV=C0K~4/|H53">
-                  <value name="VALUE2">
-                    <shadow type="materialList" id="}ts,@z]H:j=#w5!#+_NI">
-                      <field name="FIELDNAME">toon_shader_red_bright</field>
+                <block type="setHTMLElemStyle" id="e9w@YW8|#p(q~-i|r0lD">
+                  <field name="PROPERTY">cursor</field>
+                  <field name="PARENT">FALSE</field>
+                  <value name="VALUE">
+                    <shadow type="cursorDropdown" id="4nTg-a09x=KF1s#3+X.Y">
+                      <field name="TEXT">default</field>
                     </shadow>
                   </value>
-                  <value name="VALUE1">
-                    <shadow type="objectList" id="+|B_Rg4S/4.PHuzq;52k">
-                      <field name="FIELDNAME">&lt;none&gt;</field>
+                  <value name="ID">
+                    <shadow type="text" id="Y?B1a)kXXDxa.,Ge`2vu">
+                      <field name="TEXT">myElem</field>
                     </shadow>
-                    <block type="variables_get" id="oeVYEJkA;P4;CsO[U;].">
-                      <field name="VAR" id="Hy5Yu4(D{sLgP%{F_S;-">Group object to turn red</field>
+                    <block type="DOMObjectSelector" id="1v4vx}U/=}Ll6hIiptiu">
+                      <field name="DOM_OBJECT">BODY</field>
                     </block>
                   </value>
                 </block>
               </next>
             </block>
           </statement>
-          <statement name="DO_OUT">
-            <block type="controls_if" id="qZq10w2Re31VfX-5DoP_">
-              <mutation else="1"></mutation>
-              <value name="IF0">
-                <block type="logic_compare" id="]OCQtqwZj,tZZ9q[-x[|">
-                  <field name="OP">EQ</field>
-                  <value name="A">
-                    <block type="variables_get" id="so,;h{CFA]agPJVW)lCr">
-                      <field name="VAR" id="gA9wzGBp=$jIX$kXb8%6">room object is selected</field>
-                    </block>
-                  </value>
-                  <value name="B">
-                    <block type="logic_boolean" id="`Qq*Q8Hm,FmL9[Q$/uy/">
-                      <field name="BOOL">FALSE</field>
-                    </block>
-                  </value>
+        </block>
+      </statement>
+      <next>
+        <block type="whenClicked" id="wx{=sftzmkj):kkmP#!Y" inline="false">
+          <mutation xmlns="http://www.w3.org/1999/xhtml" adveventoptions="false" enableifmissed="true"></mutation>
+          <field name="X_RAY">FALSE</field>
+          <field name="DOUBLE_CLICK">FALSE</field>
+          <field name="LEFT_BUTTON">TRUE</field>
+          <field name="MIDDLE_BUTTON">TRUE</field>
+          <field name="RIGHT_BUTTON">TRUE</field>
+          <value name="VALUE">
+            <shadow type="objectList" id="tcuY02B0ZXrON[F[aNG:">
+              <field name="FIELDNAME">&lt;none&gt;</field>
+            </shadow>
+            <block type="objectList" id="OXHn,%,MDj1)R=MimkBt">
+              <field name="FIELDNAME">wall_covering_kitchen_trigger</field>
+            </block>
+          </value>
+          <statement name="DO">
+            <block type="assignMaterial" id="NOZpTbt$gW4b@K3U+j=o">
+              <value name="VALUE2">
+                <shadow type="materialList" id="Ei3yT@2)Q/6=.kAM~MLX">
+                  <field name="FIELDNAME">toon_shader_red_bright</field>
+                </shadow>
+              </value>
+              <value name="VALUE1">
+                <shadow type="objectList" id="+|B_Rg4S/4.PHuzq;52k">
+                  <field name="FIELDNAME">&lt;none&gt;</field>
+                </shadow>
+                <block type="groupList" id="ba*t+peji#^_JktOHfpc">
+                  <field name="FIELDNAME">wall_covering_kitchen</field>
                 </block>
               </value>
-              <statement name="DO0">
-                <block type="assignMaterial" id="OO;Or/)!3V}L(FBC4ct3">
-                  <value name="VALUE2">
-                    <shadow type="materialList" id="_zPuq#UBL!gXI2eIi7.n">
-                      <field name="FIELDNAME">toon_shader_white</field>
-                    </shadow>
-                  </value>
-                  <value name="VALUE1">
-                    <shadow type="objectList" id="+|B_Rg4S/4.PHuzq;52k">
-                      <field name="FIELDNAME">&lt;none&gt;</field>
-                    </shadow>
-                    <block type="variables_get" id="$MI5P`~^WP{c,RijGr-A">
-                      <field name="VAR" id="Hy5Yu4(D{sLgP%{F_S;-">Group object to turn red</field>
+              <next>
+                <block type="variables_set" id="{L}X?!4^xF7$0@Cnq*|t">
+                  <field name="VAR" id="gA9wzGBp=$jIX$kXb8%6">room object is selected</field>
+                  <value name="VALUE">
+                    <block type="logic_boolean" id="Af+}([QJU0`V[wp-g95u">
+                      <field name="BOOL">TRUE</field>
                     </block>
                   </value>
                   <next>
-                    <block type="setHTMLElemStyle" id="e9w@YW8|#p(q~-i|r0lD">
+                    <block type="setHTMLElemStyle" id="-TH3O9N^%c)2U/`M?vA7">
                       <field name="PROPERTY">cursor</field>
                       <field name="PARENT">FALSE</field>
                       <value name="VALUE">
-                        <shadow type="cursorDropdown" id="4nTg-a09x=KF1s#3+X.Y">
+                        <shadow type="cursorDropdown" id="psJVkj~35vXo`!3rm+%w">
                           <field name="TEXT">default</field>
                         </shadow>
                       </value>
@@ -6216,144 +6289,43 @@
                         <shadow type="text" id="Y?B1a)kXXDxa.,Ge`2vu">
                           <field name="TEXT">myElem</field>
                         </shadow>
-                        <block type="DOMObjectSelector" id="1v4vx}U/=}Ll6hIiptiu">
+                        <block type="DOMObjectSelector" id="#xzx.#u[vf9YP8MhYHz+">
                           <field name="DOM_OBJECT">BODY</field>
                         </block>
                       </value>
                     </block>
                   </next>
                 </block>
-              </statement>
+              </next>
             </block>
           </statement>
-          <next>
-            <block type="whenClicked" id="wx{=sftzmkj):kkmP#!Y" inline="false">
-              <mutation xmlns="http://www.w3.org/1999/xhtml" adveventoptions="false" enableifmissed="true"></mutation>
-              <field name="X_RAY">FALSE</field>
-              <field name="DOUBLE_CLICK">FALSE</field>
-              <field name="LEFT_BUTTON">TRUE</field>
-              <field name="MIDDLE_BUTTON">TRUE</field>
-              <field name="RIGHT_BUTTON">TRUE</field>
-              <value name="VALUE">
-                <shadow type="objectList" id="tcuY02B0ZXrON[F[aNG:">
+          <statement name="IF_MISSED_DO">
+            <block type="assignMaterial" id="Mp-tOFo]7[0w1P}-$WhO">
+              <value name="VALUE2">
+                <shadow type="materialList" id="|5AyG{irl@nk`9S(2uj9">
+                  <field name="FIELDNAME">toon_shader_white</field>
+                </shadow>
+              </value>
+              <value name="VALUE1">
+                <shadow type="objectList" id="+|B_Rg4S/4.PHuzq;52k">
                   <field name="FIELDNAME">&lt;none&gt;</field>
                 </shadow>
-                <block type="variables_get" id="wb)stK,5Fn?5Vc}J(O^[">
-                  <field name="VAR" id="HJ_X/U:?k#%~dqDL|fM~">Trigger object to turn red</field>
+                <block type="groupList" id="PcCxb(/l,OKZW^ZTHMXW">
+                  <field name="FIELDNAME">wall_covering_kitchen</field>
                 </block>
               </value>
-              <statement name="DO">
-                <block type="assignMaterial" id="NOZpTbt$gW4b@K3U+j=o">
-                  <value name="VALUE2">
-                    <shadow type="materialList" id="Ei3yT@2)Q/6=.kAM~MLX">
-                      <field name="FIELDNAME">toon_shader_red_bright</field>
-                    </shadow>
-                  </value>
-                  <value name="VALUE1">
-                    <shadow type="objectList" id="+|B_Rg4S/4.PHuzq;52k">
-                      <field name="FIELDNAME">&lt;none&gt;</field>
-                    </shadow>
-                    <block type="variables_get" id="|5)dZcKm?)uT+NVQ=|K:">
-                      <field name="VAR" id="Hy5Yu4(D{sLgP%{F_S;-">Group object to turn red</field>
+              <next>
+                <block type="variables_set" id="`9X!T`Oat3~dYHFyx,Bf">
+                  <field name="VAR" id="gA9wzGBp=$jIX$kXb8%6">room object is selected</field>
+                  <value name="VALUE">
+                    <block type="logic_boolean" id="!]Qn4|O}xKFa;vKok,@b">
+                      <field name="BOOL">FALSE</field>
                     </block>
                   </value>
-                  <next>
-                    <block type="variables_set" id="{L}X?!4^xF7$0@Cnq*|t">
-                      <field name="VAR" id="gA9wzGBp=$jIX$kXb8%6">room object is selected</field>
-                      <value name="VALUE">
-                        <block type="logic_boolean" id="Af+}([QJU0`V[wp-g95u">
-                          <field name="BOOL">TRUE</field>
-                        </block>
-                      </value>
-                      <next>
-                        <block type="setHTMLElemStyle" id="-TH3O9N^%c)2U/`M?vA7">
-                          <field name="PROPERTY">cursor</field>
-                          <field name="PARENT">FALSE</field>
-                          <value name="VALUE">
-                            <shadow type="cursorDropdown" id="psJVkj~35vXo`!3rm+%w">
-                              <field name="TEXT">default</field>
-                            </shadow>
-                          </value>
-                          <value name="ID">
-                            <shadow type="text" id="Y?B1a)kXXDxa.,Ge`2vu">
-                              <field name="TEXT">myElem</field>
-                            </shadow>
-                            <block type="DOMObjectSelector" id="#xzx.#u[vf9YP8MhYHz+">
-                              <field name="DOM_OBJECT">BODY</field>
-                            </block>
-                          </value>
-                        </block>
-                      </next>
-                    </block>
-                  </next>
                 </block>
-              </statement>
-              <statement name="IF_MISSED_DO">
-                <block type="assignMaterial" id="Mp-tOFo]7[0w1P}-$WhO">
-                  <value name="VALUE2">
-                    <shadow type="materialList" id="|5AyG{irl@nk`9S(2uj9">
-                      <field name="FIELDNAME">toon_shader_white</field>
-                    </shadow>
-                  </value>
-                  <value name="VALUE1">
-                    <shadow type="objectList" id="+|B_Rg4S/4.PHuzq;52k">
-                      <field name="FIELDNAME">&lt;none&gt;</field>
-                    </shadow>
-                    <block type="variables_get" id="Qe=iR;-TdD$-cib`S@1=">
-                      <field name="VAR" id="Hy5Yu4(D{sLgP%{F_S;-">Group object to turn red</field>
-                    </block>
-                  </value>
-                  <next>
-                    <block type="variables_set" id="`9X!T`Oat3~dYHFyx,Bf">
-                      <field name="VAR" id="gA9wzGBp=$jIX$kXb8%6">room object is selected</field>
-                      <value name="VALUE">
-                        <block type="logic_boolean" id="!]Qn4|O}xKFa;vKok,@b">
-                          <field name="BOOL">FALSE</field>
-                        </block>
-                      </value>
-                    </block>
-                  </next>
-                </block>
-              </statement>
+              </next>
             </block>
-          </next>
-        </block>
-      </statement>
-    </block>
-    <block xmlns="https://developers.google.com/blockly/xml" type="variables_get" id="YqIk?03TggsL}Cg)-09I" x="10410" y="2290">
-      <field name="VAR" id="gA9wzGBp=$jIX$kXb8%6">room object is selected</field>
-    </block>
-    <block xmlns="https://developers.google.com/blockly/xml" type="procedures_callnoreturn" id="F}j7SVtLcKnSxc6CgG1=" x="10210" y="2590">
-      <mutation name="Turn object red when hovered">
-        <arg name="Trigger object to turn red"></arg>
-        <arg name="Group object to turn red"></arg>
-      </mutation>
-      <value name="ARG0">
-        <block type="objectList" id="I0H:F3i~Thb[|WAg~;}4">
-          <field name="FIELDNAME">wall_covering_kitchen_trigger</field>
-        </block>
-      </value>
-      <value name="ARG1">
-        <block type="groupList" id="ba*t+peji#^_JktOHfpc">
-          <field name="FIELDNAME">wall_covering_kitchen</field>
-        </block>
-      </value>
-      <next>
-        <block type="procedures_callnoreturn" id=".bwV0dS~eK(}it{O%!~~">
-          <mutation name="Turn object red when hovered">
-            <arg name="Trigger object to turn red"></arg>
-            <arg name="Group object to turn red"></arg>
-          </mutation>
-          <value name="ARG0">
-            <block type="objectList" id="^=~P{R6=[;S@Uf%*fCWS">
-              <field name="FIELDNAME">radiator_kitchen_trigger</field>
-            </block>
-          </value>
-          <value name="ARG1">
-            <block type="groupList" id="2Up29vZ2TqquV1kr@guP">
-              <field name="FIELDNAME">radiator_kitchen</field>
-            </block>
-          </value>
+          </statement>
         </block>
       </next>
     </block>

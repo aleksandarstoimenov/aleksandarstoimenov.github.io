@@ -42,7 +42,7 @@
       <field name="FADE_ANNOTATIONS">TRUE</field>
     </block>
   </tab>
-  <tab name="New Tab" type="CommonTab" active="true" scrollx="-3586.0864873425817" scrolly="-2.3317149916738344" scale="0.6139132535407592">
+  <tab name="New Tab" type="CommonTab" active="true" scrollx="-6722.691040039066" scrolly="-421.80786132812545" scale="1">
     <variables xmlns="https://developers.google.com/blockly/xml">
       <variable id="j/HUb@Mn9F_XrMhZQS[b">animations_except_attic_room</variable>
       <variable id="J6oW`R0+@yA6=I_KCzo)">furniture_triggers</variable>
