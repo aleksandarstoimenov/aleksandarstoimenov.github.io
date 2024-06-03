@@ -1,5 +1,5 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <tab name="Init" type="InitTab" active="false" scrollx="743.4860229492188" scrolly="-250" scale="1">
+  <tab name="Init" type="InitTab" active="false" scrollx="302" scrolly="-250" scale="1">
     <block xmlns="https://developers.google.com/blockly/xml" type="initPreloader" id="BNy-![:j+%#?R05x(Xxc" x="250" y="250">
       <statement name="DO_END">
         <block type="setHTMLElemStyle" id="#v#c1k8x7{4Yds4!!s^P">
@@ -42,7 +42,7 @@
       <field name="FADE_ANNOTATIONS">TRUE</field>
     </block>
   </tab>
-  <tab name="New Tab" type="CommonTab" active="true" scrollx="-3586.0864873425817" scrolly="-2.3317149916738344" scale="0.6139132535407592">
+  <tab name="New Tab" type="CommonTab" active="true" scrollx="1806.5018310546875" scrolly="2730.188232421875" scale="1">
     <variables xmlns="https://developers.google.com/blockly/xml">
       <variable id="j/HUb@Mn9F_XrMhZQS[b">animations_except_attic_room</variable>
       <variable id="J6oW`R0+@yA6=I_KCzo)">furniture_triggers</variable>
@@ -728,7 +728,7 @@
     <block xmlns="https://developers.google.com/blockly/xml" type="setScreenScale" id="/2f@p6H[lZtuO/`bB+VN" x="-1570" y="-2410">
       <value name="FACTOR">
         <shadow type="math_number" id="Q4UhUFWV4X/0aO=){H9;">
-          <field name="NUM">1.5</field>
+          <field name="NUM">4</field>
         </shadow>
       </value>
     </block>
@@ -3749,87 +3749,107 @@
                 </block>
               </value>
               <statement name="DO">
-                <block type="setHTMLElemStyle" id="]uy4NRuB`d!6~cJxW47+">
-                  <field name="PROPERTY">cursor</field>
-                  <field name="PARENT">FALSE</field>
-                  <value name="VALUE">
-                    <shadow type="cursorDropdown" id="%aQe;2WV-Xwhf]@RkBh7">
-                      <field name="TEXT">pointer</field>
-                    </shadow>
-                  </value>
-                  <value name="ID">
-                    <shadow type="text" id="Y?B1a)kXXDxa.,Ge`2vu">
-                      <field name="TEXT">myElem</field>
-                    </shadow>
-                    <block type="DOMObjectSelector" id="_Ow1|iG-+$6keL6LBBht">
-                      <field name="DOM_OBJECT">BODY</field>
-                    </block>
-                  </value>
-                  <next>
-                    <block type="setAnimationSpeed" id="kymiY+wqq87G+2P8ZG:w">
-                      <field name="REVERSED">FALSE</field>
-                      <value name="VALUE">
-                        <shadow type="animationList" id="}Ef3;:X2qfy`3s=9#iNS">
-                          <field name="FIELDNAME">&lt;none&gt;</field>
-                        </shadow>
-                        <block type="getAnimations" id="(d@+-)=!.%Cx.EM%s/rJ">
-                          <value name="OBJECTINPUT">
-                            <shadow type="objectList" id="lI|l~xgLZI%eWJF(q=5i">
-                              <field name="FIELDNAME">&lt;none&gt;</field>
-                            </shadow>
-                            <block type="variables_get" id="Kri@t}yg26H9vO332JaO">
-                              <field name="VAR" id="cp+/$S}6Te)WAeiNfrcH">Which room to trigger hoover animation?</field>
-                            </block>
-                          </value>
+                <block type="controls_if" id="Fe8kMyw;hwYXzaCmn1Bc">
+                  <mutation else="1"></mutation>
+                  <value name="IF0">
+                    <block type="logic_compare" id="{LU@|yU!p8{JIHEk~Sg+">
+                      <field name="OP">EQ</field>
+                      <value name="A">
+                        <block type="variables_get" id="|kKD(x6~V_2|DX$X4CvF">
+                          <field name="VAR" id="J@FII3x]r![1`]rdXcK,">zoomed_in</field>
                         </block>
                       </value>
-                      <value name="SPEED">
-                        <shadow type="math_number" id=".{Hl`_c~A^tu*dq*HFug">
-                          <field name="NUM">2</field>
+                      <value name="B">
+                        <block type="logic_boolean" id="DO8X6!-R{BVZ~nWRv-u@">
+                          <field name="BOOL">FALSE</field>
+                        </block>
+                      </value>
+                    </block>
+                  </value>
+                  <statement name="DO0">
+                    <block type="setHTMLElemStyle" id="}_|vH7vou/mH_._v]2#)">
+                      <field name="PROPERTY">cursor</field>
+                      <field name="PARENT">FALSE</field>
+                      <value name="VALUE">
+                        <shadow type="cursorDropdown" id="B:cZ8O#U*:*qvv,c%,{e">
+                          <field name="TEXT">pointer</field>
                         </shadow>
                       </value>
+                      <value name="ID">
+                        <shadow type="text" id="Y?B1a)kXXDxa.,Ge`2vu">
+                          <field name="TEXT">myElem</field>
+                        </shadow>
+                        <block type="DOMObjectSelector" id="WFu5^b%PO{MDClr4,;q5">
+                          <field name="DOM_OBJECT">BODY</field>
+                        </block>
+                      </value>
                       <next>
-                        <block type="playAnimationAdv" id="obVFHxWJLK?;Yof|Zs96">
-                          <mutation xmlns="http://www.w3.org/1999/xhtml" advplaybackoptions="true" enablewhenfinished="false"></mutation>
+                        <block type="setAnimationSpeed" id="/Q*`^w|(p.Xy(jS!a7im">
                           <field name="REVERSED">FALSE</field>
-                          <field name="LOOP">LoopOnce</field>
                           <value name="VALUE">
-                            <shadow type="animationList" id="P_-(U*$.o]8^-itpTSu,">
+                            <shadow type="animationList" id="}Ef3;:X2qfy`3s=9#iNS">
                               <field name="FIELDNAME">&lt;none&gt;</field>
                             </shadow>
-                            <block type="getAnimations" id="gp^aRI+|l%nv_%u?)WJr">
+                            <block type="getAnimations" id="!|tY%lL9W?S0T8i:MKY4">
                               <value name="OBJECTINPUT">
-                                <shadow type="objectList" id="{JD9~vpKL~A8q.bI1LaF">
+                                <shadow type="objectList" id="lI|l~xgLZI%eWJF(q=5i">
                                   <field name="FIELDNAME">&lt;none&gt;</field>
                                 </shadow>
-                                <block type="variables_get" id="p(x8ry-:#{plEkqq.7dE">
+                                <block type="variables_get" id=":v-I*!8R8MuvSdan7t1s">
                                   <field name="VAR" id="cp+/$S}6Te)WAeiNfrcH">Which room to trigger hoover animation?</field>
                                 </block>
                               </value>
                             </block>
                           </value>
-                          <value name="FROM">
-                            <shadow type="math_number" id="|eJ-PSn7mR!a*DcTQ(4B">
-                              <field name="NUM">0</field>
-                            </shadow>
-                          </value>
-                          <value name="TO">
-                            <shadow type="math_number" id="d^;QURkQ+|$|h7+}DTv1">
-                              <field name="NUM">20</field>
-                            </shadow>
-                            <block type="variables_get" id="gWYG=l;myI4dnLv2UP:q">
-                              <field name="VAR" id="+X/(IbEgDFZlRBeEfdlP">room_animation_duration</field>
-                            </block>
-                          </value>
                           <value name="SPEED">
-                            <shadow type="math_number" id="jy{_D2w*dwWZft#G;-?n">
+                            <shadow type="math_number" id="iyMjyV$MSaMejQ6w(V)f">
                               <field name="NUM">2</field>
                             </shadow>
                           </value>
+                          <next>
+                            <block type="playAnimationAdv" id=")}%rvNRrkvOeXF_em[wn">
+                              <mutation xmlns="http://www.w3.org/1999/xhtml" advplaybackoptions="true" enablewhenfinished="false"></mutation>
+                              <field name="REVERSED">FALSE</field>
+                              <field name="LOOP">LoopOnce</field>
+                              <value name="VALUE">
+                                <shadow type="animationList" id="P_-(U*$.o]8^-itpTSu,">
+                                  <field name="FIELDNAME">&lt;none&gt;</field>
+                                </shadow>
+                                <block type="getAnimations" id="Q=}`~oT,~{@..|8L.8YC">
+                                  <value name="OBJECTINPUT">
+                                    <shadow type="objectList" id="{JD9~vpKL~A8q.bI1LaF">
+                                      <field name="FIELDNAME">&lt;none&gt;</field>
+                                    </shadow>
+                                    <block type="variables_get" id="C=^99[Wf#=SYJp?Ne.~-">
+                                      <field name="VAR" id="cp+/$S}6Te)WAeiNfrcH">Which room to trigger hoover animation?</field>
+                                    </block>
+                                  </value>
+                                </block>
+                              </value>
+                              <value name="FROM">
+                                <shadow type="math_number" id="5Jqm0-D,c^JuMkP3?@E8">
+                                  <field name="NUM">0</field>
+                                </shadow>
+                              </value>
+                              <value name="TO">
+                                <shadow type="math_number" id="d^;QURkQ+|$|h7+}DTv1">
+                                  <field name="NUM">20</field>
+                                </shadow>
+                                <block type="variables_get" id="V1Q8ib?=iUpW**kciAWj">
+                                  <field name="VAR" id="+X/(IbEgDFZlRBeEfdlP">room_animation_duration</field>
+                                </block>
+                              </value>
+                              <value name="SPEED">
+                                <shadow type="math_number" id="9XuTZ)IvG^!Kvf*(Ss2*">
+                                  <field name="NUM">2</field>
+                                </shadow>
+                              </value>
+                            </block>
+                          </next>
                         </block>
                       </next>
                     </block>
-                  </next>
+                  </statement>
                 </block>
               </statement>
               <next>
@@ -3845,111 +3865,131 @@
                     </block>
                   </value>
                   <statement name="DO">
-                    <block type="setHTMLElemStyle" id="WXCB8@qV~S-7S/Tbd1`2">
-                      <field name="PROPERTY">cursor</field>
-                      <field name="PARENT">FALSE</field>
-                      <value name="VALUE">
-                        <shadow type="cursorDropdown" id="{vh4[FHM{w*om76.e5r9">
-                          <field name="TEXT">default</field>
-                        </shadow>
-                      </value>
-                      <value name="ID">
-                        <shadow type="text" id="ipJ^u%bG_jSJt/z=|E(#">
-                          <field name="TEXT">myElem</field>
-                        </shadow>
-                        <block type="DOMObjectSelector" id="kmG7KxkE^6%l2Oht-7lh">
-                          <field name="DOM_OBJECT">BODY</field>
-                        </block>
-                      </value>
-                      <next>
-                        <block type="controls_if" id="`[JRPD5{|2U;Yya*5x=s">
-                          <mutation else="1"></mutation>
-                          <value name="IF0">
-                            <block type="isAnimationPlaying" id="mk8cNHBR90;7ql0B9.Gs">
-                              <value name="VALUE">
-                                <shadow type="animationList" id="gRGMq)G^K0==z*Jv{({2">
-                                  <field name="FIELDNAME">&lt;none&gt;</field>
-                                </shadow>
-                                <block type="getAnimations" id="3d+Q!EUUKUpyWtI3u=NS">
-                                  <value name="OBJECTINPUT">
-                                    <shadow type="objectList" id="f}[.jJ}!,bv]7=~jjIHB">
-                                      <field name="FIELDNAME">&lt;none&gt;</field>
-                                    </shadow>
-                                    <block type="variables_get" id="OQoW%ZH8f%a2#^y6MNX2">
-                                      <field name="VAR" id="cp+/$S}6Te)WAeiNfrcH">Which room to trigger hoover animation?</field>
-                                    </block>
-                                  </value>
-                                </block>
-                              </value>
+                    <block type="controls_if" id="QA]0R~HvGgvl*{oHZ949">
+                      <mutation else="1"></mutation>
+                      <value name="IF0">
+                        <block type="logic_compare" id="#z=}6VnD2.iaB?1nvCwL">
+                          <field name="OP">EQ</field>
+                          <value name="A">
+                            <block type="variables_get" id="D?uLq~,i)xb}dYte;_fr">
+                              <field name="VAR" id="J@FII3x]r![1`]rdXcK,">zoomed_in</field>
                             </block>
                           </value>
-                          <statement name="DO0">
-                            <block type="setAnimationSpeed" id="Nd(kJVDR$7w,,oNqWG4X">
-                              <field name="REVERSED">TRUE</field>
-                              <value name="VALUE">
-                                <shadow type="animationList" id="}Ef3;:X2qfy`3s=9#iNS">
-                                  <field name="FIELDNAME">&lt;none&gt;</field>
-                                </shadow>
-                                <block type="getAnimations" id="k(-2[!ug0-.9j`@jGLcu">
-                                  <value name="OBJECTINPUT">
-                                    <shadow type="objectList" id="[gS_70}uX{Wj4@OyB-X;">
-                                      <field name="FIELDNAME">&lt;none&gt;</field>
-                                    </shadow>
-                                    <block type="variables_get" id="b0TDA(}^/cRe^QSBSq!H">
-                                      <field name="VAR" id="cp+/$S}6Te)WAeiNfrcH">Which room to trigger hoover animation?</field>
-                                    </block>
-                                  </value>
-                                </block>
-                              </value>
-                              <value name="SPEED">
-                                <shadow type="math_number" id="vyPzR`Hne0xK?w~_~fJE">
-                                  <field name="NUM">2</field>
-                                </shadow>
-                              </value>
+                          <value name="B">
+                            <block type="logic_boolean" id="AVR}Ro@8;IpM{uqvLin~">
+                              <field name="BOOL">FALSE</field>
                             </block>
-                          </statement>
-                          <statement name="ELSE">
-                            <block type="playAnimationAdv" id="|_pk`AGD2gozFym=*tUH">
-                              <mutation xmlns="http://www.w3.org/1999/xhtml" advplaybackoptions="true" enablewhenfinished="false"></mutation>
-                              <field name="REVERSED">TRUE</field>
-                              <field name="LOOP">LoopOnce</field>
-                              <value name="VALUE">
-                                <shadow type="animationList" id="P_-(U*$.o]8^-itpTSu,">
-                                  <field name="FIELDNAME">&lt;none&gt;</field>
-                                </shadow>
-                                <block type="getAnimations" id="DTkeO7H4Y6~uvcPbhcmh">
-                                  <value name="OBJECTINPUT">
-                                    <shadow type="objectList" id="83bN~Fg2I3nMF(-g%;^d">
-                                      <field name="FIELDNAME">&lt;none&gt;</field>
-                                    </shadow>
-                                    <block type="variables_get" id="g_`W2--tmE;G@8R9x1qA">
-                                      <field name="VAR" id="cp+/$S}6Te)WAeiNfrcH">Which room to trigger hoover animation?</field>
-                                    </block>
-                                  </value>
-                                </block>
-                              </value>
-                              <value name="FROM">
-                                <shadow type="math_number" id="u+sUgKUEJ277w=8{?s2M">
-                                  <field name="NUM">0</field>
-                                </shadow>
-                              </value>
-                              <value name="TO">
-                                <shadow type="math_number" id="[hvUgij;./ng,iD}5=t?">
-                                  <field name="NUM">20</field>
-                                </shadow>
-                                <block type="variables_get" id="D3)(2{ok:zR+Qou7i4~N">
-                                  <field name="VAR" id="+X/(IbEgDFZlRBeEfdlP">room_animation_duration</field>
-                                </block>
-                              </value>
-                              <value name="SPEED">
-                                <shadow type="math_number" id="z7J{v#(.@u=lEs,cUtg6">
-                                  <field name="NUM">2</field>
-                                </shadow>
-                              </value>
-                            </block>
-                          </statement>
+                          </value>
                         </block>
-                      </next>
+                      </value>
+                      <statement name="DO0">
+                        <block type="setHTMLElemStyle" id="I:j0DF:_R#Ac2Y0JK-@V">
+                          <field name="PROPERTY">cursor</field>
+                          <field name="PARENT">FALSE</field>
+                          <value name="VALUE">
+                            <shadow type="cursorDropdown" id="Ey#YqxPft4WGi(D78N|0">
+                              <field name="TEXT">default</field>
+                            </shadow>
+                          </value>
+                          <value name="ID">
+                            <shadow type="text" id="ipJ^u%bG_jSJt/z=|E(#">
+                              <field name="TEXT">myElem</field>
+                            </shadow>
+                            <block type="DOMObjectSelector" id="5WBU-bD*#yA;V-[gUWK^">
+                              <field name="DOM_OBJECT">BODY</field>
+                            </block>
+                          </value>
+                          <next>
+                            <block type="controls_if" id="Rv=%Z*d=1}9Y^!B9tRsq">
+                              <mutation else="1"></mutation>
+                              <value name="IF0">
+                                <block type="isAnimationPlaying" id=";q(cp1}[|8Yq:w~gj8gN">
+                                  <value name="VALUE">
+                                    <shadow type="animationList" id="gRGMq)G^K0==z*Jv{({2">
+                                      <field name="FIELDNAME">&lt;none&gt;</field>
+                                    </shadow>
+                                    <block type="getAnimations" id="3zyG~1j)H5513ecFAmvZ">
+                                      <value name="OBJECTINPUT">
+                                        <shadow type="objectList" id="f}[.jJ}!,bv]7=~jjIHB">
+                                          <field name="FIELDNAME">&lt;none&gt;</field>
+                                        </shadow>
+                                        <block type="variables_get" id="u?fk.=uMu-1~+M:ao?;[">
+                                          <field name="VAR" id="cp+/$S}6Te)WAeiNfrcH">Which room to trigger hoover animation?</field>
+                                        </block>
+                                      </value>
+                                    </block>
+                                  </value>
+                                </block>
+                              </value>
+                              <statement name="DO0">
+                                <block type="setAnimationSpeed" id="AX{U@!tjGO(Pm-=g]+I#">
+                                  <field name="REVERSED">TRUE</field>
+                                  <value name="VALUE">
+                                    <shadow type="animationList" id="}Ef3;:X2qfy`3s=9#iNS">
+                                      <field name="FIELDNAME">&lt;none&gt;</field>
+                                    </shadow>
+                                    <block type="getAnimations" id="AVZ?5vHh-BT$*7P|DGd=">
+                                      <value name="OBJECTINPUT">
+                                        <shadow type="objectList" id="[gS_70}uX{Wj4@OyB-X;">
+                                          <field name="FIELDNAME">&lt;none&gt;</field>
+                                        </shadow>
+                                        <block type="variables_get" id="3;#K=TU1:xHWs`0`J:?t">
+                                          <field name="VAR" id="cp+/$S}6Te)WAeiNfrcH">Which room to trigger hoover animation?</field>
+                                        </block>
+                                      </value>
+                                    </block>
+                                  </value>
+                                  <value name="SPEED">
+                                    <shadow type="math_number" id="dej.CPtcadrL7YAU5S.(">
+                                      <field name="NUM">2</field>
+                                    </shadow>
+                                  </value>
+                                </block>
+                              </statement>
+                              <statement name="ELSE">
+                                <block type="playAnimationAdv" id="Mb]HK%DXTU*xN;j=/[mf">
+                                  <mutation xmlns="http://www.w3.org/1999/xhtml" advplaybackoptions="true" enablewhenfinished="false"></mutation>
+                                  <field name="REVERSED">TRUE</field>
+                                  <field name="LOOP">LoopOnce</field>
+                                  <value name="VALUE">
+                                    <shadow type="animationList" id="P_-(U*$.o]8^-itpTSu,">
+                                      <field name="FIELDNAME">&lt;none&gt;</field>
+                                    </shadow>
+                                    <block type="getAnimations" id=",3p|Q:fEr(wen,XLQi9,">
+                                      <value name="OBJECTINPUT">
+                                        <shadow type="objectList" id="83bN~Fg2I3nMF(-g%;^d">
+                                          <field name="FIELDNAME">&lt;none&gt;</field>
+                                        </shadow>
+                                        <block type="variables_get" id="j_,WA/zvaqS*!jr3AO3o">
+                                          <field name="VAR" id="cp+/$S}6Te)WAeiNfrcH">Which room to trigger hoover animation?</field>
+                                        </block>
+                                      </value>
+                                    </block>
+                                  </value>
+                                  <value name="FROM">
+                                    <shadow type="math_number" id="bG7luq(pzPelATxp$fr*">
+                                      <field name="NUM">0</field>
+                                    </shadow>
+                                  </value>
+                                  <value name="TO">
+                                    <shadow type="math_number" id="[hvUgij;./ng,iD}5=t?">
+                                      <field name="NUM">20</field>
+                                    </shadow>
+                                    <block type="variables_get" id="!1HN2l3GySwQb)]dqItj">
+                                      <field name="VAR" id="+X/(IbEgDFZlRBeEfdlP">room_animation_duration</field>
+                                    </block>
+                                  </value>
+                                  <value name="SPEED">
+                                    <shadow type="math_number" id="u9)f(=;`}j?/k20,r*N.">
+                                      <field name="NUM">2</field>
+                                    </shadow>
+                                  </value>
+                                </block>
+                              </statement>
+                            </block>
+                          </next>
+                        </block>
+                      </statement>
                     </block>
                   </statement>
                 </block>

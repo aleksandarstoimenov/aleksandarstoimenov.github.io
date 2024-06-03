@@ -270,7 +270,8 @@ body {
 .flex-container {
   display: flex;
   flex-direction: row; /* or column, depending on your layout */
-  height: 800px;
+  height: 100dvh;
+  max-height: 800px;
   width: 100vw;
   max-width: 1920px;
   position: absolute;
