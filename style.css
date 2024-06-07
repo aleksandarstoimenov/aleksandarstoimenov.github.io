@@ -381,6 +381,7 @@ body {
 ul li{
   list-style-type: none; /* Remove default bullets */
   max-width: calc(100% - 20px);
+  margin-bottom: 20px;
 }
 
 ul li::before {
@@ -464,6 +465,8 @@ iframe {
   ul li{
     list-style-type: none; /* Remove default bullets */
     max-width: calc(100% - 20px);
+    line-height: 14pt;
+    margin-bottom: 20px;
   }
 
   ul li::before {
