@@ -105,15 +105,15 @@ body {
 .lds-ellipsis {
   display: inline-block;
   position: relative;
-  width: 30px;
-  height: 30px;
+  width: 10px;
+  height: 10px;
   margin-top: 22px;
 }
 .lds-ellipsis div {
   position: absolute;
   top: 33px;
-  width: 13px;
-  height: 13px;
+  width: 8px;
+  height: 8px;
   border-radius: 50%;
   background: #1a1a1a;
   animation-timing-function: cubic-bezier(0, 1, 1, 0);
