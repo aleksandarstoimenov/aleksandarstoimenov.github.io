@@ -42,10 +42,8 @@
       <field name="FADE_ANNOTATIONS">TRUE</field>
     </block>
   </tab>
-  <tab name="New Tab" type="CommonTab" active="true" scrollx="-699.0198588792555" scrolly="298.42508791860155" scale="0.4886683880332325">
+  <tab name="New Tab" type="CommonTab" active="true" scrollx="2146.574462890625" scrolly="761.7472534179688" scale="1">
     <variables xmlns="https://developers.google.com/blockly/xml">
-      <variable id="j/HUb@Mn9F_XrMhZQS[b">animations_except_attic_room</variable>
-      <variable id="J6oW`R0+@yA6=I_KCzo)">furniture_triggers</variable>
       <variable id="60tdU/T30Qk7^c|n(d:B">Which room trigger?</variable>
       <variable id="$i%?MtHh75[0Mf82h4AF">Which megamenu trigger?</variable>
       <variable id=")!VwqeCAsCHcRL_{y7:a">Which animation to play? (all the rooms - current one)</variable>
@@ -55,19 +53,21 @@
       <variable id="ksvD3n81F4eg*~qwdV,e">Which room to reverse hover animation?</variable>
       <variable id="{YSCnzanX_Ix(f!@^r`E">Pop Up for specific room</variable>
       <variable id="cp+/$S}6Te)WAeiNfrcH">Which room to trigger hoover animation?</variable>
+      <variable id="j/HUb@Mn9F_XrMhZQS[b">animations_except_attic_room</variable>
+      <variable id="J6oW`R0+@yA6=I_KCzo)">furniture_triggers</variable>
       <variable id="{(w!oho~6U?K|A?KJo~l">allow_background_click</variable>
       <variable id="HJ_X/U:?k#%~dqDL|fM~">Trigger object to turn red</variable>
       <variable id="Hy5Yu4(D{sLgP%{F_S;-">Group object to turn red</variable>
       <variable id="gyOq4#,Y[MKk#3-}Sf(!">Which menu trigger for red hover?</variable>
       <variable id="v.Xf?aMII{Cz9uMHLfYu">paragraph_text</variable>
       <variable id="3SP^rAs6M-uE*s5n5r,|">Which arrow to go back?</variable>
+      <variable id="=(+qR]-%^f@x)hzYa``T">Can I hover over the room?</variable>
       <variable id="U~)`(c^[rvq;pQ31M{,t">What is the current camera?</variable>
       <variable id="7UegB-]uhENyB]8saN4z">Which animation to play? (all rooms - the current one)</variable>
       <variable id="MVm!|Ti{MzL[z(LZ]`O,">Is there a wall? (zoom out)</variable>
       <variable id="J@FII3x]r![1`]rdXcK,">zoomed_in</variable>
       <variable id="KNg=ZRDon@m+J4F;c`^5">Which room is hoovered?</variable>
       <variable id="U;CKWy,0W(X}ZJ)U1.KM">Which html element is hovered?</variable>
-      <variable id="=(+qR]-%^f@x)hzYa``T">Can I hover over the room?</variable>
       <variable id="tP6:wE0I=7+Bs0KCY,y7">animations_except_bathroom</variable>
       <variable id="dvX?DWjvdey/WczArs@m">room_animation_triggers</variable>
       <variable id=":`=hU#np!zKIqRl,TMcW">room_animation_frame</variable>
@@ -76,12 +76,12 @@
       <variable id="]CgrD`v4[icHgPAQpA)@">animations_except_toilet</variable>
       <variable id="Y7{d)3djf-@UHP5P#/%/">rooms_disapearing_duration</variable>
       <variable id="OMX4#QH(60m=;J3h+~Eu">Which trigger object has been clicked ?</variable>
-      <variable id="h*`_i5}9Wc+#{#_5[qKy">animations_except_bedroom</variable>
       <variable id="txfEx.S%54273d7LVbI*">current_camera</variable>
+      <variable id="h*`_i5}9Wc+#{#_5[qKy">animations_except_bedroom</variable>
       <variable id="W|V-M|WqX]y(D7sKQh$C">camera_animation_duration</variable>
       <variable id="*ktyn%:F:%6)Ai!AOEdJ">animations_except_entrance</variable>
-      <variable id=".Qv7z%l?FR3pGgg*VHRs">animations_except_living_room</variable>
       <variable id="Irn_@T!NyVG-A]^C!]L5">Previous trigger that has been clicked</variable>
+      <variable id=".Qv7z%l?FR3pGgg*VHRs">animations_except_living_room</variable>
       <variable id="J=+jfi#[)c.pbdWmHM.c">Previous room that is in hovered state?</variable>
       <variable id="9T6m^E915Flb_^/#|`xA">animations_except_kitchen</variable>
       <variable id="bv}A06|+kF)I-qyVs9nF">animations_except_boiler_room</variable>
@@ -4067,7 +4067,7 @@
         <block type="setScreenScale" id="4@:z(~t8SBSf/YrhnD^r">
           <value name="FACTOR">
             <shadow type="math_number" id="=R4SiU}_{micM{G9o:^@">
-              <field name="NUM">1.5</field>
+              <field name="NUM">2</field>
             </shadow>
           </value>
         </block>
