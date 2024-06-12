@@ -295,6 +295,7 @@ body {
     display: block;
     overflow: auto; /* Enable scrolling */
     display: block;
+    min-width: 500px;
 }
 
 #text-block {
@@ -305,7 +306,8 @@ body {
     transition: opacity 0.2s ease-out, transform 2s ease;
     animation-duration: 4s;
     position: absolute;
-    width: calc(100% - 40px);
+    width: calc(100% - 80px);
+    left: 40px;
 }
 
 #popup_room {
@@ -322,7 +324,7 @@ body {
     font-family: 'GillSansBold';
     max-width: 100%;
     color: #C20016;
-    font-size: 35px;
+    font-size: 16pt;
     padding-top: 5px;
 }
 
@@ -355,14 +357,14 @@ body {
   max-width: 100%;
   color: #C20016;
   font-size: 15pt;
-  padding-bottom: 20px;
+  padding-bottom: 0px;
 }
 
 .popup_naviguation_chambre{
   font-family: 'GillSansSemiBold';
   max-width: 100%;
   color: #282828;
-  font-size: 18px;
+  font-size: 12pt;
   cursor: pointer;
 }
 
@@ -372,9 +374,9 @@ body {
 }
 
 #popup_paragraph{
-  font-family: 'GillSansSemiBold';
+  font-family: 'OpenSans';
   width: 100%;
-  font-size: 12pt;
+  font-size: 11pt;
   padding-left: 15px ;
 }
 
@@ -426,13 +428,18 @@ iframe {
   #text-container {
       flex: 1;
       height: 100%;
-      margin: 0px 20px 0px 20px;
+      margin: 0px 0px 0px 0px;
+      min-width: none;
   }
 
   #text-block {
       height: 100%;
       width: 100%;
       padding-bottom: 10px;
+      left: 0px;
+      min-width: none;
+      left: 10px;
+      width: calc(100vw - 20px);
   }
 
   #popup_room {
@@ -449,7 +456,7 @@ iframe {
     font-family: 'GillSansSemiBold';
     max-width: 100%;
     color: #C20016;
-    font-size: 18px;
+    font-size: 12pt;
     padding-bottom: 0px;
     padding-top: 0px;
     max-width: 600px;

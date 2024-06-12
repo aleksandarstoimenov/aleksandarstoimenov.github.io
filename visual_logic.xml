@@ -42,7 +42,7 @@
       <field name="FADE_ANNOTATIONS">TRUE</field>
     </block>
   </tab>
-  <tab name="New Tab" type="CommonTab" active="true" scrollx="2146.574462890625" scrolly="761.7472534179688" scale="1">
+  <tab name="New Tab" type="CommonTab" active="true" scrollx="-6906.238525390625" scrolly="-2475.169189453125" scale="1">
     <variables xmlns="https://developers.google.com/blockly/xml">
       <variable id="60tdU/T30Qk7^c|n(d:B">Which room trigger?</variable>
       <variable id="$i%?MtHh75[0Mf82h4AF">Which megamenu trigger?</variable>
@@ -68,9 +68,9 @@
       <variable id="J@FII3x]r![1`]rdXcK,">zoomed_in</variable>
       <variable id="KNg=ZRDon@m+J4F;c`^5">Which room is hoovered?</variable>
       <variable id="U;CKWy,0W(X}ZJ)U1.KM">Which html element is hovered?</variable>
+      <variable id=":`=hU#np!zKIqRl,TMcW">room_animation_frame</variable>
       <variable id="tP6:wE0I=7+Bs0KCY,y7">animations_except_bathroom</variable>
       <variable id="dvX?DWjvdey/WczArs@m">room_animation_triggers</variable>
-      <variable id=":`=hU#np!zKIqRl,TMcW">room_animation_frame</variable>
       <variable id="+X/(IbEgDFZlRBeEfdlP">room_animation_duration</variable>
       <variable id="FWB$_Ext$p_dfCaAK_Bn">This is the previously clicked object</variable>
       <variable id="]CgrD`v4[icHgPAQpA)@">animations_except_toilet</variable>
@@ -1407,6 +1407,123 @@
         </block>
       </next>
     </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="procedures_defnoreturn" id="/H-+DfeS3WYF=mBCcMzs" x="5090" y="-1490">
+      <field name="NAME">set_room_animation_frame_timer</field>
+      <comment pinned="false" h="80" w="160">Describe this function...</comment>
+      <statement name="STACK">
+        <block type="variables_set" id="H}c8B(/[swG0w7SlqDS:">
+          <field name="VAR" id=":`=hU#np!zKIqRl,TMcW">room_animation_frame</field>
+          <value name="VALUE">
+            <block type="lists_getIndex" id="YY@Dg+KII`W9bI:SR1/`">
+              <mutation statement="false" at="false"></mutation>
+              <field name="MODE">GET</field>
+              <field name="WHERE">FIRST</field>
+              <value name="VALUE">
+                <block type="lists_sort" id="x@,bFKNdsBQtysqInybA">
+                  <field name="TYPE">NUMERIC</field>
+                  <field name="DIRECTION">-1</field>
+                  <value name="LIST">
+                    <block type="lists_create_with" id="-]-M3]tUv_T3U[AQ7E7+">
+                      <mutation items="10"></mutation>
+                      <value name="ADD0">
+                        <block type="getAnimationFrame" id="ZtFC__.KHlL$Hoop;u=B">
+                          <value name="VALUE">
+                            <shadow type="animationList" id=":BcrREueV(zr]HB:nOEu">
+                              <field name="FIELDNAME">attic_room_trigger</field>
+                            </shadow>
+                          </value>
+                        </block>
+                      </value>
+                      <value name="ADD1">
+                        <block type="getAnimationFrame" id="ErF%^%kTBo;Wd!KO?ILE">
+                          <value name="VALUE">
+                            <shadow type="animationList" id="14qZq(0T1Fs;ocQW8]W=">
+                              <field name="FIELDNAME">bathroom_trigger</field>
+                            </shadow>
+                          </value>
+                        </block>
+                      </value>
+                      <value name="ADD2">
+                        <block type="getAnimationFrame" id="W7~x=jBO0mohaVNzl(8J">
+                          <value name="VALUE">
+                            <shadow type="animationList" id="2dtbPAT{U8]*TKS,j-1M">
+                              <field name="FIELDNAME">toilet_trigger</field>
+                            </shadow>
+                          </value>
+                        </block>
+                      </value>
+                      <value name="ADD3">
+                        <block type="getAnimationFrame" id="C),3cLLX])?27S?qm-vp">
+                          <value name="VALUE">
+                            <shadow type="animationList" id="}ttH%14qh~j;^j!Oq;2+">
+                              <field name="FIELDNAME">bedroom_trigger</field>
+                            </shadow>
+                          </value>
+                        </block>
+                      </value>
+                      <value name="ADD4">
+                        <block type="getAnimationFrame" id="qepQ?#q#a+R!JMas)dm;">
+                          <value name="VALUE">
+                            <shadow type="animationList" id="}U+PcUVZT,)IC_=lA!Z*">
+                              <field name="FIELDNAME">entrance_trigger</field>
+                            </shadow>
+                          </value>
+                        </block>
+                      </value>
+                      <value name="ADD5">
+                        <block type="getAnimationFrame" id="d`u]7C~!K*;yyt5biw4x">
+                          <value name="VALUE">
+                            <shadow type="animationList" id="XH.JjiKqL/zS:DHqrOpG">
+                              <field name="FIELDNAME">living_room_trigger</field>
+                            </shadow>
+                          </value>
+                        </block>
+                      </value>
+                      <value name="ADD6">
+                        <block type="getAnimationFrame" id="2EyJ%_IFn*.%r5UGLyq#">
+                          <value name="VALUE">
+                            <shadow type="animationList" id="bQ;6PY^IsF6JCZKE2w^n">
+                              <field name="FIELDNAME">kitchen_trigger</field>
+                            </shadow>
+                          </value>
+                        </block>
+                      </value>
+                      <value name="ADD7">
+                        <block type="getAnimationFrame" id="$qj*vb=?-y]8R`@}1dy5">
+                          <value name="VALUE">
+                            <shadow type="animationList" id="jXeWww)v2?PN-}WYe0AG">
+                              <field name="FIELDNAME">boiler_room_trigger</field>
+                            </shadow>
+                          </value>
+                        </block>
+                      </value>
+                      <value name="ADD8">
+                        <block type="getAnimationFrame" id="8yHnZr#QL?%,`.6{BGh%">
+                          <value name="VALUE">
+                            <shadow type="animationList" id="NruKc*SXwUls_7eG%A8r">
+                              <field name="FIELDNAME">laundry_room_trigger</field>
+                            </shadow>
+                          </value>
+                        </block>
+                      </value>
+                      <value name="ADD9">
+                        <block type="getAnimationFrame" id="48[4ogL?}`]SNq68S?p;">
+                          <value name="VALUE">
+                            <shadow type="animationList" id="{D1,rgJfVi{$GtBL$|x$">
+                              <field name="FIELDNAME">garden_trigger</field>
+                            </shadow>
+                          </value>
+                        </block>
+                      </value>
+                    </block>
+                  </value>
+                </block>
+              </value>
+            </block>
+          </value>
+        </block>
+      </statement>
+    </block>
     <block xmlns="https://developers.google.com/blockly/xml" type="procedures_defnoreturn" id="^CE{1RMefs3t6na1}mf$" x="1750" y="-1070">
       <mutation>
         <arg name="Which room trigger?" varid="60tdU/T30Qk7^c|n(d:B"></arg>
@@ -1650,7 +1767,7 @@
                                                           </value>
                                                           <value name="B">
                                                             <shadow type="math_number" id="YOo)oT#~v*L5tyu~H_|,">
-                                                              <field name="NUM">0.5</field>
+                                                              <field name="NUM">1</field>
                                                             </shadow>
                                                           </value>
                                                         </block>
@@ -2155,14 +2272,14 @@
                                                                   </value>
                                                                   <value name="B">
                                                                     <shadow type="math_number" id="45KF9M~6}8VCwg4AOQ)~">
-                                                                      <field name="NUM">2</field>
+                                                                      <field name="NUM">4</field>
                                                                     </shadow>
                                                                   </value>
                                                                 </block>
                                                               </value>
                                                               <value name="B">
                                                                 <shadow type="math_number" id="f!9,sz~^9]4!SL+F|vG[">
-                                                                  <field name="NUM">0.5</field>
+                                                                  <field name="NUM">0</field>
                                                                 </shadow>
                                                               </value>
                                                             </block>
@@ -2701,14 +2818,14 @@
                                                               </value>
                                                               <value name="B">
                                                                 <shadow type="math_number" id="_d^=SCqT=aLPpl851iy,">
-                                                                  <field name="NUM">2</field>
+                                                                  <field name="NUM">4</field>
                                                                 </shadow>
                                                               </value>
                                                             </block>
                                                           </value>
                                                           <value name="B">
                                                             <shadow type="math_number" id="OfchY?pLb0|IR`aO9u_I">
-                                                              <field name="NUM">0.5</field>
+                                                              <field name="NUM">0</field>
                                                             </shadow>
                                                           </value>
                                                         </block>
@@ -3925,123 +4042,6 @@
             </shadow>
             <block type="DOMObjectSelector" id="HD1dv0kq=?HU6o57pZ/~">
               <field name="DOM_OBJECT">BODY</field>
-            </block>
-          </value>
-        </block>
-      </statement>
-    </block>
-    <block xmlns="https://developers.google.com/blockly/xml" type="procedures_defnoreturn" id="/H-+DfeS3WYF=mBCcMzs" x="5090" y="-770">
-      <field name="NAME">set_room_animation_frame_timer</field>
-      <comment pinned="false" h="80" w="160">Describe this function...</comment>
-      <statement name="STACK">
-        <block type="variables_set" id="xIL?GpD`#Ile8o_TM/!/">
-          <field name="VAR" id=":`=hU#np!zKIqRl,TMcW">room_animation_frame</field>
-          <value name="VALUE">
-            <block type="lists_getIndex" id="*fy~0+Rc[j~n1WFR,Qs^">
-              <mutation statement="false" at="false"></mutation>
-              <field name="MODE">GET</field>
-              <field name="WHERE">FIRST</field>
-              <value name="VALUE">
-                <block type="lists_sort" id="O[8=9ev*v7{.MR8u2WTU">
-                  <field name="TYPE">NUMERIC</field>
-                  <field name="DIRECTION">-1</field>
-                  <value name="LIST">
-                    <block type="lists_create_with" id="fLf?^ebH9o72!/EE%(bO">
-                      <mutation items="10"></mutation>
-                      <value name="ADD0">
-                        <block type="getAnimationFrame" id="uq;A~!Qj_z~I$bfNhYrM">
-                          <value name="VALUE">
-                            <shadow type="animationList" id="1T}8^8`zS*|*U(]$z:q%">
-                              <field name="FIELDNAME">attic_room_trigger</field>
-                            </shadow>
-                          </value>
-                        </block>
-                      </value>
-                      <value name="ADD1">
-                        <block type="getAnimationFrame" id="b;CoZWegVZNKqXgIbd|s">
-                          <value name="VALUE">
-                            <shadow type="animationList" id="[{1A81l1FxEe!rHEtPU-">
-                              <field name="FIELDNAME">bathroom_trigger</field>
-                            </shadow>
-                          </value>
-                        </block>
-                      </value>
-                      <value name="ADD2">
-                        <block type="getAnimationFrame" id="_GQK=|Z%bcG9NHU@J}Ns">
-                          <value name="VALUE">
-                            <shadow type="animationList" id="j[jjzHkYBD.]8hvfBKUv">
-                              <field name="FIELDNAME">toilet_trigger</field>
-                            </shadow>
-                          </value>
-                        </block>
-                      </value>
-                      <value name="ADD3">
-                        <block type="getAnimationFrame" id="@q.Y3R7lQ@YFz#[*#N*4">
-                          <value name="VALUE">
-                            <shadow type="animationList" id="5B!g=710c.^3x@p4jB=~">
-                              <field name="FIELDNAME">bedroom_trigger</field>
-                            </shadow>
-                          </value>
-                        </block>
-                      </value>
-                      <value name="ADD4">
-                        <block type="getAnimationFrame" id="$QPIN.u^J49q1/K_W^bO">
-                          <value name="VALUE">
-                            <shadow type="animationList" id="eoj]f}6Yr#Uvc?7@]g^=">
-                              <field name="FIELDNAME">entrance_trigger</field>
-                            </shadow>
-                          </value>
-                        </block>
-                      </value>
-                      <value name="ADD5">
-                        <block type="getAnimationFrame" id="|:kO:88DWr-v29QMMhZ0">
-                          <value name="VALUE">
-                            <shadow type="animationList" id="2=Xg!G5I60@dLM8rm^hR">
-                              <field name="FIELDNAME">living_room_trigger</field>
-                            </shadow>
-                          </value>
-                        </block>
-                      </value>
-                      <value name="ADD6">
-                        <block type="getAnimationFrame" id="OYGG*WA%Hw3H?24_j?}R">
-                          <value name="VALUE">
-                            <shadow type="animationList" id="Y,g;{5B|i4PvSPY;JYe$">
-                              <field name="FIELDNAME">kitchen_trigger</field>
-                            </shadow>
-                          </value>
-                        </block>
-                      </value>
-                      <value name="ADD7">
-                        <block type="getAnimationFrame" id="tat7He~YSd*8?uC@.m[^">
-                          <value name="VALUE">
-                            <shadow type="animationList" id="jxLls~mKLPK%$x]`})Ys">
-                              <field name="FIELDNAME">boiler_room_trigger</field>
-                            </shadow>
-                          </value>
-                        </block>
-                      </value>
-                      <value name="ADD8">
-                        <block type="getAnimationFrame" id=":h2lDjseaAIIn5o}kT`b">
-                          <value name="VALUE">
-                            <shadow type="animationList" id="GC~8Tw]lKi0iSFD#3x7H">
-                              <field name="FIELDNAME">laundry_room_trigger</field>
-                            </shadow>
-                          </value>
-                        </block>
-                      </value>
-                      <value name="ADD9">
-                        <block type="getAnimationFrame" id="vk=psb(]ZDg9Hx)RSrz7">
-                          <value name="VALUE">
-                            <shadow type="animationList" id="2mF7b*FN,56LzD(0CNL=">
-                              <field name="FIELDNAME">garden_trigger</field>
-                            </shadow>
-                          </value>
-                        </block>
-                      </value>
-                    </block>
-                  </value>
-                </block>
-              </value>
             </block>
           </value>
         </block>
@@ -5370,7 +5370,7 @@
                                                             </shadow>
                                                           </value>
                                                           <value name="TO">
-                                                            <shadow type="math_number" id="Q2r`Y2LQ|7gFv};*kGNe">
+                                                            <shadow type="math_number" id="#[L+~Qk4a^bG$`!.Xy07">
                                                               <field name="NUM">140</field>
                                                             </shadow>
                                                             <block type="variables_get" id="FX`^}7G4QG*w*MuTTN[e">
@@ -5767,6 +5767,30 @@
                                                                       <field name="VAR" id="dvX?DWjvdey/WczArs@m">room_animation_triggers</field>
                                                                     </block>
                                                                   </value>
+                                                                  <next>
+                                                                    <block type="setAnimationFrame" id="Hl5V/x#HoqA/~Wa*}E.|">
+                                                                      <value name="VALUE">
+                                                                        <shadow type="animationList" id=":SZ:/VvZ5Q}me2B3wnSs">
+                                                                          <field name="FIELDNAME">&lt;none&gt;</field>
+                                                                        </shadow>
+                                                                        <block type="getAnimations" id="P;2yX@9yNE6jg=@3L!FL">
+                                                                          <value name="OBJECTINPUT">
+                                                                            <shadow type="objectList" id="`sz?,Em~GE?AiMR0m^a{">
+                                                                              <field name="FIELDNAME">&lt;none&gt;</field>
+                                                                            </shadow>
+                                                                            <block type="variables_get" id="nH[@8th6F~81G`q*_OEi">
+                                                                              <field name="VAR" id="dvX?DWjvdey/WczArs@m">room_animation_triggers</field>
+                                                                            </block>
+                                                                          </value>
+                                                                        </block>
+                                                                      </value>
+                                                                      <value name="FROM">
+                                                                        <shadow type="math_number" id="s$U+[U;)k]wD6]lRlMFM">
+                                                                          <field name="NUM">0</field>
+                                                                        </shadow>
+                                                                      </value>
+                                                                    </block>
+                                                                  </next>
                                                                 </block>
                                                               </next>
                                                             </block>
@@ -6176,6 +6200,30 @@
                                                                   <field name="VAR" id="dvX?DWjvdey/WczArs@m">room_animation_triggers</field>
                                                                 </block>
                                                               </value>
+                                                              <next>
+                                                                <block type="setAnimationFrame" id="b,o}0J{#V.H?)H_v%Cy]">
+                                                                  <value name="VALUE">
+                                                                    <shadow type="animationList" id=":SZ:/VvZ5Q}me2B3wnSs">
+                                                                      <field name="FIELDNAME">&lt;none&gt;</field>
+                                                                    </shadow>
+                                                                    <block type="getAnimations" id="!U:7Swur#B-X0+t7ft0n">
+                                                                      <value name="OBJECTINPUT">
+                                                                        <shadow type="objectList" id="`sz?,Em~GE?AiMR0m^a{">
+                                                                          <field name="FIELDNAME">&lt;none&gt;</field>
+                                                                        </shadow>
+                                                                        <block type="variables_get" id="(H!3(5egHV9.7QCql)Oa">
+                                                                          <field name="VAR" id="dvX?DWjvdey/WczArs@m">room_animation_triggers</field>
+                                                                        </block>
+                                                                      </value>
+                                                                    </block>
+                                                                  </value>
+                                                                  <value name="FROM">
+                                                                    <shadow type="math_number" id="D.3yMr/X83aW_1{{]siZ">
+                                                                      <field name="NUM">0</field>
+                                                                    </shadow>
+                                                                  </value>
+                                                                </block>
+                                                              </next>
                                                             </block>
                                                           </next>
                                                         </block>
@@ -8140,8 +8188,18 @@
                                             </block>
                                           </value>
                                           <value name="ARG1">
-                                            <block type="groupList" id="GCj,A%:VLe}BckukG!90">
-                                              <field name="FIELDNAME">gutter_attic_room</field>
+                                            <block type="lists_create_with" id="]q5|tFiwk]81Ut}R!myt">
+                                              <mutation items="3"></mutation>
+                                              <value name="ADD0">
+                                                <block type="groupList" id="GCj,A%:VLe}BckukG!90">
+                                                  <field name="FIELDNAME">gutter_attic_room</field>
+                                                </block>
+                                              </value>
+                                              <value name="ADD1">
+                                                <block type="objectList" id="c5#5ApL]E0z@772vVNqw">
+                                                  <field name="FIELDNAME">gutter_attic_roof_exception</field>
+                                                </block>
+                                              </value>
                                             </block>
                                           </value>
                                           <value name="ARG2">
