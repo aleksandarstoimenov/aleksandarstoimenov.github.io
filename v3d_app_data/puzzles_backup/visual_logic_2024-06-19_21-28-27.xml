@@ -42,7 +42,7 @@
       <field name="FADE_ANNOTATIONS">TRUE</field>
     </block>
   </tab>
-  <tab name="New Tab" type="CommonTab" active="true" scrollx="-91.84702564426698" scrolly="-442.4695815743071" scale="0.7219857701073252">
+  <tab name="New Tab" type="CommonTab" active="true" scrollx="-568.1835044535292" scrolly="347.27307975267195" scale="0.6548623765145807">
     <variables xmlns="https://developers.google.com/blockly/xml">
       <variable id="60tdU/T30Qk7^c|n(d:B">Which room trigger?</variable>
       <variable id="$i%?MtHh75[0Mf82h4AF">Which megamenu trigger?</variable>
@@ -2818,14 +2818,14 @@
                                                               </value>
                                                               <value name="B">
                                                                 <shadow type="math_number" id="_d^=SCqT=aLPpl851iy,">
-                                                                  <field name="NUM">2</field>
+                                                                  <field name="NUM">4</field>
                                                                 </shadow>
                                                               </value>
                                                             </block>
                                                           </value>
                                                           <value name="B">
                                                             <shadow type="math_number" id="OfchY?pLb0|IR`aO9u_I">
-                                                              <field name="NUM">1</field>
+                                                              <field name="NUM">0</field>
                                                             </shadow>
                                                           </value>
                                                         </block>
@@ -2877,7 +2877,7 @@
                                                       </value>
                                                       <next>
                                                         <block type="playAnimationAdv" id="K7A0*Kc|1O|ZzZZw7$Bp">
-                                                          <mutation xmlns="http://www.w3.org/1999/xhtml" advplaybackoptions="true" enablewhenfinished="false"></mutation>
+                                                          <mutation xmlns="http://www.w3.org/1999/xhtml" advplaybackoptions="true" enablewhenfinished="true"></mutation>
                                                           <field name="REVERSED">FALSE</field>
                                                           <field name="LOOP">LoopOnce</field>
                                                           <value name="VALUE">

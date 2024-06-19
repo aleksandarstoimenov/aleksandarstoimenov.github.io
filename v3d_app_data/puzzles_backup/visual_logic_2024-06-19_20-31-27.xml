@@ -42,7 +42,7 @@
       <field name="FADE_ANNOTATIONS">TRUE</field>
     </block>
   </tab>
-  <tab name="New Tab" type="CommonTab" active="true" scrollx="-91.84702564426698" scrolly="-442.4695815743071" scale="0.7219857701073252">
+  <tab name="New Tab" type="CommonTab" active="true" scrollx="-9615.320720398544" scrolly="-831.80493029642" scale="0.9999999999999996">
     <variables xmlns="https://developers.google.com/blockly/xml">
       <variable id="60tdU/T30Qk7^c|n(d:B">Which room trigger?</variable>
       <variable id="$i%?MtHh75[0Mf82h4AF">Which megamenu trigger?</variable>
@@ -2818,14 +2818,14 @@
                                                               </value>
                                                               <value name="B">
                                                                 <shadow type="math_number" id="_d^=SCqT=aLPpl851iy,">
-                                                                  <field name="NUM">2</field>
+                                                                  <field name="NUM">4</field>
                                                                 </shadow>
                                                               </value>
                                                             </block>
                                                           </value>
                                                           <value name="B">
                                                             <shadow type="math_number" id="OfchY?pLb0|IR`aO9u_I">
-                                                              <field name="NUM">1</field>
+                                                              <field name="NUM">0</field>
                                                             </shadow>
                                                           </value>
                                                         </block>
@@ -2877,7 +2877,7 @@
                                                       </value>
                                                       <next>
                                                         <block type="playAnimationAdv" id="K7A0*Kc|1O|ZzZZw7$Bp">
-                                                          <mutation xmlns="http://www.w3.org/1999/xhtml" advplaybackoptions="true" enablewhenfinished="false"></mutation>
+                                                          <mutation xmlns="http://www.w3.org/1999/xhtml" advplaybackoptions="true" enablewhenfinished="true"></mutation>
                                                           <field name="REVERSED">FALSE</field>
                                                           <field name="LOOP">LoopOnce</field>
                                                           <value name="VALUE">
@@ -9838,7 +9838,7 @@
       <value name="ARG3">
         <block type="textMultiline" id="Mei!)+YA%TS8VIH^v;^(">
           <field name="HIGHLIGHT_MODE">html</field>
-          <field name="TEXT" editor-height="1" editor-width="120">&lt;h1 id="popup_object"&gt;Test&lt;/h1&gt;&amp;#10;&lt;div id="dividing_line_header"&gt;&lt;/div&gt;&amp;#10;&lt;p id="popup_locataire"&gt;Locataire&lt;/p&gt;&amp;#10;&lt;ul id="popup_paragraph"&gt;&amp;#10;    &lt;li&gt;Nettoyage des bouches qui doivent rester ouvertes en permanence.&lt;/li&gt;&amp;#10;    &lt;li&gt;Nettoyage et/ou remplacement régulier des filtres.&lt;/li&gt;&amp;#10;&lt;/ul&gt;&amp;#10;&lt;div id="dividing_line_2"&gt;&lt;/div&gt;&amp;#10;&lt;p id="popup_locataire"&gt;Propriétaire&lt;/p&gt;&amp;#10;&lt;ul id="popup_paragraph"&gt;&amp;#10;    &lt;li&gt;Réparations nécessaires, autres que locatives, et remplacement.&lt;/li&gt;&amp;#10;&lt;/ul&gt;</field>
+          <field name="TEXT" editor-height="29" editor-width="1110.666625976563">&lt;h1 id="popup_object"&gt;Porte d'entrée&lt;/h1&gt;&amp;#10;&lt;div id="dividing_line_header"&gt;&lt;/div&gt;&amp;#10;&lt;p id="popup_locataire"&gt;Locataire&lt;/p&gt;&amp;#10;&lt;ul id="popup_paragraph"&gt;&amp;#10;    &lt;li&gt;Porte d'entrée, Parlophone et Boîte aux lettres : Gardez un œil attentif sur ces points d'entrée, en assurant leur bon fonctionnement et en effectuant les réparations nécessaires pour qu'ils restent accueillants et sécurisés.&lt;/li&gt;&amp;#10;&lt;/ul&gt;&amp;#10;&lt;p id="popup_locataire"&gt;Propriétaire&lt;/p&gt;&amp;#10;&lt;ul id="popup_paragraph"&gt;&amp;#10;    &lt;li&gt;Réparations nécessaires, autres que locatives, et remplacement.&lt;/li&gt;&amp;#10;&lt;/ul&gt;</field>
         </block>
       </value>
       <value name="ARG4">
